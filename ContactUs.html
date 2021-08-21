@@ -55,9 +55,9 @@
   </header>
 
     
-  <div class='header-banner jumbotron' style="background-color: #252526;color: white;border-radius: 0px;">
+  <div class='header-banner jumbotron' >
     <div class="row" style="padding: 20px 200px 20px 60px">
-        <div class="col-12" style="border-left:2px solid yellow;">
+        <div class="col-12" >
         <h1>Contact Us</h1>
     </div>
     </div>
@@ -76,35 +76,56 @@
     
     
     <div class="container">
-      <form action="action_page.php">
-        <div class="row">
-    <div class="col-md-6 col-xs-12">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" name="name" placeholder="Your name..">
-    </div>
-      <div class="col-md-6 col-xs-12">
-        <label for="email">Email</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Your email">
+      <div class="row" style="padding: 40px 0px 40px 0px;">
+        <div class="col-md-6">
+          <img src="img/contact.png" />
+
+        </div>
+        <div class="col-md-6 justify-content-center mx-auto my-auto" >
+          <form action="action_page.php">
+            <div class="row justify-content-center mx-auto my-auto">
+        <div class="col-md-6 col-xs-12">
+          <label id="error" name="error"></label>
+                             <div class="form-label-group">
+                                   <input type="text" id="name" class="form-control login-input" placeholder="Name" required autofocus>
+                                    <label for="inputName">Name</label>
+                              </div>  
+        </div>
+          <div class="col-md-6 col-xs-12">
+            <label id="error" name="error"></label>
+                             <div class="form-label-group">
+                                   <input type="text" id="inputEmail" class="form-control login-input" placeholder="Email address" required autofocus>
+                                    <label for="inputEmail">Email</label>
+                              </div>  
+          </div>
+          <div class="col-md-12 col-xs-12">
+           
+            <select id='subjectType' class="form-control login-input">
+                
+                <option value='complaint'>Complaint</option>
+                <option value='suggestion'>Suggestion</option>
+                <option value='other'>Other</option>
+            </select>
+        </div>
+        <div class="col-md-12 col-xs-12" >
+         
+          <div class="form-label-group">
+            <textarea id="details" class="form-control login-input" placeholder="Write Here" name="details"  rows="8" required autofocus></textarea>
+
+                 
+           </div>  
+           
+        </div>
+        <div class="col-md-12 col-xs-12">
+          
+            <button type="button" class="btn  btn-block" value="Submit" onclick="submitData()" style="background-color: #6BC061;color:white">Submit</button>
+        </div>
       </div>
-      <div class="col-md-12 col-xs-12">
-        <label>Subject</label>
-        <select id='subjectType' class="form-control">
-            
-            <option value='complaint'>Complaint</option>
-            <option value='suggestion'>Suggestion</option>
-            <option value='other'>Other</option>
-        </select>
-    </div>
-    <div class="col-md-12 col-xs-12" >
-        <label for="details">Details</label>
-        <textarea id="details" class="form-control" name="details" placeholder="Write something.." style="height:200px"></textarea>
-    </div>
-    <div class="col-md-12 col-xs-12">
-      <br>
-        <button type="button" class="btn  btn-block" value="Submit" onclick="submitData()" style="background-color: #6BC061;color:white">Submit</button>
-    </div>
-  </div>
-      </form>
+          </form>
+
+        </div>
+      </div>
+   
     </div>
     </div>
     </div>

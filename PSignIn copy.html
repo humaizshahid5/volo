@@ -1,10 +1,9 @@
-
-
 <!DOCTYPE HTML>
 <html>
 <head>
   <title>Partner Sign In</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
   <link href="css/main.css" rel="stylesheet" type="text/css" />
@@ -12,93 +11,66 @@
   <link href="css/footer.css" rel="stylesheet" type="text/css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <script src="https://kit.fontawesome.com/e1e1ec4870.js" crossorigin="anonymous"></script>
-   
 </head>
 <body class="login-page">
   <div class="row">
-    <div class="col-md-12">
-    <button class="btn btn-md btn-info btn-return float-right">Return Home</button>
-  </div>
-  </div>
+  <div class="col-md-12">
+  <button class="btn btn-md btn-info btn-return float-right">Return Home</button>
+</div>
+</div>
     <div class="container h-100 login-body">
         <div class="row h-100 justify-content-center align-items-center">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 logo-s" >
-            <center><img src="img/logo.png" height="120px" />
-             
+          <center><img src="img/logo.png" height="120px" /></center>
              </div>
               <div class="col-lg-4 col-md-6 col-sm-8 col-xs-8 mx-auto login-box" >
                 <form id="LoginForm" onsubmit="return false">
                 <div class="row">
-                  <div class="col-lg-12 col-md-10 col-sm-10 col-xs-8 mx-auto"  >
+                  <div class="col-lg-12 col-md-10 col-sm-10 col-xs-8 mx-auto">
                     <div class="col-12 mx-auto">
-                      <div class="login-circle mx-auto" >
+                      <div class="login-circle mx-auto">
                       <center>
                        <img src="img/icon.png" class="img-fluid" />
                        </center>
-                     
                       </div>
-                      <h3 class="text-center login-txt">Sign Up</h3>
+                      <h3 class="text-center login-txt">Sign In</h3>
                     </div>
                   <div class="row">
-                     
                       <div class="col-12 ">
                         <label id="error" name="error"></label>
                              <div class="form-label-group">
-                                   <input type="text" id="inputEmail" class="form-control login-input" placeholder="Email" required autofocus>
+                                   <input type="text" id="inputEmail" class="form-control login-input" placeholder="Email address" required autofocus>
                                     <label for="inputEmail">Email</label>
-                                  </div>
-                         
+                              </div>   
                       </div>
-                      
                       <div class="col-12 ">
                         <div class="form-label-group">
-                       <input type="text" id="inputMobile" class="form-control login-input" placeholder="Mobile" required>
-                        <label for="inputMobile">Mobile</label>
+                        <input type="password" id="inputPassword" class="form-control login-input" placeholder="Password" required>
+                        <label for="inputPassword">Password</label>
                         </div>
                           </div>
-                          <div class="col-12 ">
-                            <div class="form-label-group">
-                              <select id="country" name="country" class="form-control">
-                                <option value="bahrain">Bahrain</option>
-                                <option value="saudi">Saudi Arabia</option>
-                                <option value="kuwait">Kuwait</option>
-                                <option value="uae">UAE</option>
-                                <option value="oman">Oman</option>
-                                <option value="qatar">Qatar</option>
-                            </select>
-                          
-                            </div>
-                              </div>
-                          <div class="col-12 ">
-                            <div class="form-label-group">
-                           <input type="text" id="inputCity" class="form-control login-input" placeholder="City" required>
-                            <label for="inputcity">City</label>
-                            </div>
-                              </div>
-                              <div class="col-12 ">
-                                <div class="form-label-group">
-                               <input type="password" id="inputPassword" class="form-control login-input" placeholder="Password" required>
-                                <label for="inputPassword">Password</label>
-                                </div>
-                                  </div>
                           <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:10px;">
                               <input type="checkbox" class="checkbox" name="remember" id="remember"> Remember Me
                           
                           </div>
-                          
                           <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:10px;"><span class="psw float-lg-right float-md-right"><a href="/forgetPass">Forgot password?</a></span></div>
                         <div class="col-12"">
                             <button type="submit" class="login-btn btn btn-info btn-block" onclick="login()">Login</button>
                         </div>
                     </div>
+
                   </div>
+                  
                 </div>
-                already have an account? <a href="PSignIn.html">Sign In</a>
+                Don't have an account? <a href="SignUp.html">Sign In</a>
+              
               </form>
+
               </div>
+              
          </div>
     </div>
-    <footer style="position: relative;margin-top: 240px;">
+    <footer>
       <div class="footer-wrap">
     
         <div class="second_class">

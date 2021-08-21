@@ -10,10 +10,7 @@
    
     padding: 1rem; }
     @media (max-width: 991.98px) {
-      .site-navbar {
-      
-        padding-top: 3rem;
-        padding-bottom: 3rem; } }
+      }
     .site-navbar .toggle-button {
       position: absolute;
       right: 0px; }
@@ -50,7 +47,7 @@
           display: inline-block;
           text-decoration: none !important; }
           .site-navbar .site-navigation .site-menu > li > a:hover {
-            color: #007bff; }
+            color: black; }
       .site-navbar .site-navigation .site-menu .has-children {
         position: relative; }
         .site-navbar .site-navigation .site-menu .has-children > a {
@@ -209,13 +206,12 @@
         display: block;
         position: relative;
         color: #212529; }
-        .site-mobile-menu .site-nav-wrap a:hover {
-          color: #007bff; }
+       
       .site-mobile-menu .site-nav-wrap li {
         position: relative;
         display: block; }
-        .site-mobile-menu .site-nav-wrap li .nav-link.active {
-          color: #007bff; }
+      
+         
       .site-mobile-menu .site-nav-wrap .arrow-collapse {
         position: absolute;
         right: 0px;
@@ -314,4 +310,37 @@
         .sticky-wrapper .shrink {
           padding-top: 30px !important;
           padding-bottom: 30px !important; } }
+
+          .site-navbar .site-navigation .site-menu > li { 
+
+            position: relative; 
+        
+          }
+          .site-navbar .site-navigation .site-menu > a {
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+           
+            margin-bottom: 0px;
+            display: inline-block;
+           
+          
+          }
+          .site-navbar .site-navigation .site-menu > li > a:after {    
+            background: none repeat scroll 0 0 transparent;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+           
+            position: absolute;
+            background: #fff;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            width: 0;
+          }
+          .site-navbar .site-navigation .site-menu > li >  a:hover:after { 
+            width: 100%; 
+            left: 0; 
+           
+          }
   
