@@ -1,89 +1,199 @@
+
+
+
+
+
 <!DOCTYPE HTML>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8">
-<title>Partner Sign Up</title>
+  <title>Partner Sign In</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="css/main.css" rel="stylesheet" type="text/css" />
+  <link href="css/header.css" rel="stylesheet" type="text/css" />
+  <link href="css/footer.css" rel="stylesheet" type="text/css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <script src="https://kit.fontawesome.com/e1e1ec4870.js" crossorigin="anonymous"></script>
+   
 </head>
- <header> Sign Up</header>   
- <br>   
-
-<div>
-  <label for="Ename">Store name:</label>
-  <input type="text" id="Ename" name="Ename"><br>
-    
-  <label for="city">City:</label>
-  <input type="text" id="city" name="city"><br>
-    
-
-  <label for="country">Country:</label>
-    <select id="country" name="country">
-        <option value="bahrain">Bahrain</option>
-        <option value="saudi">Saudi Arabia</option>
-        <option value="kuwait">Kuwait</option>
-        <option value="uae">UAE</option>
-        <option value="oman">Oman</option>
-        <option value="qatar">Qatar</option>
-    </select> <br><br>
-
- 
-
-    <label for="etype">Store type:</label>
-    <select id="etype" name="etype">
-        <option value="restaurant">Restaurant</option>
-        <option value="grocery">Grocery Store</option>
-        <option value="flowers">Florist</option>
-        <option value="pet">Pet Store</option>
-        <option value="supplement">Supplement Store</option>
-        <option value="beauty">Beauty Store</option>
-        <option value="electronics">Electronics</option>
-        <option value="perfumes">Fragrance Store</option>
-    </select> <br><br>
-    
-    <p>Person of Contact:</p>
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name"><br>
-    <label for="pemail">Email:</label>
-    <input type="email" id="pemail" name="pemail"><br>
-    <label for="pphone">Phone:</label> 
-    <select id="pccode" name="pccode">
-        <option value="+973">+973</option>
-        <option value="+966">+966</option>
-        <option value="+965">+965</option>
-        <option value="+971">+971</option>
-        <option value="+968">+968</option>
-        <option value="+974">+974</option>
-    </select>
-  <input type="number" id="pphone" name="pphone"><br>
-    
-
-    
-    
-    
-    <br><br>
-  <button>Contact me</button>
-</div>
-    
-    <div id='footerDiv'>
-      <!--footer -->
-      <div id='hrefsDiv'>
-          <ul id="UL">
-              <li><a href="ContactUs.html">Contact us</a></li>
-              <li><a href="Terms.html">Terms and Conditions</a></li>
-              <li><a href="privacyPolicy.html">Privacy Policy</a></li>
-              <li><a href="FAQs.html">FAQs</a></li>
-          </ul>
-      </div>
-      
-      
-      <div id='socialMediaDiv'>
-          <ul id="UL">
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">FaceBook</a></li>
-              <li><a href="#">LinkedIn</a></li>
-          </ul>
-      </div>
-          
+<body class="login-page">
+    <div class="container h-100 login-body">
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" >
+            <center><img src="img/logo.png" height="120px" />
+              
+             </div>
+              <div class="col-lg-4 col-md-6 col-sm-8 col-xs-8 mx-auto login-box" >
+                <form id="LoginForm" onsubmit="return false">
+                <div class="row">
+                  <div class="col-lg-12 col-md-10 col-sm-10 col-xs-8 mx-auto"  >
+                    <div class="col-12 mx-auto">
+                      <div class="login-circle mx-auto" >
+                      <center>
+                       <img src="img/icon.png" class="img-fluid" />
+                       </center>
+                     
+                      </div>
+                      <h3 class="text-center login-txt">Sign Up</h3>
+                    </div>
+                  <div class="row">
+                     
+                      <div class="col-12 ">
+                        <label id="error" name="error"></label>
+                             <div class="form-label-group">
+                                   <input type="text" id="inputEmail" class="form-control login-input" placeholder="Email" required autofocus>
+                                    <label for="inputEmail">Email</label>
+                                  </div>
+                         
+                      </div>
+                      
+                      <div class="col-12 ">
+                        <div class="form-label-group">
+                       <input type="text" id="inputMobile" class="form-control login-input" placeholder="Mobile" required>
+                        <label for="inputMobile">Mobile</label>
+                        </div>
+                          </div>
+                          <div class="col-12 ">
+                            <div class="form-label-group">
+                              <select id="country" name="country" class="form-control">
+                                <option value="bahrain">Bahrain</option>
+                                <option value="saudi">Saudi Arabia</option>
+                                <option value="kuwait">Kuwait</option>
+                                <option value="uae">UAE</option>
+                                <option value="oman">Oman</option>
+                                <option value="qatar">Qatar</option>
+                            </select>
+                          
+                            </div>
+                              </div>
+                          <div class="col-12 ">
+                            <div class="form-label-group">
+                           <input type="text" id="inputCity" class="form-control login-input" placeholder="City" required>
+                            <label for="inputcity">City</label>
+                            </div>
+                              </div>
+                              <div class="col-12 ">
+                                <div class="form-label-group">
+                               <input type="password" id="inputPassword" class="form-control login-input" placeholder="Password" required>
+                                <label for="inputPassword">Password</label>
+                                </div>
+                                  </div>
+                          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:10px;">
+                              <input type="checkbox" class="checkbox" name="remember" id="remember"> Remember Me
+                          
+                          </div>
+                          
+                          <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12" style="margin-bottom:10px;"><span class="psw float-lg-right float-md-right"><a href="/forgetPass">Forgot password?</a></span></div>
+                        <div class="col-12"">
+                            <button type="submit" class="login-btn btn btn-info btn-block" onclick="login()">Login</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              </div>
+        
   </div>
+  </div>
+  <footer>
+    <div class="footer-wrap">
+  
+      <div class="second_class">
+        <div class="container second_class_bdr">
+        <div class="row">
+          <div class="col-md-12 col-sm-6 my-auto">
+  
+            <div class="footer-logo text-center"><img src="img/logo.png" width="200px" alt="logo">
+            </div>
+          </div>
+          <div class="col-md-12 mx-auto text-center">
+            <ul class="nav nav-footer justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Patner Portal</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="http://127.0.0.1:5500/privacyPolicy.html">Privacy Policy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5500/Terms.html">Terms and Conditions</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="#">Contact Us</a>
+                </li>
+              </ul>
 
+          </div>
+          <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 mx-auto text-center">
+            <div class="standard_social_links mx-auto">
+                <div>
+                    <li class="round-btn btn-facebook"><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+
+                    </li>
+                    <li class="round-btn btn-linkedin"><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+
+                    </li>
+                    <li class="round-btn btn-twitter"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+
+                    </li>
+                    <li class="round-btn btn-instagram"><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+
+                    </li>
+                    <li class="round-btn btn-tiktok"><a href="#"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+
+                    </li>
+                 
+                </div>
+            </div>
+
+          </div>
+      
+          
+        </div>
+        <div class="row my-auto h-100 align-items-center justify-content-center">
+            <div class="col-md-2 col-lg-2 col-xs-12 col-sm-12 justify-content-xs-center">
+                <center><img src="img/r.png" width="180px" /></center>
+
+            </div>
+            <div class="col-md-2 col-lg-2 col-xs-12 col-sm-12 " >
+                   <center><img src="img/google.png" width="200px" /></center>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xs-12 col-sm-12">
+               <center><img src="img/gallery.png" width="220px" /></center> 
+            </div>
+        </div>
+        
+      </div>
+      </div>
+      
+      <div class="row">
+        
+        <div class="container-fluid">
+        <div class="copyright"> Copyright 2021 | All Rights Reserved by VOLO.</div>
+        </div>
+        
+      </div>
+    </div>
+    
+    </footer>
+   
+    
+    <!--footer end-->
+   
+      
+      <!-- Font Awesome 5 links-->
+   <script src="https://kit.fontawesome.com/fddf5c0916.js" crossorigin="anonymous"></script>
+   <script src="js/jquery-3.3.1.min.js"></script>
+   <script src="js/popper.min.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/jquery.sticky.js"></script>
+   <script src="js/main.js"></script>
+
+</body>    
 </html>
