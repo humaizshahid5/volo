@@ -10,6 +10,8 @@
   <link href="css/footer.css" rel="stylesheet" type="text/css" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <script src="https://kit.fontawesome.com/e1e1ec4870.js" crossorigin="anonymous"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body id="body">
@@ -26,6 +28,7 @@
 
 
      
+
 
       <header class="site-navbar site-navbar-target" role="banner">
         <div class="container">
@@ -49,8 +52,18 @@
         <nav class="site-navigation text-left mr-auto " role="navigation">
         <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
         <li><a href="about.html" class="nav-link">Become a Partner</a></li>
-        <li><a href="blog.html" class="nav-link">Contact Us</a></li>
-        
+        <li>
+          <li class=" dropdown">
+            <a class="nav-link " href="#" id="navbarDropdownMenuLink78" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language <i class="fa fa-angle-down"></i></a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink78"> 
+                <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-us"></span> English</a> 
+                <a class="dropdown-item" href=""><span class="flag-icon flag-icon-kw"></span> Arabic</a>
+                <a class="dropdown-item" href=""><span class="flag-icon flag-icon-fr"></span> Français</a> 
+                
+          </li>
+        </li>
+
+
         </ul>
         </nav>
         </div>
@@ -58,15 +71,15 @@
         </div>
         </header>
 
-    <div class='header-banner jumbotron' style="padding:0px;margin: 0px;" >
+    <div class='header-banner jumbotron'  >
         <div class="row header-row" >
             <div class="col-lg-5 col-md-5 col-xs-12 col-sm-12 mx-auto my-auto">
             <h1>Privacy Policy</h1>
             </div>
             <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 mx-auto my-auto" style="padding: 0px;" >
-             <div class="header-box mx-auto my-auto" style="padding: 0px;">
+             <div class="header-box mx-auto my-auto">
               
-               <img src="img/privacy.svg"  height="200px" />
+               <img src="img/privacy.png" class="header-icon mx-auto my-auto float-center"  height="200px" />
            
              </div>
               </div>
@@ -411,12 +424,12 @@
         <div class="second_class">
           <div class="container second_class_bdr">
           <div class="row">
-            <div class="col-md-12 col-sm-6 my-auto">
+            <div class="col-md-4 col-sm-6 my-auto">
     
-              <div class="footer-logo text-center"><img src="img/logo.png" width="200px" alt="logo">
+              <div class="footer-logo text-center my-auto"><img src="img/logo.png" width="200px" alt="logo">
               </div>
             </div>
-            <div class="col-md-12 mx-auto text-center">
+            <div class="col-md-4 mx-auto text-center">
               <ul class="nav nav-footer justify-content-center">
                   <li class="nav-item">
                     <a class="nav-link" href="#">Home</a>
@@ -439,8 +452,8 @@
                 </ul>
 
             </div>
-            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 mx-auto text-center">
-              <div class="standard_social_links mx-auto">
+            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 mx-auto my-auto text-center">
+              <div class=" mx-auto my-auto">
                   <div>
                       <li class="round-btn btn-facebook"><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
   
@@ -473,9 +486,7 @@
               <div class="col-md-2 col-lg-2 col-xs-12 col-sm-12 " >
                      <center><img src="img/google.png" width="200px" /></center>
               </div>
-              <div class="col-md-2 col-lg-2 col-xs-12 col-sm-12">
-                 <center><img src="img/gallery.png" width="220px" /></center> 
-              </div>
+             
           </div>
           
         </div>
@@ -493,7 +504,11 @@
       </footer>
       
       <!--footer end-->
-     
+     <script>
+       $(function(){
+    $('.selectpicker').selectpicker();
+});
+     </script>
         
         <!-- Font Awesome 5 links-->
      <script src="https://kit.fontawesome.com/fddf5c0916.js" crossorigin="anonymous"></script>
@@ -502,7 +517,12 @@
      <script src="js/bootstrap.min.js"></script>
      <script src="js/jquery.sticky.js"></script>
      <script src="js/main.js"></script>
-
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   
+     
+      
 </body>
 
 

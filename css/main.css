@@ -170,6 +170,8 @@ body,html{
   min-height: 200px;
  width: 100%;
 
+ padding:0px;
+ margin: 0px;
  
 }
 .btn-return{
@@ -186,7 +188,7 @@ body,html{
 
 {
 .header-box{
-	background-color: #E9ECEF;
+	background-color: #313138;
   height: 200px;
 clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
 
@@ -195,5 +197,11 @@ clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
 .header-box{
-  background-color:#E9ECEF;
+  background-color:#313138;
+  padding:0px;
+  margin: 0px;
+  
+}
+.header-icon{
+  padding:20px;
 }
