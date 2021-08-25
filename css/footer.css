@@ -95,6 +95,8 @@ footer dl, ol, ul {
 .download-link{
 margin-bottom: 10px;
 }
+@media(max-width:768px){
 .download-section{
-  padding-top: 10px;
+  padding-top: 30px;
+}
 }
