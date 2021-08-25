@@ -213,3 +213,6 @@ clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
   color:black;
  padding-top: 10px;
 }
+.header-text{
+  padding:20px 0px 20px 0px;
+}
