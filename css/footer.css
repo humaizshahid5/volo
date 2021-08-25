@@ -1,4 +1,4 @@
-.round-btn {display: inline;height: 50px; width: 50px; background:#fff;border-radius: 50%;float: left;margin: 15px 8px;box-shadow: 2px 2px 5px 0px rgb(82, 0, 67);}
+.round-btn {display: inline;height: 50px; width: 50px; background:#fff;border-radius: 50%;float: left;margin: 15px 10px;box-shadow: 2px 2px 5px 0px rgb(82, 0, 67);}
 .round-btn a {display: block !important;padding: 5px 0px;font-size: 25px;border-radius: 50%;}
 .round-btn .icon {padding: 0px; font-size: 27px;}
 
@@ -58,7 +58,7 @@ footer .first_class p, footer .first_class h3{
 footer{
   background: #ffeded;
   color: black;
-
+}
 
 footer .round-btn {
   margin: 15px 4px;}
@@ -91,4 +91,10 @@ footer dl, ol, ul {
 .mobile_icon{
   color:black;
   font-size: 18px;
+}
+.download-link{
+margin-bottom: 10px;
+}
+.download-section{
+  padding-top: 10px;
 }
