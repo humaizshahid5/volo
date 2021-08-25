@@ -205,3 +205,11 @@ clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
 .header-icon{
   padding:20px;
 }
+.c_link{
+  color:white;
+  text-decoration: none;
+}
+.mobile_icon{
+  color:black;
+ padding-top: 10px;
+}
