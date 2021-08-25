@@ -14,7 +14,7 @@
   
 .footer-wrap {
  margin-top: 40px;
- 
+ padding: 20px 0px 0px 0px;
   background-size: cover;
 }
 
@@ -83,4 +83,8 @@ footer dl, ol, ul {
 }	
 .footer-logo{
     padding: 20px;
+}
+.c_link{
+  color:white;
+  text-decoration: none;
 }
