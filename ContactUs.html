@@ -4,70 +4,78 @@
   <head>
     <meta charset="utf-8">
     <title>Contact Us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="css/main.css" rel="stylesheet" type="text/css" />
     <link href="css/header.css" rel="stylesheet" type="text/css" />
     <link href="css/footer.css" rel="stylesheet" type="text/css" />
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
      <script src="https://kit.fontawesome.com/e1e1ec4870.js" crossorigin="anonymous"></script>
-     <script src="TermsJS.js" crossorigin="anonymous"></script>
-
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet" type="text/css">
   </head>
 
 <body>
   <div class="site-mobile-menu site-navbar-target">
     <div class="site-mobile-menu-header">
       <div class="site-mobile-menu-close mt-3">
-        <i class="fas fa-times-circle js-menu-toggle" style="color: black;"></i>
+        <span class="fas fa-times mobile_icon js-menu-toggle"></span>
       </div>
     </div>
     <div class="site-mobile-menu-body"></div>
   </div>
-
-
- 
-
-  <header class="site-navbar js-sticky-header site-navbar-target" role="banner" style="background-color: #6CC061;">
-
-    <div class="container">
-      <div class="row align-items-center position-relative">
-        <div class="site-logo">
-          <a href="index.html" class="text-black"><span class="text-primary"><img src="img/icon.png"/ width="50px"></a>
+  <header class="site-navbar site-navbar-target" role="banner">
+      <div class="container">
+        <div class="row align-items-center position-relative">
+          <div class="col-lg-4">
+            <nav class="site-navigation text-right ml-auto " role="navigation">
+              <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="project.html" class="nav-link">About</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-4 text-center">
+              <div class="site-logo">
+                <a href="index.html"><img src="img/logo.png" width="120px" /></a>
+              </div>
+              <div class="ml-auto my-auto mx-auto toggle-button d-inline-block d-lg-none"><a href="#" class="mx-auto my-auto js-menu-toggle text-black"><span class="fas fa-bars mobile_icon h3 text-black"></span></a></div>
+              </div>
+              <div class="col-lg-4">
+                <nav class="site-navigation text-left mr-auto " role="navigation">
+                  <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                    <li><a href="SignUp.html" class="nav-link">Become a Partner</a></li>
+                    <li>
+                      <li><a href="FAQs.html" class="nav-link">FAQs</a></li>
+                    <li>
+                     <li class=" dropdown">
+                        <a class="nav-link " href="#" id="navbarDropdownMenuLink78" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="flag-icon flag-icon-gb"></span> <i class="fa fa-angle-down"></i></a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink78"> 
+                              <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-gb"></span> English</a> 
+                              <a class="dropdown-item" href=""><span class="flag-icon flag-icon-bh"></span> Arabic</a>
+                          </div>
+                    </li>
+                  </ul>
+                </nav>  
+              </div>
+          </div>
         </div>
-        <div class="col-12">
-          <nav class="site-navigation text-right ml-auto " role="navigation">
-            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-              <li><a href="#home-section" class="nav-link">Home</a></li>
-              <li><a href="#home-section" class="nav-link">About</a></li> 
-              <li><a href="#services-section" class="nav-link">Become a partner</a></li>
-             
-            </ul>
-          </nav>
-
-        </div>
-
-        <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-black"><i class="fa fa-bars" style="color:white"></i></a></div>
-
-      </div>
-    </div>
-
   </header>
-
-    
   <div class='header-banner jumbotron' >
-    <div class="row" style="padding: 20px 200px 20px 60px">
-        <div class="col-12" >
-        <h1>Contact Us</h1>
-    </div>
-    </div>
+    <div class="row header-row" >
+        <div class="col-lg-5 col-md-5 col-xs-12 col-sm-12 mx-auto my-auto header-text">
+            <h1>Contact Us</h1>
+        </div>
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 mx-auto my-auto" style="padding: 0px;" >
+            <div class="header-box mx-auto my-auto">
+                  <img src="img/contact.png" class="header-icon mx-auto my-auto float-center"  height="200px" />
+              </div>
+        </div>
+      </div>
+  </div>
   
-</div>
 
 
 
 
-<br>
 <div class='container'>
     <div class="row">
     
@@ -78,7 +86,25 @@
     <div class="container">
       <div class="row" style="padding: 40px 0px 40px 0px;">
         <div class="col-md-6">
-          <img src="img/contact.png" />
+         <div class="row">
+           <a  class="contact-link" href="mailto:humaiz.work@gmail.com">
+          <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 contact-box mx-auto text-center">
+            <i class="fa fa-envelope contact-icon"></i>
+            <br>
+            <h2 style="line-height: 40px;margin-bottom: 0px;">Email</h2>
+            <p style="margin-top: 0px;padding-top: 0px;"> help@volo.com</p>
+           </div>
+          </a>
+          <a class="contact-link" href="tel:+923182224858">
+           <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 contact-box mx-auto  text-center"  >
+            <i class="fa fa-phone-alt contact-icon"></i>
+            <br>
+            <h2 style="line-height: 40px;margin-bottom: 0px;">Mobile</h2>
+            <p style="margin-top: 0px;padding-top: 0px;"> +9223344332</p>
+           </div>
+          </a>
+         </div>
+         
 
         </div>
         <div class="col-md-6 justify-content-center mx-auto my-auto" >
@@ -86,15 +112,15 @@
             <div class="row justify-content-center mx-auto my-auto">
         <div class="col-md-6 col-xs-12">
           <label id="error" name="error"></label>
-                             <div class="form-label-group">
-                                   <input type="text" id="name" class="form-control login-input" placeholder="Name" required autofocus>
-                                    <label for="inputName">Name</label>
-                              </div>  
+          <div class="form-label-group">
+                <input type="text" id="inputName" class="form-control login-input" placeholder="Email address" required autofocus>
+                 <label for="inputName">Name</label>
+           </div>   
         </div>
           <div class="col-md-6 col-xs-12">
             <label id="error" name="error"></label>
                              <div class="form-label-group">
-                                   <input type="text" id="inputEmail" class="form-control login-input" placeholder="Email address" required autofocus>
+                                   <input type="email" id="inputEmail" class="form-control login-input" placeholder="Email address" required autofocus>
                                     <label for="inputEmail">Email</label>
                               </div>  
           </div>
@@ -130,17 +156,17 @@
     </div>
     </div>
     <footer>
-      <div class="footer-wrap">
+      <div class="footer-wrap"  >
     
-        <div class="second_class">
-          <div class="container second_class_bdr">
+        <div class="second_class" >
+          <div class="container-fluid" >
           <div class="row">
-            <div class="col-md-12 col-sm-6 my-auto">
+            <div class="col-md-4 col-sm-6 my-auto">
     
-              <div class="footer-logo text-center"><img src="img/logo.png" width="200px" alt="logo">
+              <div class="footer-logo text-center my-auto"><img src="img/logo.png" width="200px" alt="logo">
               </div>
             </div>
-            <div class="col-md-12 mx-auto text-center">
+            <div class="col-md-4 mx-auto my-auto text-center">
               <ul class="nav nav-footer justify-content-center">
                   <li class="nav-item">
                     <a class="nav-link" href="#">Home</a>
@@ -151,21 +177,17 @@
                   <li class="nav-item">
                       <a class="nav-link" href="#">Patner Portal</a>
                     </li>
+                
                   <li class="nav-item">
-                    <a class="nav-link" href="http://127.0.0.1:5500/privacyPolicy.html">Privacy Policy</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="http://127.0.0.1:5500/Terms.html">Terms and Conditions</a>
-                    </li>
-                  <li class="nav-item">
-                    <a class="nav-link " href="#">Contact Us</a>
+                    <a class="nav-link " href="contactus.html">Contact Us</a>
                   </li>
                 </ul>
 
             </div>
-            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 mx-auto text-center">
-              <div class="standard_social_links mx-auto">
-                  <div>
+            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 mx-auto my-auto text-center justify-content-center" >
+              <div class="row mx-auto my-auto justify-content-center">
+                <div class="col-12"></div>
+                
                       <li class="round-btn btn-facebook"><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
   
                       </li>
@@ -182,39 +204,32 @@
   
                       </li>
                    
-                  </div>
+                  
               </div>
 
             </div>
         
             
           </div>
-          <div class="row my-auto h-100 align-items-center justify-content-center">
-              <div class="col-md-2 col-lg-2 col-xs-12 col-sm-12 justify-content-xs-center">
-                  <center><img src="img/r.png" width="180px" /></center>
-
-              </div>
-              <div class="col-md-2 col-lg-2 col-xs-12 col-sm-12 " >
-                     <center><img src="img/google.png" width="200px" /></center>
-              </div>
-              <div class="col-md-2 col-lg-2 col-xs-12 col-sm-12">
-                 <center><img src="img/gallery.png" width="220px" /></center> 
-              </div>
+          <div class="row my-auto h-100 align-items-center justify-content-center download-section" >
+                <center><img src="img/r.png" width="200px" height="60px" class="download-link" /></center>
+                <center><img src="img/google.png" width="220px" height="90px" class="download-link" /></center>
+                <center><img src="img/huawei.png" width="200px" height="60px"  class="download-link" /></center>
           </div>
           
+        </div>
         </div>
         </div>
         
-        <div class="row">
-          
-          <div class="container-fluid">
-          <div class="copyright"> Copyright 2021 | All Rights Reserved by VOLO.</div>
-          </div>
-          
-        </div>
+    </footer>  
+     <div class="copyright" > 
+            <div class="row">
+              <div class="col-md-6">
+                <a href="privacyPolicy.html" class="c_link" style="color:#ccc;">Privacy Policy</a> |  <a href="Terms.html" class="c_link" style="color:#ccc;">Terms and Conditions</a>  
+              </div>
+              <div class="col-md-6">&copy Copyright 2021 | All Rights Reserved by VOLO.</div>
       </div>
-      
-      </footer>
+ 
     
     <!--footer end-->
    

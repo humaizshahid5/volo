@@ -216,3 +216,27 @@ clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
 .header-text{
   padding:20px 0px 20px 0px;
 }
+.contact-box{
+  padding:30px 40px 20px 40px;
+  color:white;
+  background-color: #5FBD5B;
+  border-radius: 8px;
+  margin: 20px 0px 20px 0px;
+  width: 90%;
+}
+.contact-icon{
+  font-size: 40px;
+  color:white;
+}
+a.contact-link{
+  text-decoration: none;
+  list-style: none;
+ 
+  width: 100%;
+}
+a.contact-link :visited{
+text-decoration:none;
+}
+.header-button{
+  margin-left: 20px;
+}
