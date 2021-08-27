@@ -218,15 +218,15 @@ clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 .contact-box{
   padding:30px 40px 20px 40px;
-  color:white;
-  background-color: #5FBD5B;
+  color:#6595CE;
+  background-color:#F7F7F7;
   border-radius: 8px;
   margin: 20px 0px 20px 0px;
   width: 90%;
 }
 .contact-icon{
   font-size: 40px;
-  color:white;
+  color:#6595CE;
 }
 a.contact-link{
   text-decoration: none;
