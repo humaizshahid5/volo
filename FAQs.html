@@ -109,7 +109,7 @@
                             <div class="float-right">
                                 <i class="fa fa-angle-down"></i>
                             </div>
-                      </a>
+                      
                       </div>
                     </a>
                       <div id="collapse2" class="collapse accordion-body" data-parent="#accordion">
@@ -430,7 +430,7 @@
                     </li>
                 
                   <li class="nav-item">
-                    <a class="nav-link " href="ContactUs.html">Contact Us</a>
+                    <a class="nav-link " href="contactus.html">Contact Us</a>
                   </li>
                 </ul>
 
@@ -494,9 +494,22 @@
      <script src="js/main.js"></script>
      <script>
       $('.card-header').click(function() {
-          $(this).find('i').toggleClass('fas fa-angle-down fas fa-angle-up');
-      });
-      </script>
+        $(this).find('i').toggleClass('fas fa-angle-down fas fa-angle-up');
+    });
+    $(document).ready(function(){
+      //Add a minus icon to the collapse element that is open by default
+        $('.collapse.show').each(function(){
+        $(this).parent().find(".fa").removeClass("fa-angle-down").addClass("fa-angle-up");
+        });
+          
+      //Toggle plus/minus icon on show/hide of collapse element
+      $('.collapse').on('shown.bs.collapse', function(){
+        $(this).parent().find(".fa").removeClass("fa-angle-down").addClass("fa-angle-up");
+      }).on('hidden.bs.collapse', function(){
+        $(this).parent().find(".fa").removeClass("fa-angle-up").addClass("fa-angle-down");
+      });       
+    });
+  </script>
 
 </body>
 
