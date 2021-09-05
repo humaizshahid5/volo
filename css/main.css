@@ -265,3 +265,9 @@ margin-right: 0.75em;
 .contact-person:after {
 margin-left: 0.75em;
 }
+.card-link > .card-header{
+  color:black;
+}
+.card-body{
+  color:#63676A;
+}
