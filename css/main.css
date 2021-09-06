@@ -19,11 +19,21 @@ body,html{
    background-attachment: fixed;
    background-size: cover;
 }
-.layer{
-    height: 100%;
-    width: 100%;
-
+.signup-page{
+  background-image: 
+  /* top, transparent red */
+  linear-gradient(
+      rgba(0, 0, 0, 0.70),
+      rgba(0, 0, 0, 0.70)
+  ),
+  /* your image */
+  url('../img/signup_bg.jpg');
+ 
+ background-attachment: fixed;
+ background-size: cover;
 }
+
+
 
 .login-box{
    padding-top:30px;
@@ -45,7 +55,17 @@ body,html{
     
 }
 .contact-btn{
-  background-color: #FFCC01;color:white
+  background-color: #FFCC01;
+  color:black;
+
+}
+.btn-signin{
+  background-color: transparent;
+  border:1px solid #FFCC01;
+  color:white;
+}
+.btn-signin:hover{
+  color:#FDCC02;
 }
 .login-icon{
    
@@ -91,6 +111,7 @@ body,html{
    background-color:#FFCC01;
    border:0px;
    height: 40px;
+   color:black
 }
 .login-btn:hover{
     background-color:#BCC535;
@@ -216,6 +237,7 @@ clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%);
  padding-top: 10px;
 }
 .header-text{
+  color: black;
   padding:20px 0px 20px 0px;
 }
 .contact-box{
@@ -267,6 +289,9 @@ margin-left: 0.75em;
 }
 .card-link > .card-header{
   color:black;
+}
+.card-link >.card-header:hover{
+  color:#FFCC01;
 }
 .card-body{
   color:#63676A;
