@@ -3,3 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/mamoonaamir1/public_html/humaizshahid.com
     - /bin/cp -R * $DEPLOYPATH
+    e
