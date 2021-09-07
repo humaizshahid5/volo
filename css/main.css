@@ -35,11 +35,12 @@ body,html{
 
 .signup-nav{
   width: 50%;
-
+   text-align: center;
   margin-top: 10px;
 }
-.signup-nav .nav-tabs .nav-link.active {
- background-color: #FFCC01;
+.signup-nav > .nav-link.active {
+ background-color: #FDCC02;
+ color:black;
 }
 .s-link{
   color:black;
