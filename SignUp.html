@@ -16,14 +16,14 @@
 </head>
 <body >
   <div class="signup-page">
-  <div class="container-fluid ">
+  <div class="container-fluid " >
   <div class="row" style="padding:15px;">
     <div class="col-5" style="background-color: black;">
       <a href="index.html">
-      <img src="img/logo.png" width="150px" />
+      <img src="img/logo.png" width="120px" />
       </a>
     </div>
-    <div class="col-6 mx-auto my-auto">
+    <div class="col-7 mx-auto my-auto">
       <nav class="site-navigation float-right ">
       <ul class="nav justify-content-right ">
       <li class=" dropdown">
@@ -35,7 +35,7 @@
     </li>
   
    <li class="nav-item">
-    <a href="PSignIn.html" class="btn btn-md  btn-signin">Sign In</a>
+    <a href="PSignIn.html" class="btn btn-md  btn-signin">Patner Poral</a>
     </li>
   </ul>
   </nav>
@@ -43,12 +43,12 @@
   </div>
   </div>
   </div>
-    <div class="container h-100 login-body">
-        <div class="row h-100 justify-content-center align-items-center">
+    <div class="container  mx-auto mx-auto">
+        <div class="row signup-body justify-content-center align-items-center">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 logo-s" >
             <center>
-              <h1 style="color:#FDCA31;font-size: 50px;">
-               Re-creating online Marketplace Experience
+              <h1 style="color:#FDCA31;font-size: 40px;">
+                All with a tap.
                </h1>
                <br>
               
@@ -57,7 +57,7 @@
             </center>
              
              </div>
-              <div class="col-lg-4 col-md-6 col-sm-8 col-xs-8 mx-auto login-box" >
+              <div class="col-lg-4 col-md-6 col-sm-8 col-xs-8 mx-auto signup-box" >
                 <form id="LoginForm" onsubmit="return false">
                 <div class="row">
                  
@@ -71,95 +71,116 @@
                       </div>
                       <h3 class="text-center login-txt">Sign Up</h3>
                     </div>
-                  <div class="row">
-                    <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
-                      <p class="contact-person">Store Details</p>
-                      </div>
-                      <div class="col-12 ">
-                        <label id="error" name="error"></label>
-                             <div class="form-label-group">
-                                   <input type="text" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Store Name</label>
-                                  </div>
-                         
-                      </div>
-                      <div class="col-12 ">
-                        <div class="form-label-group">
-                       <input type="text" id="inputCity" class="form-control login-input" placeholder="City" required>
-                        <label for="inputcity">City</label>
-                        </div>
-                          </div>
-                      <div class="col-12 ">
-                        <div class="form-label-group">
-                          <select id="country" name="country" class="form-control login-input">
-                            <option value="bahrain">Bahrain</option>
-                            <option value="saudi">Saudi Arabia</option>
-                            <option value="kuwait">Kuwait</option>
-                            <option value="uae">UAE</option>
-                            <option value="oman">Oman</option>
-                            <option value="qatar">Qatar</option>
-                        </select>
-                      
-                        </div>
-                          </div>
-                      <div class="col-md-12">
-                        
-                          <select id="etype" name="etype" class="form-control login-input">
-                            <option value="">Store Type</option>
-                              <option value="restaurant">Restaurant</option>
-                              <option value="grocery">Grocery Store</option>
-                              <option value="flowers">Florist</option>
-                              <option value="pet">Pet Store</option>
-                              <option value="supplement">Supplement Store</option>
-                              <option value="beauty">Beauty Store</option>
-                              <option value="electronics">Electronics</option>
-                              <option value="perfumes">Fragrance Store</option>
-                          </select>
-                      </div>
-                      <div class="col-12">
-                      <p class="contact-person">Person of Contact</p>
-                      </div>
-                      <div class="col-12 ">
-                        <div class="form-label-group">
-                       <input type="text" id="inputPosition" class="form-control login-input" placeholder="Position" required autofocus>
-                        <label for="inputPosition">Position</label>
-                        </div>
-                          </div>
-                      
-                        
-                      <div class="col-12 ">
-                        <div class="form-label-group">
-                       <input type="text" id="inputName" class="form-control login-input" placeholder="Name" required autofocus>
-                        <label for="inputName">Name</label>
-                        </div>
-                          </div>
-                      
-                      <div class="col-12 ">
-                        <div class="form-label-group">
-                       <input type="text" id="inputEmail" class="form-control login-input" placeholder="Email" requiredn autofocus>
-                        <label for="inputEmail">Email</label>
-                        </div>
-                          </div>
-                          <div class="col-12">
-                            <div class="row">
-                            <div class="col-4" style="padding-right:0px;">
-                            <select id="pccode" name="pccode" class="form-control login-input">
-                                <option value="+973">+973</option>
-                                <option value="+966">+966</option>
-                                <option value="+965">+965</option>
-                                <option value="+971">+971</option>
-                                <option value="+968">+968</option>
-                                <option value="+974">+974</option>
-                            </select>
-                          </div>
-                          <div class="col-8">
-                            <div class="form-label-group">
-                            <input type="phone" id="inputPhone" class="form-control login-input" placeholder="Email" required autofocus>
-                            <label for="inputPhone">Phone</label>
+                    <div class="container" style="width: 100%;margin: 0px; padding:0px;">
+                  
+                      <!-- Nav tabs -->
+                      <ul class="nav nav-tabs">
+                        <li class="nav-item signup-nav">
+                          <a class="nav-link s-link active" data-toggle="tab" href="#store">Store Details</a>
+                        </li>
+                        <li class="nav-item signup-nav">
+                          <a class="nav-link s-link" data-toggle="tab" href="#person">Contact Person</a>
+                        </li>
+                       
+                      </ul>
+                    
+                      <!-- Tab panes -->
+                      <div class="tab-content" style="width: 100%;margin:0px;">
+                        <div id="store" class="tab-pane active"><br>
+                          
+                            <div class="col-12 ">
+                            
+                                   <div class="form-label-group">
+                                         <input type="text" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                          <label for="inputStorename">Store Name</label>
+                                        </div>
+                               
                             </div>
-                          </div>
+                            <div class="col-12 ">
+                              <div class="form-label-group">
+                             <input type="text" id="inputCity" class="form-control login-input" placeholder="City" required>
+                              <label for="inputcity">City</label>
+                              </div>
+                                </div>
+                            <div class="col-12 ">
+                              <div class="form-label-group">
+                                <select id="country" name="country" class="form-control login-input">
+                                  <option value="bahrain">Bahrain</option>
+                                  <option value="saudi">Saudi Arabia</option>
+                                  <option value="kuwait">Kuwait</option>
+                                  <option value="uae">UAE</option>
+                                  <option value="oman">Oman</option>
+                                  <option value="qatar">Qatar</option>
+                              </select>
+                            
+                              </div>
+                                </div>
+                            <div class="col-md-12">
+                              
+                                <select id="etype" name="etype" class="form-control login-input">
+                                  <option value="">Store Type</option>
+                                    <option value="restaurant">Restaurant</option>
+                                    <option value="grocery">Grocery Store</option>
+                                    <option value="flowers">Florist</option>
+                                    <option value="pet">Pet Store</option>
+                                    <option value="supplement">Supplement Store</option>
+                                    <option value="beauty">Beauty Store</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="perfumes">Fragrance Store</option>
+                                </select>
+                            </div>
                         </div>
+                        <div id="person" class=" tab-pane fade"><br>
+                        
+                            <div class="col-12 ">
+                              <div class="form-label-group">
+                             <input type="text" id="inputPosition" class="form-control login-input" placeholder="Position" required autofocus>
+                              <label for="inputPosition">Position</label>
+                              </div>
+                                </div>
+                            
+                              
+                            <div class="col-12 ">
+                              <div class="form-label-group">
+                             <input type="text" id="inputName" class="form-control login-input" placeholder="Name" required autofocus>
+                              <label for="inputName">Name</label>
+                              </div>
+                                </div>
+                            
+                            <div class="col-12 ">
+                              <div class="form-label-group">
+                             <input type="text" id="inputEmail" class="form-control login-input" placeholder="Email" requiredn autofocus>
+                              <label for="inputEmail">Email</label>
+                              </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="row">
+                                  <div class="col-4" style="padding-right:0px;">
+                                  <select id="pccode" name="pccode" class="form-control login-input">
+                                      <option value="+973">+973</option>
+                                      <option value="+966">+966</option>
+                                      <option value="+965">+965</option>
+                                      <option value="+971">+971</option>
+                                      <option value="+968">+968</option>
+                                      <option value="+974">+974</option>
+                                  </select>
+                                </div>
+                                <div class="col-8">
+                                  <div class="form-label-group">
+                                  <input type="phone" id="inputPhone" class="form-control login-input" placeholder="Email" required autofocus>
+                                  <label for="inputPhone">Phone</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                      
                       </div>
+                    </div>
+                    
+                  <div class="row">
+                   
+                    
                           
                          
                            
