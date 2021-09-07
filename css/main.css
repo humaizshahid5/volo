@@ -28,17 +28,22 @@ body,html{
   ),
   /* your image */
   url('../img/signup_bg.jpg');
-  height: 100%;
+  min-height: 100%;
  background-attachment: fixed;
  background-size: cover;
 }
 
 .signup-nav{
- padding: 0px 10px 0px 10px ;
+  width: 50%;
+
   margin-top: 10px;
+}
+.signup-nav .nav-tabs .nav-link.active {
+ background-color: #FFCC01;
 }
 .s-link{
   color:black;
+  
 }
 .s-link:hover{
   color:#FFCC01;
@@ -69,6 +74,7 @@ body,html{
   -webkit-box-shadow: -1px 2px 10px -3px rgba(0,0,0,0.45);
   -moz-box-shadow: -1px 2px 10px -3px rgba(0,0,0,0.45);
 }
+
 .login-circle{
    
     height: 100px;
