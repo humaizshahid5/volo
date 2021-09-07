@@ -101,5 +101,7 @@ margin-bottom: 10px;
 }
 }
 .footer-logo{
-  border-radius: 30px;
+  width: 40%;
+  background-color:#FDCD0A ;
+  border-radius: 20px;
 }
