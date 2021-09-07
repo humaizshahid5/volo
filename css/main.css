@@ -52,7 +52,8 @@ body,html{
 .login-box{
    padding-top:30px;
   width: 80%;
-   
+  padding-left: 30px;
+  padding-right: 30px;
    padding-bottom:30px;
    border-radius: 8px;
    background-color: white;
@@ -65,6 +66,8 @@ body,html{
  margin-bottom: 30px;
 }
 .signup-box{
+  padding-left: 50px;
+  padding-right: 50px;
   padding-top:30px;
  width: 90%;
  margin-bottom: 50px;
@@ -122,9 +125,12 @@ body,html{
    margin-top: 20px;
     font-family: 'Merriweather', serif;
 }
+
 .login-input{
-    padding: 10px;
+  
+    
     height: 50px;
+   
     margin-bottom: 10px;
 }
 
