@@ -305,6 +305,7 @@ text-decoration:none;
 }
 
 .contact-person{
+  padding:10px 0px 10px 0px;
   position: relative;
   font-size: 20px;
   z-index: 1;
@@ -334,4 +335,20 @@ margin-left: 0.75em;
 }
 .card-body{
   color:#63676A;
+}
+.icon-circle{
+  background-color:#FDCC02; height: 100px;width: 100px;border-radius: 50%;padding: 20px;margin: 0px 0px 10px 0px;
+}
+.c-header{
+  font-size: 18px;
+  font-weight: bold;
+  
+  margin: 20px 0px 0px 0px;
+}
+.info-text{
+  color:rgb(83, 81, 81);
+}
+.c-box{
+  padding: 10px 0px 10px 0px;
+  margin: 20px 0px 20px 0px;
 }
