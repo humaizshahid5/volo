@@ -101,7 +101,8 @@ margin-bottom: 10px;
 }
 }
 .footer-logo{
-  width: 40%;
+  width:150px;
+  height:150px ;
   background-color:#FDCD0A ;
   border-radius: 20px;
 }
