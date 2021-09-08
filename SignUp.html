@@ -1,349 +1,588 @@
-
-
 <!DOCTYPE HTML>
 <html>
-<head>
-  <title>Partner Sign In</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-  <link href="css/main.css" rel="stylesheet" type="text/css" />
-  <link href="css/header.css" rel="stylesheet" type="text/css" />
-  <link href="css/footer.css" rel="stylesheet" type="text/css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-   <script src="https://kit.fontawesome.com/e1e1ec4870.js" crossorigin="anonymous"></script>
-   
-</head>
-<body >
-  <div class="signup-page">
-  <div class="container-fluid " >
-  <div class="row" style="padding:15px;">
-    <div class="col-5">
-      <a href="index.html">
-      <img src="img/logo.png" width="120px" />
-      </a>
-    </div>
-    <div class="col-7 mx-auto my-auto">
-      <nav class="site-navigation float-right ">
-      <ul class="nav justify-content-right ">
-      <li class=" dropdown">
-        <a class="nav-link " href="#" id="navbarDropdownMenuLink78" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="flag-icon flag-icon-gb"></span> </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink78"> 
-              <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-gb"></span> English</a> 
-              <a class="dropdown-item" href=""><span class="flag-icon flag-icon-bh"></span> Arabic</a>
-          </div>
-    </li>
-  
-   <li class="nav-item">
-    <a href="PSignIn.html" class="btn btn-md  btn-signin">Patner Poral</a>
-    </li>
-  </ul>
-  </nav>
-
-  </div>
-  </div>
-  </div>
-    <div class="container  mx-auto mx-auto">
-        <div class="row signup-body justify-content-center align-items-center">
-          
-              <div class="col-lg-8 col-md-6 col-sm-8 col-xs-8 mx-auto signup-box" >
-                <form id="LoginForm" onsubmit="return false">
-                <div class="row">
-                 
-                  <div class="col-lg-12 col-md-10 col-sm-10 col-xs-8 mx-auto"  >
-                    <div class="col-12 mx-auto">
-                      <div class="login-circle mx-auto" >
-                      <center>
-                       <img src="img/icon.png" class="img-fluid" />
-                       </center>
-                     
-                      </div>
-                      <h3 class="text-center login-txt">Sign Up</h3>
-                      
-                    </div>
-                    </div>
-                         <div class="col-md-6" style="margin:0px;padding:0px;">
-                          <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
-                            <p class="contact-person">Store Details</p>
-                            <br>
-                            </div>
-                              <div class="col-12 ">
-                              
-                                    <div class="form-label-group">
-                                          <input type="text" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                            <label for="inputStorename">Store Name</label>
-                                          </div>
-                                
+   <head>
+      <title>Partner Sign In</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+      <link href="css/main.css" rel="stylesheet" type="text/css" />
+      <link href="css/header.css" rel="stylesheet" type="text/css" />
+      <link href="css/footer.css" rel="stylesheet" type="text/css" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://kit.fontawesome.com/e1e1ec4870.js" crossorigin="anonymous"></script>
+   </head>
+   <body >
+      <div class="signup-page">
+         <div class="container-fluid " >
+            <div class="row" style="padding:15px;">
+               <div class="col-5">
+                  <a href="index.html">
+                  <img src="img/logo.png" width="120px" />
+                  </a>
+               </div>
+               <div class="col-7 mx-auto my-auto">
+                  <nav class="site-navigation float-right ">
+                     <ul class="nav justify-content-right ">
+                        <li class=" dropdown">
+                           <a class="nav-link " href="#" id="navbarDropdownMenuLink78" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="flag-icon flag-icon-gb"></span> </a>
+                           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink78"> 
+                              <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-gb"></span> English</a> 
+                              <a class="dropdown-item" href=""><span class="flag-icon flag-icon-bh"></span> Arabic</a>
+                           </div>
+                        </li>
+                        <li class="nav-item">
+                           <a href="PSignIn.html" class="btn btn-md  btn-signin">Patner Poral</a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </div>
+         <div class="container  mx-auto mx-auto">
+            <div class="row signup-body justify-content-center align-items-center">
+               <div class="col-lg-8 col-md-6 col-sm-8 col-xs-8 mx-auto signup-box" >
+                  <form id="LoginForm" onsubmit="return false">
+                     <div class="row">
+                        <div class="col-lg-12 col-md-10 col-sm-10 col-xs-8 mx-auto"  >
+                           <div class="col-12 mx-auto">
+                              <div class="login-circle mx-auto" >
+                                 <center>
+                                    <img src="img/icon.png" class="img-fluid" />
+                                 </center>
                               </div>
-                              <div class="col-12 ">
-                                <div class="form-label-group">
-                              <input type="text" id="inputCity" class="form-control login-input" placeholder="City" required autofocus>
-                                <label for="inputCity">City</label>
-                                </div>
-                                  </div>
-                              <div class="col-12 ">
-                                <div class="form-label-group">
-                                  <select id="country" name="country" class="form-control login-input">
+                              <h3 class="text-center login-txt">Sign Up</h3>
+                           </div>
+                        </div>
+                        <div class="col-md-6" style="margin:0px;padding:0px;">
+                           <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
+                              <p class="contact-person">Store Details</p>
+                              <br>
+                           </div>
+                           <div class="col-12 ">
+                              <div class="form-label-group">
+                                 <input type="text" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                 <label for="inputStorename">Store Name</label>
+                              </div>
+                           </div>
+                           <div class="col-12 ">
+                              <div class="form-label-group">
+                                 <input type="text" id="inputCity" class="form-control login-input" placeholder="City" required autofocus>
+                                 <label for="inputCity">City</label>
+                              </div>
+                           </div>
+                           <div class="col-12 ">
+                              <div class="form-label-group">
+                                 <label for="ForCountry">Country</label>
+                                 <select id="ForCountry" name="country" class="form-control login-input">
+                                    <option value=""></option>
                                     <option value="bahrain">Bahrain</option>
                                     <option value="saudi">Saudi Arabia</option>
                                     <option value="kuwait">Kuwait</option>
                                     <option value="uae">UAE</option>
                                     <option value="oman">Oman</option>
                                     <option value="qatar">Qatar</option>
-                                </select>
-                              
-                                </div>
-                                  </div>
-                              <div class="col-md-12">
-                                
-                                  <select id="etype" name="etype" class="form-control login-input">
-                                    <option value="">Store Type</option>
-                                      <option value="restaurant">Restaurant</option>
-                                      <option value="grocery">Grocery Store</option>
-                                      <option value="flowers">Florist</option>
-                                      <option value="pet">Pet Store</option>
-                                      <option value="supplement">Supplement Store</option>
-                                      <option value="beauty">Beauty Store</option>
-                                      <option value="electronics">Electronics</option>
-                                      <option value="perfumes">Fragrance Store</option>
-                                  </select>
+                                 </select>
                               </div>
-                          </div>
-                        
-                            <div class="col-md-6" style="margin:0px;padding:0px;">
-                              <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
-                                <p class="contact-person">Person of Contact</p>
-                                <br>
-                                </div>
-                            <div class="col-12 ">
+                           </div>
+                           <div class="col-md-12">
                               <div class="form-label-group">
-                             <input type="text" id="inputPosition" class="form-control login-input" placeholder="Position" required autofocus>
-                              <label for="inputPosition">Position</label>
+                                 <label for="ForStoreType">State</label>
+                                 <select id="ForStoreType" class="form-control" >
+                                    <option value=""></option>
+                                    <option value="restaurant">Restaurant</option>
+                                    <option value="grocery">Grocery Store</option>
+                                    <option value="flowers">Florist</option>
+                                    <option value="pet">Pet Store</option>
+                                    <option value="supplement">Supplement Store</option>
+                                    <option value="beauty">Beauty Store</option>
+                                    <option value="electronics">Electronics</option>
+                                    <option value="perfumes">Fragrance Store</option>
+                                 </select>
                               </div>
-                                </div>
-                            
-                              
-                            <div class="col-12 ">
-                              <div class="form-label-group">
-                             <input type="text" id="inputName" class="form-control login-input" placeholder="Name" required autofocus>
-                              <label for="inputName">Name</label>
-                              </div>
-                                </div>
-                            
-                            <div class="col-12 ">
-                              <div class="form-label-group">
-                             <input type="text" id="inputEmail" class="form-control login-input" placeholder="Email" requiredn autofocus>
-                              <label for="inputEmail">Email</label>
-                              </div>
-                                </div>
-                                <div class="col-12">
-                                  <div class="row">
-                                  <div class="col-4" style="padding-right:0px;">
-                                  <select id="pccode" name="pccode" class="form-control login-input">
-                                      <option value="+973">+973</option>
-                                      <option value="+966">+966</option>
-                                      <option value="+965">+965</option>
-                                      <option value="+971">+971</option>
-                                      <option value="+968">+968</option>
-                                      <option value="+974">+974</option>
-                                  </select>
-                                </div>
-                                <div class="col-8">
-                                  <div class="form-label-group">
-                                  <input type="phone" id="inputPhone" class="form-control login-input" placeholder="Email" required autofocus>
-                                  <label for="inputPhone">Phone</label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                       
-                    </div>
-                    </div>
-                   
-                    
-                  <div class="row">
-                   
-                    
-                          
-                         
-                           
-                         
-                          
-                        <div class="col-12"">
-                            <button type="submit" class="login-btn btn btn-info btn-block" onclick="login()">Contact Me</button>
+                           </div>
                         </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-              </div>
+                        <div class="col-md-6" style="margin:0px;padding:0px;">
+                           <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
+                              <p class="contact-person">Person of Contact</p>
+                              <br>
+                           </div>
+                           <div class="col-12 ">
+                              <div class="form-label-group">
+                                 <input type="text" id="inputPosition" class="form-control login-input" placeholder="Position" required autofocus>
+                                 <label for="inputPosition">Position</label>
+                              </div>
+                           </div>
+                           <div class="col-12 ">
+                              <div class="form-label-group">
+                                 <input type="text" id="inputName" class="form-control login-input" placeholder="Name" required autofocus>
+                                 <label for="inputName">Name</label>
+                              </div>
+                           </div>
+                           <div class="col-12 ">
+                              <div class="form-label-group">
+                                 <input type="text" id="inputEmail" class="form-control login-input" placeholder="Email" requiredn autofocus>
+                                 <label for="inputEmail">Email</label>
+                              </div>
+                           </div>
+                           <div class="col-12">
+                              <div class="row">
+                                 <div class="col-4" style="padding-right:0px;">
+                                    <div class="form-label-group">
+                                       <label for="ForCode">Code</label>
+                                       <select id="ForCode" name="pccode" class="form-control login-input">
+                                          <option value=""></option>
+                                          <option value="+973">+973</option>
+                                          <option value="+966">+966</option>
+                                          <option value="+965">+965</option>
+                                          <option value="+971">+971</option>
+                                          <option value="+968">+968</option>
+                                          <option value="+974">+974</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class="col-8">
+                                    <div class="form-label-group">
+                                       <input type="phone" id="inputPhone" class="form-control login-input" placeholder="Email" required autofocus>
+                                       <label for="inputPhone">Phone</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-12"">
+                           <button type="submit" class="login-btn btn btn-info btn-block" onclick="login()">Contact Me</button>
+                        </div>
+                     </div>
+               </div>
+            </div>
+            </form>
          </div>
-    </div>
-  </div>
-    <div class="signp-info" style="background-color: white;min-height: 300px;margin-bottom: -50px;padding:50px;">
-        <div class="container-fluid" style="padding:0px;margin:0px;">
-          <div class="row">
-            <div class="col-md-6 mx-auto my-auto" style="padding: 40px;">
-              <img src="img/signup.jpeg" class="img-fluid"  />
-
-            </div>
-            <div class="col-md-6">
-              
-              <br>
-
-             
-              <div class="col-12 c-box">
-                  <div class="row">
-                  <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12  my-auto">
-                    <div class="icon-circle mx-auto my-auto" >
-                        <img src="img/icon1.png" class="img-fluid" />
-                    </div>
-                  </div>
-                  <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12 my-auto">
-                   <h2 class="c-header">AVOIDE SERVICE WAITING TIMES AND QUEUE</h2>
-                   <p class="info-text">Simply Order Through The App On Your Smartphone At Any Time And From Anywhere</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 c-box">
-                <div class="row">
-                <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12  my-auto">
-                  <div class="icon-circle mx-auto my-auto" >
-                      <img src="img/icon2.png" class="img-fluid" />
-                  </div>
-                </div>
-                <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12 my-auto">
-                 <h2 class="c-header">BROWSE A DIGITAL MENU & CUSTOMISE ORDERS
-                 </h2>
-                 <p class="info-text">As You Ease Into The Comfort Of Your Table Flip Through The Menu On Your Phone And Make Your Choices As You Place Your Orders Without The Help Of Any Wait Staff.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 c-box">
-              <div class="row">
-              <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 my-auto">
-                <div class="icon-circle mx-auto my-auto" >
-                    <img src="img/icon4.png" class="img-fluid" />
-                </div>
-              </div>
-              <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12 my-auto">
-               <h2 class="c-header"> LEAVE WHEN YOU'RE DONE AND WITH YOUR RECEIPT SENT TO YOU
-               </h2>
-               <p class="info-text">Never Wait Again For The Bill To Arrive – Pay Through The App And Leave When You Are Done</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 c-box">
-            <div class="row">
-            <div class="col-lg-2 col-md-4 col-sm-12 col-xs-12 my-auto">
-              <div class="icon-circle mx-auto my-auto" >
-                  <img src="img/icon3.png" class="img-fluid" />
-              </div>
-            </div>
-            <div class="col-lg-8 col-md-8 col-xs-12 col-sm-12 my-auto">
-             <h2 class="c-header">MAKE YOUR PAYMENT THROUGH THE APP </h2>
-             <p class="info-text">Mobile Payment With Your Cards Can Be Executed Upon Ordering. Post-Meal Payments Can Also Be Made With Cash Or Card Upon Finishing Your Meal With A Swipe Of Your Finger.
-
-            </p>
-            </div>
-          </div>
-        </div>
-              
-            
-             </div>
-          </div>
-
-        </div>
-    </div>
-    <footer>
-      <div class="footer-wrap"  >
-    
-        <div class="second_class" >
-          <div class="container-fluid" >
-          <div class="row">
-          <div class="col-md-4 col-sm-6 my-auto">
-    
-               <div class="text-center my-auto ">
-                <div class="footer-logo my-auto mx-auto">
-                <img src="img/footer-logo.png" class="rounded" width="100px" alt="logo">
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 mx-auto my-auto text-center">
-              <ul class="nav nav-footer justify-content-center">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Patner Portal</a>
-                    </li>
-                
-                  <li class="nav-item">
-                    <a class="nav-link " href="ContactUs.html">Contact Us</a>
-                  </li>
-                </ul>
-
-            </div>
-            <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 mx-auto my-auto text-center justify-content-center" >
-              <div class="row mx-auto my-auto justify-content-center">
-                <div class="col-12"></div>
-                
-                      <li class="round-btn btn-facebook"><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-  
-                      </li>
-                      <li class="round-btn btn-linkedin"><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-  
-                      </li>
-                      <li class="round-btn btn-twitter"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-  
-                      </li>
-                      <li class="round-btn btn-instagram"><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-  
-                      </li>
-                      <li class="round-btn btn-tiktok"><a href="#"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
-  
-                      </li>
-                   
-                  
-              </div>
-
-            </div>
-        
-            
-          </div>
-          <div class="row my-auto h-100 align-items-center justify-content-center download-section" >
-                <center><img src="img/r.png" width="200px" height="60px" class="download-link" /></center>
-                <center><img src="img/google.png" width="220px" height="90px" class="download-link" /></center>
-                <center><img src="img/huawei.png" width="200px" height="60px"  class="download-link" /></center>
-          </div>
-          
-        </div>
-        </div>
-        </div>
-        
-    </footer>  
-    <div class="copyright container-fluid" > 
-            <div class="row">
-              <div class="col-md-6">
-                <a href="privacyPolicy.html" class="c_link" style="color:#ccc;">Privacy Policy</a> |  <a href="Terms.html" class="c_link" style="color:#ccc;">Terms and Conditions</a>  
-              </div>
-              <div class="col-md-6">&copy Copyright 2021 | All Rights Reserved by VOLO.</div>
       </div>
- 
-    
-    <!--footer end-->
-   
-      
+      </div>
+      </div>
+      <div class="signp-info" style="background-color: white;min-height: 300px;margin-bottom: -50px;padding:50px;">
+         <div class="container-fluid" style="padding:0px;margin:0px;">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="col-12 c-box">
+                     <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12  my-auto">
+                           <div class="icon-circle mx-auto my-auto" >
+                              <img src="img/icon1.png" class="img-fluid" />
+                           </div>
+                        </div>
+                        <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                           <h2 class="c-header">Analytics</h2>
+                           <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                        </div>
+                     </div>
+                     <div class="col-12 c-box">
+                        <div class="row">
+                           <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12  my-auto">
+                              <div class="icon-circle mx-auto my-auto" >
+                                 <img src="img/icon2.png" class="img-fluid" />
+                              </div>
+                           </div>
+                           <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                              <h2 class="c-header">Menu Management
+                              </h2>
+                              <p class="info-text">Proin augue ipsum, vulputate sit amet sodales at, ultricies eget nisl. Nulla ornare, metus vitae sodales molestie, ante ipsum mattis lacus, </p>
+                           </div>
+                        </div>
+                        <div class="col-12 c-box">
+                           <div class="row">
+                              <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-auto">
+                                 <div class="icon-circle mx-auto my-auto" >
+                                    <img src="img/icon4.png" class="img-fluid" />
+                                 </div>
+                              </div>
+                              <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                                 <h2 class="c-header">Promotions
+                                 </h2>
+                                 <p class="info-text">Donec volutpat convallis orci, nec tincidunt nisl convallis ac. Praesent at rhoncus lorem, vitae mattis lectus. Vestibulum scelerisque metus vel risus convallis</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 c-box">
+                           <div class="row">
+                              <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-auto">
+                                 <div class="icon-circle mx-auto my-auto" >
+                                    <img src="img/icon3.png" class="img-fluid" />
+                                 </div>
+                              </div>
+                              <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                                 <h2 class="c-header">Endless Reach </h2>
+                                 <p class="info-text">Nam rutrum nunc sit amet fringilla porta. Fusce faucibus elit orci, sit amet tristique dolor mollis id.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4 mx-auto my-auto" >
+                  <img src="img/signup.jpeg" class="img-fluid"  />
+               </div>
+               <div class="col-md-4">
+                  <div class="col-12 c-box">
+                     <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-auto">
+                           <div class="icon-circle mx-auto my-auto" >
+                              <img src="img/icon3.png" class="img-fluid" />
+                           </div>
+                        </div>
+                        <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                           <h2 class="c-header">Online Presence</h2>
+                           <p class="info-text">Aenean id risus maximus, molestie massa nec, vestibulum neque. Aliquam auctor in arcu at vehicula. 
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 c-box">
+                     <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-auto">
+                           <div class="icon-circle mx-auto my-auto" >
+                              <img src="img/icon3.png" class="img-fluid" />
+                           </div>
+                        </div>
+                        <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                           <h2 class="c-header">Accurate Ordering</h2>
+                           <p class="info-text">Nam venenatis dolor in erat fringilla, et consequat lectus ultricies. 
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 c-box">
+                     <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-auto">
+                           <div class="icon-circle mx-auto my-auto" >
+                              <img src="img/icon3.png" class="img-fluid" />
+                           </div>
+                        </div>
+                        <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                           <h2 class="c-header">Free Marketing</h2>
+                           <p class="info-text">Mauris est mauris, tincidunt a orci in, imperdiet convallis odio. Maecenas nisl urna, interdum a interdum gravida, laoreet tempus risus. Donec vel nisi hendreri.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12 c-box">
+                     <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-auto">
+                           <div class="icon-circle mx-auto my-auto" >
+                              <img src="img/icon3.png" class="img-fluid" />
+                           </div>
+                        </div>
+                        <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                           <h2 class="c-header">Be Heard</h2>
+                           <p class="info-text">Nam rutrum nunc sit amet fringilla porta. Fusce faucibus elit orci, sit amet tristique dolor mollis id. 
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <footer>
+         <div class="footer-wrap"  >
+            <div class="second_class" >
+               <div class="container-fluid" >
+                  <div class="row">
+                     <div class="col-md-4 col-sm-6 my-auto">
+                        <div class="text-center my-auto ">
+                           <div class="footer-logo my-auto mx-auto">
+                              <img src="img/footer-logo.png" class="rounded" width="100px" alt="logo">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4 mx-auto my-auto text-center">
+                        <ul class="nav nav-footer justify-content-center">
+                           <li class="nav-item">
+                              <a class="nav-link" href="#">Home</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#">About</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#">Patner Portal</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link " href="ContactUs.html">Contact Us</a>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 mx-auto my-auto text-center justify-content-center" >
+                        <div class="row mx-auto my-auto justify-content-center">
+                           <div class="col-12"></div>
+                           <li class="round-btn btn-facebook"><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                           </li>
+                           <li class="round-btn btn-linkedin"><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                           </li>
+                           <li class="round-btn btn-twitter"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                           </li>
+                           <li class="round-btn btn-instagram"><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                           </li>
+                           <li class="round-btn btn-tiktok"><a href="#"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+                           </li>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row my-auto h-100 align-items-center justify-content-center download-section" >
+                     <center><img src="img/r.png" width="200px" height="60px" class="download-link" /></center>
+                     <center><img src="img/google.png" width="220px" height="90px" class="download-link" /></center>
+                     <center><img src="img/huawei.png" width="200px" height="60px"  class="download-link" /></center>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <div class="copyright container-fluid" >
+      <div class="row">
+         <div class="col-md-6">
+            <a href="privacyPolicy.html" class="c_link" style="color:#ccc;">Privacy Policy</a> |  <a href="Terms.html" class="c_link" style="color:#ccc;">Terms and Conditions</a>  
+         </div>
+         <div class="col-md-6">&copy Copyright 2021 | All Rights Reserved by VOLO.</div>
+      </div>
+      <!--footer end-->
       <!-- Font Awesome 5 links-->
-   <script src="https://kit.fontawesome.com/fddf5c0916.js" crossorigin="anonymous"></script>
-   <script src="js/jquery-3.3.1.min.js"></script>
-   <script src="js/popper.min.js"></script>
-   <script src="js/bootstrap.min.js"></script>
-   <script src="js/jquery.sticky.js"></script>
-   <script src="js/main.js"></script>
-
-</body>    
+      <script src="https://kit.fontawesome.com/fddf5c0916.js" crossorigin="anonymous"></script>
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.sticky.js"></script>
+      <script src="js/main.js"></script>
+      <script>
+         /** GLOBAL OBJECT **/
+         var $ = {
+         addClass      : function( elem, name ){
+         var classes = elem.className.split( ' ' ),
+         cIndex  = classes.indexOf( name );
+         if( cIndex === -1 ){
+         classes.push( name );
+         }
+         elem.className = classes.join( ' ' );
+         return this;
+         },	// END addClass
+         
+         removeClass   : function( elem, name ){
+         var classes = elem.className.split( ' ' ),
+         cIndex  = undefined;
+         function recursive(){
+         // use a recursive function to remove all instances
+         // of the class name
+         cIndex = classes.indexOf( name );
+         if( cIndex >= 0 ){
+         classes.splice( cIndex, 1 );
+         recursive();
+         }
+         }
+         recursive();
+         elem.className = classes.join( ' ' );
+         return this;
+         },	// END removeClass
+         
+         hasClass      : function( elem, name ){
+         var classes = elem.className.split( ' ' ),
+         cIndex  = classes.indexOf( name );
+         if( cIndex >= 0 ){
+         return true;
+         }else{
+         return false;
+         }
+         }, 	// END hasClass
+         
+         selectCreate : function( select, label ){
+         
+         var _this = this;
+         id    = '_' + select.id,
+         input = document.createElement( 'input' ),
+         div   = document.createElement( 'div' ),
+         ul    = document.createElement( 'ul' ),
+         val   = { value : select.value ,
+           text  : select.options[select.selectedIndex].text };
+         
+         select.style.display = 'none';
+         
+         ul.id = 'ul' + id;
+         ul.className = 'ddown-list';
+         ul.setAttribute( 'aria-live', 'polite' );
+         
+         input.setAttribute( 'type', 'text' );
+         input.setAttribute( 'aria-autocomplete', 'list' );
+         input.setAttribute( 'aria-haspopup', 'true' );
+         input.setAttribute( 'aria-owns', ul.id );
+         input.className = 'dynamic-dropdown';
+         input.id = id;
+         
+         if( select.getAttribute( 'data-required' ) === 'true' ){
+         input.setAttribute( 'required', 'true' );
+         }
+         
+         label.setAttribute( 'for', id );
+         
+         div.className = 'selectRegion';
+         
+         div.appendChild( label );
+         div.appendChild( input );
+         div.appendChild(   ul  );
+         
+         select.parentNode.insertBefore( div, select );
+         
+         input.value = val.text;
+         
+         if( input.value !== '' ){
+         this.addClass( label, 'active'   );
+         }else{
+         this.addClass( label, 'inactive' );
+         }
+         
+         input.addEventListener( 'focus', function(){
+         _this.addClass(    label, 'active'     )
+         .addClass(    label, 'transition' )
+         .removeClass( label, 'inactive'   );
+         if( this.setSelectionRange ){
+         this.setSelectionRange(0, this.value.length);
+         }
+         populateList(  this, select, document.getElementById( 'ul' + this.id ), -1, true );
+         });	// END focus
+         input.addEventListener( 'blur', function(){
+         var input = this;
+         setTimeout( function(){
+         if( input.value === '' ){
+         _this.addClass(    label, 'inactive'   )
+         	 .addClass(    label, 'transition' )
+         	 .removeClass( label, 'active'     );
+         }else{
+         var list     = getList( input.value, select, false );
+         select.value = list.value[0];
+         input.value  = list.text[0];
+         }
+         document.getElementById( 'ul' + input.id ).innerHTML = '';
+         }, 250 );
+         });	// END blur
+         input.addEventListener( 'keyup', function(e){
+         var list  = document.getElementById( 'ul' + this.id ).getElementsByTagName( 'li' ),
+         index = -1,
+         kC    = e.keyCode;
+         for( var i=0, x=list.length; i<x; i++ ){
+         if( _this.hasClass( list[i], 'active' ) ){
+         index = i;
+         break;
+         }
+         }
+         if( kC !== 9 && kC !== 16 ){	// SHIFT && TAB	
+         if( kC === 13 ){   // ENTER
+         var list     = getList( this.value, select, false );
+         select.value = list.value[index];
+         this.value   = list.text[index];
+         document.getElementById( 'ul' + this.id ).innerHTML = '';
+         }else{
+         switch( kC ){
+         	case 38: 	// ARROW UP
+         		index--;
+         		if( index < 0 ){ index = 0; }
+         		break;
+         	case 40: 	// ARROW DOWN
+         		index++;
+         		if( index >= list.length ){ index = list.length - 1; }
+         		break;
+         	default:
+         		index = -1;
+         		break;
+         }
+         populateList(  this, select, document.getElementById( 'ul' + this.id ), index, false );
+         }
+         }
+         });	// END keyup
+         
+         function populateList( input, select, target, index, focus ){
+         var list    = getList( input.value, select, focus ),
+         counter = 0,
+         output;
+         if( focus ){
+         index = select.selectedIndex - 1;
+         }
+         target.innerHTML = '';
+         for( var i=0, x=list.value.length; i<x; i++ ){
+         output = document.createElement( 'li' );
+         if( counter === index ){
+         output.className = 'active';
+         }
+         output.appendChild( document.createTextNode( list.text[i] ) );
+         output.addEventListener( 'click', function(){
+         console.log( 'test' );
+         input.value = this.innerHTML;
+         });
+         target.appendChild( output );
+         counter++;
+         }
+         if( index >= 0 ){
+         var lis  = target.getElementsByTagName( 'li' ),
+         sTop = 0;
+         for( var i=0, x=lis.length; i<x; i++ ){
+         if( i >= index ){ break; }
+         sTop += lis[i].clientHeight;
+         }
+         target.scrollTop = sTop;
+         }
+         
+         }	// END populateList
+         
+         function getList( val, list, focus ){
+         var value   = [],
+         text    = [],
+         vLength = val.length;
+         if( focus ){ 
+         vLength = 0;
+         val     = '';
+         }
+         for( var i=0, x=list.length; i<x; i++ ){
+         if( list[i].text !== '' && 
+          ( list[i].text.toUpperCase().substring(  0, vLength ) === val.toUpperCase() ||
+         list[i].value.toUpperCase().substring( 0, vLength ) === val.toUpperCase() ) ){
+         value.push( list[i].value );
+         text.push( list[i].text  );
+         }
+         }
+         return { value: value, text: text };
+         }	// END function getList
+         
+         },	// END selectCreate()
+         
+         };	// END $
+         
+         window.onload = function(){
+         var labels = document.getElementsByTagName( 'label' ),
+         id     = '',
+         label  = undefined,
+         input  = undefined,
+         type   = undefined;
+         
+         for( var i=0, x=labels.length; i<x; i++ ){
+         label = labels[i];
+         id    = label.getAttribute( 'for' ) || '';
+         input = document.getElementById( id );
+         type  = input.getAttribute( 'type' ) || input.tagName;
+         type  = type.toLowerCase();
+         if( input && ( type === 'select' ) ){
+         $.selectCreate( input, label );
+         }// END if( input && select )
+         }// END for( labels )
+         
+         
+         }();
+         
+         var demo = function(){
+         setTimeout( function(){
+         document.getElementById('_s').focus();
+         setTimeout( function(){
+         document.getElementById('_s').blur();
+         }, 750);
+         }, 500 );
+         }();
+      </script>
+   </body>
 </html>
