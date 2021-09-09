@@ -429,3 +429,8 @@ li.active{
 			.selectRegion ul li:hover{
 				cursor: pointer;
 			}
+.choose-icon{
+  font-size: 50px;
+  text-align: center;
+  padding: 3px 6px 3px 6px;
+}
