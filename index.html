@@ -1,166 +1,825 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<head>
-<meta charset="utf-8">
+   <head>
+      <meta charset="utf-8">
+      <title>Home</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+      <link href="css/main.css" rel="stylesheet" type="text/css" />
+      <link href="css/header.css" rel="stylesheet" type="text/css" />
+      <link href="css/footer.css" rel="stylesheet" type="text/css" />
+      <script src="https://kit.fontawesome.com/e1e1ec4870.js" crossorigin="anonymous"></script>
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
 
-<title>Home</title>
-</head>
+      <script>
+          $(document).ready(function() {
+           var owl = $('#owl-carousel');
+           owl.owlCarousel({
+             items: 1,
+             loop: true,
+             margin: 10,
+             autoplay: true,
+             autoplayTimeout: 2000,
+             autoplayHoverPause: false,
+             itemsDesktop : [1199,3],
+            itemsDesktopSmall : [979,3],
+            responsive: {
+            600: {
+            items: 4
+            }
+            }
+           });
 
+         })
+         $(document).ready(function() {
+           var owl = $('#owl-carousel2');
+           owl.owlCarousel({
+             items: 1,
+             loop: true,
+             margin: 10,
+             autoplay: true,
+             autoplayTimeout: 2000,
+             autoplayHoverPause: false,
+             itemsDesktop : [1199,3],
+            itemsDesktopSmall : [979,3],
+            responsive: {
+            600: {
+            items: 3
+            }
+            }
+           });
 
-<body>
-    
-    <div id='headerDiv'>
+         })
         
-        <!--Top bar and become a partner-->
-        <ul id="UL">
-            <li><a href="SignUp.html">Become a Partner</a></li>
-        </ul>
-    
-        <button>App Store</button>
-        <button>Google Play</button>
-        <button>App Gallery</button>
-    </div>
-    
-    
-    <div id='topOffersDiv'>
-        <!--top offers div-->
-        <label>Top offers</label>
-        
-        
-        <div class="imgcontainer">
-            <label>50% OFF</label>
-            <img src="" alt="Avatar" class="avatar" id="img01">
-            <br><br>
-            <label>Partner name here</label>
-        </div>
-        
-        <div class="imgcontainer">
-            <label>BUY 1 GET 1 FREE</label>
-            <img src="" alt="Avatar" class="avatar" id="img02">
-            <br><br>
-            <label>Partner name here</label>
-        </div>
-        
-        <div class="imgcontainer">
-            <label>40% OFF</label>
-            <img src="" alt="Avatar" class="avatar" id="img03">
-            <br><br>
-            <label>Partner name here</label>
-        </div>
-    </div>
-    
-    
-    <div id='topPartnersDiv'>
-        
-        <label>Top rated partners</label>
-        
-        
-        <div class="imgcontainer">
-            <label>4.63 stars</label>
-            <img src="" alt="Avatar" class="avatar" id="pimg01">
-            <br><br>
-            <label>Partner name here</label>
-        </div>
-        
-        <div class="imgcontainer">
-            <label>4.9 stars</label>
-            <img src="" alt="Avatar" class="avatar" id="pimg02">
-            <br><br>
-            <label>Partner name here</label>
-        </div>
-        
-        <div class="imgcontainer">
-            <label>5.0 stars</label>
-            <img src="" alt="Avatar" class="avatar" id="pimg03">
-            <br><br>
-            <label>Partner name here</label>
-        </div>
-            
-        
-        
-    </div>
-    
-    
-    
-    <div>
-        
-        <!--volo description -->
-        
-        <div id='whoDiv'>
-            <label class='titleLabel'>Who are we?</label>
-            
-            <label class='infoLabel'>We're the latest online market in Bahrain, Made entirely by a dedicated Bahraini team. We pride ourselves on the fact that we kdihnasj xawjdnwk sklnjks swlknswjkns ejkcnrkvb iwsnwid ekdnekd j j kndkend ienken njn jno om dopmne knc incknd ckndc</label>
-            
-        </div>
-        
-        
-        <div id='whyDiv'>
-            <label class='titleLabel'>Who VOLO?</label>
-            
-            <label class='infoLabel'>kdihnasj xawjdnwk sklnjks swlknswjkns ejkcnrkvb iwsnwid ekdnekd j j kndkend ienken njn jno om dopmne knc incknd cknd</label>
-            
-        </div>
-        
-        <div id='howDiv'>
-            <label class='titleLabel'>How it works?</label>
-            
-            <label class='infoLabel'>kdihnasj xawjdnwk sklnjks swlknswjkns ejkcnrkvb iwsnwid ekdnekd j j kndkend ienken njn jno om dopmne knc incknd cknd</label>
-            
-        </div>
-        
-        <div id='whyPartnerDiv'>
-            <label class='titleLabel'>Why partner with us?</label>
-            
-            <label class='infoLabel'></label>
-            
-        </div>
-        
-        <div id='whyDriveDiv'>
-            <label class='titleLabel'>Why ride with us?</label>
-            
-            <label class='infoLabel'>kdihnasj xawjdnwk sklnjks swlknswjkns ejkcnrkvb iwsnwid ekdnekd j j kndkend ienken njn jno om dopmne knc incknd cknd</label>
-            
-        </div>
-        
-        
-    </div>
-    
-    
-    
-    <div id='footerDiv'>
-        <!--footer -->
-        <div id='hrefsDiv'>
-            <ul id="UL">
-                <li><a href="ContactUs.html">Contact us</a></li>
-                <li><a href="Terms.html">Terms and Conditions</a></li>
-                <li><a href="privacyPolicy.html">Privacy Policy</a></li>
-                <li><a href="FAQs.html">FAQs</a></li>
-            </ul>
-        </div>
-        
-        
-        <div id='socialMediaDiv'>
-            <ul id="UL">
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">FaceBook</a></li>
-                <li><a href="#">LinkedIn</a></li>
-            </ul>
-        </div>
-            
-    </div>
-    
-    
-    <style>
-        
-        label {
-            display: block;
-            padding: 1rem;
-        }
+       
+       
+      </script>
 
-    </style>
-    
-    
-</body>
+   </head>
+   <body>
+      </head>
+      <body style="height: 100%;">
+         <div class="site-mobile-menu site-navbar-target">
+            <div class="site-mobile-menu-header">
+               <div class="site-mobile-menu-close mt-3">
+                  <span class="fas fa-times mobile_icon js-menu-toggle"></span>
+               </div>
+            </div>
+            <div class="site-mobile-menu-body"></div>
+         </div>
+         <header class="site-navbar site-navbar-target" role="banner">
+            <div class="container">
+               <div class="row align-items-center position-relative">
+                  <div class="col-lg-4">
+                     <nav class="site-navigation text-right ml-auto " role="navigation">
+                        <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                           <li><a href="index.html" class="nav-link">Home</a></li>
+                           <li><a href="project.html" class="nav-link">About</a></li>
+                        </ul>
+                     </nav>
+                  </div>
+                  <div class="col-lg-4 text-center">
+                     <div class="site-logo">
+                        <a href="index.html"><img src="img/logo.png" width="150px" /></a>
+                     </div>
+                     <div class="ml-auto my-auto mx-auto toggle-button d-inline-block d-lg-none"><a href="#" class="mx-auto my-auto js-menu-toggle text-black"><span class="fas fa-bars mobile_icon h3 text-black"></span></a></div>
+                  </div>
+                  <div class="col-lg-4">
+                     <nav class="site-navigation text-left mr-auto " role="navigation">
+                        <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                           <li><a href="SignUp.html" class="nav-link">Become a Partner</a></li>
+                           <li>
+                           <li><a href="FAQs.html" class="nav-link">FAQs</a></li>
+                           <li>
+                           <li class=" dropdown">
+                              <a class="nav-link " href="#" id="navbarDropdownMenuLink78" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="flag-icon flag-icon-gb"></span> <i class="fa fa-angle-down"></i></a>
+                              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink78"> 
+                                 <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-gb"></span> English</a> 
+                                 <a class="dropdown-item" href=""><span class="flag-icon flag-icon-bh"></span> Arabic</a>
+                              </div>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <section class="home-top h-100">
+            <div class="container h-100 d-flex align-items-center justify-content-center " style="padding: 10px 20px 10px 20px;"  >
+               <div class="row d-flex align-items-center justify-content-center " >
+                  <div class="col-md-3 ">
+                     <p class="float-right" style="color:#FDCA31;font-size:30px;">Flight to Fly</p>
+                  </div>
+                  <div class="col-md-1">
+                     <hr style="background-color: white; width: 100%;height: 1px;">
+                  </div>
+                  <div class="col-md-3" style="padding-bottom:20px;"> 
+                     <img src="img/logo.png" class="img-fluid" />
+                  </div>
+                  <div class="col-md-1">
+                     <hr style="background-color: white; width: 100%;height: 1px;">
+                  </div>
+                  <div class="col-md-3">
+                     <p style="color:#FDCA31;font-size:30px;">To want , Desire</p>
+                  </div>
+                  <div class="col-12">
+                     <p style="color: white;"> if any of your favourite shops aren't listed, contact us
+                        through the contact us page or via live chat in our app and we’ll work on making it happen.
+                     </p>
+                  </div>
+                  <div class="col-9" >
+                     <div class="row mx-auto justify-content-center">
+                        <div class="col-md-4 mx-auto my-auto"  >
+                           <center><img src="img/apple_w.png"   /></center>
+                        </div>
+                        <div class="col-md-4 mx-auto my-auto" >
+                           <center><img src="img/google_w.png"   height="70px" /></center>
+                        </div>
+                        <div class="col-md-4 mx-auto my-auto" >
+                           <center> <img src="img/huawei.png" height="70px"  /></center>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-12">
+                     <p class="text-center" style="color:white;padding-top: 10px;">Made in <span class="flag-icon flag-icon-bh"></span></p>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section style="padding: 40px;">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-md-12">
+                     <center>
+                        <h1>Trending</h1>
+                     </center>
+                     <br>
+                  </div>
+                  <div class="col-12 justify-content-center align-items-center text-center" style="margin-top:20px;">
+                     <button class="btn btn-md btn-warning btn-active">
+                        All
+                     </button>
+                     <button class="btn btn-md btn-default btn-outline-warning btn-active btn-option">
+                        Restaurants
+                     </button>
+                     <button class="btn btn-md btn-default btn-outline-warning btn-active btn-option">
+                        Groceries
+                     </button>
+                     <button class="btn btn-md btn-default btn-outline-warning btn-active btn-option">
+                        Florists
+                     </button>
+                     <button class="btn btn-md btn-default btn-outline-warning btn-active btn-option">
+                        Pet stores
+                     </button>
+                     <button class="btn btn-md btn-default btn-outline-warning btn-active btn-option">
+                        Supplements
+                     </button>
+                     <button class="btn btn-md btn-default btn-outline-warning btn-active btn-option">
+                        Beauty
+                     </button>
+                     <button class="btn btn-md btn-default btn-outline-warning btn-active btn-option">
+                        Electronics
+                     </button>
+                     <button class="btn btn-md btn-default btn-outline-warning btn-active btn-option">
+                        Fragrance
+                     </button>
+                     <button class="btn btn-md btn-default btn-outline-warning btn-active btn-option">
+                        Stationeries
+                     </button>
+                     <button class="btn btn-md btn-default btn-outline-warning btn-active btn-option">
+                        Book
+                     </button>
+                     <button class="btn btn-md btn-default btn-outline-warning btn-active btn-option">
+                        Vape
+                     </button>
+                    
+                  </div>
+                  
+                  <div class="col-md-12"  id="page-content" style="margin-top: 20px;margin-bottom: 50px;">
+                     <div class="row">
+                        <div class="col">
+                           <div class="owl-carousel owl-theme" id="owl-carousel">
+                              <div class="item">
+                                 <div class="badge" >1</div>
+                                 <div class=" card trending-box">
+                                    <img src="img/kfc.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">KFC</h5>
+                                       <p class="card-text">Fast Food</p>
 
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                 <div class="badge" >2</div>
+                                 <div class="card trending-box">
+                                    <img src="img/mcd.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">McDonald's</h5>
+                                       <p class="card-text">Fast Food</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                 <div class="badge" >3</div>
+                                 <div class=" card trending-box">
+                                    <img src="img/sunbway.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Subway</h5>
+                                       <p class="card-text">Fast Food</p>
+                                      
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                 <div class="badge" >4</div>
+                                 <div class=" card trending-box">
+                                    <img src="img/dom.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Domino's</h5>
+                                       <p class="card-text">Fas Food</p>
+                                     
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                 <div class="badge" >5</div>
+                                 <div class=" card trending-box">
+                                    <img src="img/bk.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Burger King</h5>
+                                       <p class="card-text">Fast Food</p>
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                 <div class="badge" >6</div>
+                                 <div class=" card trending-box">
+                                    <img src="img/pizza.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Pizza Hut</h5>
+                                       <p class="card-text">Fast Food</p>
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+         </section>
+         <section class="top-patner" style="background-color: rgb(22, 20, 20);padding: 60px 40px 40px 40px;">
+            <div class="row h-100 d-flex align-items-center justify-content-center ">
+               <div class="col-md-12">
+                  <center>
+                     <h1 style="color: white;">Top Rated Partners</h1>
+                  </center>
+                  <br>
+               </div>
+               <div class="col-md-4 mx-auto">
+                 <center><img src="img/tt.png" class="img-fluid" /></center> 
+               </div>
+               <div class="col-md-8 my-auto">
+                  <div class="col-md-12 my-auto"  id="page-content" style="margin-top: 20px;margin-bottom: 100px;">
+                     <div class="row">
+                        <div class="col">
+                           <div class="owl-carousel owl-theme" id="owl-carousel2">
+                              <div class="item">
+
+                                 <div class=" card trending-box">
+                                    <img src="img/kfc.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">KFC</h5>
+                                       <p class="card-text">Fast Food</p>
+
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                 
+                                 <div class="card trending-box">
+                                    <img src="img/mcd.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">McDonald's</h5>
+                                       <p class="card-text">Fast Food</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                
+                                 <div class=" card trending-box">
+                                    <img src="img/sunbway.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Subway</h5>
+                                       <p class="card-text">Fast Food</p>
+                                      
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                 
+                                 <div class=" card trending-box">
+                                    <img src="img/dom.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Domino's</h5>
+                                       <p class="card-text">Fas Food</p>
+                                     
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                 
+                                 <div class="card trending-box">
+                                    <img src="img/bk.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Burger King</h5>
+                                       <p class="card-text">Fast Food</p>
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                
+                                 <div class=" card trending-box">
+                                    <img src="img/pizza.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Pizza Hut</h5>
+                                       <p class="card-text">Fast Food</p>
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="why" style="padding: 50px 40px 40px 40px;">
+            <div class="container">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <center>
+                  
+                     <h1>Why Volo?</h1>
+                  </center>
+                  <br>
+               </div>
+              <div class="col-md-4 why-box">
+               <div class="row">
+                 
+                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                     <div class="icon-circle mx-auto" >
+                        <center> <i class="fas fa-leaf choose-icon"></i></center>
+                      </div>
+                    <center><h2 class="why-header">Seamless Experience</h2></center>
+                     <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                  </div>
+               </div>
+               
+              </div>
+              <div class="col-md-4 why-box">
+               <div class="row">
+                 
+                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                     <div class="icon-circle mx-auto" >
+                        <center> <i class="fas fa-heart choose-icon" style="padding-top: 8px;"></i></center>
+                      </div>
+                    <center><h2 class="why-header">Exclusive Deals</h2></center>
+                     <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                  </div>
+               </div>
+               
+              </div>
+              <div class="col-md-4 why-box">
+               <div class="row">
+                 
+                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                     <div class="icon-circle mx-auto" >
+                        <center> <i class="fas fa-user choose-icon"></i></center>
+                      </div>
+                    <center><h2 class="why-header"> Do it yourself</h2></center>
+                     <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                  </div>
+               </div>
+               
+              </div>
+              
+             
+              <div class="col-md-4 why-box">
+               <div class="row">
+                 
+                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                     <div class="icon-circle mx-auto" >
+                        <center> <i class="fas fa-credit-card choose-icon" style="font-size: 45px;padding-top: 5px;"></i></center>
+                      </div>
+                    <center><h2 class="why-header">Secure
+                     Payments</h2></center>
+                     <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                  </div>
+               </div>
+               
+              </div>
+              <div class="col-md-4 why-box">
+               <div class="row">
+                 
+                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                     <div class="icon-circle mx-auto" >
+                        <center> <i class="fas fa-lock choose-icon"></i></center>
+                      </div>
+                    <center><h2 class="why-header">Data Privacy</h2></center>
+                     <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                  </div>
+               </div>
+               
+              </div>
+              <div class="col-md-4 why-box">
+               <div class="row">
+                 
+                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                     <div class="icon-circle mx-auto" >
+                        <center> <i class="fas fa-users choose-icon" style="font-size: 40px;padding-top: 8px;"></i></center>
+                      </div>
+                    <center><h2 class="why-header">Dedicated Team</h2></center>
+                     <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                  </div>
+               </div>
+               
+              </div>
+            </div>
+            
+            </div>
+            
+
+         </section>
+         <section class="howitwork" style="background-color:#FDCA31 ; min-height: 400px;padding: 50px 40px 40px 40px;">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-12 ">
+                     <center>
+                     
+                        <h1>How it Works?</h1>
+                     </center>
+                     <br>
+                  </div>
+                 <div class="col-md-4 why-box">
+                  <div class="row">
+                    
+                     <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                        <div class="icon-circle mx-auto" >
+                           <center> <i class="fas fa-truck choose-icon"></i></center>
+                         </div>
+                       <center><h2 class="why-header">Delivery</h2></center>
+                        <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                     </div>
+                  </div>
+                  
+                 </div>
+                 <div class="col-md-4 why-box">
+                  <div class="row">
+                    
+                     <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                        <div class="icon-circle mx-auto" >
+                           <center> <i class="fas fa-truck-loading choose-icon" style="padding-top: 8px;"></i></center>
+                         </div>
+                       <center><h2 class="why-header">Pickup</h2></center>
+                        <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                     </div>
+                  </div>
+                  
+                 </div>
+                 <div class="col-md-4 why-box">
+                  <div class="row">
+                    
+                     <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                        <div class="icon-circle mx-auto" >
+                           <center> <i class="fas fa-history choose-icon"></i></center>
+                         </div>
+                       <center><h2 class="why-header">Preorders</h2></center>
+                        <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                     </div>
+                  </div>
+                  
+                 </div>
+                 
+                
+                 <div class="col-md-4 why-box">
+                  <div class="row">
+                    
+                     <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                        <div class="icon-circle mx-auto" >
+                           <center> <i class="fas fa-bell choose-icon"></i></center>
+                         </div>
+                       <center><h2 class="why-header">Reservations</h2></center>
+                        <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                     </div>
+                  </div>
+                  
+                 </div>
+                 <div class="col-md-4 why-box">
+                  <div class="row">
+                    
+                     <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                        <div class="icon-circle mx-auto" >
+                           <center> <i class="fas fa-lock choose-icon"></i></center>
+                         </div>
+                       <center><h2 class="why-header">DIY</h2></center>
+                        <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                     </div>
+                  </div>
+                  
+                 </div>
+                 <div class="col-md-4 why-box">
+                  <div class="row">
+                    
+                     <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                        <div class="icon-circle mx-auto" >
+                           <center> <i class="fas fa-chart-line choose-icon" ></i></center>
+                         </div>
+                       <center><h2 class="why-header">Trending</h2></center>
+                        <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                     </div>
+                  </div>
+                  
+                 </div>
+               </div>
+               
+               </div>
+               
+
+         </section>
+         <section>
+            <div class="signp-info" style="background-color: white;min-height: 300px;margin-bottom: -50px;padding:50px;">
+               <div class="container-fluid" style="padding:0px;margin:0px;">
+                  <div class="col-md-12 ">
+                     <center>
+                     
+                        <h1>Why Partner With Us?</h1>
+                     </center>
+                     <br>
+                  </div>
+                  <div class="row">
+                     
+                    <div class="col-lg-4 col-xs-12 col-sm-12  mx-auto my-auto" >
+                      <img src="img/why_volo.png" class="img-fluid"  />
+                   </div>
+                     <div class="col-md-4 col-xs-12 col-sm-12 order-lg-first">
+                        <div class="col-12 c-box">
+                           <div class="row">
+                              <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12  my-auto">
+                                 <div class="icon-circle mx-auto my-auto" >
+                                   <center> <i class="fas fa-chart-pie choose-icon"></i></center>
+                                 </div>
+                              </div>
+                              <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                                 <h2 class="c-header">Analytics</h2>
+                                 <p class="info-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                              </div>
+                           </div>
+                           <div class="col-12 c-box">
+                              <div class="row">
+                                 <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12  my-auto">
+                                    <div class="icon-circle mx-auto my-auto" >
+                                      <center> <i class="fas fa-tasks choose-icon"></i></center>
+                                    </div>
+                                 </div>
+                                 <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                                    <h2 class="c-header">Menu Management
+                                    </h2>
+                                    <p class="info-text">Proin augue ipsum, vulputate sit amet sodales at, ultricies eget nisl. Nulla ornare, metus vitae sodales molestie, ante ipsum mattis lacus, </p>
+                                 </div>
+                              </div>
+                              <div class="col-12 c-box">
+                                 <div class="row">
+                                    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-auto">
+                                       <div class="icon-circle mx-auto my-auto" >
+                                        <center> <i class="fas fa-percentage choose-icon"></i></center>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                                       <h2 class="c-header">Promotions
+                                       </h2>
+                                       <p class="info-text">Donec volutpat convallis orci, nec tincidunt nisl convallis ac. Praesent at rhoncus lorem, vitae mattis lectus. Vestibulum scelerisque metus vel risus convallis</p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="col-12 c-box">
+                                 <div class="row">
+                                    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-auto">
+                                       <div class="icon-circle mx-auto my-auto" >
+                                        <center> <i class="fas fa-chart-line choose-icon"></i></center>
+      
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                                       <h2 class="c-header">Endless Reach </h2>
+                                       <p class="info-text">Nam rutrum nunc sit amet fringilla porta. Fusce faucibus elit orci, sit amet tristique dolor mollis id.
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                    
+                     <div class="col-md-4 col-xs-12 col-sm-12 order-md-3 order-sm-3 order-xs-3">
+                        <div class="col-12 c-box">
+                           <div class="row">
+                              <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-auto">
+                                 <div class="icon-circle mx-auto my-auto" >
+                                  <center> <i class="fas fa-globe choose-icon"></i></center>
+      
+                                 </div>
+                              </div>
+                              <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                                 <h2 class="c-header">Online Presence</h2>
+                                 <p class="info-text">Aenean id risus maximus, molestie massa nec, vestibulum neque. Aliquam auctor in arcu at vehicula. 
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 c-box">
+                           <div class="row">
+                              <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-auto">
+                                 <div class="icon-circle mx-auto my-auto" >
+                                  <center> <i class="fas fa-shopping-cart choose-icon" style="font-size: 35px;padding-top:12px;"></i></center>
+      
+                                 </div>
+                              </div>
+                              <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                                 <h2 class="c-header">Accurate Ordering</h2>
+                                 <p class="info-text">Nam venenatis dolor in erat fringilla, et consequat lectus ultricies. 
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 c-box">
+                           <div class="row">
+                              <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-auto">
+                                 <div class="icon-circle mx-auto my-auto" >
+                                  <center> <i class="fas fa-bullhorn choose-icon"></i></center>
+                                 </div>
+                              </div>
+                              <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                                 <h2 class="c-header">Free Marketing</h2>
+                                 <p class="info-text">Mauris est mauris, tincidunt a orci in, imperdiet convallis odio. Maecenas nisl urna, interdum a interdum gravida, laoreet tempus risus. Donec vel nisi hendreri.
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 c-box">
+                           <div class="row">
+                              <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12 my-auto">
+                                 <div class="icon-circle mx-auto my-auto" >
+                                  <center> <i class="fas fa-heart choose-icon"></i></center>
+      
+                                 </div>
+                              </div>
+                              <div class="col-lg-9 col-md-8 col-xs-12 col-sm-12 my-auto">
+                                 <h2 class="c-header">Be Heard</h2>
+                                 <p class="info-text">Nam rutrum nunc sit amet fringilla porta. Fusce faucibus elit orci, sit amet tristique dolor mollis id. 
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="rider" >
+            <div class="container">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <center>
+                  
+                     <h1 style="color: white;"> Why Ride With Us?</h1>
+                  </center>
+                  <br>
+               </div>
+              <div class="col-md-4">
+               <div class="row ride-box">
+                 
+                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                    
+                        <center> <i class="fas fa-dollar-sign choose-icon"></i></center>
+                     
+                    <center><h2 class="rider-header">Extra income</h2></center>
+                     <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                  </div>
+               </div>
+               
+              </div>
+              <div class="col-md-4">
+               <div class="row ride-box">
+                 
+                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                   
+                        <center> <i class="fas fa-gift choose-icon" ></i></center>
+                     
+                    <center><h2 class="rider-header">Prizes</h2></center>
+                     <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                  </div>
+               </div>
+               
+              </div>
+            
+              <div class="col-md-4">
+               <div class="row ride-box">
+                 
+                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                    
+                        <center> <i class="fas fa-chart-pie choose-icon" ></i></center>
+                     
+                    <center><h2 class="rider-header">Analytics </h2></center>
+                     <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
+                  </div>
+               </div>
+               
+              </div>
+            </div>
+            
+            </div>
+            
+
+         </section>
+         <footer>
+            <div class="footer-wrap"  >
+               <div class="second_class" >
+                  <div class="container-fluid" >
+                     <div class="row">
+                        
+                        <div class="col-md-4 col-sm-6 my-auto">
+                           <div class="text-center my-auto ">
+                              <div class="footer-logo my-auto mx-auto">
+                                 <img src="img/footer-logo.png" class="rounded" width="100px" alt="logo">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-md-4 mx-auto my-auto text-center">
+                           <ul class="nav nav-footer justify-content-center">
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#">About</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#">Patner Portal</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link " href="contactus.html">Contact Us</a>
+                              </li>
+                           </ul>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 mx-auto my-auto text-center justify-content-center" >
+                           <div class="row mx-auto my-auto justify-content-center">
+                              <div class="col-12"></div>
+                              <li class="round-btn btn-facebook"><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                              </li>
+                              <li class="round-btn btn-linkedin"><a href="#"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                              </li>
+                              <li class="round-btn btn-twitter"><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                              </li>
+                              <li class="round-btn btn-instagram"><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                              </li>
+                              <li class="round-btn btn-tiktok"><a href="#"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
+                              </li>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row my-auto h-100 align-items-center justify-content-center download-section" >
+                        <center><img src="img/r.png" width="200px" height="60px" class="download-link" /></center>
+                        <center><img src="img/google.png" width="220px" height="90px" class="download-link" /></center>
+                        <center><img src="img/huawei.png" width="200px" height="60px"  class="download-link" /></center>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <div class="copyright container-fluid" >
+         <div class="row">
+            <div class="col-md-6">
+               <a href="privacyPolicy.html" class="c_link" style="color:#ccc;">Privacy Policy</a> |  <a href="Terms.html" class="c_link" style="color:#ccc;">Terms and Conditions</a>  
+            </div>
+            <div class="col-md-6">&copy Copyright 2021 | All Rights Reserved by VOLO.</div>
+         </div>
+        
+     
+       
+   </body>
 </html>

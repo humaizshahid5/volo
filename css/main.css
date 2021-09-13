@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url(' https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css');
@@ -18,6 +17,21 @@ body,html{
    
    background-attachment: fixed;
    background-size: cover;
+}
+.rider{
+  margin-bottom: -50px;
+ padding: 50px 40px 90px 40px !important;
+  background-image: 
+  /* top, transparent red */
+  linear-gradient(
+      rgba(0, 0, 0, 0.70),
+      rgba(0, 0, 0, 0.70)
+  ),
+  /* your image */
+  url('../img/login-background.jpg');
+ 
+ background-attachment: fixed;
+ background-size: cover;
 }
 .signup-page{
   background-image: 
@@ -389,4 +403,55 @@ select {
   font-size: 50px;
   text-align: center;
   padding: 3px 6px 3px 6px;
+}
+.home-top{
+  min-height: 90%;
+  background-image: 
+  /* top, transparent red */
+  linear-gradient(
+      rgba(0, 0, 0, 0.70),
+      rgba(0, 0, 0, 0.70)
+  ),
+  /* your image */
+  url('../img/home.jpg');
+ background-attachment: fixed;
+ position: relative;
+  
+ background-size: cover;
+}
+.trending-box{
+  min-width: 90%;
+  margin: 10px;
+
+}
+
+.btn-option{
+  color:black;
+  min-width:100px;
+}
+.btn-active{
+  min-width: 100px;
+}
+.card-img-top{
+  width: 100%;
+  height: 200px;
+}
+.badge{
+  width: 40px; height: 40px;border-radius: 50%;background-color: #FDCA31;position:relative;top:25px;z-index: 100;font-size: 20px;text-align: center;line-height: 25px;
+}
+.why-text{
+  text-align: center;
+}
+.why-box{
+  margin: 20px 0px 20px 0px;
+}
+.rider-header{
+  padding: 10px 0px 10px 0px;
+}
+.ride-box{
+  background-color: white;
+  padding: 20px 20px 20px 20px;
+ width: 100%;
+ min-height: 200px;
+ 
 }
