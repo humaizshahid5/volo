@@ -407,7 +407,8 @@ select {
   padding: 3px 6px 3px 6px;
 }
 .home-top{
-  min-height: 90%;
+  height: auto;
+ 
   background-image: 
   /* top, transparent red */
   linear-gradient(
@@ -417,27 +418,39 @@ select {
   /* your image */
   url('../img/home.jpg');
  background-attachment: fixed;
- position: relative;
+ 
   
  background-size: cover;
+ padding: 180px 20px 180px 20px;
+}
+.store-div{
+  padding: 20px;
 }
 .trending-box{
   min-width: 95%;
   margin: 10px;
 
 }
+.why-volo{
+  background-color: white;min-height: 300px;margin-bottom: -50px;padding:50px;
+}
 .top-box{
   min-width: 99%;
   margin: 10px;
 
 }
+.howitwork{
+  background-color:#FDCA31 ; min-height: 400px;padding: 50px 40px 40px 40px;
+}
 
 .btn-option{
   color:black;
   min-width:100px;
+  margin-bottom: 10px;
 }
 .btn-active{
   min-width: 100px;
+  margin-bottom: 10px;
 }
 .card-img-top{
   width: 100%;
