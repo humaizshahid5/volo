@@ -375,7 +375,9 @@ margin-left: 0.75em;
 
 
 
-
+.top-patner{
+  background-color: rgb(22, 20, 20);padding: 60px 40px 40px 40px;
+}
 
 
 
@@ -420,7 +422,12 @@ select {
  background-size: cover;
 }
 .trending-box{
-  min-width: 90%;
+  min-width: 95%;
+  margin: 10px;
+
+}
+.top-box{
+  min-width: 99%;
   margin: 10px;
 
 }
