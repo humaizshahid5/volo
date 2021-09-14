@@ -110,13 +110,13 @@
           <div class="col-md-12 mx-auto text-center">
             <ul class="nav nav-footer justify-content-center">
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
+                  <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="FAQs.html">FAQ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Patner Portal</a>
+                    <a class="nav-link" href="PSignIn.html">Patner Portal</a>
                   </li>
                 <li class="nav-item">
                   <a class="nav-link" href="http://127.0.0.1:5500/privacyPolicy.html">Privacy Policy</a>
