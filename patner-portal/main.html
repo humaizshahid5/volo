@@ -630,7 +630,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <div class="card-body">
                 <div class="row">
                   <div class="col-12" style="overflow: scroll;">
-                    <table id="example3" class="table table-bordered table-striped table-responsive" >
+                    <table id="example4" class="table table-bordered table-striped table-responsive" >
                       <thead>
                       <tr>
                         <th>Order ID</th>
@@ -751,6 +751,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example3_wrapper .col-md-6:eq(0)');
+    $("#example4").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example4_wrapper .col-md-6:eq(0)');
     
   });
 </script>
