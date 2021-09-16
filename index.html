@@ -20,9 +20,14 @@
            var owl = $('#owl-carousel');
            owl.owlCarousel({
              items: 1,
-             loop: true,
+             loop: false,
              margin: 10,
+             
              autoplay: true,
+             nav:true,
+             navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>", "<i class='fa fa-angle-right' aria-hidden='true'></i>"],
+
+      
              autoplayTimeout: 2000,
              autoplayHoverPause: false,
              itemsDesktop : [1199,3],
@@ -41,6 +46,8 @@
              items: 1,
              loop: true,
              margin: 10,
+             nav:true,
+             navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>", "<i class='fa fa-angle-right' aria-hidden='true'></i>"],
              autoplay: true,
              autoplayTimeout: 2000,
              autoplayHoverPause: false,
@@ -48,7 +55,7 @@
             itemsDesktopSmall : [979,3],
             responsive: {
             600: {
-            items: 3
+            items: 4
             }
             }
            });
@@ -205,7 +212,7 @@
                         <div class="col">
                            <div class="owl-carousel owl-theme" id="owl-carousel">
                               <div class="item">
-                                 <div class="badge" >1</div>
+                                 <div class="badge" >#1</div>
                                  <div class=" card trending-box">
                                     <img src="img/kfc.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
@@ -217,7 +224,7 @@
                                  </div>
                               </div>
                               <div class="item">
-                                 <div class="badge" >2</div>
+                                 <div class="badge" >#2</div>
                                  <div class="card trending-box">
                                     <img src="img/mcd.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
@@ -227,7 +234,7 @@
                                  </div>
                               </div>
                               <div class="item">
-                                 <div class="badge" >3</div>
+                                 <div class="badge" >#3</div>
                                  <div class=" card trending-box">
                                     <img src="img/sunbway.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
@@ -238,7 +245,7 @@
                                  </div>
                               </div>
                               <div class="item">
-                                 <div class="badge" >4</div>
+                                 <div class="badge" >#4</div>
                                  <div class=" card trending-box">
                                     <img src="img/dom.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
@@ -249,7 +256,7 @@
                                  </div>
                               </div>
                               <div class="item">
-                                 <div class="badge" >5</div>
+                                 <div class="badge" >#5</div>
                                  <div class=" card trending-box">
                                     <img src="img/bk.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
@@ -260,7 +267,7 @@
                                  </div>
                               </div>
                               <div class="item">
-                                 <div class="badge" >6</div>
+                                 <div class="badge" >#6</div>
                                  <div class=" card trending-box">
                                     <img src="img/pizza.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
@@ -284,10 +291,8 @@
          <section class="top-patner">
             <div class="row h-100 d-flex align-items-center justify-content-center ">
               
-               <div class="col-md-4 mx-auto">
-                 <center><img src="img/tt.png" class="img-fluid" /></center> 
-               </div>
-               <div class="col-md-8 my-auto">
+            
+               <div class="col-md-12 my-auto">
                   <div class="col-md-12">
                      <center>
                         <h1 style="color: white;">Top Rated Partners</h1>
@@ -303,7 +308,7 @@
                                  <div class=" card top-box">
                                     <img src="img/kfc.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
-                                       <h5 class="card-title">KFC</h5>
+                                       <h5 class="card-title">KFC <b>(<i class="fas fa-star rating-icon"></i>4.68)</b></h5>
                                        <p class="card-text">Fast Food</p>
 
                                        
@@ -315,7 +320,7 @@
                                  <div class="card top-box">
                                     <img src="img/mcd.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
-                                       <h5 class="card-title">McDonald's</h5>
+                                       <h5 class="card-title">McDonald's <b>(<i class="fas fa-star rating-icon"></i>4.68)</b></h5>
                                        <p class="card-text">Fast Food</p>
                                     </div>
                                  </div>
@@ -325,7 +330,7 @@
                                  <div class=" card top-box">
                                     <img src="img/sunbway.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
-                                       <h5 class="card-title">Subway</h5>
+                                       <h5 class="card-title">Subway <b>(<i class="fas fa-star rating-icon"></i>4.67)</b></h5>
                                        <p class="card-text">Fast Food</p>
                                       
                                     </div>
@@ -336,7 +341,7 @@
                                  <div class=" card trending-box">
                                     <img src="img/dom.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
-                                       <h5 class="card-title">Domino's</h5>
+                                       <h5 class="card-title">Domino's <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
                                        <p class="card-text">Fas Food</p>
                                      
                                     </div>
@@ -347,7 +352,7 @@
                                  <div class="card top-box">
                                     <img src="img/bk.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
-                                       <h5 class="card-title">Burger King</h5>
+                                       <h5 class="card-title">Burger King <b>(<i class="fas fa-star rating-icon"></i>4.58)</b></h5>
                                        <p class="card-text">Fast Food</p>
                                        
                                     </div>
@@ -358,7 +363,7 @@
                                  <div class=" card top-box">
                                     <img src="img/pizza.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
-                                       <h5 class="card-title">Pizza Hut</h5>
+                                       <h5 class="card-title">Pizza Hut <b>(<i class="fas fa-star rating-icon"></i>4.48)</b></h5>
                                        <p class="card-text">Fast Food</p>
                                        
                                     </div>
@@ -577,7 +582,7 @@
                   <div class="row">
                      
                     <div class="col-lg-4 col-xs-12 col-sm-12  mx-auto my-auto" >
-                      <img src="img/why_volo.png" class="img-fluid"  />
+                      <img src="img/patner.png" class="img-fluid"  />
                    </div>
                      <div class="col-md-4 col-xs-12 col-sm-12 order-lg-first">
                         <div class="col-12 c-box">
@@ -713,44 +718,43 @@
                   </center>
                   <br>
                </div>
-              <div class="col-md-4">
-               <div class="row ride-box">
+              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 ">
+               <div class="ride-box">
                  
-                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                 
                     
                         <center> <i class="fas fa-dollar-sign choose-icon"></i></center>
                      
                     <center><h2 class="rider-header">Extra income</h2></center>
                      <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
-                  </div>
+                 
                </div>
                
               </div>
-              <div class="col-md-4">
-               <div class="row ride-box">
+              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 ">
+               <div class="ride-box">
                  
-                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
+                
                    
                         <center> <i class="fas fa-gift choose-icon" ></i></center>
                      
                     <center><h2 class="rider-header">Prizes</h2></center>
                      <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
-                  </div>
+                
                </div>
                
               </div>
             
-              <div class="col-md-4">
-               <div class="row ride-box">
+              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 ">
+               <div class="ride-box">
                  
-                  <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 ">
                     
                         <center> <i class="fas fa-chart-pie choose-icon" ></i></center>
                      
                     <center><h2 class="rider-header">Analytics </h2></center>
                      <p class="why-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus volutpat lacus a volutpat volutpat.</p>
                   </div>
-               </div>
+               
                
               </div>
             </div>
