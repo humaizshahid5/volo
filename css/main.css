@@ -534,27 +534,27 @@ select {
   color:rgb(228, 228, 34);
 }
 .wordCarousel {
-  height: 50% !important;
-  font-size: 36px;
-  font-weight: 100;
-  color: #939393;
- margin-top: 40px;
+ 
+  font-size: 32px;
+  font-weight:initial;
+ 
+   margin-top: 50px;
       
   
 }
 .text-animation {
   overflow: hidden;
   position: static;
-  float: right;
+  
   height: 65px;
   padding-top: 10px;
   margin-top: -10px;
 }
 .animate-li {
-  list-style: none;
-    font-family: Serif;
+    list-style: none;
+   
     color: #FDCA31;
-    font-weight: 700;
+    
     padding: 0 10px;
     height: 45px;
     margin-bottom: 45px;
