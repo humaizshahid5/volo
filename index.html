@@ -61,6 +61,27 @@
            });
 
          })
+         $(document).ready(function() {
+           var owl = $('#owl-carousel3');
+           owl.owlCarousel({
+             items: 1,
+             loop: true,
+             margin: 10,
+             nav:true,
+             navText: ["<i class='fa fa-angle-left' aria-hidden='true'></i>", "<i class='fa fa-angle-right' aria-hidden='true'></i>"],
+             autoplay: true,
+             autoplayTimeout: 2000,
+             autoplayHoverPause: false,
+             itemsDesktop : [1199,3],
+            itemsDesktopSmall : [979,3],
+            responsive: {
+            600: {
+            items: 4
+            }
+            }
+           });
+
+         })
         
        
        
@@ -163,6 +184,148 @@
                <div class="row">
                   <div class="col-md-12">
                      <center>
+                        <h1>Top Promotions</h1>
+                     </center>
+                     <br>
+                  </div>
+            
+                  
+                  <div class="col-md-12"  id="page-content" style="margin-bottom: 20px;">
+                     <div class="row">
+                        <div class="col">
+                           <div class="owl-carousel owl-theme" id="owl-carousel3">
+                              <div class="item">
+                                
+                                 <div class=" card trending-box">
+                                    <img src="img/kfc.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">KFC <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
+                                       <p class="card-text">Fast Food</p>
+                                       <div class="promotion-badge" >40% Off</div>
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+
+                                 <div class="card trending-box">
+                                    <img src="img/mcd.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">McDonald's <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
+                                       <p class="card-text">Fast Food</p>
+                                       <div class="promotion-badge" >30% Off</div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                               
+                                 <div class=" card trending-box">
+                                    <img src="img/sunbway.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Subway <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
+                                       <p class="card-text">Fast Food</p>
+                                       <div class="promotion-badge" >25% Off</div>
+                                    </div>
+                                    
+                                 </div>
+                               
+                              </div>
+                              <div class="item">
+
+                                 <div class=" card trending-box">
+                                    <img src="img/dom.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Domino's <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
+                                       <p class="card-text">Fas Food</p>
+                                       <div class="promotion-badge" >20% Off</div>
+                                     
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                
+                                 <div class=" card trending-box">
+                                    <img src="img/bk.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Burger King <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
+                                       <p class="card-text">Fast Food</p>
+                                       <div class="promotion-badge" >15% Off</div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+
+                                 <div class=" card trending-box">
+                                    <img src="img/pizza.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Pizza Hut <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
+                                       <p class="card-text">Fast Food</p>
+                                       <div class="promotion-badge" >10% Off</div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                
+                                 <div class=" card trending-box">
+                                    <img src="img/al.jpeg" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Al-Baik <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
+                                       <p class="card-text">Fast Food</p>
+                                       <div class="promotion-badge" >Flat 50% Off</div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+
+                                 <div class=" card trending-box">
+                                    <img src="img/papa.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Pappa Jhon's <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
+                                       <p class="card-text">Fast Food</p>
+                                       <div class="promotion-badge" >Buy 1 Get 1 Free</div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+
+                                 <div class=" card trending-box">
+                                    <img src="img/gloria.jpeg" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Gloria Jeans <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
+                                       <p class="card-text">Fast Food</p>
+                                       <div class="promotion-badge" >Free Drink</div>
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                
+                                 <div class=" card trending-box">
+                                    <img src="img/har.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Hardee's <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
+                                       <p class="card-text">Fast Food</p>
+                                       <div class="promotion-badge" >4% Off</div>
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+         </section>
+         <section style="padding: 40px;background-color: rgb(252, 247, 247);">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-md-12">
+                     <center>
                         <h1>Trending</h1>
                      </center>
                      <br>
@@ -216,7 +379,7 @@
                                  <div class=" card trending-box">
                                     <img src="img/kfc.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
-                                       <h5 class="card-title">KFC</h5>
+                                       <h5 class="card-title">KFC <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
                                        <p class="card-text">Fast Food</p>
 
                                        
@@ -228,7 +391,7 @@
                                  <div class="card trending-box">
                                     <img src="img/mcd.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
-                                       <h5 class="card-title">McDonald's</h5>
+                                       <h5 class="card-title">McDonald's <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
                                        <p class="card-text">Fast Food</p>
                                     </div>
                                  </div>
@@ -238,7 +401,7 @@
                                  <div class=" card trending-box">
                                     <img src="img/sunbway.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
-                                       <h5 class="card-title">Subway</h5>
+                                       <h5 class="card-title">Subway <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
                                        <p class="card-text">Fast Food</p>
                                       
                                     </div>
@@ -249,7 +412,7 @@
                                  <div class=" card trending-box">
                                     <img src="img/dom.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
-                                       <h5 class="card-title">Domino's</h5>
+                                       <h5 class="card-title">Domino's <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
                                        <p class="card-text">Fas Food</p>
                                      
                                     </div>
@@ -260,7 +423,7 @@
                                  <div class=" card trending-box">
                                     <img src="img/bk.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
-                                       <h5 class="card-title">Burger King</h5>
+                                       <h5 class="card-title">Burger King <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
                                        <p class="card-text">Fast Food</p>
                                        
                                     </div>
@@ -271,7 +434,51 @@
                                  <div class=" card trending-box">
                                     <img src="img/pizza.png" class="img-fluid card-img-top" alt="...">
                                     <div class="card-body">
-                                       <h5 class="card-title">Pizza Hut</h5>
+                                       <h5 class="card-title">Pizza Hut <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
+                                       <p class="card-text">Fast Food</p>
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                 <div class="badge" >#7</div>
+                                 <div class=" card trending-box">
+                                    <img src="img/al.jpeg" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Al-Baik <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
+                                       <p class="card-text">Fast Food</p>
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                 <div class="badge" >#8</div>
+                                 <div class=" card trending-box">
+                                    <img src="img/papa.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Pappa Jhon's <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
+                                       <p class="card-text">Fast Food</p>
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                 <div class="badge" >#9</div>
+                                 <div class=" card trending-box">
+                                    <img src="img/gloria.jpeg" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Gloria Jeans <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
+                                       <p class="card-text">Fast Food</p>
+                                       
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="item">
+                                 <div class="badge" >#10</div>
+                                 <div class=" card trending-box">
+                                    <img src="img/har.png" class="img-fluid card-img-top" alt="...">
+                                    <div class="card-body">
+                                       <h5 class="card-title">Hardee's <b>(<i class="fas fa-star rating-icon"></i>4.65)</b></h5>
                                        <p class="card-text">Fast Food</p>
                                        
                                     </div>
