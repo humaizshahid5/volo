@@ -333,7 +333,7 @@
           height: 2px;
          
           position: absolute;
-          background:#FFCC01;
+          background:#FDCA31;
           transition: width 0.3s ease 0s, left 0.3s ease 0s;
           width: 0;
         }
