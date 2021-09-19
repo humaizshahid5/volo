@@ -25,4 +25,37 @@ table td {
     text-overflow: ellipsis;
     word-break: break-all;
     overflow: hidden;
+    } 
+    .main-sidebar{
+        position: fixed !important;
     }
+    
+    thead{
+        background-color:#FDCA31 !important ;
+    }
+.m-footer{
+    padding:20px;
+    border-top: 1px solid #F2BBBB  ;
+}
+.trading {
+    background-color : #FDCA31;
+    color: black;
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    padding:11px
+  }
+.trading > img{
+    width: 50px;
+    height: 50px;
+
+}
+  #trading-btn {
+
+    position: fixed;
+    bottom: 8px;
+    right: 10px;
+    z-index: 1000;
+  }
+  
+ 
