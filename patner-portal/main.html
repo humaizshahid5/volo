@@ -27,15 +27,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <body class="hold-transition sidebar-mini">
   
 <div class="wrapper">
-  <a  href="#" data-toggle="modal" data-target="#trading">
-  <div id="trading-btn">
-    
-   <div class="trading">
-      <img src="../img/footer-logo.png" class="img-responsive" />
-    </div>
-    
-    </div>
-    </a>
+  
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
@@ -342,15 +334,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="card">
               <!-- /.card-header -->
               <div class="card-body" >
-                <div class="row mx-auto justify-content-center">
-                  <div class="col-md-4">
-                    <button class="btn btn-info btn-block">Active orders</button>
+                <div class="row  mx-auto justify-content-center">
+                  <div class="col-md-4 top-btn">
+                    <button class="btn btn-info btn-block" data-toggle="modal" data-target="#active">Active orders</button>
                   </div>
-                  <div class="col-md-4">
-                    <button class="btn btn-success btn-block">Today’s Orders</button>
+                  <div class="col-md-4 top-btn">
+                    <button class="btn btn-success btn-block" data-toggle="modal" data-target="#today">Today’s Orders</button>
                   </div>
-                  <div class="col-md-4">
-                    <button class="btn btn-danger btn-block">Cancelled Orders</button>
+                  <div class="col-md-4 top-btn">
+                    <button class="btn btn-danger btn-block" data-toggle="modal" data-target="#cancelled">Cancelled Orders</button>
                   </div>
                  
                 </div>
@@ -637,8 +629,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
          
         </div>
         <!-- /.row -->
+      
       </div><!-- /.container-fluid -->
     </div>
+    <a  href="#" data-toggle="modal" data-target="#trading">
+      <div class="row">
+        <div class="col-12 t-fixed ">
+        
+            <div class="trading">
+               <img src="../img/footer-logo.png" class="img-responsive" />
+             </div>
+             
+            
+
+        </div>
+        
+      </div>
+    
+      </a>
+
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
@@ -873,6 +882,64 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
   </div>
 </div>
+<div class="modal fade" id="active" tabindex="-1" role="dialog" aria-labelledby="active" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Active Order's</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="today" tabindex="-1" role="dialog" aria-labelledby="today" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Order's Today</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+     
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="cancelled" tabindex="-1" role="dialog" aria-labelledby="cancelled" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Cancelled Order's</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
@@ -899,23 +966,24 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script>
   $(function () {
     $("#example1").DataTable({
-      "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": true,
+      "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
     $("#example2").DataTable({ 
        "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ], "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
     $("#example3").DataTable({
       "responsive": true, "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example3_wrapper .col-md-6:eq(0)');
     $("#example4").DataTable({
        "lengthChange": true, "pageLength": 20, "lengthMenu": [ [5, 10, 20, 25, 50, -1], [5, 10, 20, 25, 50, "All"] ], "autoWidth": false,
-      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+      "buttons": ["copy", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example4_wrapper .col-md-6:eq(0)');
     
   });
+  
 </script>
 </body>
 </html>
