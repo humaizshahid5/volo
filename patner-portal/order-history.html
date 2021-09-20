@@ -523,7 +523,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <button type="button" class="btn btn-info " data-dismiss="modal">Print <i class="fas fa-print"></i></button>
             <div class="float-right">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Accept <i class="fas fa-check"></i></button>
-              <button type="button" class="btn btn-primary">Decline <i class="fas fa-times"></i></button>
+              <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#decline">Decline <i class="fas fa-times"></i></button>
               </div>
           </div>
           
@@ -534,6 +534,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
   </div>
 </div>
+<div class="modal fade" id="decline" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content">
+      
+        <div class="modal-body">
+         Are you sure you want to decline the order?
+         <br>
+         <div class="float-right">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-warning" data-dismiss="modal">Confirm</button>
+         </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 <div class="modal fade" id="rider" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
