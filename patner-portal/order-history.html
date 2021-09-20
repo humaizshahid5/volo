@@ -235,7 +235,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">Order's History</h1>
           </div><!-- /.col -->
           
           <div class="col-sm-6">
@@ -252,296 +252,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Main content -->
     <div class="content">
       <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>150</h3>
-
-                <p>Order's Request</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-paper-plane"></i>
-              </div>
-              <a href="#requests" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>53</h3>
-
-                <p>Pending Order's</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-history"></i>
-              </div>
-              <a href="#pending" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
+     
         
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>65</h3>
 
-                <p>Prepared Order's</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-concierge-bell"></i>
-               
-              </div>
-              <a href="#ready" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>65</h3>
-
-                <p>Completed Order's</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-check"></i>
-              </div>
-              <a href="#complete" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="card">
-              <!-- /.card-header -->
-              <div class="card-body" >
-                <div class="row  mx-auto justify-content-center">
-                  <div class="col-md-4 top-btn">
-                    <button class="btn btn-info btn-block" data-toggle="modal" data-target="#active">Active orders (1)</button>
-                  </div>
-                  <div class="col-md-4 top-btn">
-                    <button class="btn btn-success btn-block" data-toggle="modal" data-target="#today">Today’s Orders (2) </button>
-                  </div>
-                  <div class="col-md-4 top-btn">
-                    <button class="btn btn-danger btn-block" data-toggle="modal" data-target="#cancelled">Cancelled Orders (0)</button>
-                  </div>
-                 
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
-
-        <div class="row">
-
-          <div class="col-lg-12">
-           
-            <div class="card" id="requests">
-              <div class="card-header">
-                <h3 class="card-title">Order's Request</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-12" style="overflow: scroll;">
-                    <table id="example1" class="table table-bordered  table-responsive" >
-                      <thead>
-                      <tr>
-                        <th>Order ID</th>
-                        <th>Placed On</th>
-                        <th>Pickup Time</th>
-                        <th>Order Type</th>
-                        <th>Customer Name</th>
-                        <th>Customer Phone</th>
-                        <th>Customer address</th>
-                        <th>Cutlery</th>
-                        <th>Payment</th>
-                        <th>Prepaid</th>
-                        <th>Subtotal</th>
-                        <th>Discount</th>
-                        <th>Total</th>
-                        <th>Order</th>
-                        <th>Action</th>    
-                      </tr>
-                      </thead>
-                      <tbody>
-                      <tr>
-                        <td>21BE0B82</td>
-                        <td>23:33 11 July 2021</td>
-                        <td>ASAP</td>
-                        <td>Delivery</td>
-                        <td>Mohamed Jaffer	</td>
-                        <td>+973 0000000	</td>
-                        <td>Office: 415 Floor: 4 Building: 9182 Road: 456 Area: Saar Notes: Please do not ring the bell	</td>
-                        <td>NO</td>
-                        <td>Cash</td>
-                        <td>NO</td>
-                        <td>BD 5.400	</td>
-                        <td>BD 0.000	</td>
-                        <td>BD 0.000	</td>
-                        <td><button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-md btn-block btn-success">View Order</button></td>
-                        <td><button class="btn btn-md btn-block btn-info"> Approve </button><button class="btn btn-md btn-block btn-danger">Decline</button></td>
-                       
-
-
-                      
-                      </tr>
-    
-                      </tbody>
-                     
-                    </table>
-
-                  </div>
-                </div>
-
-           
-          
-              </div>
-              <!-- /.card-body -->
-            </div>
-
-           
-          </div>
-         
-        </div>
-        <!-- /.row -->
-        <div class="row">
-
-          <div class="col-lg-12">
-           
-            <div class="card" id="pending">
-              <div class="card-header">
-                <h3 class="card-title">Pending Order</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-12" style="overflow: scroll;">
-                    <table id="example2" class="table table-bordered  table-responsive" >
-                      <thead>
-                      <tr>
-                        <th>Order ID</th>
-                        <th>Placed On</th>
-                        <th>Pickup Time</th>
-                        <th>Order Type</th>
-                        <th>Customer Name</th>
-                        <th>Customer Phone</th>
-                        <th>Customer address</th>
-                        <th>Cutlery</th>
-                        <th>Payment</th>
-                        <th>Prepaid</th>
-                        <th>Subtotal</th>
-                        <th>Discount</th>
-                        <th>Total</th>
-                        <th>Order</th>
-                        <th>Action</th> 
-                        <th>Assign</th>    
-
-                      </tr>
-                      </thead>
-                      <tbody>
-                      <tr>
-                        <td>21BE0B82</td>
-                        <td>23:33 11 July 2021</td>
-                        <td>ASAP</td>
-                        <td>Delivery</td>
-                        <td>Mohamed Jaffer	</td>
-                        <td>+973 0000000	</td>
-                        <td>Office: 415 Floor: 4 Building: 9182 Road: 456 Area: Saar Notes: Please do not ring the bell	</td>
-                        <td>NO</td>
-                        <td>Cash</td>
-                        <td>NO</td>
-                        <td>BD 5.400	</td>
-                        <td>BD 0.000	</td>
-                        <td>BD 0.000	</td>
-                        <td><button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-md btn-block btn-success">View Order</button></td>
-                        <td><button class="btn btn-md btn-block btn-info"> Approve </button><button class="btn btn-md btn-block btn-danger">Decline</button></td>
-                        <td><button class="btn btn-md btn-block btn-warning" data-toggle="modal" data-target="#rider">Assign Rider</button></td>
-
-                       
-
-
-                      
-                      </tr>
-    
-                      </tbody>
-                     
-                    </table>
-
-                  </div>
-                </div>
-
-           
-          
-              </div>
-              <!-- /.card-body -->
-            </div>
-
-           
-          </div>
-         
-        </div>
-        <div class="row">
-
-          <div class="col-lg-12">
-           
-            <div class="card" id="ready">
-              <div class="card-header">
-                <h3 class="card-title">Order ready for delivery and pickup</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-12" style="overflow: scroll;">
-                    <table id="example3" class="table table-bordered  table-responsive" >
-                      <thead>
-                      <tr>
-                        <th>Order ID</th>
-                        <th>Placed On</th>
-                        <th>Pickup Time</th>
-                        <th>Order Type</th>
-                        <th>Customer Name</th>
-                        <th>Customer Phone</th>
-                        <th>Customer address</th>
-                        <th>Cutlery</th>
-                        <th>Payment</th>
-                        <th>Prepaid</th>
-                        <th>Subtotal</th>
-                        <th>Discount</th>
-                        <th>Total</th>
-                        <th>Order</th>
-                        <th>Action</th>  
-                     
-
-                        
-                      </tr>
-                      </thead>
-                      <tbody>
-                    
-    
-                      </tbody>
-                     
-                    </table>
-
-                  </div>
-                </div>
-
-           
-          
-              </div>
-              <!-- /.card-body -->
-            </div>
-
-           
-          </div>
-         
-        </div>
+ 
+       
+     
         <!-- /.row -->
         <div class="row">
 
@@ -549,13 +265,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
            
             <div class="card" id="complete">
               <div class="card-header">
-                <h3 class="card-title">Complete Order</h3>
+                <h3 class="card-title">Order's</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <div class="row">
                   <div class="col-12" style="overflow: scroll;">
-                    <table id="example4" class="table table-bordered  table-responsive" >
+                    <table id="example1" class="table table-bordered  table-responsive" >
                       <thead>
                       <tr>
                         <th>Order ID</th>
@@ -1008,18 +724,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": true,
       "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $("#example2").DataTable({ 
-       "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ], "autoWidth": false,
-      "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
-    $("#example3").DataTable({
-      "responsive": true, "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": false,
-      "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example3_wrapper .col-md-6:eq(0)');
-    $("#example4").DataTable({
-       "lengthChange": true, "pageLength": 20, "lengthMenu": [ [5, 10, 20, 25, 50, -1], [5, 10, 20, 25, 50, "All"] ], "autoWidth": false,
-      "buttons": ["copy", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example4_wrapper .col-md-6:eq(0)');
+    
     
   });
   
