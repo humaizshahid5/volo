@@ -134,3 +134,10 @@ table td {
   .modal-lg{
       height: auto;
   }
+  .order-info > div{
+      padding: 10px;
+      text-align: justify;
+  }
+  .order-info > b{
+      text-align: center;
+  }

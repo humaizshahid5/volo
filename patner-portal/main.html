@@ -645,7 +645,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- ./wrapper -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Order Details</h5>
@@ -663,30 +663,30 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
           </div>
         </div>
-       
-        <table class="table table-borderless">
-          <tr>
-            <td><b>Payment Type:</b></td>
-            <td>Cash</td>
-            <td><b>Order Date:</b></td>
-            <td>21 June 2021</td>
-          </tr>
-          <tr>
-            <td><b>Order Time:</b></td>
-            <td>21:55</td>
-          
-            <td><b>Pickup  Time:</b></td>
-            <td>ASAP</td>
-          </tr>
-          <tr>
-            <td><b>Address:</b></td>
-            <td style="width: 100%;">
-             
-                Ryt Road: Rut Block: 608 Area: Arad Notes: none
-              </td>
-          </tr>
-          </table>
+       <div class="row">
+         <div class="col-md-10 mx-auto">
+           <div class="row order-info">
+             <div class="col-md-6">
+               <b>Payment Type:</b> Cash
+             </div>
+             <div class="col-md-6">
+              <b>Order Date:</b> 21 June 2021
+            </div>
+         
+            <div class="col-md-6">
+              <b>Order Time:</b> 21:55
+            </div>
+            <div class="col-md-6">
+             <b>Pickup Time:</b> ASAP
+           </div>
+           <div class="col-12">
+             <b>Address:</b> Ryt Road: Rut Block: 608 Area: Arad Notes: none
 
+           </div>
+          </div>
+         </div>
+       </div>
+       
         <div class="item-details">
           <div class="row ">
             <div class="col-md-2 my-auto">
@@ -694,11 +694,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 1
               </div>
               </div>
-              <div class="col-md-8 order-details">
+              <div class="col-md-7 order-details">
                   <h3>Pizza</h3>
                   <p>hola1 (BD 0.100) | hola2 (BD 0.100) | Spicy (BD 0.200)</p>
               </div>
-              <div class="col-md-2 price-details">
+              <div class="col-md-3 price-details">
                 <div class="float-right">                
                   BD 3.50
                   </div>
@@ -713,52 +713,50 @@ scratch. This page gets rid of all links and provides the needed markup only.
       
       
    
-   
-        <table class="table table-borderless float-right">
-        <tr>
-        <td></td>
-        <td></td>
-
-          <td><b>Promo</b></td>
-          <td>None</td>
-        </tr>
-        <tr>
-          <td></td>
-        <td></td>
-          <td><b>Cart Subtotal</b></td>
-          <td>BD 26.800</td>
-        </tr>
-        <tr>
-          <td></td>
-        <td></td>
-          <td><b>Cart Discount</b></td>
-          <td>- BD 0.000</td>
-        </tr>
-        
-        <tr>
-          <td></td>
-          <td></td>
-          <td><b>Delivery</b></td>
-          <td>+ BD 1.300</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td><b>Cart Total</b></td>
-          <td>26.800</td>
-        </tr>
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <div class="row order-info">
+              
+              <div class="col-12">
+                <div class="float-right">
+               <b>Promo:</b> None
+               </div>
+             </div>
+             <div class="col-12">
+              <div class="float-right">
+             <b>Cart Subtotal:</b> BD 26.800
+             </div>
+           </div>
+           <div class="col-12">
+            <div class="float-right">
+           <b>Cart Discount:</b> -BB 0.000
+           </div>
+         </div>
        
-        <tr>
-          <td></td>
-          <td></td>
+       <div class="col-12">
+        <div class="float-right">
+       <b>Delivery:</b> +BD 1.300
+       </div>
+     </div>
+     <div class="col-12">
+      <div class="float-right">
+     <b>Cart Total:</b> 26.800
+     </div>
+   </div>
+   <div class="col-12">
+    <div class="float-right">
+   <b>Total:</b> 28.100
+   </div>
+ </div>
 
-          <td><b>Total</b></td>
-          <td>BD 28.100</td>
-        </tr>
-        
-
-        
-      </table>
+          
+            
+             
+          
+           </div>
+          </div>
+        </div>
+   
       <div class="map">
         <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Bahrain+(Volo)&amp;t=&amp;z=3&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
       </div>
