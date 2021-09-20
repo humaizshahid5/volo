@@ -30,7 +30,9 @@ table td {
         position: fixed !important;
         z-index:20;
     }
-    
+    .main-header{
+        z-index: 10;
+    }
     thead{
         background-color:#FDCA31 !important ;
     }
