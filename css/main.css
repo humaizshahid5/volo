@@ -76,6 +76,9 @@ body,html{
 .s-link:hover{
   color:#FFCC01;
 }
+.otp-btn{
+  background-color:#FDCA31 ;
+}
 .login-box{
    padding-top:30px;
   width: 80%;
