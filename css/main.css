@@ -644,3 +644,6 @@ select {
   padding-top: 10px;
   text-align: left !important;
 }
+.decline-btns{
+ line-height: 30px;
+}
