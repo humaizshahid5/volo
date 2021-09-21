@@ -40,89 +40,81 @@
     </div>
     </div>
     </div>
-    <div class="container forget-body">
-        <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 logo-s my-auto" >
+    <div class="container h-100 ">
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 logo-s" >
             <a href="index.html">
           <center><img src="img/logo.png" height="150px" /></center>
           </a>
              </div>
-              <div class="col-lg-4 col-md-6 col-sm-8 col-xs-8 mx-auto my-auto forget-box" >
+              <div class="col-lg-4 col-md-6 col-sm-8 col-xs-8 mx-auto forget-box" >
                 <form id="LoginForm" onsubmit="return false">
-                <div class="row">
-                  <div class="col-lg-12 col-md-10 col-sm-10 col-xs-8 mx-auto">
-                    <div class="col-12 mx-auto">
-                      <div class="login-circle mx-auto">
-                      <center>
-                       <img src="img/icon.png" class="img-fluid" />
-                       </center>
-                      </div>
-                      <h3 class="text-center login-txt">Forget Password</h3>
-                    </div>
                   <div class="row">
-                      <div class="col-12 ">
-                        <label id="error" name="error"></label>
-                             <div class="form-label-group">
-                                   <input type="email" id="inputEmail" class="form-control login-input" placeholder="Email address" required autofocus>
-                                    <label for="inputEmail">Branch Email</label>
-                              </div>   
-                      </div>
-                      <div class="col-12 ">
-                        <div class="form-label-group">
-                        <input type="email" id="ownerEmail" class="form-control login-input" placeholder="Owner Email" required>
-                        <label for="ownerEmail">Owner Email</label>
+                     <div class="col-lg-12 col-md-10 col-sm-10 col-xs-8 mx-auto">
+                        <div class="col-12 mx-auto">
+                           <div class="login-circle mx-auto">
+                              <center>
+                                 <img src="img/icon.png" class="img-fluid" />
+                              </center>
+                           </div>
+                           <h3 class="text-center login-txt">Forget Password</h3>
                         </div>
-                          </div>
-                          <div class="col-12 ">
-                            <div class="form-label-group">
-                            <input type="text" id="ownerID" class="form-control login-input" placeholder="Owner ID" required>
-                            <label for="ownerID">Owner ID</label>
-                            </div>
+                        <div class="row">
+                           <div class="col-12 ">
+                              <label id="error" name="error"></label>
+                              <div class="form-label-group">
+                                 <input type="email" id="inputEmail" class="form-control login-input" placeholder="Email address" required autofocus>
+                                 <label for="inputEmail">Branch Email</label>
                               </div>
-                              <div class="col-12 ">
-                                <div class="form-label-group">
-                                <input type="text" id="ownerfa" class="form-control login-input" placeholder="Owner 2FA" required>
-                                <label for="ownerfa">Owner 2FA</label>
-                                </div>
-                                  </div>
-                                  <div class="col-12">
-                                    <div class="row">
-                                       <div class="col-4" style="padding-right:0px;">
-                                      
-                                          <div class="form-label-group">
-                                             
-                                             <select name="pccode" class="form-control login-input">
-                                              <option value="" selected disabled hidden>Code</option>
-                                                <option value="+973">+973</option>
-                                                <option value="+966">+966</option>
-                                                <option value="+965">+965</option>
-                                                <option value="+971">+971</option>
-                                                <option value="+968">+968</option>
-                                                <option value="+974">+974</option>
-                                             </select>
-                                          </div>
-                                       </div>
-                                       <div class="col-8">
-                                          <div class="form-label-group">
-                                             <input type="phone" id="inputPhone" class="form-control login-input" placeholder="Email" required autofocus>
-                                             <label for="inputPhone">Owner Phone</label>
-                                          </div>
-                                       </div>
+                           </div>
+                           <div class="col-12 ">
+                              <div class="form-label-group">
+                                 <input type="email" id="ownerEmail" class="form-control login-input" placeholder="Owner Email" required>
+                                 <label for="ownerEmail">Owner Email</label>
+                              </div>
+                           </div>
+                           <div class="col-12 ">
+                              <div class="form-label-group">
+                                 <input type="text" id="ownerID" class="form-control login-input" placeholder="Owner ID" required>
+                                 <label for="ownerID">Owner ID</label>
+                              </div>
+                           </div>
+                           <div class="col-12 ">
+                              <div class="form-label-group">
+                                 <input type="text" id="ownerfa" class="form-control login-input" placeholder="Owner 2FA" required>
+                                 <label for="ownerfa">Owner 2FA</label>
+                              </div>
+                           </div>
+                           <div class="col-12">
+                              <div class="row">
+                                 <div class="col-4" style="padding-right:0px;">
+                                    <div class="form-label-group">
+                                       <select name="pccode" class="form-control login-input">
+                                          <option value="" selected disabled hidden>Code</option>
+                                          <option value="+973">+973</option>
+                                          <option value="+966">+966</option>
+                                          <option value="+965">+965</option>
+                                          <option value="+971">+971</option>
+                                          <option value="+968">+968</option>
+                                          <option value="+974">+974</option>
+                                       </select>
                                     </div>
                                  </div>
-                              
-                        
-                        <div class="col-12"">
-                            <button type="button" data-toggle="modal" data-target="#otp" class="login-btn btn btn-info btn-block" >Rest Password</button>
+                                 <div class="col-8">
+                                    <div class="form-label-group">
+                                       <input type="phone" id="inputPhone" class="form-control login-input" placeholder="Email" required autofocus>
+                                       <label for="inputPhone">Owner Phone</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-12"">
+                              <button type="button" data-toggle="modal" data-target="#otp" class="login-btn btn btn-info btn-block" >Rest Password</button>
+                           </div>
                         </div>
-                    </div>
-
+                     </div>
                   </div>
-                  
-                </div>
-              
-              
-              </form>
+               </form>
 
               </div>
               
@@ -206,89 +198,6 @@
                 <a href="privacyPolicy.html" class="c_link" style="color:#ccc;">Privacy Policy</a> |  <a href="Terms.html" class="c_link" style="color:#ccc;">Terms and Conditions</a>  
               </div>
               <div class="col-md-6">&copy Copyright 2021 | All Rights Reserved by VOLO.</div>
-      </div>
-      <div class="modal fade" id="otp" tabindex="-1" role="dialog" aria-labelledby="OTP" aria-hidden="true">
-        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-          <div class="modal-content">
-          
-            <div class="modal-body">
-                <div class="row">
-                    
-                    <div class="col-12">
-                        
-                        <button class="btn btn-md  otp-btn float-right " data-dismiss="modal" aria-label="Close" >
-                            <i class="fa fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="col-12">
-                        <p style="color: black;text-align: left;">We sent you a code via SMS, please enter it below</p>
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control" />
-                            </div>
-                            <button class="btn btn-block otp-btn" data-dismiss="modal" data-toggle="modal" data-target="#change"  >Confirm</button>
-                        </form>
-                    </div>
-
-                </div>
-
-            </div>
-           
-          </div>
-        </div>
-      </div>
-      <div class="modal fade" id="change" tabindex="-1" role="dialog" aria-labelledby="Change" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-          
-            <div class="modal-body">
-                <div class="row">
-                    
-                    <div class="col-12">
-                        
-                        <button class="btn btn-md  otp-btn float-right " data-dismiss="modal" aria-label="Close" >
-                            <i class="fa fa-times"></i>
-                        </button>
-                     
-                    </div>
-                    <div class="col-12 change-form">
-                      <div class="col-12">
-                        <p style="color: black;text-align: left;">Enter your new Password</p>
-                      </div>
-                     
-                        <form>
-
-                          <div class="col-12 ">
-                            <div class="form-label-group">
-                               <input type="password" id="inputPassword" class="form-control login-input" placeholder="Password" required autofocus>
-                               <label for="inputPassword">Password</label>
-                            </div>
-                         </div>
-                         <div class="col-12 ">
-                          <div class="form-label-group">
-                             <input type="password" id="inputConfirm" class="form-control login-input" placeholder="Confirm Password" required autofocus>
-                             <label for="inputConfirm">Confirm Password</label>
-                          </div>
-                       </div>
-                       <div class="col-12 ">
-                        <div class="form-label-group">
-                           <input type="text" id="inputFA" class="form-control login-input" placeholder="Owneer 2FA" required autofocus>
-                           <label for="inputFA">Owner 2FA</label>
-                        </div>
-                     </div>
-                     <div class="col-12">
-                       
-                            <button class="btn btn-block otp-btn" data-dismiss="modal">Confirm</button>
-                          </div>
-                        </form>
-                    </div>
-
-                </div>
-
-            </div>
-           
-          </div>
-        </div>
       </div>
     
     <!--footer end-->

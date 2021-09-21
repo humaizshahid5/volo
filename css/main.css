@@ -55,7 +55,7 @@ body,html{
   ),
   /* your image */
   url('../img/signup_bg.jpg');
-  min-height: 100%;
+
  background-attachment: fixed;
  background-size: cover;
 }
@@ -108,25 +108,18 @@ body,html{
   box-shadow: -1px 2px 10px -3px rgba(0,0,0,0.45);
   -webkit-box-shadow: -1px 2px 10px -3px rgba(0,0,0,0.45);
   -moz-box-shadow: -1px 2px 10px -3px rgba(0,0,0,0.45);
- 
-}
-
-.forget-body{
-  padding: 90px 0px 50px 0px;
   margin-top: -50px;
-  height: 100%;
-  clear: both;
 }
-.signup-body{
-  padding: 30px 0px 50px 0px;
-  vertical-align: middle;
 
-  
-  clear: both;
+
+.signup-body{
+  padding-top: 50px;
+  padding-bottom: 50px;
   margin-top: auto;
-margin-bottom: auto;
+  margin-bottom: auto;
  
 }
+
 .signup-box{
   
   padding-left: 50px;
