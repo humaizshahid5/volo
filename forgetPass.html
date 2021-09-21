@@ -201,15 +201,100 @@
       </div>
     
     <!--footer end-->
+    <div class="modal fade" id="otp" tabindex="-1" role="dialog" aria-labelledby="OTP" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+        <div class="modal-content">
+        
+          <div class="modal-body">
+              <div class="row">
+                  
+                  <div class="col-12">
+                      
+                      <button class="btn btn-md  otp-btn float-right " data-dismiss="modal" aria-label="Close" >
+                          <i class="fa fa-times"></i>
+                      </button>
+                  </div>
+                  <div class="col-12">
+                      <p style="color: black;text-align: left;">We sent you a code via SMS, please enter it below</p>
+                      <form>
+                          <div class="form-group">
+                              <input type="text" class="form-control" />
+                          </div>
+                          <button class="btn btn-block otp-btn" data-dismiss="modal" data-toggle="modal" data-target="#change"  >Confirm</button>
+                      </form>
+                  </div>
+
+              </div>
+
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="change" tabindex="-1" role="dialog" aria-labelledby="Change" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+        
+          <div class="modal-body">
+              <div class="row">
+                  
+                  <div class="col-12">
+                      
+                      <button class="btn btn-md  otp-btn float-right " data-dismiss="modal" aria-label="Close" >
+                          <i class="fa fa-times"></i>
+                      </button>
+                   
+                  </div>
+                  <div class="col-12 change-form">
+                    <div class="col-12">
+                      <p style="color: black;text-align: left;">Enter your new Password</p>
+                    </div>
+                   
+                      <form>
+
+                        <div class="col-12 ">
+                          <div class="form-label-group">
+                             <input type="password" id="inputPassword" class="form-control login-input" placeholder="Password" required autofocus>
+                             <label for="inputPassword">Password</label>
+                          </div>
+                       </div>
+                       <div class="col-12 ">
+                        <div class="form-label-group">
+                           <input type="password" id="inputConfirm" class="form-control login-input" placeholder="Confirm Password" required autofocus>
+                           <label for="inputConfirm">Confirm Password</label>
+                        </div>
+                     </div>
+                     <div class="col-12 ">
+                      <div class="form-label-group">
+                         <input type="text" id="inputFA" class="form-control login-input" placeholder="Owneer 2FA" required autofocus>
+                         <label for="inputFA">Owner 2FA</label>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                     
+                          <button class="btn btn-block otp-btn" data-dismiss="modal">Confirm</button>
+                        </div>
+                      </form>
+                  </div>
+
+              </div>
+
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  
    
       
       <!-- Font Awesome 5 links-->
-   <script src="https://kit.fontawesome.com/fddf5c0916.js" crossorigin="anonymous"></script>
-   <script src="js/jquery-3.3.1.min.js"></script>
-   <script src="js/popper.min.js"></script>
-   <script src="js/bootstrap.min.js"></script>
-   <script src="js/jquery.sticky.js"></script>
-   <script src="js/main.js"></script>
+      <script src="https://kit.fontawesome.com/fddf5c0916.js" crossorigin="anonymous"></script>
+      <script src="js/jquery-3.3.1.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jquery.sticky.js"></script>
+      <script src="js/main.js"></script>
+   
 
 </body>    
 </html>
