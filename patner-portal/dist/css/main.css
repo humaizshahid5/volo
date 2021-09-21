@@ -107,6 +107,7 @@
     background-color: #F8F9FA;
     min-height: 80px;
     border-radius: 8px;
+    margin-bottom: 0px;
  
 }
 .quantity{
@@ -120,6 +121,7 @@
     padding-top: 12px;
 }
 .price-details{
+    margin-top: 0px;
     font-size: 20px;
     font-weight: bold;
   }
@@ -136,12 +138,14 @@
   .order-info{
       margin-bottom: 10px;
   }
-  .payment-info{
-      padding:0px 10px 20px 10px;
-  }
-  .order-popup {
-      padding-top:20px;
-      padding-bottom: 40px;
+  
+ 
+  @media only screen and (max-width: 800px)
+  {
+    .payment-info{
+        padding:0px 20px 20px 20px;
+    }
+
   }
   .order-map{
       margin-top: 10px;
