@@ -19,13 +19,7 @@
     text-align: center;
     padding-left: 20px;
 }
-table td {
-   
-    
-   line-break: strict;
-   min-width: 150px;
-    
-    } 
+
     .main-sidebar{
         position: fixed !important;
         z-index:20;
@@ -143,5 +137,13 @@ table td {
       margin-bottom: 10px;
   }
   .payment-info{
-      padding:0px 10px 0px 10px;
+      padding:0px 10px 20px 10px;
+  }
+  .order-popup {
+      padding-top:20px;
+      padding-bottom: 40px;
+  }
+  .order-map{
+      margin-top: 10px;
+      margin-bottom: 10px;
   }
