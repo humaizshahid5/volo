@@ -440,8 +440,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <td>BD 5.400	</td>
                         <td>BD 0.000	</td>
                         <td>BD 0.000	</td>
-                        <td><button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-md btn-block btn-success">View Order</button></td>
-                        <td><button class="btn btn-md btn-block btn-info"> Approve </button><button class="btn btn-md btn-block btn-danger">Decline</button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#orderdetail" class="btn btn-md btn-block btn-success">View Order</button></td>
+                        <td><button class="btn btn-md btn-block btn-info" data-toggle="modal" data-target="#accept"> Approve </button><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#decline">Decline</button></td>
                        
 
 
@@ -495,7 +495,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <th>Discount</th>
                         <th>Total</th>
                         <th>Order</th>
-                        <th>Action</th> 
+                       <th>Action</th>
                         <th>Assign</th>    
 
                       </tr>
@@ -515,8 +515,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <td>BD 5.400	</td>
                         <td>BD 0.000	</td>
                         <td>BD 0.000	</td>
-                        <td><button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-md btn-block btn-success">View Order</button></td>
-                        <td><button class="btn btn-md btn-block btn-info"> Approve </button><button class="btn btn-md btn-block btn-danger">Decline</button></td>
+                        <td><button type="button" data-toggle="modal" data-target="#orderdetail" class="btn btn-md btn-block btn-success">View Order</button></td>
+                        <td><button class="btn btn-md btn-block btn-info" data-toggle="modal" data-target="#accept"> Approve </button><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#decline">Decline</button></td>
                         <td><button class="btn btn-md btn-block btn-warning" data-toggle="modal" data-target="#rider">Assign Rider</button></td>
 
                        
@@ -645,7 +645,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <td>BD 5.400	</td>
                         <td>BD 0.000	</td>
                         <td>BD 0.000	</td>
-                        <td><button class="btn btn-md btn-block btn-success" data-toggle="modal" data-target="#exampleModal">View Order</button></td>
+                        <td><button class="btn btn-md btn-block btn-success" data-toggle="modal" data-target="#orderdetail">View Order</button></td>
                         
                        
 
@@ -691,11 +691,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </div>
 
 <!-- ./wrapper -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="orderdetail" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Order Details</h5>
+        <h5 class="modal-title" id="orderdetailLabel">Order Details</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -853,8 +853,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
           <div class="col-12">
             <button type="button" class="btn btn-info " data-dismiss="modal">Print <i class="fas fa-print"></i></button>
             <div class="float-right">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Accept <i class="fas fa-check"></i></button>
-              <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#decline">Decline <i class="fas fa-times"></i></button>
+              <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#accept">Accept <i class="fas fa-check"></i></button>
+              <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#decline">Decline <i class="fas fa-times"></i></button>
               </div>
           </div>
           
@@ -882,11 +882,32 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
   </div>
 </div>
-<div class="modal fade" id="rider" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="accept" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content">
+    
+      <div class="modal-body">
+       
+       <center>Order have been approved to be picked up in</center>
+       <div class="p-time mx-auto" >
+         30 Min
+       </div>
+
+       <div class="float-right">
+        <br>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
+        
+       </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="rider" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Assign a Rider</h5>
+        <h5 class="modal-title" id="orderdetailLabel">Assign a Rider</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -909,11 +930,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
   </div>
 </div>
-<div class="modal fade" id="trading" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="trading" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Start Trading</h5>
+        <h5 class="modal-title" id="orderdetailLabel">Start Trading</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -989,7 +1010,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Active Order's</h5>
+        <h5 class="modal-title" id="orderdetailLongTitle">Active Order's</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -1008,7 +1029,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Order's Today</h5>
+        <h5 class="modal-title" id="orderdetailLongTitle">Order's Today</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -1027,7 +1048,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Cancelled Order's</h5>
+        <h5 class="modal-title" id="orderdetailLongTitle">Cancelled Order's</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>

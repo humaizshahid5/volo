@@ -151,3 +151,8 @@
       margin-top: 10px;
       margin-bottom: 10px;
   }
+  .p-time{
+    background-color:#FDCA31; width: 80px; height: 80px; border-radius: 50%; font-size: 20px;text-align: center; line-height: 75px;margin-top: 10px;
+      
+
+  }
