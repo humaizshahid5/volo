@@ -5,6 +5,7 @@
     width: 60px;
     height: 60px;
     
+    
 
 }
 .company-img > img{
@@ -14,11 +15,20 @@
     border-radius: 50%;
     background-color: #FDCA31 ;
 }
-.company-name{
-    line-height: 60px;
-    text-align: center;
-    padding-left: 20px;
+
+.comapny-title{
+    color: white;
+    display: block; 
+    width: 100%; 
+    word-break: break-word; 
+    word-wrap: break-all; 
+    white-space: initial;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    max-height: 50px;
+    overflow-y: scroll;
 }
+
 
     .main-sidebar{
         position: fixed !important;
@@ -143,16 +153,46 @@
   @media only screen and (max-width: 800px)
   {
     .payment-info{
-        padding:0px 20px 20px 20px;
+        padding:0px 35px 20px 30px;
     }
 
   }
   .order-map{
-      margin-top: 10px;
-      margin-bottom: 10px;
+      margin-top: 20px;
+      margin-bottom: 20px;
   }
   .p-time{
     background-color:#FDCA31; width: 80px; height: 80px; border-radius: 50%; font-size: 20px;text-align: center; line-height: 75px;margin-top: 10px;
       
 
   }
+  table{
+      width: 100% !important;
+  }
+  .control-sidebar{
+   z-index:9;
+  }
+table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
+background-color: #FDCA31;
+color: black;
+}
+td.address{
+    min-width: 300px;
+}
+td{
+    min-width: 100px;
+}
+td{
+    text-align: center;
+}
+th{
+    text-align: center;
+   margin-bottom: auto;
+    margin-top:auto;
+    
+
+}
+.btn-default{
+    background-color: #FDCA31;
+    border:none;
+}
