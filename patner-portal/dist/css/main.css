@@ -32,11 +32,9 @@
 
     .main-sidebar{
         position: fixed !important;
-        z-index:20;
+        
     }
-    .main-header{
-        z-index: 10;
-    }
+   
     thead{
         background-color:#FDCA31 !important ;
     }
@@ -56,13 +54,13 @@
     height: 90px;
     border-radius: 50px;
     position: fixed;
-    bottom: 30px;
+    bottom: 90px;
     padding: 9px;
    
-    left: 38%;
     
-    right: 38%;
     z-index: 100;
+    right: 1%;
+   
 
    
   }
@@ -71,7 +69,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 109;
+   
     width: 79px;
     height: 98px;
     margin-top: -1px;
@@ -99,7 +97,7 @@
     background-size: cover;
     position: fixed;
     bottom: 0;
-    z-index:30;
+   
    
 }
 
@@ -108,9 +106,7 @@
  padding: 10px;
 }
 
-.content-wrapper{
-    z-index: 3;
-}
+
 
 .item-details{
     padding: 10px;
@@ -119,6 +115,13 @@
     border-radius: 8px;
     margin-bottom: 0px;
  
+}
+.layout-navbar-fixed .wrapper .sidebar-dark-primary .brand-link:not([class*=navbar])
+{
+    background-color:  #FDCA31;
+}
+.layout-navbar-fixed  .company-img{
+    margin-top: 80px;
 }
 .quantity{
    padding-top: 10px;
@@ -172,9 +175,7 @@
   table{
       width: 100% !important;
   }
-  .control-sidebar{
-   z-index:9;
-  }
+
 table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
 background-color: #FDCA31;
 color: black;
