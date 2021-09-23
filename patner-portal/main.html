@@ -75,8 +75,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4" >
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link mx-auto text-center" >
-      <img src="../img/footer-logo.png" alt="AdminLTE Logo" height="50px" >
+    <a href="main.html" class="brand-link mx-auto text-center" >
+      <img src="../img/footer-logo.png" alt="Volo Logo" height="50px" >
    
     </a>
 
@@ -1536,7 +1536,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <!-- ./wrapper -->
 <div class="modal fade" id="orderdetail" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="orderdetailLabel">Order Details</h5>
@@ -1730,12 +1730,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
     <div class="modal-content">
     
-      <div class="modal-body">
+      <div class="modal-body h-100">
        
        <center>Order have been approved to be picked up in</center>
-       <div class="p-time mx-auto" >
-         30 Min
+       <div class="col-12 p-time mx-auto">
+       <div class="p-text mx-auto my-auto"">
+        Wed, 21 May 12:45 pm
        </div>
+          
+       
+       </div>
+       
 
        <div class="float-right">
         <br>
@@ -1750,17 +1755,18 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="modal fade" id="signout" tabindex="-1" role="dialog" aria-labelledby="signout" aria-hidden="true">
   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
     <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="orderdetailLongTitle">Logout of</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+     </div>
     
       <div class="modal-body">
     <div class="row">
-      <div class="col-12">
-        <button class="btn btn-md  otp-btn float-right " data-dismiss="modal" aria-label="Close" >
-          <i class="fa fa-times"></i>
-      </button>
-
-      </div>
-      <div class="col-12">
-        Logout of:
+    
+      <div class="col-12 logout-popup">
+       
         <div class="form-check">
          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
          <label class="form-check-label" for="exampleRadios1">
@@ -1996,7 +2002,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script>
   $(function () {
     $("#example1").DataTable({
-      "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": true,
+      "responsive": true, "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": true,
       "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
     $("#example2").DataTable({ 
@@ -2016,10 +2022,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
   
 </script>
 <a  href="#" data-toggle="modal" data-target="#trading">
- 
+  <div class="row" style="padding: 0px;margin: 0px;">
+<div class="col-12 t-fixed " style="padding: 0px;margin: 0px;"> 
+
+</div>
+
+</div>
+
 <div class="trading mx-auto" >
-  <img src="../img/footer-logo.png"/>
-  <img src="../img/icon.png" class="img-top" alt="Card Front">
+<img src="../img/footer-logo.png"/>
+<img src="../img/icon.png" class="img-top" alt="Card Front">
 </div>
 
 </a>
