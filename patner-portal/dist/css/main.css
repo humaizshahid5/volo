@@ -67,6 +67,9 @@
 
    
   }
+  .modal{
+      z-index: 2000000 !important;
+  }
   .fa-th-large{
       color:#FDCA31;
   }
