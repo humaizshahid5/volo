@@ -235,3 +235,19 @@ th{
     border-radius: 50%;
     line-height: 10px;
 }
+ .more-info{
+    min-width: 20px !important;
+    background-color: none;
+    border:0px;
+    border:0px solid white !important;
+    border-right: 1px solid black;
+}
+th.info-heading{
+    visibility: hidden;
+    border:0px solid white !important;
+    background-color: white  !important;
+}
+
+table{
+    width: 100%  !important;
+}
