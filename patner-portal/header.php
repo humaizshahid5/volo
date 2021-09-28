@@ -91,7 +91,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <li class="nav-item">
-                <a href="main.php" class="nav-link">
+                <a href="main.html" class="nav-link">
                   <i class="nav-icon fas fa-tachometer-alt"></i>
                   <p>
                     Dashboard
@@ -100,7 +100,7 @@
                 </a>
               </li>
           <li class="nav-item">
-            <a href="order-history.php" class="nav-link ">
+            <a href="order-history.html" class="nav-link ">
               <i class="nav-icon fas fa-shopping-bag"></i>
               <p>
                 Order's History
@@ -119,7 +119,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="reservations.php" class="nav-link ">
+                <a href="reservations.html" class="nav-link ">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Today Reservations's</p>
                 </a>
