@@ -73,25 +73,7 @@
   .fa-th-large{
       color:#FDCA31;
   }
-  .trading .img-top {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-   
-    width: 79px;
-    height: 98px;
-    margin-top: -1px;
-    margin-left: 2px;
-    margin-right: 10px;
-    padding: 9px;
-   
-}
-.trading:hover .img-top {
-
-    display: inline;
-    
-}
+  
   
 .trading > img{
     width: 70px;

@@ -42,6 +42,11 @@
                <!-- Messages Dropdown Menu -->
                <!-- Notifications Dropdown Menu -->
                <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#chat">
+                    <i class="fas fa-comment"></i>
+                  </a>
+                </li>
+               <li class="nav-item">
                   <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                   <i class="fas fa-expand-arrows-alt"></i>
                   </a>
@@ -257,9 +262,14 @@
                                        <input type="date" class="form-control" name="from" />
                                     </div>
                                  </div>
-                                 <div class="col-12">
+                                 <div class="col-6">
                                     <button class="btn btn-block btn-default">
                                     Search
+                                    </button>
+                                 </div>
+                                 <div class="col-6">
+                                    <button class="btn btn-block btn-info">
+                                    Generate PDF
                                     </button>
                                  </div>
                               </div>
@@ -435,6 +445,7 @@
                           
                               <span class="right badge badge-success">Delivered</span>
                            </div>
+                          
                            <div class="col-6 text-left">
                               <b>Order ID</b> <br>21BE0B82
                            </div>
@@ -455,6 +466,12 @@
                            </div>
                            <div class="col-12 text-center">
                               <b>Pickup Time</b><br> ASAP
+                           </div>
+                           <div class="col-12 text-center">
+                              <b>Customer Name</b> <br>Mohamed Jaffer	
+                           </div>
+                           <div class="col-12 text-center">
+                              <b>Customer Number</b> <br>+973 0000000	
                            </div>
                            <div class="col-8 mx-auto text-center">
                               <b>Address</b><br>
@@ -525,9 +542,7 @@
                      </div>
                   </div>
                </div>
-               <div class="order-map">
-                  <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Bahrain+(Volo)&amp;t=&amp;z=3&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
-               </div>
+              
                <div class="m-footer" >
                   <div class="row">
                      <div class="col-12">
@@ -619,6 +634,75 @@
             </div>
          </div>
       </div>
+      <div class="modal fade" id="chat" tabindex="-1" role="dialog" aria-labelledby="signout" aria-hidden="true">
+         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-body">
+                 <div class="col-12 text-right">
+                  <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"> &times; </button>
+       
+                 </div>
+                 <div class="col-12 mx-auto justify-content-center" >
+                 <br>
+                   <p style="text-align: center;">Facing any issue please feel free to contact our 24/7 support </p>
+                  <center><button class="btn btn-default text-center ">Contact Support</button></center> 
+                   <br>
+                 </div>
+                  
+                 
+                  
+               </div>
+            </div>
+         </div>
+       </div>
+       <div class="modal fade" id="signout" tabindex="-1" role="dialog" aria-labelledby="signout" aria-hidden="true">
+          <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+             <div class="modal-content">
+                <div class="modal-header">
+                   <h5 class="modal-title" id="orderdetailLongTitle">Logout of</h5>
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <span aria-hidden="true">&times;</span>
+                   </button>
+                </div>
+                <div class="modal-body">
+                   <div class="row">
+                      <div class="col-12 logout-popup">
+                         <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                            This device
+                            </label>
+                         </div>
+                         <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                            All devices
+                            </label>
+                         </div>
+                         <div class="float-right">
+                            <br>
+                            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#confirm">Logout</button>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+          <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+             <div class="modal-content">
+                <div class="modal-body">
+                   Are you sure you want to logout?
+                   <div class="float-right">
+                      <br>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                      <a href="../PSignIn.html"><button type="button" class="btn btn-warning" >Confirm</button></a>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
       <!-- jQuery -->
       <script src="plugins/jquery/jquery.min.js"></script>
       <!-- Bootstrap 4 -->
@@ -746,7 +830,7 @@
       
       <div class="trading mx-auto" >
       <img src="../img/footer-logo.png"/>
-      <img src="../img/icon.png" class="img-top" alt="Card Front">
+      
       </div>
       
       </a>
