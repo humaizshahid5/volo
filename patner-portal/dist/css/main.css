@@ -26,6 +26,7 @@
     margin-top: 10px;
     margin-bottom: 0px;
     max-height: 50px;
+    text-align: center;
     overflow-y: scroll;
 }
 
