@@ -71,9 +71,14 @@
   .modal{
       z-index: 2000000 !important;
   }
-  .fa-th-large{
+  .controlleft:focus{
       color:#FDCA31;
   }
+  
+  
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color:#FDCA31;
+}
   
   
 .trading > img{
