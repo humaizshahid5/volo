@@ -44,7 +44,11 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
-     
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal"  data-target="#notification">
+          <i class="fas fa-bell"></i>
+        </a>
+      </li>
 
       <!-- Messages Dropdown Menu -->
       <li class="nav-item">
@@ -129,6 +133,7 @@
                   </p>
                 </a>
               </li>
+              
           <li class="nav-item">
             <a href="order-history.html" class="nav-link ">
               <i class="nav-icon fas fa-shopping-bag"></i>
@@ -711,6 +716,7 @@
                     </table>
 
                   </div>
+            
                 </div>
 
           
@@ -743,8 +749,82 @@
     </div>
   </aside>
   <!-- /.control-sidebar -->
-  <script src="plugins/chart/Chart.min.js"></script>
+  
+  <div class="col-md-3 live-chat" id="live-chat">
+    <!-- DIRECT CHAT SUCCESS -->
+    <div class="card card-warning direct-chat direct-chat-warning shadow">
+      <div class="card-header">
+        <h3 class="card-title">Contact Chat</h3>
 
+        <div class="card-tools">
+          <span title="3 New Messages" class="badge bg-success">3</span>
+          <button type="button" class="btn btn-tool" data-card-widget="collapse">
+            <i class="fas fa-minus"></i>
+          </button>
+          <button type="button" class="btn btn-tool" title="Contacts" data-widget="chat-pane-toggle">
+            <i class="fas fa-comments"></i>
+          </button>
+          <button type="button" class="btn btn-tool" data-card-widget="remove">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body">
+        <!-- Conversations are loaded here -->
+        <div class="direct-chat-messages">
+          <!-- Message. Default to the left -->
+          <div class="waitng-chat-msg">
+          
+        
+          </div>
+          <!-- /.direct-chat-msg -->
+
+          <!-- Message to the right -->
+        
+          <!-- /.direct-chat-msg -->
+        </div>
+        <!--/.direct-chat-messages-->
+
+        <!-- Contacts are loaded here -->
+        <div class="direct-chat-contacts">
+          <ul class="contacts-list">
+            <li>
+              <a href="#">
+                <img class="contacts-list-img" src="dist/img/user1-128x128.jpg" alt="User Avatar">
+
+                <div class="contacts-list-info">
+                  <span class="contacts-list-name">
+                    Count Dracula
+                    <small class="contacts-list-date float-right">2/28/2015</small>
+                  </span>
+                  <span class="contacts-list-msg">How have you been? I was...</span>
+                </div>
+                <!-- /.contacts-list-info -->
+              </a>
+            </li>
+            <!-- End Contact Item -->
+          </ul>
+          <!-- /.contatcts-list -->
+        </div>
+        <!-- /.direct-chat-pane -->
+        <center>You are currently 5 in the line</center>
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer">
+        <form action="#" method="post">
+          <div class="input-group">
+            <input type="text" name="message" placeholder="Type Message ..." class="form-control">
+            <span class="input-group-append">
+              <button type="submit" class="btn btn-success">Send</button>
+            </span>
+          </div>
+        </form>
+      </div>
+      <!-- /.card-footer-->
+    </div>
+    <!--/.direct-chat -->
+  </div>
 <div class="modal fade" id="orderdetail" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
    <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -1173,7 +1253,7 @@
           <div class="col-12 mx-auto justify-content-center" >
             <br>
             <p style="text-align: center;">Facing any issue please feel free to contact our 24/7 support </p>
-           <center><button class="btn btn-default text-center ">Contact Support</button></center> 
+           <center><button class="btn btn-default text-center" onclick="chat()" data-dismiss="modal">Contact Support</button></center> 
             <br>
           </div>
            
@@ -1183,6 +1263,13 @@
      </div>
   </div>
 </div>
+<script>
+  function chat(){
+    
+    var chat = document.getElementById('live-chat');
+    chat.style.display = 'block';
+  }
+</script>
 <div class="modal fade" id="signout" tabindex="-1" role="dialog" aria-labelledby="signout" aria-hidden="true">
    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
       <div class="modal-content">

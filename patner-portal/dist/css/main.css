@@ -104,6 +104,14 @@
  padding: 10px;
 }
 
+.live-chat{
+    position:fixed;
+    bottom:-13px;
+    z-index: 5000000;
+    right:-1px;
+    display: none;
+   
+}
 
 
 .item-details{
