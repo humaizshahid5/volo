@@ -757,33 +757,90 @@
         <h3 class="card-title">Contact Chat</h3>
 
         <div class="card-tools">
-          <span title="3 New Messages" class="badge bg-success">3</span>
+         
           <button type="button" class="btn btn-tool" data-card-widget="collapse">
             <i class="fas fa-minus"></i>
           </button>
-          <button type="button" class="btn btn-tool" title="Contacts" data-widget="chat-pane-toggle">
-            <i class="fas fa-comments"></i>
-          </button>
-          <button type="button" class="btn btn-tool" data-card-widget="remove">
+         
+          <button type="button" class="btn btn-tool"  data-toggle="modal" data-target="#chat-dismiss">
             <i class="fas fa-times"></i>
           </button>
         </div>
       </div>
+      <div class="modal fade" id="chat-dismiss" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+           <div class="modal-content">
+              <div class="modal-body">
+                 Are you sure you want to close chat ?
+                 <div class="float-right">
+                    <br>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#support-review" data-dismiss="modal" data-card-widget="remove" >Confirm</button>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
       <!-- /.card-header -->
       <div class="card-body">
-        <!-- Conversations are loaded here -->
         <div class="direct-chat-messages">
           <!-- Message. Default to the left -->
-          <div class="waitng-chat-msg">
-          
-        
+          <div class="direct-chat-msg">
+            <div class="direct-chat-infos clearfix">
+              <span class="direct-chat-name float-left">Alexander Pierce</span>
+              <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
+            </div>
+            <!-- /.direct-chat-infos -->
+            <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="Message User Image">
+            <!-- /.direct-chat-img -->
+            <div class="direct-chat-text">
+              Is this template really for free? That's unbelievable!
+            </div>
+            <!-- /.direct-chat-text -->
           </div>
           <!-- /.direct-chat-msg -->
 
           <!-- Message to the right -->
-        
+          <div class="direct-chat-msg right">
+            <div class="direct-chat-infos clearfix">
+              <span class="direct-chat-name float-right">Sarah Bullock</span>
+              <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
+            </div>
+            <!-- /.direct-chat-infos -->
+            <img class="direct-chat-img" src="../img/kfc.png" alt="Message User Image">
+            <!-- /.direct-chat-img -->
+            <div class="direct-chat-text">
+              You better believe it!
+            </div>
+            <!-- /.direct-chat-text -->
+          </div>
           <!-- /.direct-chat-msg -->
         </div>
+        <!--/.direct-chat-messages-->
+
+        <!-- Contacts are loaded here -->
+        <div class="direct-chat-contacts">
+          <ul class="contacts-list">
+            <li>
+              <a href="#">
+                <img class="contacts-list-img" src="dist/img/user1-128x128.jpg" alt="User Avatar">
+
+                <div class="contacts-list-info">
+                  <span class="contacts-list-name">
+                    Count Dracula
+                    <small class="contacts-list-date float-right">2/28/2015</small>
+                  </span>
+                  <span class="contacts-list-msg">How have you been? I was...</span>
+                </div>
+                <!-- /.contacts-list-info -->
+              </a>
+            </li>
+            <!-- End Contact Item -->
+          </ul>
+          <!-- /.contatcts-list -->
+        </div>
+        <!-- Conversations are loaded here -->
+       
         <!--/.direct-chat-messages-->
 
         <!-- Contacts are loaded here -->
@@ -1221,6 +1278,38 @@
       </div>
    </div>
 </div>
+<div class="modal fade" id="support-review" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+     <div class="modal-content">
+        <div class="modal-body">
+          <div class="col-12 text-right">
+            <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"> &times; </button>
+ 
+           </div>
+           <div class="col-12">
+             <label>Rate</label>
+             <br>
+               <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+           </div>
+           <div class="col-12">
+             <label>Comments</label>
+             <textarea class="form-control"></textarea>
+           </div>
+           
+           
+              <br>
+              <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Send</button>
+              
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+
 <div class="modal fade" id="accept" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
       <div class="modal-content">
