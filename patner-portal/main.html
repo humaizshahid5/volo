@@ -1621,17 +1621,23 @@
    </div>
 </div>
 <div class="modal fade" id="trading" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
-   <div class="modal-dialog" role="document">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="orderdetailLabel">Start Trading</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-         </div>
+   <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content ">
+       
          <div class="modal-body">
+           <div class="row">
+            <div class="col-8">
+              <h3>Start Trading</h3>
+            </div>
+           <div class="col-4 text-right">
+             <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"> &times; </button>
+  
+            </div>
+
+           </div>
+        
             <form>
-               <div class="row">
+               <div class="row" style="margin-top: 20px;">
                   <div class="col-md-12">
                      <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -1680,12 +1686,13 @@
                      <b>Current Delay is: </b> 15 min <br>
                      <b>Nearest closing time: </b> 11:30 PM 
                   </div>
+                  <div class="col-12" style="margin-top: 20px;">
+                    <button type="button" class="btn btn-default btn-block">Submit changes</button>
+                  </div>
                </div>
             </form>
          </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Submit changes</button>
-         </div>
+         
       </div>
    </div>
 </div>
