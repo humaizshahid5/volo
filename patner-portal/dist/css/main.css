@@ -407,17 +407,35 @@ table{
     font-weight: 700;
     }
   
+
+.notifications-dropdown{
+    width: 300px !important;
+}
+.dropdown-menu-lg{
+    min-width: 350px !important;
+}
+.n-circle{
+    width: 50px;
+    height: 50px;
+    background-color:#FDCA31;
+    border-radius: 50%;
+    color:black;
+    line-height: 48px;
+    font-size: 22px;
+    text-align: center;
+}
 .rate {
-    float: left;
+   
     height: 46px;
-    
+    width:60%;
 }
 .rate:not(:checked) > input {
     position:absolute;
+   
     top:-9999px;
 }
 .rate:not(:checked) > label {
-  
+    float:right;
     width:1em;
     overflow:hidden;
     white-space:nowrap;
@@ -442,19 +460,5 @@ table{
 .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
 }
-.notifications-dropdown{
-    width: 300px !important;
-}
-.dropdown-menu-lg{
-    min-width: 350px !important;
-}
-.n-circle{
-    width: 50px;
-    height: 50px;
-    background-color:#FDCA31;
-    border-radius: 50%;
-    color:black;
-    line-height: 48px;
-    font-size: 22px;
-    text-align: center;
-}
+
+/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
