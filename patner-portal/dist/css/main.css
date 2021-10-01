@@ -51,6 +51,12 @@
     
 
 }
+.direct-chat-text {
+margin: 0px !important;
+}
+.btn-lm{
+   margin: 10px 0px 10px 0px;
+}
 
     .main-sidebar{
         position: fixed !important;

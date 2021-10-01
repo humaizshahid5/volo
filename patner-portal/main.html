@@ -911,6 +911,33 @@
            </div>
         </div>
       </div>
+      <div class="modal fade" id="leavemessage" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true" style="z-index: 4000000;">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+           <div class="modal-content">
+              <div class="modal-body">
+                <div class="col-12 text-right">
+                  <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"> &times; </button>
+       
+                 </div>
+              
+                 
+      
+                
+                    <label>Leave a Message<br></label>
+                  
+               
+                   <textarea class="form-control" rows="5"></textarea>
+                 
+                 
+                 
+                    <br>
+                    <button type="button" class="btn btn-default btn-block" data-dismiss="modal" data-card-widget="remove">Send</button>
+                    
+                 </div>
+              </div>
+           </div>
+       </div>
+      
       <!-- /.card-header -->
       <div class="card-body">
         <div class="direct-chat-messages">
@@ -920,13 +947,11 @@
               <span class="direct-chat-name float-left">Alexander Pierce</span>
               <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
             </div>
-            <!-- /.direct-chat-infos -->
-            <img class="direct-chat-img" src="dist/img/user1-128x128.jpg" alt="Message User Image">
-            <!-- /.direct-chat-img -->
+         
             <div class="direct-chat-text">
               Is this template really for free? That's unbelievable!
             </div>
-            <!-- /.direct-chat-text -->
+          
           </div>
           <!-- /.direct-chat-msg -->
 
@@ -937,7 +962,7 @@
               <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
             </div>
             <!-- /.direct-chat-infos -->
-            <img class="direct-chat-img" src="../img/kfc.png" alt="Message User Image">
+        
             <!-- /.direct-chat-img -->
             <div class="direct-chat-text">
               You better believe it!
@@ -996,6 +1021,8 @@
         </div>
         <!-- /.direct-chat-pane -->
         <center>You are currently 5 in the line</center>
+        <center><button class="btn btn-default btn-md btn-lm" data-toggle="modal" data-target="#leavemessage">Leave a Message</button></center>
+        
       </div>
       <!-- /.card-body -->
       <div class="card-footer">
@@ -1475,6 +1502,7 @@
      </div>
   </div>
 </div>
+
 
 <div class="modal fade" id="accept" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
