@@ -44,11 +44,141 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="modal"  data-target="#notification">
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="fas fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
         </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notifications-dropdown">
+          <span class="dropdown-item dropdown-header">Notifications</span>
+         
+          <a href="#" class="dropdown-item" data-toggle="modal" data-target="#orderdetail">
+            <div class="row n-row">
+              <div class="col-md-2 n-circle my-auto">
+                <i class="fas fa-shopping-bag"></i>
+              </div>
+              <div class="col-md-10 my-auto mx-auto " >
+                 <p class="n-text">HumAiz placed a new order</p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="reservations.html" class="dropdown-item" >
+            <div class="row">
+              <div class="col-md-2 n-circle my-auto">
+                <i class="fas fa-book"></i>
+              </div>
+              <div class="col-md-10 my-auto mx-auto " >
+                <p class="n-text">HumAiz placed a new reservation</p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="reservations.html" class="dropdown-item" >
+            <div class="row">
+              <div class="col-md-2 n-circle my-auto">
+                <i class="fas fa-times"></i>
+              </div>
+              <div class="col-md-10 my-auto mx-auto " >
+                <p class="n-text">  An order was cancelled</p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="review.html" class="dropdown-item" >
+            <div class="row">
+              <div class="col-md-2 n-circle my-auto">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="col-md-10 my-auto mx-auto " >
+                <p class="n-text">  You get a new review</p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item" data-toggle="modal" data-target="#chat" >
+            <div class="row">
+              <div class="col-md-2 n-circle my-auto">
+                <i class="fas fa-comment"></i>
+              </div>
+              <div class="col-md-10 my-auto" >
+                Volo replied to your enquiry:
+              <p class="n-more">
+                Thanks for contacting volo support. We are happy to assist you. Feel free to reach us anytime
+
+              </p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item" >
+            <div class="row">
+              <div class="col-md-2 n-circle my-auto" onclick="$('#orderpending').modal('show');">
+                <i class="fas fa-motorcycle" ></i>
+              </div>
+              <div class="col-md-10 my-auto"  >
+               
+               <a class="n-text" href="#" onclick="$('#orderpending').modal('show');" style="text-decoration: none;color:black; display: inline; line-break: strict;">
+                Your driver had an accident
+               </a>
+               <br>
+              
+                    Rider No: <a href="#" onclick="copyToClipboard('#p1')"  > <p id="p1" class="n-text" style="display: inline">+91433566644</p></a>
+
+
+                   
+                  
+                  
+               
+
+              </div>
+                
+           
+
+            </div>
+          
+
+          </div>
+        
+          <div class="dropdown-divider"></div>
+          
+         
+          
+          
+        </div>
       </li>
+      <script>
+       function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+      }
+
+  
+
+      </script>
 
       <!-- Messages Dropdown Menu -->
       <li class="nav-item">
@@ -1278,7 +1408,7 @@
       </div>
    </div>
 </div>
-<div class="modal fade" id="support-review" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
+<div class="modal fade" id="support-review" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true" style="z-index: 4000000;">
   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
      <div class="modal-content">
         <div class="modal-body">
@@ -1288,17 +1418,29 @@
            </div>
            <div class="col-12">
              <label>Rate</label>
-             <br>
-               <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-           </div>
-           <div class="col-12">
-             <label>Comments</label>
+         <br>
+            </div>
+
+             <div class="rate col-12">
+              <input type="radio" />
+              <label for="star5" title="text">5 stars</label>
+              <input type="radio" id="star4" name="rate" value="4" />
+              <label for="star4" title="text">4 stars</label>
+              <input type="radio" id="star3" name="rate" value="3" />
+              <label for="star3" title="text">3 stars</label>
+              <input type="radio" id="star2" name="rate" value="2" />
+              <label for="star2" title="text">2 stars</label>
+              <input type="radio" id="star1" name="rate" value="1" />
+              <label for="star1" title="text">1 star</label>
+            </div>
+           
+
+          
+              <label>Comment<br></label>
+            
+         
              <textarea class="form-control"></textarea>
-           </div>
+           
            
            
               <br>
