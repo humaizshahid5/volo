@@ -52,7 +52,7 @@
 
 }
 .direct-chat-text {
-margin: 0px !important;
+margin: 10px !important;
 }
 .btn-lm{
    margin: 10px 0px 10px 0px;
@@ -415,12 +415,12 @@ table{
     min-width: 350px !important;
 }
 .n-circle{
-    width: 50px;
+    width:100%;
     height: 50px;
     background-color:#FDCA31;
     border-radius: 50%;
     color:black;
-    line-height: 48px;
+    line-height: 50px;
     font-size: 22px;
     text-align: center;
 }
