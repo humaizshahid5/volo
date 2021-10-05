@@ -34,209 +34,348 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
  </div>
   
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-     
-    </ul>
-
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-     
-
-      <!-- Messages Dropdown Menu -->
-  
-      <!-- Notifications Dropdown Menu -->
-  
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4" >
-    <!-- Brand Logo -->
-    <a href="main.html" class="brand-link mx-auto text-center" >
-      <img src="../img/footer-logo.png" alt="Volo Logo" height="50px" >
+ <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <!-- Left navbar links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+    </li>
    
-    </a>
+  </ul>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-       <div class="user-panel mt-3 pb-3 mb-3 d-flex brand-text ">
-        <div class="row brand-text ">
-          <div class="col-12 mx-auto  ">
-            <div class="company-img mx-auto">
-              <img src="../img/kfc.png" />
+  <!-- Right navbar links -->
+  <ul class="navbar-nav ml-auto">
+    <!-- Navbar Search -->
+    <li class="nav-item dropdown">
+      <a class="nav-link" data-toggle="dropdown" href="#">
+        <i class="fas fa-bell"></i>
+        <span class="badge badge-warning navbar-badge">15</span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notifications-dropdown">
+        <span class="dropdown-item dropdown-header">Notifications</span>
+       
+        <a href="#" class="dropdown-item" data-toggle="modal" data-target="#orderdetail">
+          <div class="row n-row">
+            <div class="col-2 n-circle ">
+              <i class="fas fa-shopping-bag"></i>
+            </div>
+            <div class="col-10 my-auto mx-auto " >
+               <p class="n-text">HumAiz placed a new order</p>
+           
             </div>
 
           </div>
-          <div class="col-12">
-          
-            <p class="comapny-title"> Gloria-Jeans Coffee Main Market Manama, Bahrain</p>
+        
+
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="reservations.html" class="dropdown-item" >
+          <div class="row">
+            <div class="col-2 n-circle my-auto">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="col-10 my-auto mx-auto " >
+              <p class="n-text">HumAiz placed a new reservation</p>
            
-          </div>
+            </div>
 
           </div>
-       
-       
-    </div>
+        
 
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item" data-toggle="modal" data-target="#ordercomplete" >
+          <div class="row">
+            <div class="col-2 n-circle my-auto">
+              <i class="fas fa-times"></i>
+            </div>
+            <div class="col-10 my-auto mx-auto " >
+              <p class="n-text">  An order was cancelled</p>
+           
+            </div>
+
           </div>
+        
+
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="review.html" class="dropdown-item" >
+          <div class="row">
+            <div class="col-2 n-circle my-auto">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="col-10 my-auto mx-auto " >
+              <p class="n-text">  You get a new review</p>
+           
+            </div>
+
+          </div>
+        
+
+        </a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item" data-toggle="modal" data-target="#chat" >
+          <div class="row">
+            <div class="col-2 n-circle my-auto">
+              <i class="fas fa-comment"></i>
+            </div>
+            <div class="col-10 my-auto" >
+              Volo replied to your enquiry:
+            <p class="n-more">
+              Thanks for contacting volo support. We are happy to assist you. Feel free to reach us anytime
+
+            </p>
+           
+            </div>
+
+          </div>
+        
+
+        </a>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-item" >
+          <div class="row">
+            <div class="col-2 n-circle my-auto" onclick="$('#orderpending').modal('show');">
+              <i class="fas fa-motorcycle" ></i>
+            </div>
+            <div class="col-10 my-auto"  >
+             
+             <a class="n-text" href="#" onclick="$('#orderpending').modal('show');" style="text-decoration: none;color:black; display: inline; line-break: strict;">
+              Your driver had an accident
+             </a>
+             <br>
+            
+                  Rider No: <a href="#" onclick="copyToClipboard('#p1')"  > <p id="p1" class="n-text" style="display: inline">+91433566644</p></a>
+
+
+                 
+                
+                
+             
+
+            </div>
+              
+         
+
+          </div>
+        
+
+        </div>
+      
+        <div class="dropdown-divider"></div>
+        
+       
+        
+        
+      </div>
+    </li>
+    <script>
+     function copyToClipboard(element) {
+      var $temp = $("<input>");
+      $("body").append($temp);
+      $temp.val($(element).text()).select();
+      document.execCommand("copy");
+      $temp.remove();
+    }
+
+
+
+    </script>
+
+  
+    <!-- Notifications Dropdown Menu -->
+    <li class="nav-item">
+      <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+        <i class="fas fa-expand-arrows-alt"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link controlleft" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+        <i class="fas fa-th-large"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-toggle="modal" data-target="#signout">
+        <i class="fas fa-lock"></i>
+      </a>
+    </li>
+  
+  </ul>
+</nav>
+<!-- /.navbar -->
+
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4" >
+  <!-- Brand Logo -->
+  <a href="main.html" class="brand-link mx-auto text-center" >
+    <img src="../img/footer-logo.png" alt="Volo Logo" height="50px" >
+ 
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex brand-text ">
+      <div class="row brand-text ">
+        <div class="col-12 mx-auto  ">
+          <div class="company-img mx-auto">
+            <img src="../img/kfc.png" />
+          </div>
+
+        </div>
+        <div class="col-12">
+        
+          <p class="comapny-title"> Gloria-Jeans Coffee Main Market Manama, Bahrain</p>
+         
+        </div>
+
+        </div>
+     
+     
+  </div>
+
+    <!-- SidebarSearch Form -->
+    <div class="form-inline">
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
         </div>
       </div>
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-               <li class="nav-item">
-                <a href="main.html" class="nav-link">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
-                  <p>
-                    Dashboard
-                  
-                  </p>
-                </a>
-              </li>
-          <li class="nav-item">
-            <a href="order-history.html" class="nav-link ">
-              <i class="nav-icon fas fa-shopping-bag"></i>
-              <p>
-                Order's History
-              
-              </p>
-            </a>
-           
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-                Reservations's
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="reservations.html" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Today Reservations's</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Reservations's History</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p> Reservations's Review</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-home"></i>
-              <p>
-                Do it Yourself
-               
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-cog"></i>
-              <p>
-                Settings
-               
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-bullhorn"></i>
-              <p>
-                Promotions
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Acive Promotions</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Promotions's History</p>
-                </a>
-              </li>
-            
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-plus"></i>
-              <p>
-                Add-ons
-               
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-motorcycle"></i>
-              <p>
-                Drivers
-               
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
-              <p>
-                Analytics
-               
-              </p>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
     </div>
-    <!-- /.sidebar -->
-  </aside>
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+             <li class="nav-item">
+              <a href="main.html" class="nav-link">
+                <i class="nav-icon fas fa-tachometer-alt"></i>
+                <p>
+                  Dashboard
+                
+                </p>
+              </a>
+            </li>
+            
+        <li class="nav-item">
+          <a href="order-history.html" class="nav-link ">
+            <i class="nav-icon fas fa-shopping-bag"></i>
+            <p>
+              Order's History
+            
+            </p>
+          </a>
+         
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link ">
+            <i class="nav-icon fas fa-book"></i>
+            <p>
+              Reservations's
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="reservations.html" class="nav-link ">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Today Reservations's</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Reservations's History</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p> Reservations's Review</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-home"></i>
+            <p>
+              Do it Yourself
+             
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-cog"></i>
+            <p>
+              Settings
+             
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link ">
+            <i class="nav-icon fas fa-bullhorn"></i>
+            <p>
+              Promotions
+              <i class="right fas fa-angle-left"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class="nav-link ">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Acive Promotions</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Promotions's History</p>
+              </a>
+            </li>
+          
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-plus"></i>
+            <p>
+              Add-ons
+             
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-motorcycle"></i>
+            <p>
+              Drivers
+             
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-chart-pie"></i>
+            <p>
+              Analytics
+             
+            </p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>
+
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -330,7 +469,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <table id="reservations_request" class="table table-bordered  table-responsive" >
                       <thead>
                       <tr>
+                        <th>Reservation ID</th>
                         <th>Reservation Date</th>
+
                         <th>Reservation Day	</th>
                         <th>Reservation Time</th>
                         <th>Guest Name</th>
@@ -344,7 +485,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </thead>
                       <tbody>
                       <tr>
+                        <td>43553	</td>
                         <td>2021-07-14	</td>
+
                         <td>Wednesday</td>
                         <td>8:00 am (08:00)</td>
                         <td>Mohamed Jaffer</td>
@@ -352,7 +495,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <td>+973 0000000	</td>
                         <td>None</td>
                         <td>2021-07-14 02:35:10	</td>
-                        <td><button class="btn btn-md btn-block btn-info"> Approve </button><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#decline">Decline</button></td>
+                        <td><button class="btn btn-md btn-block btn-default" data-toggle="modal" data-target="#approve"> Approve </button><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#decline">Decline</button></td>
                        
 
 
@@ -394,6 +537,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <table id="reservations_request" class="table table-bordered table-responsive" >
                       <thead>
                       <tr>
+                        <th>Reservation ID</th>
                         <th>Reservation Date</th>
                         <th>Reservation Day	</th>
                         <th>Reservation Time</th>
@@ -409,7 +553,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </thead>
                       <tbody>
                       <tr>
+                        <td>23345	</td>
                         <td>2021-07-14	</td>
+
                         <td>Wednesday</td>
                         <td>8:00 am (08:00)</td>
                         <td>Mohamed Jaffer</td>
@@ -419,14 +565,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <td>2021-07-14 02:35:10	</td>
                         <td>Upcoming</td>
 
-                        <td><button class="btn btn-md btn-block btn-info"> Done </button><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#decline">Cancel</button></td>
+                        <td><button class="btn btn-md btn-block btn-default" data-toggle="modal" data-target="#done"> Done </button><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#decline">Cancel</button></td>
                        
 
 
                       
                       </tr>
                       <tr>
+                        <td>234333	</td>
                         <td>2021-07-14	</td>
+
                         <td>Wednesday</td>
                         <td>8:00 am (08:00)</td>
                         <td>Mohamed Jaffer</td>
@@ -435,14 +583,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <td>None</td>
                         <td>2021-07-14 02:35:10	</td>
                         <td>Upcoming</td>
-                        <td><button class="btn btn-md btn-block btn-info"> Done </button><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#decline">Cancel</button></td>
+                        <td><button class="btn btn-md btn-block btn-default" data-toggle="modal" data-target="#done"> Done </button><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#decline">Cancel</button></td>
                        
 
 
                       
                       </tr>
                       <tr>
+                        <td>443354	</td>
                         <td>2021-07-14	</td>
+
                         <td>Wednesday</td>
                         <td>8:00 am (08:00)</td>
                         <td>Mohamed Jaffer</td>
@@ -451,7 +601,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <td>None</td>
                         <td>2021-07-14 02:35:10	</td>
                         <td>Upcoming</td>
-                        <td><button class="btn btn-md btn-block btn-info"> Done </button><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#decline">Cancel</button></td>
+                        <td><button class="btn btn-md btn-block btn-default" data-toggle="modal" data-target="#done"> Done </button><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#decline">Cancel</button></td>
                        
 
 
@@ -490,7 +640,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <table id="upcoming_reservation" class="table table-bordered table-responsive" >
                       <thead>
                       <tr>
+                        <th>Reservation ID</th>
                         <th>Reservation Date</th>
+
                         <th>Reservation Day	</th>
                         <th>Reservation Time</th>
                         <th>Guest Name</th>
@@ -505,7 +657,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </thead>
                       <tbody>
                       <tr>
+                        <td>34333	</td>
                         <td>2021-07-14	</td>
+
                         <td>Wednesday</td>
                         <td>8:00 am (08:00)</td>
                         <td>Mohamed Jaffer</td>
@@ -514,14 +668,16 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <td>None</td>
                         <td>2021-07-14 02:35:10	</td>
                         <td>Upcoming</td>
-                        <td><button class="btn btn-md btn-block btn-info"> Done </button><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#decline">Cancel</button></td>
+                        <td><button class="btn btn-md btn-block btn-default" data-toggle="modal" data-target="#done"> Done </button><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#decline">Cancel</button></td>
                        
 
 
                       
                       </tr>
                       <tr>
+                        <td>44334	</td>
                         <td>2021-07-14	</td>
+
                         <td>Wednesday</td>
                         <td>8:00 am (08:00)</td>
                         <td>Mohamed Jaffer</td>
@@ -530,7 +686,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <td>None</td>
                         <td>2021-07-14 02:35:10	</td>
                         <td>Upcoming</td>
-                        <td><button class="btn btn-md btn-block btn-info"> Done </button><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#decline">Cancel</button></td>
+                        <td><button class="btn btn-md btn-block btn-default" data-toggle="modal" data-target="#done"> Done </button><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#decline">Cancel</button></td>
                        
 
 
@@ -540,7 +696,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </tbody>
                      
                     </table>
-                    <button class="btn btn-md btn-default" data-toggle="modal" data-target="#myModal">Settings</button>
 
                   </div>
                 </div>
@@ -601,7 +756,41 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </div>
   </div>
 </div>
-<div class="modal fade" id="myModal" class="modal">
+<div class="modal fade" id="approve" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content">
+    
+      <div class="modal-body">
+       Are you sure you want to approve the reservation?
+      
+       <div class="float-right">
+           <br>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Confirm</button>
+       </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="done" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+    <div class="modal-content">
+    
+      <div class="modal-body">
+       Are you sure you want to mark the reservation done?
+      
+       <div class="float-right">
+           <br>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Confirm</button>
+       </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="reservationsettings" class="modal">
   <div class="modal-dialog  modal-dialog-centered" role="document">
 
   <!-- Modal content -->
@@ -615,35 +804,39 @@ scratch. This page gets rid of all links and provides the needed markup only.
       </div>
       <div class="col-12">
       <label>Tables available for reservation:</label>
-      <label id='tableLabel' class="reserveLabels"></label>
-      <input type="number" id='tableNumber' class="form-control">
+      <p class="reserve_txt">12</p>
+      
+      
+      <input type="number" id='reserveInputs' class="form-control r-popup" value="12" >
 
       
 
       <label>Maximum guests per table:</label>
-      <label id="maxGuestLabel" class="reserveLabels" ></label>
-      <input type="number" id="maxGuests" class="form-control">
+      <p class="reserve_txt">15</p>
+     
+      <input type="number" id="maxGuests" class="form-control r-popup" value="15">
       
 
       <label>Maximum stay in minutes:</label>
-      <label id="maxStayLabel" class="reserveLabels"></label>
-      <input type="number" id="maxStay" class="form-control">
+      <p class="reserve_txt">200</p>
+     
+      <input type="number" id="maxStay" class="form-control r-popup" value="200">
      
 
       <label>Reservation interval in minutes:</label>
-      
-      <select id="interval" class="form-control" >
+      <p class="reserve_txt">60</p>
+      <select id="interval" class="form-control r-popup" >
           <option value='15'>15</option>
           <option value='30'>30</option>
-          <option value='60'>60</option>
+          <option value='60' selected>60</option>
       </select>
       
 
       <label>Minimum notice for reservations in minutes:</label>
-      <label id="minNoticeLabel" class="reserveLabels"></label>
-      <select id='minNotice' name='minNotice' class="form-control">
+      <p class="reserve_txt">30</p>
+      <select id='minNotice' name='minNotice' class="form-control r-popup">
           <option value='15'>15</option>
-          <option value='30'>30</option>
+          <option value='30' selected>30</option>
           <option value='45'>45</option>
           <option value='60'>60</option>
           <option value='75'>75</option>
@@ -663,7 +856,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
          
           <div class="col-4">
             <br>
-            <button type='button' class="btn btn-md btn-default" id='confirmTableBtn' onclick='updateTableNumber()' style="display: none;">Confirm</button>
+            <button type='button' class="btn btn-md btn-default" name="update" id='confirmTableBtn' onclick='updateTableNumber(this.name)' style="display: none;">Confirm</button>
           </div>
           <div class="col-8 text-right">
             <br>
@@ -700,7 +893,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
             <div class="col-lg-5 col-md-5 col-xs-12 col-sm-12">
             
-              <div class="eventMenu">
+              <div class="eventMenu" >
                 <div class="eventHeader">
       
                     <h1>Day Events</h1>
@@ -709,9 +902,53 @@ scratch. This page gets rid of all links and provides the needed markup only.
       
       
                 </div>
-      
-                <div class="eventSlots" id='eventSlots'>
-                    <div class="slot">
+                
+                <div id="accordion">
+
+                  <div class="card">
+                    <div class="card-header">
+                      <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                        Mohamed Jaffer (8:00 AM)
+                      </a>
+                    </div>
+                    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                      <div class="slot">
+                        
+                        
+                          <h4>8:00 am (08:00)</h4>
+                          
+                          <h4>Mohamed Jaffer</h4>
+                         
+                          <h4>5 Guests</h4>
+                        
+                          <h4>+973 0000000</h4>
+                         
+                          <h4 >Notes: none</h4>
+                         
+        
+                         
+                         
+                          <h4>Requested on:</h4>
+                          <h4>02:35:10 2021-07-14</h4>
+                         
+                          <h4 >Status: <span class="approved">Approved</span></h4>
+                         
+                          
+                     
+                      
+                      </div>
+                    </div>
+                  </div>
+                
+                  <div class="card">
+                    <div class="card-header">
+                      <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                       Muhammad HumAiz (9:00 AM)
+                      </a>
+                    </div>
+                    <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                      <div class="slot">
+                        
                         
                         <h4>8:00 am (08:00)</h4>
                         
@@ -732,7 +969,50 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <h4 >Status: <span class="approved">Approved</span></h4>
                        
                         
+                   
+                    
                     </div>
+                    </div>
+                  </div>
+                
+                  <div class="card">
+                    <div class="card-header">
+                      <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                       Ali (10:00 AM)
+                      </a>
+                    </div>
+                    <div id="collapseThree" class="collapse" data-parent="#accordion">
+                      <div class="slot">
+                        
+                        
+                        <h4>8:00 am (08:00)</h4>
+                        
+                        <h4>Mohamed Jaffer</h4>
+                       
+                        <h4>5 Guests</h4>
+                      
+                        <h4>+973 0000000</h4>
+                       
+                        <h4 >Notes: none</h4>
+                       
+      
+                       
+                       
+                        <h4>Requested on:</h4>
+                        <h4>02:35:10 2021-07-14</h4>
+                       
+                        <h4 >Status: <span class="approved">Approved</span></h4>
+                       
+                        
+                   
+                    
+                    </div>
+                    </div>
+                  </div>
+                
+                </div>
+                <div class="eventSlots" id='eventSlots'>
+                  
                 </div>
               </div>
             </div>
@@ -772,6 +1052,54 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </div>
  
 </div>
+<div class="modal fade" id="signout" tabindex="-1" role="dialog" aria-labelledby="signout" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+     <div class="modal-content">
+        <div class="modal-header">
+           <h5 class="modal-title" id="orderdetailLongTitle">Logout of</h5>
+           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+           </button>
+        </div>
+        <div class="modal-body">
+           <div class="row">
+              <div class="col-12 logout-popup">
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                    This device
+                    </label>
+                 </div>
+                 <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                    All devices
+                    </label>
+                 </div>
+                 <div class="float-right">
+                    <br>
+                    <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#confirm">Logout</button>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+     <div class="modal-content">
+        <div class="modal-body">
+           Are you sure you want to logout?
+           <div class="float-right">
+              <br>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+              <a href="../PSignIn.html"><button type="button" class="btn btn-warning" >Confirm</button></a>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
 
 
 <!-- jQuery -->
@@ -804,11 +1132,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
       "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#reservations_request_wrapper .col-md-6:eq(0)');
     $("#today_reservation").DataTable({ 
-      "responsive": true, "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ], "autoWidth": false,
+      "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ], "autoWidth": false,
       "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#today_reservation_wrapper .col-md-6:eq(0)');
     $("#upcoming_reservation").DataTable({
-      "responsive": true, "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": false,
+      "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": false,
       "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#upcoming_reservation_wrapper .col-md-6:eq(0)');
      
@@ -816,7 +1144,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   });
   
 </script>
-<a  href="#" data-toggle="modal" data-target="#trading">
+<a  href="#" data-toggle="modal" data-target="#reservationsettings">
   <div class="row" style="padding: 0px;margin: 0px;">
 <div class="col-12 t-fixed " style="padding: 0px;margin: 0px;"> 
 
@@ -826,7 +1154,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <div class="trading mx-auto" >
 <img src="../img/footer-logo.png"/>
-<img src="../img/icon.png" class="img-top" alt="Card Front">
+
 </div>
 
 </a>

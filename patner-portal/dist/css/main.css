@@ -461,4 +461,14 @@ table{
     color: #c59b08;
 }
 
-/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
+.r-popup{
+    display: none;
+}
+.slot{
+   
+    background-color: #262626;
+}
+#accordion{
+    margin-top: 10px;
+    background-color: #12121F;
+}

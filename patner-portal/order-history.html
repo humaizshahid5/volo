@@ -32,189 +32,346 @@
          <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
-               <li class="nav-item">
-                  <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-               </li>
+              <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+              </li>
+             
             </ul>
+        
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
-               <!-- Navbar Search -->
-               <!-- Messages Dropdown Menu -->
-               <!-- Notifications Dropdown Menu -->
-               <li class="nav-item">
-                  <a class="nav-link" href="#" data-toggle="modal" data-target="#chat">
-                    <i class="fas fa-comment"></i>
+              <!-- Navbar Search -->
+              <li class="nav-item dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">
+                  <i class="fas fa-bell"></i>
+                  <span class="badge badge-warning navbar-badge">15</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notifications-dropdown">
+                  <span class="dropdown-item dropdown-header">Notifications</span>
+                 
+                  <a href="#" class="dropdown-item" data-toggle="modal" data-target="#orderdetail">
+                    <div class="row n-row">
+                      <div class="col-2 n-circle ">
+                        <i class="fas fa-shopping-bag"></i>
+                      </div>
+                      <div class="col-10 my-auto mx-auto " >
+                         <p class="n-text">HumAiz placed a new order</p>
+                     
+                      </div>
+        
+                    </div>
+                  
+        
                   </a>
-                </li>
-               <li class="nav-item">
-                  <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                  <div class="dropdown-divider"></div>
+                  <a href="reservations.html" class="dropdown-item" >
+                    <div class="row">
+                      <div class="col-2 n-circle my-auto">
+                        <i class="fas fa-book"></i>
+                      </div>
+                      <div class="col-10 my-auto mx-auto " >
+                        <p class="n-text">HumAiz placed a new reservation</p>
+                     
+                      </div>
+        
+                    </div>
+                  
+        
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item" data-toggle="modal" data-target="#ordercomplete" >
+                    <div class="row">
+                      <div class="col-2 n-circle my-auto">
+                        <i class="fas fa-times"></i>
+                      </div>
+                      <div class="col-10 my-auto mx-auto " >
+                        <p class="n-text">  An order was cancelled</p>
+                     
+                      </div>
+        
+                    </div>
+                  
+        
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="review.html" class="dropdown-item" >
+                    <div class="row">
+                      <div class="col-2 n-circle my-auto">
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <div class="col-10 my-auto mx-auto " >
+                        <p class="n-text">  You get a new review</p>
+                     
+                      </div>
+        
+                    </div>
+                  
+        
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item" data-toggle="modal" data-target="#chat" >
+                    <div class="row">
+                      <div class="col-2 n-circle my-auto">
+                        <i class="fas fa-comment"></i>
+                      </div>
+                      <div class="col-10 my-auto" >
+                        Volo replied to your enquiry:
+                      <p class="n-more">
+                        Thanks for contacting volo support. We are happy to assist you. Feel free to reach us anytime
+        
+                      </p>
+                     
+                      </div>
+        
+                    </div>
+                  
+        
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <div class="dropdown-item" >
+                    <div class="row">
+                      <div class="col-2 n-circle my-auto" onclick="$('#orderpending').modal('show');">
+                        <i class="fas fa-motorcycle" ></i>
+                      </div>
+                      <div class="col-10 my-auto"  >
+                       
+                       <a class="n-text" href="#" onclick="$('#orderpending').modal('show');" style="text-decoration: none;color:black; display: inline; line-break: strict;">
+                        Your driver had an accident
+                       </a>
+                       <br>
+                      
+                            Rider No: <a href="#" onclick="copyToClipboard('#p1')"  > <p id="p1" class="n-text" style="display: inline">+91433566644</p></a>
+        
+        
+                           
+                          
+                          
+                       
+        
+                      </div>
+                        
+                   
+        
+                    </div>
+                  
+        
+                  </div>
+                
+                  <div class="dropdown-divider"></div>
+                  
+                 
+                  
+                  
+                </div>
+              </li>
+              <script>
+               function copyToClipboard(element) {
+                var $temp = $("<input>");
+                $("body").append($temp);
+                $temp.val($(element).text()).select();
+                document.execCommand("copy");
+                $temp.remove();
+              }
+        
+          
+        
+              </script>
+        
+              <!-- Messages Dropdown Menu -->
+            
+              <!-- Notifications Dropdown Menu -->
+              <li class="nav-item">
+                <a class="nav-link" data-widget="fullscreen" href="#" role="button">
                   <i class="fas fa-expand-arrows-alt"></i>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link controlleft" data-widget="control-sidebar" data-slide="true" href="#" role="button">
                   <i class="fas fa-th-large"></i>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="../PSignIn.html">
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#signout">
                   <i class="fas fa-lock"></i>
-                  </a>
-               </li>
+                </a>
+              </li>
+            
             </ul>
-         </nav>
-         <!-- /.navbar -->
-         <!-- Main Sidebar Container -->
-         <aside class="main-sidebar sidebar-dark-primary elevation-4">
+          </nav>
+          <!-- /.navbar -->
+        
+          <!-- Main Sidebar Container -->
+          <aside class="main-sidebar sidebar-dark-primary elevation-4" >
             <!-- Brand Logo -->
-            <a href="main.html" class="brand-link mx-auto text-center">
-            <img src="../img/footer-logo.png" alt="Volo Logo" height="50px" />
+            <a href="main.html" class="brand-link mx-auto text-center" >
+              <img src="../img/footer-logo.png" alt="Volo Logo" height="50px" >
+           
             </a>
+        
             <!-- Sidebar -->
             <div class="sidebar">
-               <!-- Sidebar user panel (optional) -->
-               <div class="user-panel mt-3 pb-3 mb-3 d-flex brand-text">
-                  <div class="row brand-text">
-                     <div class="col-12 mx-auto">
-                        <div class="company-img mx-auto">
-                           <img src="../img/kfc.png" />
-                        </div>
-                     </div>
-                     <div class="col-12">
-                        <p class="comapny-title">Gloria-Jeans Coffee Main Market Manama, Bahrain</p>
-                     </div>
+              <!-- Sidebar user panel (optional) -->
+              <div class="user-panel mt-3 pb-3 mb-3 d-flex brand-text ">
+                <div class="row brand-text ">
+                  <div class="col-12 mx-auto  ">
+                    <div class="company-img mx-auto">
+                      <img src="../img/kfc.png" />
+                    </div>
+        
                   </div>
-               </div>
-               <!-- SidebarSearch Form -->
-               <div class="form-inline">
-                  <div class="input-group" data-widget="sidebar-search">
-                     <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search" />
-                     <div class="input-group-append">
-                        <button class="btn btn-sidebar">
-                        <i class="fas fa-search fa-fw"></i>
-                        </button>
-                     </div>
+                  <div class="col-12">
+                  
+                    <p class="comapny-title"> Gloria-Jeans Coffee Main Market Manama, Bahrain</p>
+                   
                   </div>
-               </div>
-               <!-- Sidebar Menu -->
-               <nav class="mt-2">
-                  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                     <!-- Add icons to the links using the .nav-icon class
-                        with font-awesome or any other icon font library -->
-                     <li class="nav-item">
+        
+                  </div>
+               
+               
+            </div>
+        
+              <!-- SidebarSearch Form -->
+              <div class="form-inline">
+                <div class="input-group" data-widget="sidebar-search">
+                  <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                  <div class="input-group-append">
+                    <button class="btn btn-sidebar">
+                      <i class="fas fa-search fa-fw"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- Sidebar Menu -->
+              <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                  <!-- Add icons to the links using the .nav-icon class
+                       with font-awesome or any other icon font library -->
+                       <li class="nav-item">
                         <a href="main.html" class="nav-link">
-                           <i class="nav-icon fas fa-tachometer-alt"></i>
-                           <p>
-                              Dashboard
-                           </p>
+                          <i class="nav-icon fas fa-tachometer-alt"></i>
+                          <p>
+                            Dashboard
+                          
+                          </p>
                         </a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="order-history.html" class="nav-link">
-                           <i class="nav-icon fas fa-shopping-bag"></i>
-                           <p>
-                              Order's History
-                           </p>
+                      </li>
+                      
+                  <li class="nav-item">
+                    <a href="order-history.html" class="nav-link ">
+                      <i class="nav-icon fas fa-shopping-bag"></i>
+                      <p>
+                        Order's History
+                      
+                      </p>
+                    </a>
+                   
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link ">
+                      <i class="nav-icon fas fa-book"></i>
+                      <p>
+                        Reservations's
+                        <i class="right fas fa-angle-left"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="reservations.html" class="nav-link ">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Today Reservations's</p>
                         </a>
-                     </li>
-                     <li class="nav-item">
+                      </li>
+                      <li class="nav-item">
                         <a href="#" class="nav-link">
-                           <i class="nav-icon fas fa-book"></i>
-                           <p>
-                              Reservations's
-                              <i class="right fas fa-angle-left"></i>
-                           </p>
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Reservations's History</p>
                         </a>
-                        <ul class="nav nav-treeview">
-                           <li class="nav-item">
-                              <a href="reservations.html" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Today Reservations's</p>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Reservations's History</p>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Reservations's Review</p>
-                              </a>
-                           </li>
-                        </ul>
-                     </li>
-                     <li class="nav-item">
+                      </li>
+                      <li class="nav-item">
                         <a href="#" class="nav-link">
-                           <i class="nav-icon fas fa-home"></i>
-                           <p>
-                              Do it Yourself
-                           </p>
+                          <i class="far fa-circle nav-icon"></i>
+                          <p> Reservations's Review</p>
                         </a>
-                     </li>
-                     <li class="nav-item">
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon fas fa-home"></i>
+                      <p>
+                        Do it Yourself
+                       
+                      </p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon fas fa-cog"></i>
+                      <p>
+                        Settings
+                       
+                      </p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link ">
+                      <i class="nav-icon fas fa-bullhorn"></i>
+                      <p>
+                        Promotions
+                        <i class="right fas fa-angle-left"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="#" class="nav-link ">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Acive Promotions</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
                         <a href="#" class="nav-link">
-                           <i class="nav-icon fas fa-cog"></i>
-                           <p>
-                              Settings
-                           </p>
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Promotions's History</p>
                         </a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                           <i class="nav-icon fas fa-bullhorn"></i>
-                           <p>
-                              Promotions
-                              <i class="right fas fa-angle-left"></i>
-                           </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                           <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Acive Promotions</p>
-                              </a>
-                           </li>
-                           <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                 <i class="far fa-circle nav-icon"></i>
-                                 <p>Promotions's History</p>
-                              </a>
-                           </li>
-                        </ul>
-                     </li>
-                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                           <i class="nav-icon fas fa-plus"></i>
-                           <p>
-                              Add-ons
-                           </p>
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                           <i class="nav-icon fas fa-motorcycle"></i>
-                           <p>
-                              Drivers
-                           </p>
-                        </a>
-                     </li>
-                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                           <i class="nav-icon fas fa-chart-pie"></i>
-                           <p>
-                              Analytics
-                           </p>
-                        </a>
-                     </li>
-                  </ul>
-               </nav>
-               <!-- /.sidebar-menu -->
+                      </li>
+                    
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon fas fa-plus"></i>
+                      <p>
+                        Add-ons
+                       
+                      </p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon fas fa-motorcycle"></i>
+                      <p>
+                        Drivers
+                       
+                      </p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="nav-icon fas fa-chart-pie"></i>
+                      <p>
+                        Analytics
+                       
+                      </p>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+              <!-- /.sidebar-menu -->
             </div>
             <!-- /.sidebar -->
-         </aside>
+          </aside>
+        
          <!-- Content Wrapper. Contains page content -->
          <div class="content-wrapper">
             <!-- Content Header (Page header) -->
@@ -468,6 +625,9 @@
                               <b>Pickup Time</b><br> ASAP
                            </div>
                            <div class="col-12 text-center">
+                              <b>Completion Time</b><br> 40 mins
+                           </div>
+                           <div class="col-12 text-center">
                               <b>Customer Name</b> <br>Mohamed Jaffer	
                            </div>
                            <div class="col-12 text-center">
@@ -634,27 +794,7 @@
             </div>
          </div>
       </div>
-      <div class="modal fade" id="chat" tabindex="-1" role="dialog" aria-labelledby="signout" aria-hidden="true">
-         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-            <div class="modal-content">
-               <div class="modal-body">
-                 <div class="col-12 text-right">
-                  <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"> &times; </button>
-       
-                 </div>
-                 <div class="col-12 mx-auto justify-content-center" >
-                 <br>
-                   <p style="text-align: center;">Facing any issue please feel free to contact our 24/7 support </p>
-                  <center><button class="btn btn-default text-center ">Contact Support</button></center> 
-                   <br>
-                 </div>
-                  
-                 
-                  
-               </div>
-            </div>
-         </div>
-       </div>
+    
        <div class="modal fade" id="signout" tabindex="-1" role="dialog" aria-labelledby="signout" aria-hidden="true">
           <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
              <div class="modal-content">
@@ -703,6 +843,105 @@
              </div>
           </div>
        </div>
+       <div class="modal fade" id="trading" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content ">
+             
+               <div class="modal-body">
+                 <div class="row">
+                  <div class="col-8">
+                    <h3>Start Trading</h3>
+                  </div>
+                 <div class="col-4 text-right">
+                   <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"> &times; </button>
+        
+                  </div>
+      
+                 </div>
+              
+                  <form>
+                     <div class="row">
+                      <div class="col-12 mx-auto justify-content-center">
+                        <h5 style="text-align: center;">Current Status
+                          <span class="badge badge-secondary" style="background-color: green;">On</span></h5>
+      
+                      </div>
+                        <div class="col-md-12">
+                           <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                              <label class="form-check-label" for="defaultCheck1">
+                              Start/Stop Trading
+                              </label>
+                           </div>
+                        </div>
+                       
+                        <div class="col-md-12">
+                           <div class="form-check">
+                             <div class="row">
+                               <div class="col-12">
+                                <input class="form-check-input" type="checkbox" value="" id="shipping_time" onclick="ShowHideDiv(this)">
+                                <label class="form-check-label" for="defaultCheck1">
+                                   Disable automatic Shipping Until 
+                                  </label>
+                               </div>
+                               <div class="col-12">
+                                <select class="form-control" id="time" style="display: none;">
+                                  <option>11:30 Pm</option>
+                                  <option>12:00 Pm</option>
+                                  <option>12:30 Pm</option>
+                                  <option>01:00 Pm</option>
+                               </select>
+                            
+      
+                               </div>
+                             </div>
+                            
+                                 
+                           </div>
+                        </div>
+                        <script type="text/javascript">
+                          function ShowHideDiv(shipping_time) {
+                              var dvPassport = document.getElementById("time");
+                              dvPassport.style.display = shipping_time.checked ? "block" : "none";
+                          }
+                      </script>
+            
+                        <div class="col-md-12">
+                           <div class="form-check">
+                              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                              <label class="form-check-label" for="defaultCheck1">
+                              Busy?
+                              </label>
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <div class="form-group">
+                              <label for="forDelay">
+                              Average Delay
+                              </label>
+                              <select class="form-control">
+                                 <option>10 Min</option>
+                                 <option>20 Min</option>
+                                 <option>30 Min</option>
+                                 <option>40 Min</option>
+                                 <option>50 Min</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="col-md-12">
+                           <b>Current Delay is: </b> 15 min <br>
+                           <b>Nearest closing time: </b> 11:30 PM 
+                        </div>
+                        <div class="col-12" style="margin-top: 20px;">
+                          <button type="button" class="btn btn-default btn-block">Submit changes</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               
+            </div>
+         </div>
+      </div>
       <!-- jQuery -->
       <script src="plugins/jquery/jquery.min.js"></script>
       <!-- Bootstrap 4 -->
