@@ -1265,6 +1265,7 @@ var areChildrenAllSelected = true;
 $.each(group.children, function(i, child) {
 if (selectedIds.indexOf(child.id) < 0) {
 areChildrenAllSelected = false;
+
 return false; // Short-circuit $.each()
 }
 });
