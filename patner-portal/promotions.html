@@ -487,28 +487,17 @@
                                  <div class="col-12" id="diy_itm" style="display: none;">
                                     <div class="form-group">
                                         <label>DIY Items</label>
-                                        <select   id="choices-multiple-remove-button" name="type[]" multiple  >
-                                            <optgroup label="Fast Food">
-                                                <option   value="1">Burger</option>
-                                                <option   value="2">Pizza</option>
-                                                <option  value="3">Zinger</option>
-                                                <option  value="3">Fries</option>
-                                                </optgroup>
-                                                <optgroup label="Drink">
-                                                    
-                                                    <option  value="3">Drink</option>
-                                                </optgroup>
-                                                <optgroup label="BBQ">
-                                                    
-                                                    <option  value="3">Tikka</option>
-                                                </optgroup>
+                                        <br>
+                                        <input type="hidden"  id="diy_item" value="" style="width:100%;margin-bottom: 0px;" /><br />
+
+                                        
                                                 
                                                 
     
     
     
                                               
-                                      </select>
+                                    
                                     
                                   </div>
           
@@ -1232,31 +1221,108 @@
             
        </script>
             <script>
-                var FRUIT_GROUPS = [
+                var Diy_item = [
 {
 id: '',
-text: 'Citrus',
+text: 'Fast Food',
 children: [
-{ id: 'c1', text: 'Grapefruit' },
-{ id: 'c2', text: 'Orange' },
-{ id: 'c3', text: 'Lemon' },
-{ id: 'c4', text: 'Lime' }
+{ id: 'c1', text: 'Pizza' },
+{ id: 'c2', text: 'Burger' },
+{ id: 'c3', text: 'Fries' },
+{ id: 'c4', text: 'Pasta' }
 ]
 },
 {
 id: '',
-text: 'Other',
+text: 'Drink',
 children: [
-{ id: 'o1', text: 'Apple' },
-{ id: 'o2', text: 'Mango' },
-{ id: 'o3', text: 'Banana' }
+{ id: 'o1', text: 'Coca-Cola' },
+{ id: 'o2', text: 'Sprite' },
+{ id: 'o3', text: 'Fanta' },
+{ id: 'o4', text: 'Mint Margrita' }
+
+]
+},
+{
+id: '',
+text: 'BBQ',
+children: [
+{ id: 'b1', text: 'Tikka' },
+{ id: 'b2', text: 'Turkish Kabab' },
+
+]
+}
+];
+
+$('#diy_item').select2({
+multiple: true,
+placeholder: "Select DIY Items....",
+data: Diy_item,
+query: function(options) {
+var selectedIds = options.element.select2('val');
+var selectableGroups = $.map(this.data, function(group) {
+var areChildrenAllSelected = true;
+$.each(group.children, function(i, child) {
+if (selectedIds.indexOf(child.id) < 0) {
+areChildrenAllSelected = false;
+return false; // Short-circuit $.each()
+}
+});
+return !areChildrenAllSelected ? group : null;
+});
+options.callback({ results: selectableGroups });
+}
+}).on('select2-selecting', function(e) {
+var $select = $(this);
+if (e.val == '') {
+e.preventDefault();
+$select.select2('data', $select.select2('data').concat(e.choice.children));
+$select.select2('close');
+}
+});
+
+$('#showValue').click(function() {
+$('#output').text($('#diy_item').val());
+});
+
+            </script>
+              <script>
+                var FRUIT_GROUPS = [
+{
+id: '',
+text: 'Fast Food',
+children: [
+{ id: 'c1', text: 'Pizza' },
+{ id: 'c2', text: 'Burger' },
+{ id: 'c3', text: 'Fries' },
+{ id: 'c4', text: 'Pasta' }
+]
+},
+{
+id: '',
+text: 'Drink',
+children: [
+{ id: 'o1', text: 'Coca-Cola' },
+{ id: 'o2', text: 'Sprite' },
+{ id: 'o3', text: 'Fanta' },
+{ id: 'o4', text: 'Mint Margrita' }
+
+]
+},
+{
+id: '',
+text: 'BBQ',
+children: [
+{ id: 'b1', text: 'Tikka' },
+{ id: 'b2', text: 'Turkish Kabab' },
+
 ]
 }
 ];
 
 $('#fruitSelect').select2({
 multiple: true,
-placeholder: "Select fruits...",
+placeholder: "Select Items...",
 data: FRUIT_GROUPS,
 query: function(options) {
 var selectedIds = options.element.select2('val');
