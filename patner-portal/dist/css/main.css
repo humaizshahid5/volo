@@ -475,3 +475,9 @@ table{
 optgroup > option{
     padding-left: 40px;
 }
+.card{
+    padding-bottom: 0px  !important;
+}
+.info-box{
+    margin-bottom: 0px !important;
+}
