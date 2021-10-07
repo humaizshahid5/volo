@@ -500,6 +500,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <table id="reservations_request" class="table table-bordered  table-responsive" >
                       <thead>
                       <tr>
+                        <th class="info-heading"></th>
+
                         <th>Reservation ID</th>
                         <th>Reservation Date</th>
 
@@ -516,6 +518,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       </thead>
                       <tbody>
                       <tr>
+                        <td class="more-info"><button class="btn btn-md btn-default btn-more" data-toggle="modal" data-target="#reservationdetails">+</button></td>
+
                         <td>43553	</td>
                         <td>2021-07-14	</td>
 
@@ -533,6 +537,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                       
                       </tr>
                       <tr>
+                        <td class="more-info"><button class="btn btn-md btn-default btn-more" data-toggle="modal" data-target="#reservationdetails">+</button></td>
+
                         <td>43553	</td>
                         <td>2021-07-14	</td>
 
@@ -599,6 +605,77 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </div>
 
 <!-- ./wrapper -->
+<div class="modal fade" id="reservationdetails" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+       <div class="modal-content">
+          <div class="modal-header">
+             <h5 class="modal-title" id="orderdetailLabel">Reservation Details</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+             </button>
+          </div>
+          <div class="modal-body order-popup ">
+             <div class="row ">
+                <div class="col-12 justify-content-center">
+                   <center>
+                      <img src="../img/footer-logo.png" class="img-center" width="80px" />
+                      <br>
+                   </center>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-md-10 mx-auto">
+                   <div class="row order-info">
+                    <div class="col-12 text-center">
+                       <b>Status</b><br> <h5 style="text-align: center;"><span class="badge btn-default">Done</span></h5>
+                    </div>
+                    <div class="col-12 text-center">
+                        <b>Reservation ID</b> <br>43553
+                     </div>
+                      <div class="col-12 text-center">
+                         <b>Reservation Date</b> <br>2021-07-14	
+                      </div>
+                      <div class="col-12 text-center">
+                        <b>Reservation Day</b> <br>Wednesay
+                     </div>
+                     <div class="col-12 text-center">
+                        <b>Reservation Time</b> <br>8:00 am (08:00)	
+                     </div>
+                      <div class="col-12 text-center">
+                         <b>Guest Name</b> <br>Mohamed Jaffer	
+                      </div>
+                      <div class="col-12 text-center">
+                         <b>Guest</b> <br>5
+                      </div>
+                      <div class="col-12 text-center">
+                         <b>Phone</b> <br> +973 0000000	
+                      </div>
+                      <div class="col-12  text-center">
+                         <b>Notes</b><br> None
+                      </div>
+                      <div class="col-12 text-center">
+                         <b>Requested On</b><br> 2021-07-14 02:35:10	
+
+                      </div>
+                      
+                    
+                   </div>
+                </div>
+             </div>
+          
+          <div class="m-footer" >
+             <div class="row">
+                <div class="col-12">
+                   <button type="button" class="btn btn-info " data-dismiss="modal">Print <i class="fas fa-print"></i></button>
+                   
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ </div>
+
 
 <div class="modal fade" id="decline" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
