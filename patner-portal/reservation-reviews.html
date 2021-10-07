@@ -726,7 +726,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script>
   $(function () {
     $("#reservations_request").DataTable({
-      "responsive": true,"lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": true,
+     "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": true,
       "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#reservations_request_wrapper .col-md-6:eq(0)');
    
