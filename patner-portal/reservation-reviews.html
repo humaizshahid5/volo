@@ -403,7 +403,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   <div class="card-body">
                      <div class="row">
                         <div class="col-md-3 col-sm-6 col-12">
-                           <a href="#" data-toggle="modal" data-target="#total">
+                           <a href="#" href="#" data-toggle="modal" data-target="#overall">
                               <div class="info-box bg-gradient-info">
                                  <span class="info-box-icon"><i class="fas fa-star"></i></span>
                                  <div class="info-box-content">
@@ -417,7 +417,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div>
                         <!-- /.col -->
                         <div class="col-md-3 col-sm-6 col-12">
-                           <a href="#" data-toggle="modal" data-target="#cancelled">
+                           <a href="#" data-toggle="modal" data-target="#quality">
                               <div class="info-box bg-gradient-primary">
                                  <span class="info-box-icon"><i class="fas fa-star"></i></span>
                                  <div class="info-box-content">
@@ -431,7 +431,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </div>
                         <!-- /.col -->
                         <div class="col-md-3 col-sm-6 col-12">
-                           <a href="#" data-toggle="modal" data-target="#pickup">
+                           <a href="#" data-toggle="modal" data-target="#fanciness">
                               <div class="info-box bg-gradient-warning">
                                  <span class="info-box-icon"><i class="fas fa-star"></i></span>
                                  <div class="info-box-content">
@@ -444,7 +444,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                            <!-- /.info-box -->
                         </div>
                         <div class="col-md-3 col-sm-6 col-12">
-                           <a href="#" data-toggle="modal" data-target="#delivered">
+                           <a href="#" data-toggle="modal" data-target="#value">
                               <div class="info-box bg-gradient-success">
                                  <span class="info-box-icon"><i class="fas fa-star"></i></span>
                                  <div class="info-box-content">
@@ -482,10 +482,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <th class="info-heading"></th>
                      
                         <th>Reservation Date</th>
-                        <th>Reservation Time</th>
+                        
                         <th>Guest Name</th>
-                        <th>Guests</th>     
-                        <th>Phone</th>
+                        
                         <th>Notes</th>
                         <th>Approved</th>
                           
@@ -498,10 +497,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <td>2021-07-14	</td>
 
                        
-                        <td>8:00 am (08:00)</td>
+                       
                         <td>Mohamed Jaffer</td>
-                        <td>5</td>
-                        <td>+973 0000000	</td>
+                        
                         <td>NOICE 🍑🍑🍑🔥</td>
 
                        
@@ -518,10 +516,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <td>2021-07-14	</td>
 
                         
-                        <td>8:00 am (08:00)</td>
+                        
                         <td>Mohamed Jaffer</td>
-                        <td>5</td>
-                        <td>+973 0000000	</td>
+                     
                         <td>🍋</td>
 
                        
@@ -604,9 +601,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
              <div class="row">
                 <div class="col-md-10 mx-auto">
                    <div class="row order-info">
-                      <div class="col-12 text-center">
-                         <b>Reservation ID</b> <br>21BE0B82
-                      </div>
+                     
                       <div class="col-12 text-center">
                          <b>Reservation Date</b> <br>2021-07-14	
                       </div>
@@ -644,6 +639,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
           </div>
        </div>
     </div>
+ </div>
  </div>
 
 
@@ -684,27 +680,108 @@ scratch. This page gets rid of all links and provides the needed markup only.
      </div>
   </div>
 </div>
-<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
-  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-     <div class="modal-content">
-        <div class="modal-body">
-           Are you sure you want to logout?
-           <div class="float-right">
-              <br>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-              <a href="../PSignIn.html"><button type="button" class="btn btn-warning" >Confirm</button></a>
-           </div>
+
+<div class="modal fade" id="overall" tabindex="-1" role="dialog" aria-labelledby="today" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+       <div class="modal-content">
+          <div class="modal-header">
+             <h5 class="modal-title" id="orderdetailLongTitle">Over all Rating</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+             </button>
+          </div>
+          <div class="modal-body">
+           <div class="chart">
+             <canvas id="overall_chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+           
+   </div>
+          </div>
+          <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+       </div>
+    </div>
+ </div>
+ <div class="modal fade" id="quality" tabindex="-1" role="dialog" aria-labelledby="cancelled" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+       <div class="modal-content">
+          <div class="modal-header">
+             <h5 class="modal-title" id="orderdetailLongTitle">Quality</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+             </button>
+          </div>
+          <div class="modal-body">
+           <div class="chart">
+             <canvas id="quality_chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+           
+   </div>
+          </div>
+          <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+       </div>
+    </div>
+ </div>
+ 
+ <div class="modal fade" id="fanciness" tabindex="-1" role="dialog" aria-labelledby="active" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+       <div class="modal-content">
+         <div class="modal-header">
+             <h5 class="modal-title" id="orderdetailLongTitle">Fanciness</h5>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <div class="modal-body">
+         
+         <div class="chart">
+                   <canvas id="fanciness_chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                 </div>
+         </div>
+         <div class="modal-footer">
+             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         </div>
+       </div>
+   </div>
+ </div>
+ 
+ <div class="modal fade" id="value" tabindex="-1" role="dialog" aria-labelledby="active" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="orderdetailLongTitle">Value for Money</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+          <div class="modal-body">
+          
+          <div class="chart">
+                    <canvas id="value_chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                  </div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
         </div>
-     </div>
+    </div>
   </div>
-</div>
+  
+  
+ 
+  
+ 
 
-
+ 
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 <!-- DataTables  & Plugins -->
+<script src="plugins/chart/Chart.js"></script>
+
 <script src="plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
@@ -717,12 +794,85 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-<script src="partnerReserve.js" type="text/javascript"></script>
+
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
-<!-- Page specific script -->
+<script>
+    var overall_chart = document.getElementById("overall_chart").getContext('2d');
+       var myChart = new Chart(overall_chart, {
+           type: 'line',
+           data: {
+                labels: ["January",	"February",	"March",	"April",	"May ",	"June",	"July", "August", "September", "October", "November", "December"],
+               datasets: [{
+                   label: 'Overall Rating', // Name the series
+                   data: [5,4.9,5,	5,	5,	5,	4,	5,	5, 5,5,4.9], // Specify the data values array
+                   fill: false,
+                   borderColor: '#2196f3', // Add custom color border (Line)
+                   backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+                   borderWidth: 1 // Specify bar border width
+               }]},
+           options: {
+           responsive: true, // Instruct chart js to respond nicely.
+           maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+           }
+   });
+   var quality_chart = document.getElementById("quality_chart").getContext('2d');
+       var myChart = new Chart(quality_chart, {
+           type: 'line',
+           data: {
+            labels: ["January",	"February",	"March",	"April",	"May ",	"June",	"July", "August", "September", "October", "November", "December"],
+               datasets: [{
+                   label: 'Quality Ratings', // Name the series
+                   data: [5,4.9,5,	5,	5,	5,	4,	5,	5, 5,5,4.9], // Specify the data values array
+                   fill: false,
+                   borderColor: '#2196f3', // Add custom color border (Line)
+                   backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+                   borderWidth: 1 // Specify bar border width
+               }]},
+           options: {
+           responsive: true, // Instruct chart js to respond nicely.
+           maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+           }
+   });
+   var fanciness_chart = document.getElementById("fanciness_chart").getContext('2d');
+       var myChart = new Chart(fanciness_chart, {
+           type: 'line',
+           data: {
+               labels: ["January",	"February",	"March",	"April",	"May ",	"June",	"July", "August", "September", "October", "November", "December"],
+               datasets: [{
+                   label: 'Fanciness Rating', // Name the series
+                   data: [5,3,5,	5,	5,	5,	4,	5,	5, 5,5,5], // Specify the data values array
+                   fill: false,
+                   borderColor: '#2196f3', // Add custom color border (Line)
+                   backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+                   borderWidth: 1 // Specify bar border width
+               }]},
+           options: {
+           responsive: true, // Instruct chart js to respond nicely.
+           maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+           }
+   });
+   var value = document.getElementById("value_chart").getContext('2d');
+       var myChart = new Chart(value_chart, {
+           type: 'line',
+           data: {
+               labels: ["January",	"February",	"March",	"April",	"May ",	"June",	"July", "August", "September", "October", "November", "December"],
+               datasets: [{
+                   label: 'Value For Money', // Name the series
+                   data: [5,4.9,5,	5,	5,	5,	4,	5,	5, 5,5,4.9], // Specify the data values array
+                   fill: false,
+                   borderColor: '#2196f3', // Add custom color border (Line)
+                   backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+                   borderWidth: 1 // Specify bar border width
+               }]},
+           options: {
+           responsive: true, // Instruct chart js to respond nicely.
+           maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+           }
+   });
+   </script>
 <script>
   $(function () {
     $("#reservations_request").DataTable({
@@ -735,20 +885,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
   });
   
 </script>
-<a  href="#" >
-  <div class="row" style="padding: 0px;margin: 0px;">
-<div class="col-12 t-fixed " style="padding: 0px;margin: 0px;"> 
-
-</div>
-
-</div>
-
-<div class="trading mx-auto" >
-<img src="../img/footer-logo.png"/>
-
-</div>
-
-</a>
 
 </body>
 </html>
