@@ -20,6 +20,8 @@
       <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css" />
       <!-- Theme style -->
       <link rel="stylesheet" href="dist/css/adminlte.min.css" />
+      <link rel="stylesheet" href="dist/css/choice.css" />
+
       <link rel="stylesheet" href="dist/css/main.css" />
    </head>
    <body class="hold-transition sidebar-mini">
@@ -374,7 +376,7 @@
                <div class="container-fluid">
                   <div class="row mb-2">
                      <div class="col-sm-6">
-                        <h1 class="m-0">Order's History</h1>
+                        <h1 class="m-0">Promotions</h1>
                      </div>
                      <!-- /.col -->
                      <div class="col-sm-6">
@@ -397,103 +399,192 @@
                      <div class="col-lg-12">
                         <div class="card" id="complete">
                            <div class="card-header">
-                              <h3 class="card-title">Filter</h3>
+                              <h3 class="card-title">Add Promotions</h3>
                            </div>
                            <!-- /.card-header -->
                            <div class="card-body">
                               <div class="row">
                                  <div class="col-md-6">
                                     <div class="form-group">
-                                       <label>From</label>
-                                       <input type="date" class="form-control" name="from" />
+                                       <label>Promotion Type</label>
+                                       <select id='promoType' name='promoType' class="form-control" required>
+                                        <option value='1G1' name='1G1'>Buy 1 get 1 free</option>
+                                        <option value='2G1' name='2G1'>Buy 2 get 1 free</option>
+                                        <option value='3G1' name='3G1'>Buy 3 get 1 free</option>
+                                        <option value='10OFF' name='10OFF'>10% discount</option>
+                                        <option value='15OFF' name='15OFF'>15% discount</option>
+                                        <option value='20OFF' name='20OFF'>20% discount</option>
+                                        <option value='25OFF' name='25OFF'>25% discount</option>
+                                        <option value='30OFF' name='30OFF'>30% discount</option>
+                                        <option value='35OFF' name='35OFF'>35% discount</option>
+                                        <option value='40OFF' name='40OFF'>40% discount</option>
+                                        <option value='45OFF' name='45OFF'>45% discount</option>
+                                        <option value='50OFF' name='50OFF'>50% discount</option>
+                                        <option value='55OFF' name='55OFF'>55% discount</option>
+                                        <option value='60OFF' name='60OFF'>60% discount</option>
+                                        <option value='65OFF' name='65OFF'>65% discount</option>
+                                        <option value='70OFF' name='70OFF'>70% discount</option>
+                                        <option value='75OFF' name='75OFF'>75% discount</option>
+                                        <option value='80OFF' name='80OFF'>80% discount</option>
+                                        <option value='85OFF' name='85OFF'>85% discount</option>
+                                        <option value='90OFF' name='90OFF'>90% discount</option>
+                                    </select>
                                     </div>
                                  </div>
                                  <div class="col-md-6">
                                     <div class="form-group">
-                                       <label>To</label>
-                                       <input type="date" class="form-control" name="from" />
+                                       <label>On</label>
+                                       <select id='on' class="form-control" onchange='items()' required>
+                                        <option value='all' name='all'>All items</option>
+                                        <option value='category' name='category' >Some categories</option>
+                                        <option value='items' name='items'>Some items</option>
+                                    </select>
                                     </div>
                                  </div>
+                                 <div class="col-12" id="cat" style="display: none;">
+                                    <div class="form-group">
+                                        <label>Select</label>
+                                    <select   id="choices-multiple-remove-button" name="type[]" multiple  >
+                                       
+                                            <option   value="1">Burger</option>
+                                            <option   value="2">Pizza</option>
+                                            <option  value="3">Zinger</option>
+                                            <option  value="3">Fries</option>
+                                            <option  value="3">BBQ</option>
+                                            <option  value="3">Drink</option>
+
+
+
+                                          
+                                  </select>
+                                  </div>
+          
+                                 </div>
                                  <div class="col-6">
+                                     <div class="form-group">
+                                        <label>Promo Privacy</label>
+                                        <div style="margin-top: 10px;font-weight: normal !important;">
+                                           
+                                            <label class="radio-inline" style="font-weight: normal !important;"><input name="type" type="radio" value="" onclick="code()"> Private&nbsp;</label>
+                                            <label class="radio-inline" style="font-weight: normal !important;"><input name="type" type="radio" value="" onclick="code2()"> Public</label>
+                                        </div>
+                                        
+                                     </div>
+                                 </div>
+                                 
+                                 <div class="col-6">
+                                     <div class="form-group">
+                                         <label>Promo Day</label>
+                                         <select id='promoDays' class="form-control">
+                
+                                            <option value='ALL'>All days</option>
+                                            <option value='0'>Sundays</option>
+                                            <option value='1'>Mondays</option>
+                                            <option value='2'>Tuesdays</option>
+                                            <option value='3'>Wednesdays</option>
+                                            <option value='4'>Thursdays</option>
+                                            <option value='5'>Fridays</option>
+                                            <option value='6'>Saturdays</option>
+                                            
+                                            
+                                        </select>
+                                     </div>
+                                 </div>
+                                 <div id="code" class="col-12" style="display: none;">
+                                    <div class="form-group">
+                                        <label>Promo Code</label>
+                                        <input type="text" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>Valid From</label>
+                                        <select id='validFrom' class="form-control" required>
+                                            <option value='today'>Today</option>
+                                            <option value='tomorrow'>Tomorrow</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>Valid To</label>
+                                        <select id='validTo' class="form-control" required>
+                                            <option value='same'>Same day</option>
+                                            <option value='1'>1 day</option>
+                                            <option value='2'>2 days</option>
+                                            <option value='3'>3 days</option>
+                                            <option value='4'>4 days</option>
+                                            <option value='5'>5 days</option>
+                                            <option value='6'>6 days</option>
+                                            <option value='7'>7 days</option>
+                                            <option value='8'>8 days</option>
+                                            <option value='9'>9 days</option>
+                                            <option value='10'>10 days</option>
+                                            <option value='11'>11 days</option>
+                                            <option value='12'>12 days</option>
+                                            <option value='13'>13 days</option>
+                                            <option value='14'>14 days</option>
+                                            <option value='15'>15 days</option>
+                                            <option value='16'>16 days</option>
+                                            <option value='17'>17 days</option>
+                                            <option value='18'>18 days</option>
+                                            <option value='19'>19 days</option>
+                                            <option value='20'>20 days</option>
+                                            <option value='21'>21 days</option>
+                                            <option value='22'>22 days</option>
+                                            <option value='23'>23 days</option>
+                                            <option value='24'>24 days</option>
+                                            <option value='25'>25 days</option>
+                                            <option value='26'>26 days</option>
+                                            <option value='27'>27 days</option>
+                                            <option value='28'>28 days</option>
+                                            <option value='29'>29 days</option>
+                                            <option value='30'>30 days</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                 <div class="col-12">
                                     <button class="btn btn-block btn-default">
-                                    Search
+                                    Add Promotions
                                     </button>
                                  </div>
-                                 <div class="col-6">
-                                    <button class="btn btn-block btn-info">
-                                    Generate PDF
-                                    </button>
-                                 </div>
+                                 
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="row">
-                     <div class="col-lg-12">
-                        <div class="card">
-                           <!-- /.card-header -->
-                           <div class="card-body">
-                              <div class="row">
-                                 <div class="col-md-3 col-sm-6 col-12">
-                                    <a href="#" data-toggle="modal" data-target="#total">
-                                       <div class="info-box bg-gradient-info">
-                                          <span class="info-box-icon"><i class="fas fa-shopping-bag"></i></span>
-                                          <div class="info-box-content">
-                                             <span class="info-box-text">Total orders</span>
-                                             <span class="info-box-number">1,200</span>
-                                          </div>
-                                          <!-- /.info-box-content -->
-                                       </div>
-                                    </a>
-                                    <!-- /.info-box -->
-                                 </div>
-                                 <!-- /.col -->
-                                 <div class="col-md-3 col-sm-6 col-12">
-                                    <a href="#" data-toggle="modal" data-target="#cancelled">
-                                       <div class="info-box bg-gradient-danger">
-                                          <span class="info-box-icon"><i class="fas fa-times"></i></span>
-                                          <div class="info-box-content">
-                                             <span class="info-box-text">Cancelled Orders</span>
-                                             <span class="info-box-number">410</span>
-                                          </div>
-                                          <!-- /.info-box-content -->
-                                       </div>
-                                    </a>
-                                    <!-- /.info-box -->
-                                 </div>
-                                 <!-- /.col -->
-                                 <div class="col-md-3 col-sm-6 col-12">
-                                    <a href="#" data-toggle="modal" data-target="#pickup">
-                                       <div class="info-box bg-gradient-warning">
-                                          <span class="info-box-icon"><i class="fas fa-car"></i></span>
-                                          <div class="info-box-content">
-                                             <span class="info-box-text">Pickup Order</span>
-                                             <span class="info-box-number">410</span>
-                                          </div>
-                                          <!-- /.info-box-content -->
-                                       </div>
-                                    </a>
-                                    <!-- /.info-box -->
-                                 </div>
-                                 <div class="col-md-3 col-sm-6 col-12">
-                                    <a href="#" data-toggle="modal" data-target="#delivered">
-                                       <div class="info-box bg-gradient-success">
-                                          <span class="info-box-icon"><i class="fas fa-motorcycle"></i></span>
-                                          <div class="info-box-content">
-                                             <span class="info-box-text">Delivered Order</span>
-                                             <span class="info-box-number">410</span>
-                                          </div>
-                                          <!-- /.info-box-content -->
-                                       </div>
-                                    </a>
-                                    <!-- /.info-box -->
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                  <script type="text/javascript">
+                    function items() {
+
+                      var cat = document.getElementById('cat');
+                      var on = document.getElementById('on').value;
+                      if(on == "all"){
+                        cat.style.display= "none";
+                      }
+                      else{
+                        cat.style.display= "block";
+                      }
+
+                      
+                    }
+                </script>
+                 <script type="text/javascript">
+                    function code() {
+
+                      var code = document.getElementById('code');
+                      code.style.display= "block";
+                    }
+                </script>
+                 <script type="text/javascript">
+                    function code2() {
+
+                      var code = document.getElementById('code');
+                      code.style.display= "none";
+                    }
+                </script>
+                
                   <!-- /.row -->
                   <div class="row">
                      <div class="col-lg-12">
@@ -508,30 +599,34 @@
                                  <table id="history" class="table table-bordered  table-responsive" >
                                    <thead>
                                    <tr>
-                                     <th class="info-heading"></th>
-                                     <th>Order ID</th>
-                                     <th>Placed On</th>
-                                     <th>Pickup Time</th>
-                                     <th>Order Type</th>
-                                     <th>Customer Name</th>
-                                     <th>Customer Phone</th>
-                                     <th>Payment</th>
-                                     <th>Total</th>
+                                    
+                                     <th>Promo Type	</th>
+                                     <th>On</th>
+                                     <th>From</th>
+                                     <th>To</th>
+                                     <th>Promo Days	</th>
+                                     <th>Privacy</th>
+                                     <th>Promo Code	</th>
+                                     <th>Status</th>
+                                     <th>Remove</th>
+
                                    
                                    </tr>
                                    </thead>
                                    <tbody>
              
                                    <tr>
-                                     <td class="more-info"><button class="btn btn-md btn-default btn-more" data-toggle="modal" data-target="#orderdetail">+</button></td>
-                                     <td>21BE0B82</td>
-                                     <td>23:33 11 July 2021</td>
-                                     <td>ASAP</td>
-                                     <td>Delivery</td>
-                                     <td>Mohamed Jaffer	</td>
-                                     <td>+973 0000000	</td>                     
-                                     <td>Cash</td>                 
-                                     <td>BD 5.400	</td>               
+                                     <td>1G1</td>
+                                     <td>All items	</td>
+                                     <td>2021-07-14	</td>
+                                     <td>2021-07-14	</td>
+                                     <td> All days		</td>
+                                     <td>Public	</td>                     
+                                     <td>none</td>                 
+                                     <td>Active</td>   
+                                     <td><button class="btn btn-md btn-block btn-danger" data-toggle="modal" data-target="#remove">Remove</button></td>
+
+
                                    </tr>
                                  
              
@@ -937,6 +1032,22 @@
             </div>
          </div>
       </div>
+      <div class="modal fade" id="remove" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+           <div class="modal-content">
+              <div class="modal-body">
+                 Are you sure you want to remove this promotion?
+                 <div class="float-right">
+                    <br>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <a href="../PSignIn.html"><button type="button" class="btn btn-warning" >Confirm</button></a>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+      
+      
       <!-- jQuery -->
       <script src="plugins/jquery/jquery.min.js"></script>
       <!-- Bootstrap 4 -->
@@ -961,85 +1072,12 @@
       <!-- AdminLTE for demo purposes -->
       <script src="dist/js/demo.js"></script>
       <!-- Page specific script -->
-      <script>
-         var ctx = document.getElementById("totalChart").getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ["10 AM",	"11 AM",	"12 PM",	"1 PM",	"2 PM ",	"3 PM",	"4 PM","5 PM",	"6 PM","7 PM"],
-                    datasets: [{
-                        label: 'Total Order', // Name the series
-                        data: [5,	3,	10,	9,	8,	15,	17,	20,	12, 28], // Specify the data values array
-                        fill: false,
-                        borderColor: '#2196f3', // Add custom color border (Line)
-                        backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
-                        borderWidth: 1 // Specify bar border width
-                    }]},
-                options: {
-                responsive: true, // Instruct chart js to respond nicely.
-                maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
-                }
-        });
-        var pickup = document.getElementById("pickupChart").getContext('2d');
-            var myChart = new Chart(pickup, {
-                type: 'line',
-                data: {
-                    labels: ["Today",	"Tuesday",	"Wednesay",	"Thursaday",	"Friday ",	"Saturday",	"Sanday"],
-                    datasets: [{
-                        label: 'Pickup Order', // Name the series
-                        data: [15,	30,	29,	35,	32,	38,	40], // Specify the data values array
-                        fill: false,
-                        borderColor: '#2196f3', // Add custom color border (Line)
-                        backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
-                        borderWidth: 1 // Specify bar border width
-                    }]},
-                options: {
-                responsive: true, // Instruct chart js to respond nicely.
-                maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
-                }
-        });
-        var cancelled = document.getElementById("cancelledChart").getContext('2d');
-            var myChart = new Chart(cancelled, {
-                type: 'line',
-                data: {
-                    labels: ["Today",	"Tuesday",	"Wednesay",	"Thursaday",	"Friday ",	"Saturday",	"Sanday"],
-                    datasets: [{
-                        label: 'Cancelled Order', // Name the series
-                        data: [1,	7,	9,	0,	8,	4,	10], // Specify the data values array
-                        fill: false,
-                        borderColor: '#2196f3', // Add custom color border (Line)
-                        backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
-                        borderWidth: 1 // Specify bar border width
-                    }]},
-                options: {
-                responsive: true, // Instruct chart js to respond nicely.
-                maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
-                }
-        });
-        var delivered = document.getElementById("deliveredChart").getContext('2d');
-            var myChart = new Chart(delivered, {
-                type: 'line',
-                data: {
-                    labels: ["Today",	"Tuesday",	"Wednesay",	"Thursaday",	"Friday ",	"Saturday",	"Sanday"],
-                    datasets: [{
-                        label: 'Cancelled Order', // Name the series
-                        data: [1,	7,	9,	0,	8,	4,	10], // Specify the data values array
-                        fill: false,
-                        borderColor: '#2196f3', // Add custom color border (Line)
-                        backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
-                        borderWidth: 1 // Specify bar border width
-                    }]},
-                options: {
-                responsive: true, // Instruct chart js to respond nicely.
-                maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
-                }
-        });
-        </script>
+    
       <script>
          $(function () {
              $("#history")
                  .DataTable({
-                     responsive: true,
+                     
                      lengthChange: true,
                      pageLength: 50,
                      lengthMenu: [
@@ -1054,6 +1092,28 @@
                  .appendTo("#example1_wrapper .col-md-6:eq(0)");
          });
       </script>
+       <script src="dist/js/mutiple_select.js"></script>
+       <script>
+          $(document).ready(function(){
+          
+          var multipleCancelButton = new Choices('#choices-multiple-remove-button', {
+          removeItemButton: true,
+         
+          searchResultLimit:5,
+          renderChoiceLimit:5
+          });
+          
+          
+          });
+          
+          
+          
+          
+          
+          
+          
+            
+       </script>
       <a  href="#" data-toggle="modal" data-target="#trading">
         <div class="row" style="padding: 0px;margin: 0px;">
       <div class="col-12 t-fixed " style="padding: 0px;margin: 0px;"> 
