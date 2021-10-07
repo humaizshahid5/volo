@@ -21,6 +21,8 @@
       <!-- Theme style -->
       <link rel="stylesheet" href="dist/css/adminlte.min.css" />
       <link rel="stylesheet" href="dist/css/choice.css" />
+      <link rel="stylesheet" href="dist/css/select2.min.css" />
+
 
       <link rel="stylesheet" href="dist/css/main.css" />
    </head>
@@ -451,31 +453,22 @@
                                  <div class="col-12" id="itm" style="display: none;">
                                     <div class="form-group">
                                         <label>Select Items</label>
-                                        <select   id="choices-multiple-remove-button" name="type[]" multiple  >
-                                            <optgroup label="Fast Food">
-                                                <option   value="1">Burger</option>
-                                                <option   value="2">Pizza</option>
-                                                <option  value="3">Zinger</option>
-                                                <option  value="3">Fries</option>
-                                                </optgroup>
-                                                <optgroup label="Drink">
-                                                    
-                                                    <option  value="3">Drink</option>
-                                                </optgroup>
-                                                <optgroup label="BBQ">
-                                                    
-                                                    <option  value="3">Tikka</option>
-                                                </optgroup>
-                                                
-                                                
-    
-    
-    
-                                              
-                                      </select>
+                                        <br>
+                                      
+                                        <input type="hidden"  id="fruitSelect" value="" style="width:100%;margin-bottom: 0px;" /><br />
+                                        <br />
+                                      
+                                        <br />
+                                        <div id="output">
+                                        </div>
+                                        
+                                        
+                                        
+                                 
                                     
                                   </div>
                                   </div>
+                              
                                   <div class="col-12" id="cat" style="display: none;">
                                     <div class="form-group">
                                         <label>Select Categories</label>
@@ -1175,6 +1168,8 @@
       
       <!-- jQuery -->
       <script src="plugins/jquery/jquery.min.js"></script>
+      <script src="dist/js/select2.min.js"></script>
+
       <!-- Bootstrap 4 -->
       <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
       <script src="plugins/chart/Chart.js"></script>
@@ -1192,6 +1187,7 @@
       <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
       <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
       <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
       <!-- AdminLTE App -->
       <script src="dist/js/adminlte.min.js"></script>
       <!-- AdminLTE for demo purposes -->
@@ -1239,6 +1235,61 @@
           
             
        </script>
+            <script>
+                var FRUIT_GROUPS = [
+{
+id: '',
+text: 'Citrus',
+children: [
+{ id: 'c1', text: 'Grapefruit' },
+{ id: 'c2', text: 'Orange' },
+{ id: 'c3', text: 'Lemon' },
+{ id: 'c4', text: 'Lime' }
+]
+},
+{
+id: '',
+text: 'Other',
+children: [
+{ id: 'o1', text: 'Apple' },
+{ id: 'o2', text: 'Mango' },
+{ id: 'o3', text: 'Banana' }
+]
+}
+];
+
+$('#fruitSelect').select2({
+multiple: true,
+placeholder: "Select fruits...",
+data: FRUIT_GROUPS,
+query: function(options) {
+var selectedIds = options.element.select2('val');
+var selectableGroups = $.map(this.data, function(group) {
+var areChildrenAllSelected = true;
+$.each(group.children, function(i, child) {
+if (selectedIds.indexOf(child.id) < 0) {
+areChildrenAllSelected = false;
+return false; // Short-circuit $.each()
+}
+});
+return !areChildrenAllSelected ? group : null;
+});
+options.callback({ results: selectableGroups });
+}
+}).on('select2-selecting', function(e) {
+var $select = $(this);
+if (e.val == '') {
+e.preventDefault();
+$select.select2('data', $select.select2('data').concat(e.choice.children));
+$select.select2('close');
+}
+});
+
+$('#showValue').click(function() {
+$('#output').text($('#fruitSelect').val());
+});
+
+            </script>
      
      
    </body>
