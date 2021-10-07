@@ -113,7 +113,16 @@ body,html{
 
 
 .signup-body{
+ 
   padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: auto;
+  margin-bottom: auto;
+ 
+}
+.signup2-body{
+  height: 100%;
+  padding-top: 45px;
   padding-bottom: 50px;
   margin-top: auto;
   margin-bottom: auto;
