@@ -472,3 +472,6 @@ table{
     margin-top: 10px;
     background-color: #12121F;
 }
+optgroup > option{
+    padding-left: 40px;
+}
