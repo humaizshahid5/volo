@@ -438,19 +438,75 @@
                                         <option value='all' name='all'>All items</option>
                                         <option value='category' name='category' >Some categories</option>
                                         <option value='items' name='items'>Some items</option>
-                                        <option value='items' name='items'>All items and DIY Items</option>
+                                        <option value='diy_all' name='diy_all'>All items and DIY Items</option>
 
-                                        <option value='items' name='items'>Some DIY Items</option>
+                                        <option value='diy_itm' name='diy_itm'>Some DIY Items</option>
 
-                                        <option value='items' name='items'>Some DIY Categories</option>
+                                        <option value='diy_cat' name='diy_cat'>Some DIY Categories</option>
 
                                         
                                     </select>
                                     </div>
                                  </div>
-                                 <div class="col-12" id="cat" style="display: none;">
+                                 <div class="col-12" id="itm" style="display: none;">
                                     <div class="form-group">
-                                        <label>Select</label>
+                                        <label>Select Items</label>
+                                    <select   id="choices-multiple-remove-button" name="type[]" multiple  >
+                                       
+                                            <option   value="1">Burger</option>
+                                            <option   value="2">Pizza</option>
+                                            <option  value="3">Zinger</option>
+                                            <option  value="3">Fries</option>
+                                            <option  value="3">BBQ</option>
+                                            <option  value="3">Drink</option>
+
+
+
+                                          
+                                  </select>
+                                  </div>
+                                  </div>
+                                  <div class="col-12" id="cat" style="display: none;">
+                                    <div class="form-group">
+                                        <label>Select Categories</label>
+                                    <select   id="choices-multiple-remove-button" name="type[]" multiple  >
+                                       
+                                            <option   value="1">Burger</option>
+                                            <option   value="2">Pizza</option>
+                                            <option  value="3">Zinger</option>
+                                            <option  value="3">Fries</option>
+                                            <option  value="3">BBQ</option>
+                                            <option  value="3">Drink</option>
+
+
+
+                                          
+                                  </select>
+                                  </div>
+          
+                                 </div>
+                                 <div class="col-12" id="diy_itm" style="display: none;">
+                                    <div class="form-group">
+                                        <label>DIY Items</label>
+                                    <select   id="choices-multiple-remove-button" name="type[]" multiple  >
+                                       
+                                            <option   value="1">Burger</option>
+                                            <option   value="2">Pizza</option>
+                                            <option  value="3">Zinger</option>
+                                            <option  value="3">Fries</option>
+                                            <option  value="3">BBQ</option>
+                                            <option  value="3">Drink</option>
+
+
+
+                                          
+                                  </select>
+                                  </div>
+          
+                                 </div>
+                                 <div class="col-12" id="diy_cat" style="display: none;">
+                                    <div class="form-group">
+                                        <label>DIY Categories</label>
                                     <select   id="choices-multiple-remove-button" name="type[]" multiple  >
                                        
                                             <option   value="1">Burger</option>
@@ -570,9 +626,46 @@
                       if(on == "all"){
                         cat.style.display= "none";
                       }
-                      else{
-                        cat.style.display= "block";
+                      
+                      else if(on == "items"){
+
+                        itm.style.display= "block";
+                        cat.style.display= "none";
+                        diy_itm.style.display= "none";
+                        diy_cat.style.display= "none";
                       }
+                      else if(on == "category"){
+
+                        cat.style.display= "block";
+                        itm.style.display= "none";
+                        diy_itm.style.display= "none";
+                        diy_cat.style.display= "none";
+                        }
+                        else if(on == "diy_cat"){
+
+                        cat.style.display= "none";
+                        itm.style.display= "none";
+                        diy_itm.style.display= "none";
+                        diy_cat.style.display= "block";
+
+
+                        }
+                        else if(on == "diy_itm"){
+
+                            cat.style.display= "none";
+                            itm.style.display= "none";
+                            diy_itm.style.display= "block";
+                            diy_cat.style.display= "none";
+
+
+                        }
+                        else{
+                            cat.style.display= "none";
+                            itm.style.display= "none";
+                            diy_itm.style.display= "none";
+                            diy_cat.style.display= "none";
+                        }
+                        
 
                       
                     }
