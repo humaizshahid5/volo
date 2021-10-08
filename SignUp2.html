@@ -108,7 +108,7 @@
                               <div class="col-8">
                                  <div class="form-label-group">
                                     <input type="phone" id="inputPhone" class="form-control login-input" placeholder="Email" required autofocus>
-                                    <label for="inputPhone">Phone</label>
+                                    <label for="inputPhone">Branch Phone</label>
                                  </div>
                               </div>
                            </div>
@@ -148,7 +148,7 @@
                         <div class="col-md-12">
                            <div class="form-label-group">
                               <select  class="form-control login-input" >
-                                 <option value=" "selected disabled hidden>Store Type</option>
+                                 <option value=" "selected disabled hidden>Establishment Type</option>
                                  <option value="restaurant">Restaurant</option>
                                  <option value="grocery">Grocery Store</option>
                                  <option value="flowers">Florist</option>
@@ -218,7 +218,7 @@
                         <div class="col-12" id="cat" >
                            <div class="form-group">
                               <label>Select Categories</label>
-                              <select   id="choices-multiple-remove-button" name="type[]" multiple  >
+                              <select   id="choices-multiple-remove-button" name="type[]" multiple style="z-index: 1000000 I !important;"  >
                                  <option value="american">American</option>
                                  <option value="arabic">Arabic</option>
                                  <option value="asian">Asian</option>
@@ -770,6 +770,41 @@
                               </div>
                            </div>
                         </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
+                           <p class="signup-heading">Location</p>
+                           <br>
+                        </div>
+                        <div class="col-12">
+                           
+                              <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Bahrain+(Volo)&amp;t=&amp;z=3&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+                           
+                        </div>
+                        
+                     </div>
+                     <div class="row">
+                        <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
+                           <p class="signup-heading">Delivery Details</p>
+                           <br>
+                        </div>
+                        <div class="col-12">
+                           <div class="form-group">
+                              <div style="margin-top: 10px;font-weight: normal !important;">
+                                 <label class="radio-inline" style="font-weight: normal !important;"><input name="type" type="radio" value="" onclick="code()"> Self</label>
+                                 <label class="radio-inline" style="font-weight: normal !important;"><input name="type" type="radio" value="" onclick="code2()"> Volo</label>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12">
+                           <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
+                              <p class="signup-heading">Delivery Range</p>
+                              <br>
+                           </div>
+                           <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Bahrain+(Volo)&amp;t=&amp;z=3&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+
+                        </div>
+
                      </div>
                      <div class="row">
                         <div class="col-12"">
