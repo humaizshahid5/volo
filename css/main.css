@@ -694,3 +694,6 @@ select {
 .bd{
   margin:0px;padding:0px;font-size: 18px;line-height: 50px;
 }
+.form-error{
+  color:red;
+}
