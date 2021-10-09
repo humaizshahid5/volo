@@ -132,7 +132,8 @@
                         <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                            <div class="form-group">
                               <div class="form-label-group">
-                                 <input type="text" id="password" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                 <input id="password-field" type="password" class="form-control login-input" name="password" >
+                                 <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                                  <label for="password">Password</label>
                               </div>
                            </div>
@@ -140,10 +141,12 @@
                         <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                            <div class="form-group">
                               <div class="form-label-group">
-                                 <input type="text" id="verifypassword" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                 <label for="verifypassword">Verify Password</label>
+                                 <input id="toggle-verifypassword" type="password" class="form-control login-input" name="password" >
+                                 <span toggle="#toggle-verifypassword" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                                 <label for="toggle-verifypassword">Password</label>
                               </div>
                            </div>
+                          
                         </div>
                         <div class="col-md-12">
                            <div class="form-label-group">
@@ -356,16 +359,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="op1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="op1">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="cl1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="cl1">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -375,16 +378,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="op2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="op2">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="cl2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="cl2">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -394,16 +397,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="op3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="op3">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="cl3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="cl3">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -414,7 +417,7 @@
                         <div class="row">
                         
                            <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
-                              <p class="signup-heading">Monday</p>
+                              <p class="signup-heading">Sunday</p>
                               <br>
                            </div>
                            <div class="col-12">
@@ -423,16 +426,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="so1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="so1">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="sc1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="sc1">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -442,16 +445,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="so2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="so2">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="sc2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="sc2">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -461,16 +464,77 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="so3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="so3">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="sc3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="sc3">Closing Time</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
+                              <p class="signup-heading">Monday</p>
+                              <br>
+                           </div>
+                           <div class="col-12">
+                              <h5>Shift One</h5>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                              <div class="form-group">
+                                 <div class="form-label-group">
+                                    <input type="time" id="mo1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="mo1">Opening Time</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                              <div class="form-group">
+                                 <div class="form-label-group">
+                                    <input type="time" id="mc1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="mc1">Closing Time</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-12">
+                              <h5>Shift Two</h5>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                              <div class="form-group">
+                                 <div class="form-label-group">
+                                    <input type="time" id="mo2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="mo2">Opening Time</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                              <div class="form-group">
+                                 <div class="form-label-group">
+                                    <input type="time" id="mc2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="mc2">Closing Time</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-12">
+                              <h5>Shift Three</h5>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                              <div class="form-group">
+                                 <div class="form-label-group">
+                                    <input type="time" id="mo3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="mo3">Opening Time</label>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                              <div class="form-group">
+                                 <div class="form-label-group">
+                                    <input type="time" id="mc3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="mc3">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -484,16 +548,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="to1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="to1">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="tc1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="tc1">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -503,16 +567,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="to2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="to2">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="tc2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="tc2">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -522,21 +586,21 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="to3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="to3">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="tc3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="tc3">Closing Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
-                              <p class="signup-heading">Wednesday</p>
+                              <p class="signup-heading">Wednesay</p>
                               <br>
                            </div>
                            <div class="col-12">
@@ -545,16 +609,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="wo1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="wo1">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="wc1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="wc1">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -564,16 +628,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="wo2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="wo2">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="wc2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="wc2">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -583,16 +647,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="wo3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="wo3">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="wc3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="wc3">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -606,16 +670,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="tho1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="tho1">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="thc1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="thc1">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -625,16 +689,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="tho2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="tho2">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="thc2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="thc2">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -644,16 +708,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="tho3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="tho3">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="thc3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="thc3">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -667,16 +731,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="f01" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="fo1">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="fc2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="fc1">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -686,16 +750,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="fo2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="fo2">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="fc2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="fc2">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -705,16 +769,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="fo3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="fo3">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="fc3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="fc3">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -728,77 +792,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="sao1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="sao1">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-12">
-                              <h5>Shift Two</h5>
-                           </div>
-                           <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                              <div class="form-group">
-                                 <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                              <div class="form-group">
-                                 <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-12">
-                              <h5>Shift Three</h5>
-                           </div>
-                           <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                              <div class="form-group">
-                                 <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                              <div class="form-group">
-                                 <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
-                              <p class="signup-heading">Sunday</p>
-                              <br>
-                           </div>
-                           <div class="col-12">
-                              <h5>Shift One</h5>
-                           </div>
-                           <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                              <div class="form-group">
-                                 <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                              <div class="form-group">
-                                 <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="sac1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="sac1">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -808,16 +811,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="sao2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="sao2">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="sac2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="sac2">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -827,16 +830,16 @@
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Opening Time</label>
+                                    <input type="time" id="sao3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="sao3">Opening Time</label>
                                  </div>
                               </div>
                            </div>
                            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
                               <div class="form-group">
                                  <div class="form-label-group">
-                                    <input type="time" id="inputStorename" class="form-control login-input" placeholder="Store Name" required autofocus>
-                                    <label for="inputStorename">Closing Time</label>
+                                    <input type="time" id="sac3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                                    <label for="sac3">Closing Time</label>
                                  </div>
                               </div>
                            </div>
@@ -936,7 +939,7 @@
                            <p class="signup-heading">Delivery Price</p>
                            <br>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+                        <div class="col-lg-3 col-md-3 col-xs-10 col-sm-10">
                            <div class="form-group">
                               <div class="form-label-group">
                                  <input type="text" id="S_range" class="form-control login-input" placeholder="Store Name" required autofocus>
@@ -944,7 +947,11 @@
                               </div>
                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+                        <div class="col-lg-1 col-md-1 col-sm-2 col-xs-2 float-left bd">
+                           BD
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-3 col-xs-10 col-sm-10">
                            <div class="form-group">
                               <div class="form-label-group">
                                  <input type="text" id="M_range" class="form-control login-input" placeholder="Store Name" required autofocus>
@@ -952,13 +959,19 @@
                               </div>
                            </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12">
+                        <div class="col-1 float-left bd">
+                           BD
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-xs-10 col-sm-10">
                            <div class="form-group">
                               <div class="form-label-group">
                                  <input type="text" id="S_range" class="form-control login-input" placeholder="Store Name" required autofocus>
                                  <label for="L_range">Long Range</label>
                               </div>
                            </div>
+                        </div>
+                        <div class="col-1 float-left bd">
+                           BD
                         </div>
                         <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
                            <p class="signup-heading">Extra's</p>
@@ -1045,12 +1058,27 @@
                            <br>
                         </div>
                         <div class="col-12">
-                           <input class="form-control-file" type='file' onchange="readURL(this);" />
-                           <br>
+                           <div class="form-input">
+                              
+                              <input type="file" id="pic" name="pic" accept="image/*" onchange='checkInfo(event)'>
+                              </div>
+                              </div>
+                              <div class="col-6" style="margin-bottom: 10px;">
+                                
+                                 <div class="preview">
+                                    
+                                     <img id="file-ip-1-preview" class="img-fluid" style="margin-top:10px;">
+                                 </div>
+                              </div>
+                              <div class="col-6 my-auto">
+                                 <div id='imgInfo'></div>
+                              </div>
+                             
+                              
+                          </div>
+
                         </div>
-                        <div class="col-12" id="img" style="display: none;margin-bottom: 10px;">
-                           <img id="blah" src="http://placehold.it/180" class="img-fluid" alt="your image" />
-                        </div>
+                       
 
                         
 
@@ -1108,6 +1136,7 @@
            different.style.display= "block";
          }
      </script>
+    
      
       <!--footer end-->
       <!-- Font Awesome 5 links-->
@@ -1117,6 +1146,8 @@
       <script src="js/bootstrap.min.js"></script>
       <script src="js/jquery.sticky.js"></script>
       <script src="js/main.js"></script>
+      <script src="js/patnerSettings.js"></script>
+
       <script src="patner-portal/dist/js/mutiple_select.js"></script>
       <script>
          $(document).ready(function(){
@@ -1137,6 +1168,28 @@
          
          
            
+      </script>
+       <script>
+         $(".toggle-password").click(function() {
+ 
+          $(this).toggleClass("fa-eye fa-eye-slash");
+          var input = $($(this).attr("toggle"));
+          if (input.attr("type") == "password") {
+          input.attr("type", "text");
+          } else {
+          input.attr("type", "password");
+          }
+          });
+          $(".toggle-verifypassword").click(function() {
+ 
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $($(this).attr("toggle"));
+            if (input.attr("type") == "password") {
+            input.attr("type", "text");
+            } else {
+            input.attr("type", "password");
+            }
+            });
       </script>
    </body>
 </html>
