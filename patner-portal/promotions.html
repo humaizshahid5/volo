@@ -907,86 +907,7 @@
             </div>
          </div>
       </div>
-      <div class="modal fade" id="total" tabindex="-1" role="dialog" aria-labelledby="total" aria-hidden="true">
-         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="orderdetailLongTitle">Total Order's</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                  </button>
-               </div>
-               <div class="modal-body">
-                  <div class="chart">
-                     <canvas id="totalChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                   </div>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal fade" id="cancelled" tabindex="-1" role="dialog" aria-labelledby="cancelled" aria-hidden="true">
-         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="orderdetailLongTitle">Cancelled Order's</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                  </button>
-               </div>
-               <div class="modal-body">
-                  <div class="chart">
-                     <canvas id="cancelledChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                   </div>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal fade" id="pickup" tabindex="-1" role="dialog" aria-labelledby="pickup" aria-hidden="true">
-         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="orderdetailLongTitle">Pickup Order's</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                  </button>
-               </div>
-               <div class="modal-body">
-                  <div class="chart">
-                     <canvas id="pickupChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                   </div>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal fade" id="delivered" tabindex="-1" role="dialog" aria-labelledby="delivered" aria-hidden="true">
-         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-               <div class="modal-header">
-                  <h5 class="modal-title" id="orderdetailLongTitle">Delivered Order's</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                  </button>
-               </div>
-               <div class="modal-body">
-                  <div class="chart">
-                     <canvas id="deliveredChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                   </div>
-               </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-               </div>
-            </div>
-         </div>
-      </div>
+  
     
        <div class="modal fade" id="signout" tabindex="-1" role="dialog" aria-labelledby="signout" aria-hidden="true">
           <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
@@ -1036,105 +957,7 @@
              </div>
           </div>
        </div>
-       <div class="modal fade" id="trading" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
-         <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content ">
-             
-               <div class="modal-body">
-                 <div class="row">
-                  <div class="col-8">
-                    <h3>Start Trading</h3>
-                  </div>
-                 <div class="col-4 text-right">
-                   <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"> &times; </button>
-        
-                  </div>
-      
-                 </div>
-              
-                  <form>
-                     <div class="row">
-                      <div class="col-12 mx-auto justify-content-center">
-                        <h5 style="text-align: center;">Current Status
-                          <span class="badge badge-secondary" style="background-color: green;">On</span></h5>
-      
-                      </div>
-                        <div class="col-md-12">
-                           <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                              <label class="form-check-label" for="defaultCheck1">
-                              Start/Stop Trading
-                              </label>
-                           </div>
-                        </div>
-                       
-                        <div class="col-md-12">
-                           <div class="form-check">
-                             <div class="row">
-                               <div class="col-12">
-                                <input class="form-check-input" type="checkbox" value="" id="shipping_time" onclick="ShowHideDiv(this)">
-                                <label class="form-check-label" for="defaultCheck1">
-                                   Disable automatic Shipping Until 
-                                  </label>
-                               </div>
-                               <div class="col-12">
-                                <select class="form-control" id="time" style="display: none;">
-                                  <option>11:30 Pm</option>
-                                  <option>12:00 Pm</option>
-                                  <option>12:30 Pm</option>
-                                  <option>01:00 Pm</option>
-                               </select>
-                            
-      
-                               </div>
-                             </div>
-                            
-                                 
-                           </div>
-                        </div>
-                        <script type="text/javascript">
-                          function ShowHideDiv(shipping_time) {
-                              var dvPassport = document.getElementById("time");
-                              dvPassport.style.display = shipping_time.checked ? "block" : "none";
-                          }
-                      </script>
-            
-                        <div class="col-md-12">
-                           <div class="form-check">
-                              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                              <label class="form-check-label" for="defaultCheck1">
-                              Busy?
-                              </label>
-                           </div>
-                        </div>
-                        <div class="col-md-12">
-                           <div class="form-group">
-                              <label for="forDelay">
-                              Average Delay
-                              </label>
-                              <select class="form-control">
-                                 <option>10 Min</option>
-                                 <option>20 Min</option>
-                                 <option>30 Min</option>
-                                 <option>40 Min</option>
-                                 <option>50 Min</option>
-                              </select>
-                           </div>
-                        </div>
-                        <div class="col-md-12">
-                           <b>Current Delay is: </b> 15 min <br>
-                           <b>Nearest closing time: </b> 11:30 PM 
-                        </div>
-                        <div class="col-12" style="margin-top: 20px;">
-                          <button type="button" class="btn btn-default btn-block">Submit changes</button>
-                        </div>
-                     </div>
-                  </form>
-               </div>
-               
-            </div>
-         </div>
-      </div>
+     
       <div class="modal fade" id="remove" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
            <div class="modal-content">
@@ -1256,7 +1079,9 @@ children: [
 
 $('#diy_item').select2({
 multiple: true,
+
 placeholder: "Select DIY Items....",
+allowClear: true,
 data: Diy_item,
 query: function(options) {
 var selectedIds = options.element.select2('val');
@@ -1315,7 +1140,7 @@ id: '',
 text: 'BBQ',
 children: [
 { id: 'b1', text: 'Tikka' },
-{ id: 'b2', text: 'Turkish Kabab' },
+{ id: 'b2', text: 'Turkish Kabab'  },
 
 ]
 }
@@ -1323,7 +1148,10 @@ children: [
 
 $('#fruitSelect').select2({
 multiple: true,
+
+         
 placeholder: "Select Items...",
+allowClearL: true,
 data: FRUIT_GROUPS,
 query: function(options) {
 var selectedIds = options.element.select2('val');
@@ -1332,6 +1160,7 @@ var areChildrenAllSelected = true;
 $.each(group.children, function(i, child) {
 if (selectedIds.indexOf(child.id) < 0) {
 areChildrenAllSelected = false;
+removeItemButto=  true;
 return false; // Short-circuit $.each()
 }
 });
@@ -1345,6 +1174,7 @@ if (e.val == '') {
 e.preventDefault();
 $select.select2('data', $select.select2('data').concat(e.choice.children));
 $select.select2('close');
+
 }
 });
 
