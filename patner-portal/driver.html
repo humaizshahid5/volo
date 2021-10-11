@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patner Portal | Volo</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+   <!-- Ionicons -->
+   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/main.css">
+
+</head>
+<body class="hold-transition sidebar-mini">
+  
+<div class="wrapper">
+  <div class="preloader flex-column justify-content-center align-items-center"  > 
+    <img class="" src="../img/footer-logo.png" width="120" height="120" />
+    <img class="animation__shake" src="../img/loading.gif" width="120" height="120"  />
+
+
+ </div>
+  
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+     
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fas fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notifications-dropdown">
+          <span class="dropdown-item dropdown-header">Notifications</span>
+         
+          <a href="#" class="dropdown-item" data-toggle="modal" data-target="#orderdetail">
+            <div class="row n-row">
+              <div class="col-2 n-circle ">
+                <i class="fas fa-shopping-bag"></i>
+              </div>
+              <div class="col-10 my-auto mx-auto " >
+                 <p class="n-text">HumAiz placed a new order</p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="reservations.html" class="dropdown-item" >
+            <div class="row">
+              <div class="col-2 n-circle my-auto">
+                <i class="fas fa-book"></i>
+              </div>
+              <div class="col-10 my-auto mx-auto " >
+                <p class="n-text">HumAiz placed a new reservation</p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item" data-toggle="modal" data-target="#ordercomplete" >
+            <div class="row">
+              <div class="col-2 n-circle my-auto">
+                <i class="fas fa-times"></i>
+              </div>
+              <div class="col-10 my-auto mx-auto " >
+                <p class="n-text">  An order was cancelled</p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="review.html" class="dropdown-item" >
+            <div class="row">
+              <div class="col-2 n-circle my-auto">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="col-10 my-auto mx-auto " >
+                <p class="n-text">  You get a new review</p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item" data-toggle="modal" data-target="#chat" >
+            <div class="row">
+              <div class="col-2 n-circle my-auto">
+                <i class="fas fa-comment"></i>
+              </div>
+              <div class="col-10 my-auto" >
+                Volo replied to your enquiry:
+              <p class="n-more">
+                Thanks for contacting volo support. We are happy to assist you. Feel free to reach us anytime
+
+              </p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item" >
+            <div class="row">
+              <div class="col-2 n-circle my-auto" onclick="$('#orderpending').modal('show');">
+                <i class="fas fa-motorcycle" ></i>
+              </div>
+              <div class="col-10 my-auto"  >
+               
+               <a class="n-text" href="#" onclick="$('#orderpending').modal('show');" style="text-decoration: none;color:black; display: inline; line-break: strict;">
+                Your driver had an accident
+               </a>
+               <br>
+              
+                    Rider No: <a href="#" onclick="copyToClipboard('#p1')"  > <p id="p1" class="n-text" style="display: inline">+91433566644</p></a>
+
+
+                   
+                  
+                  
+               
+
+              </div>
+                
+           
+
+            </div>
+          
+
+          </div>
+        
+          <div class="dropdown-divider"></div>
+          
+         
+          
+          
+        </div>
+      </li>
+      <script>
+       function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+      }
+
+  
+
+      </script>
+
+     
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link controlleft" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#signout">
+          <i class="fas fa-lock"></i>
+        </a>
+      </li>
+    
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" >
+    <!-- Brand Logo -->
+    <a href="main.html" class="brand-link mx-auto text-center" >
+      <img src="../img/footer-logo.png" alt="Volo Logo" height="50px" >
+   
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex brand-text ">
+        <div class="row brand-text ">
+          <div class="col-12 mx-auto  ">
+            <div class="company-img mx-auto">
+              <img src="../img/kfc.png" />
+            </div>
+
+          </div>
+          <div class="col-12">
+          
+            <p class="comapny-title"> Gloria-Jeans Coffee Main Market Manama, Bahrain</p>
+           
+          </div>
+
+          </div>
+       
+       
+    </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+               <li class="nav-item">
+                <a href="main.html" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Dashboard
+                  
+                  </p>
+                </a>
+              </li>
+              
+          <li class="nav-item">
+            <a href="order-history.html" class="nav-link ">
+              <i class="nav-icon fas fa-shopping-bag"></i>
+              <p>
+                Order's History
+              
+              </p>
+            </a>
+           
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Reservations's
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="reservations.html" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Today Reservations's</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="reservation-history.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Reservations's History</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="reservation-reviews.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p> Reservations's Review</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Do it Yourself
+               
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cog"></i>
+              <p>
+                Settings
+               
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="reviews.html" class="nav-link">
+              <i class="nav-icon fas fa-comment"></i>
+              <p>
+                Reviews
+               
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="promotions.html" class="nav-link ">
+              <i class="nav-icon fas fa-bullhorn"></i>
+              <p>
+                Promotions
+               
+              </p>
+            </a>
+            
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-plus"></i>
+              <p>
+                Add-ons
+               
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-motorcycle"></i>
+              <p>
+                Drivers
+               
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Analytics
+               
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Driver</h1>
+          </div><!-- /.col -->
+          
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Starter Page</li>
+            </ol>
+            
+
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+       
+    
+
+        <div class="row">
+
+          <div class="col-lg-12">
+           
+            <div class="card" id="requests">
+              <div class="card-header">
+                <h3 class="card-title">Driver's</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-12" style="overflow: scroll;">
+                    <table id="example1" class="table table-bordered " >
+                      <thead>
+                      <tr>
+                        <th class="info-heading"></th>
+                        <th>Driver ID</th>
+                        <th>Driver Name</th>
+                        <th>Driver Email</th>
+                        <th>Driver Phone</th>
+                        <th>Requested On</th>
+                        <th>Status </th>
+                       
+                       
+                      </tr>
+                      </thead>
+                      <tbody>
+
+                      <tr>
+                        <td class="more-info"><button class="btn btn-md btn-default btn-more" data-toggle="modal" data-target="#driverinfo">+</button></td>
+                        <td>14fca0fc</td>
+                        <td>HumAiz</td>
+                        <td>g7@hotmail.com	</td>
+                        <td>+973 99999999</td>
+                        <td>2021-06-23		</td>
+                        <td>Approved</td>                     
+                                
+                      </tr>
+                      
+                      
+                     
+    
+                      </tbody>
+                     
+                    </table>
+
+                  </div>
+                </div>
+
+           
+          
+              </div>
+              <!-- /.card-body -->
+            </div>
+
+           
+          </div>
+         
+        </div>
+   
+        <!-- /.row -->
+      
+      </div><!-- /.container-fluid -->
+    </div>
+ 
+
+    <!-- /.content -->
+  </div>
+
+
+  <!-- /.content-wrapper -->
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark" > 
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  
+  
+
+<div class="modal fade" id="driverinfo" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="orderdetailLabel">Driver Info</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body order-popup ">
+            <div class="row ">
+               <div class="col-12 justify-content-center">
+                  <center>
+                     <img src="../img/footer-logo.png" class="img-center" width="80px" />
+                     <br>
+                  </center>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-10 mx-auto">
+                  <div class="row order-info">
+                     <div class="col-12 text-center">
+                        <b>Driver ID</b> <br>21BE0B82
+                     </div>
+                     <div class="col-12 text-center">
+                        <b>Driver Name</b> <br>Delivery
+                     </div>
+                     <div class="col-12 text-center">
+                        <b>Driver DOB</b> <br>Delivery
+                     </div>
+                     <div class="col-12 text-center">
+                        <b>Driver Email</b> <br>No
+                     </div>
+                     <div class="col-12 text-center">
+                        <b>Driver Phone</b> <br>No
+                     </div>
+                     <div class="col-12 text-center">
+                        <b>Driver Password</b> <br>  <span id="password">Show Password</span> <span toggle="#password-show" class="fa fa-fw fa-eye  toggle-showpassword"></span>
+                     </div>
+                     <div class="col-12  text-center">
+                        <b>Driver  Two Factor Authentication </b><br> <span id="authentication">Show Authentication</span> <span toggle="#password-authentication" class="fa fa-fw fa-eye  toggle-authentication"></span>
+                     </div>
+                     <div class="col-12 text-center">
+                        <b>Driver Vehicle</b><br> ASAP
+                     </div>
+                     <div class="col-12 text-center">
+                        <b>Vehicle Brand</b><br> ASAP
+                     </div>
+                     <div class="col-12 text-center">
+                        <b>Vechile Modal</b><br> ASAP
+                     </div>
+                     <div class="col-12 text-center">
+                        <b>Vehicle Registration Number</b><br> ASAP
+                     </div>
+                     
+                  </div>
+               </div>
+            </div>
+         
+         <div class="m-footer" >
+            <div class="row">
+               <div class="col-6">
+                  <button type="button" class="btn btn-info " data-dismiss="modal">Print <i class="fas fa-print"></i></button>
+                </div>
+                
+                  <div class="col-6 text-right">
+                    <button class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#edit-driver">Edit <i class="fas fa-edit"></i></button>
+                </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="modal fade" id="decline" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
+   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content">
+         <div class="modal-body">
+            Are you sure you want to decline ?
+            <div class="float-right">
+               <br>
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+               <button type="button" class="btn btn-warning" data-dismiss="modal">Confirm</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+
+
+<div class="modal fade" id="signout" tabindex="-1" role="dialog" aria-labelledby="signout" aria-hidden="true">
+   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="orderdetailLongTitle">Logout of</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <div class="row">
+               <div class="col-12 logout-popup">
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                     <label class="form-check-label" for="exampleRadios1">
+                     This device
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                     <label class="form-check-label" for="exampleRadios2">
+                     All devices
+                     </label>
+                  </div>
+                  <div class="float-right">
+                     <br>
+                     <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#confirm">Logout</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content">
+         <div class="modal-body">
+            Are you sure you want to logout?
+            <div class="float-right">
+               <br>
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+               <a href="../PSignIn.html"><button type="button" class="btn btn-warning" >Confirm</button></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="modal fade" id="add-driver" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+       <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="orderdetailLabel">Add Driver</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <div class="form-group">
+                          <label>Driver First Name</label>
+                          <input type="text" class="form-control" />
+                      </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Driver Last Name</label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Driver DOB</label>
+                        <input type="date" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                    <label for="branchphone">Driver Number</label>
+                    <div class="row">
+                       <div class="col-4" style="padding-right:0px;">
+                          <div class="form-label-group">
+                             <select name="pccode" class="form-control login-input">
+                                <option value="" selected disabled hidden>Code</option>
+                                <option value="+973">+973</option>
+                                <option value="+966">+966</option>
+                                <option value="+965">+965</option>
+                                <option value="+971">+971</option>
+                                <option value="+968">+968</option>
+                                <option value="+974">+974</option>
+                             </select>
+                          </div>
+                       </div>
+                       <div class="col-8">
+                          <div class="form-label-group">
+                             <input type="phone" id="branchphone" class="form-control login-input" placeholder="Number" required autofocus>
+                           
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Driver Email</label>
+                        <input type="email" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Verify Email</label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Driver Password</label>
+                        <input id="password-field" type="password" class="form-control" />
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Verify Password</label>
+                        <input  id="toggle-verifypassword" type="password" class="form-control" />
+                        <span toggle="#toggle-verifypassword" class="fa fa-fw fa-eye field-icon toggle-verifypassword"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Driver two-factor authentication code (6 digits)
+                        </label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Verify Driver two-factor authentication code
+                        </label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Vechile Type
+                        </label>
+                        <select class="form-control">
+                            <option>MoterCycle</option>
+                            <option>Car</option>
+                            <option>Min-Van</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Vehicle Brand
+                        </label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Vechile Model
+                        </label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Vechile Plate No
+                        </label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                
+
+
+              </div>
+          
+           
+          </div>
+          <div class="m-footer" >
+            <div class="row">
+               <div class="col-12">
+                  <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Add Driver</button>
+                </div>
+                
+               </div>
+            </div>
+       </div>
+    </div>
+ </div>
+ <div class="modal fade" id="edit-driver" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+       <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="orderdetailLabel">Edit Driver</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+          <div class="modal-body">
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <div class="form-group">
+                          <label>Driver First Name</label>
+                          <input type="text" class="form-control" />
+                      </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Driver Last Name</label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Driver DOB</label>
+                        <input type="date" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                    <label for="branchphone">Driver Number</label>
+                    <div class="row">
+                       <div class="col-4" style="padding-right:0px;">
+                          <div class="form-label-group">
+                             <select name="pccode" class="form-control login-input">
+                                <option value="" selected disabled hidden>Code</option>
+                                <option value="+973">+973</option>
+                                <option value="+966">+966</option>
+                                <option value="+965">+965</option>
+                                <option value="+971">+971</option>
+                                <option value="+968">+968</option>
+                                <option value="+974">+974</option>
+                             </select>
+                          </div>
+                       </div>
+                       <div class="col-8">
+                          <div class="form-label-group">
+                             <input type="phone" id="branchphone" class="form-control login-input" placeholder="Number" required autofocus>
+                           
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Driver Email</label>
+                        <input type="email" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Verify Email</label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Driver Password</label>
+                        <input id="password-field" type="password" class="form-control" />
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Verify Password</label>
+                        <input  id="toggle-verifypassword" type="password" class="form-control" />
+                        <span toggle="#toggle-verifypassword" class="fa fa-fw fa-eye field-icon toggle-verifypassword"></span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Driver two-factor authentication code (6 digits)
+                        </label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Verify Driver two-factor authentication code
+                        </label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Vechile Type
+                        </label>
+                        <select class="form-control">
+                            <option>MoterCycle</option>
+                            <option>Car</option>
+                            <option>Min-Van</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Vehicle Brand
+                        </label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Vechile Model
+                        </label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="form-group">
+                        <label>Vechile Plate No
+                        </label>
+                        <input type="text" class="form-control" />
+                    </div>
+                </div>
+                
+
+
+              </div>
+          
+           
+          </div>
+          <div class="m-footer" >
+            <div class="row">
+               <div class="col-12">
+                  <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Edit Driver</button>
+                </div>
+                
+               </div>
+            </div>
+       </div>
+    </div>
+ </div>
+ 
+
+<div class="modal fade" id="cancelled" tabindex="-1" role="dialog" aria-labelledby="cancelled" aria-hidden="true">
+   <div class="modal-dialog" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="orderdetailLongTitle">Cancelled Order's</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+          <div class="chart">
+            <canvas id="cancelledChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+          
+  </div>
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="modal fade" id="active" tabindex="-1" role="dialog" aria-labelledby="active" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="orderdetailLongTitle">Active Order's</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+        
+        <div class="chart">
+                  <canvas id="activeChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<footer class="main-footer">
+  
+  <strong>Copyright &copy; 2021 <a href="https://humaizshahid.com">Volo</a>.</strong> All rights reserved.
+</footer>
+</div>
+
+<a  href="#" data-toggle="modal" data-target="#add-driver">
+  <div class="row" style="padding: 0px;margin: 0px;">
+<div class="col-12 t-fixed " style="padding: 0px;margin: 0px;"> 
+
+</div>
+
+</div>
+
+<div class="trading mx-auto" >
+<img src="../img/footer-logo.png"/>
+</div>
+
+</a>
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- DataTables  & Plugins -->
+<script src="plugins/chart/Chart.js"></script>
+
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="plugins/jszip/jszip.min.js"></script>
+<script src="plugins/pdfmake/pdfmake.min.js"></script>
+<script src="plugins/pdfmake/vfs_fonts.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+
+
+  
+
+
+<script>
+  var ctx = document.getElementById("activeChart").getContext('2d');
+     var myChart = new Chart(ctx, {
+         type: 'line',
+         data: {
+             labels: ["10 AM",	"11 AM",	"12 PM",	"1 PM",	"2 PM ",	"3 PM",	"4 PM","5 PM",	"6 PM","7 PM"],
+             datasets: [{
+                 label: 'Active Order', // Name the series
+                 data: [5,	3,	10,	9,	8,	15,	17,	20,	12, 28], // Specify the data values array
+                 fill: false,
+                 borderColor: '#2196f3', // Add custom color border (Line)
+                 backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+                 borderWidth: 1 // Specify bar border width
+             }]},
+         options: {
+         responsive: true, // Instruct chart js to respond nicely.
+         maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+         }
+ });
+ var today = document.getElementById("todayChart").getContext('2d');
+     var myChart = new Chart(today, {
+         type: 'line',
+         data: {
+             labels: ["Today",	"Tuesday",	"Wednesay",	"Thursaday",	"Friday ",	"Saturday",	"Sanday"],
+             datasets: [{
+                 label: 'Todays Order', // Name the series
+                 data: [15,	30,	29,	35,	32,	38,	40], // Specify the data values array
+                 fill: false,
+                 borderColor: '#2196f3', // Add custom color border (Line)
+                 backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+                 borderWidth: 1 // Specify bar border width
+             }]},
+         options: {
+         responsive: true, // Instruct chart js to respond nicely.
+         maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+         }
+ });
+ var cancelled = document.getElementById("cancelledChart").getContext('2d');
+     var myChart = new Chart(cancelled, {
+         type: 'line',
+         data: {
+             labels: ["Today",	"Tuesday",	"Wednesay",	"Thursaday",	"Friday ",	"Saturday",	"Sanday"],
+             datasets: [{
+                 label: 'Cancelled Order', // Name the series
+                 data: [1,	7,	9,	0,	8,	4,	10], // Specify the data values array
+                 fill: false,
+                 borderColor: '#2196f3', // Add custom color border (Line)
+                 backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
+                 borderWidth: 1 // Specify bar border width
+             }]},
+         options: {
+         responsive: true, // Instruct chart js to respond nicely.
+         maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
+         }
+ });
+ </script>
+<script>
+  $(function () {
+    $("#example1").DataTable({
+     "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": true,
+      "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $("#example2").DataTable({ 
+     "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ], "autoWidth": false,
+      "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
+    $("#example3").DataTable({
+     "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": false,
+      "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example3_wrapper .col-md-6:eq(0)');
+    $("#example4").DataTable({
+       "lengthChange": true, "pageLength": 20, "lengthMenu": [ [5, 10, 20, 25, 50, -1], [5, 10, 20, 25, 50, "All"] ], "autoWidth": false,
+      "buttons": ["copy", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example4_wrapper .col-md-6:eq(0)');
+    
+  });
+  
+</script>
+<script>
+    $(".toggle-showpassword").click(function() {
+
+     $(this).toggleClass("fa-eye fa-eye-slash");
+    var status= document.getElementById("password").innerHTML;
+    if(status == "Show Password"){
+        document.getElementById("password").innerHTML = "12345678";
+    }
+    else{
+        document.getElementById("password").innerHTML = "Show Password";
+    }
+    });
+    $(".toggle-authentication").click(function() {
+
+    $(this).toggleClass("fa-eye fa-eye-slash");
+    var status= document.getElementById("authentication").innerHTML;
+    if(status == "Show Authentication"){
+    document.getElementById("authentication").innerHTML = "12345678";
+    }
+    else{
+    document.getElementById("authentication").innerHTML = "Show Authentication";
+    }
+    });
+    
+    
+ </script>
+  <script>
+    $(".toggle-password").click(function() {
+
+     $(this).toggleClass("fa-eye fa-eye-slash");
+     var input = $($(this).attr("toggle"));
+     if (input.attr("type") == "password") {
+     input.attr("type", "text");
+     } else {
+     input.attr("type", "password");
+     }
+     });
+     $(".toggle-verifypassword").click(function() {
+
+       $(this).toggleClass("fa-eye fa-eye-slash");
+       var input = $($(this).attr("toggle"));
+       if (input.attr("type") == "password") {
+       input.attr("type", "text");
+       } else {
+       input.attr("type", "password");
+       }
+       });
+ </script>
+</body>
+</html>
