@@ -468,7 +468,7 @@ table{
    
     background-color: #262626;
 }
-#accordion{
+.reservation-accordion{
     margin-top: 10px;
     background-color: #12121F;
 }
@@ -496,3 +496,11 @@ optgroup > option{
   .s-border{
       padding:10px
   }
+  .addon-box{
+      
+      background-color: rgb(243, 240, 240);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+  }
+  
