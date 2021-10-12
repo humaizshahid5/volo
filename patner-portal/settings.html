@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Patner Portal | Volo</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+   <!-- Ionicons -->
+   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="dist/css/main.css">
+  <link rel="stylesheet" href="dist/css/toggle.css">
+
+
+</head>
+<body class="hold-transition sidebar-mini">
+  
+<div class="wrapper">
+  <div class="preloader flex-column justify-content-center align-items-center"  > 
+    <img class="" src="../img/footer-logo.png" width="120" height="120" />
+    <img class="animation__shake" src="../img/loading.gif" width="120" height="120"  />
+
+
+ </div>
+  
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+     
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fas fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notifications-dropdown">
+          <span class="dropdown-item dropdown-header">Notifications</span>
+         
+          <a href="#" class="dropdown-item" data-toggle="modal" data-target="#orderdetail">
+            <div class="row n-row">
+              <div class="col-2 n-circle ">
+                <i class="fas fa-shopping-bag"></i>
+              </div>
+              <div class="col-10 my-auto mx-auto " >
+                 <p class="n-text">HumAiz placed a new order</p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="reservations.html" class="dropdown-item" >
+            <div class="row">
+              <div class="col-2 n-circle my-auto">
+                <i class="fas fa-book"></i>
+              </div>
+              <div class="col-10 my-auto mx-auto " >
+                <p class="n-text">HumAiz placed a new reservation</p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item" data-toggle="modal" data-target="#ordercomplete" >
+            <div class="row">
+              <div class="col-2 n-circle my-auto">
+                <i class="fas fa-times"></i>
+              </div>
+              <div class="col-10 my-auto mx-auto " >
+                <p class="n-text">  An order was cancelled</p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="review.html" class="dropdown-item" >
+            <div class="row">
+              <div class="col-2 n-circle my-auto">
+                <i class="fas fa-star"></i>
+              </div>
+              <div class="col-10 my-auto mx-auto " >
+                <p class="n-text">  You get a new review</p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item" data-toggle="modal" data-target="#chat" >
+            <div class="row">
+              <div class="col-2 n-circle my-auto">
+                <i class="fas fa-comment"></i>
+              </div>
+              <div class="col-10 my-auto" >
+                Volo replied to your enquiry:
+              <p class="n-more">
+                Thanks for contacting volo support. We are happy to assist you. Feel free to reach us anytime
+
+              </p>
+             
+              </div>
+
+            </div>
+          
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-item" >
+            <div class="row">
+              <div class="col-2 n-circle my-auto" onclick="$('#orderpending').modal('show');">
+                <i class="fas fa-motorcycle" ></i>
+              </div>
+              <div class="col-10 my-auto"  >
+               
+               <a class="n-text" href="#" onclick="$('#orderpending').modal('show');" style="text-decoration: none;color:black; display: inline; line-break: strict;">
+                Your driver had an accident
+               </a>
+               <br>
+              
+                    Rider No: <a href="#" onclick="copyToClipboard('#p1')"  > <p id="p1" class="n-text" style="display: inline">+91433566644</p></a>
+
+
+                   
+                  
+                  
+               
+
+              </div>
+                
+           
+
+            </div>
+          
+
+          </div>
+        
+          <div class="dropdown-divider"></div>
+          
+         
+          
+          
+        </div>
+      </li>
+      <script>
+       function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        $temp.remove();
+      }
+
+  
+
+      </script>
+
+     
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link controlleft" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#signout">
+          <i class="fas fa-lock"></i>
+        </a>
+      </li>
+    
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4" >
+    <!-- Brand Logo -->
+    <a href="main.html" class="brand-link mx-auto text-center" >
+      <img src="../img/footer-logo.png" alt="Volo Logo" height="50px" >
+   
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex brand-text ">
+        <div class="row brand-text ">
+          <div class="col-12 mx-auto  ">
+            <div class="company-img mx-auto">
+              <img src="../img/kfc.png" />
+            </div>
+
+          </div>
+          <div class="col-12">
+          
+            <p class="comapny-title"> Gloria-Jeans Coffee Main Market Manama, Bahrain</p>
+           
+          </div>
+
+          </div>
+       
+       
+    </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+               <li class="nav-item">
+                <a href="main.html" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    Dashboard
+                  
+                  </p>
+                </a>
+              </li>
+              
+          <li class="nav-item">
+            <a href="order-history.html" class="nav-link ">
+              <i class="nav-icon fas fa-shopping-bag"></i>
+              <p>
+                Order's History
+              
+              </p>
+            </a>
+           
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fas fa-book"></i>
+              <p>
+                Reservations's
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="reservations.html" class="nav-link ">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Today Reservations's</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="reservation-history.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Reservations's History</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="reservation-reviews.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p> Reservations's Review</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-home"></i>
+              <p>
+                Do it Yourself
+               
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-cog"></i>
+              <p>
+                Settings
+               
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="reviews.html" class="nav-link">
+              <i class="nav-icon fas fa-comment"></i>
+              <p>
+                Reviews
+               
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="promotions.html" class="nav-link ">
+              <i class="nav-icon fas fa-bullhorn"></i>
+              <p>
+                Promotions
+               
+              </p>
+            </a>
+            
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-plus"></i>
+              <p>
+                Add-ons
+               
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="driver.html" class="nav-link">
+              <i class="nav-icon fas fa-motorcycle"></i>
+              <p>
+                Drivers
+               
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-chart-pie"></i>
+              <p>
+                Analytics
+               
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Settings</h1>
+          </div><!-- /.col -->
+          
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Starter Page</li>
+            </ol>
+            
+
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+       
+    
+
+        <div class="row">
+
+          <div class="col-lg-12">
+           
+            <div class="card" id="requests">
+              <div class="card-header">
+                <h3 class="card-title">Settings</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label>Minimum Order</label>
+                        <input class="form-control"/>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <label>Appears to Customer</label>
+                        
+                            <div class="store-status">
+                                <label class="switch switch-left-right">
+                                <input class="switch-input" type="checkbox">
+                                <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                            </div>
+
+                          
+                    </div>
+                   
+                    <div class="col-12 " >
+                        <br>
+                        <div class="form-input">
+                           
+                           <input type="file" id="pic" name="pic" accept="image/*" onchange='checkInfo(event)'>
+                           </div>
+                    </div>
+                           <div class="col-6 my-auto" >
+                             
+                              <div class="preview">
+                                 
+                                  <img id="file-ip-1-preview" class="img-fluid" style="margin-top:10px;margin-bottom: 10px;">
+                              </div>
+                           </div>
+                           <div class="col-6 my-auto" >
+                              <div id='imgInfo'  ></div>
+                             
+                           </div>
+                           <div class="col-12">
+
+                             
+                               <button class="btn btn-default btn-block">Update Settings</button>
+                           </div>
+                          
+                          
+                           
+                       </div>
+                       
+
+                    </div>
+                    
+                </div>
+
+           
+          
+              </div>
+              <!-- /.card-body -->
+            </div>
+
+           
+          </div>
+         
+        </div>
+   
+        <!-- /.row -->
+      
+      </div><!-- /.container-fluid -->
+    </div>
+ 
+
+    <!-- /.content -->
+  </div>
+
+
+  <!-- /.content-wrapper -->
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark" > 
+    <!-- Control sidebar content goes here -->
+    <div class="p-3">
+      <h5>Title</h5>
+      <p>Sidebar content</p>
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  
+  
+
+<div class="modal fade" id="decline" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
+   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content">
+         <div class="modal-body">
+            Are you sure you want to decline ?
+            <div class="float-right">
+               <br>
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+               <button type="button" class="btn btn-warning" data-dismiss="modal">Confirm</button>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+
+
+
+<div class="modal fade" id="signout" tabindex="-1" role="dialog" aria-labelledby="signout" aria-hidden="true">
+   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="orderdetailLongTitle">Logout of</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+            <div class="row">
+               <div class="col-12 logout-popup">
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                     <label class="form-check-label" for="exampleRadios1">
+                     This device
+                     </label>
+                  </div>
+                  <div class="form-check">
+                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                     <label class="form-check-label" for="exampleRadios2">
+                     All devices
+                     </label>
+                  </div>
+                  <div class="float-right">
+                     <br>
+                     <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#confirm">Logout</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content">
+         <div class="modal-body">
+            Are you sure you want to logout?
+            <div class="float-right">
+               <br>
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+               <a href="../PSignIn.html"><button type="button" class="btn btn-warning" >Confirm</button></a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<div class="modal fade" id="hours" tabindex="-1" role="dialog" aria-labelledby="cancelled" aria-hidden="true">
+   <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="orderdetailLongTitle">Working Hours</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+         <div class="modal-body">
+             <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                       <div style="margin-top: 10px;font-weight: normal !important;">
+                          <label class="radio-inline" style="font-weight: normal !important;"><input name="type" type="radio" value="" onclick="code()" checked> Same for Every Day</label>
+                          <label class="radio-inline" style="font-weight: normal !important;"><input name="type" type="radio" value="" onclick="code2()"> Different for Every Day</label>
+                       </div>
+                    </div>
+                 </div>
+             </div>
+             <div id="same" >
+                <div class="row"  >
+                   <div class="col-12">
+                      <h5>Shift One</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="op1">Opening Time</label>
+                            <input type="time" id="op1" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="cl1">Closing Time</label>
+                            <input type="time" id="cl1" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Two</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="op2">Opening Time</label>
+                            <input type="time" id="op2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="cl2">Closing Time</label>
+                            <input type="time" id="cl2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Three</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="op3">Opening Time</label>
+                            <input type="time" id="op3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                           
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="cl3">Closing Time</label>
+                            <input type="time" id="cl3" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+         
+             <div id="different" style="display: none;width: 100%;">
+                <div class="row">
+                
+                   <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
+                      <h2 class="signup-heading text-center">Sunday</h2>
+                      <br>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift One</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="so1">Opening Time</label>
+                            <input type="time" id="so1" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="sc1">Closing Time</label>
+                            <input type="time" id="sc1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                           
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Two</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="so2">Opening Time</label>
+                            <input type="time" id="so2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="sc2">Closing Time</label>
+                            <input type="time" id="sc2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Three</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="so3">Opening Time</label>
+                            <input type="time" id="so3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                           
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="sc3">Closing Time</label>
+                            <input type="time" id="sc3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                          
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
+                      <h2 class="signup-heading text-center">Monday</h2>
+                      <br>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift One</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="mo1">Opening Time</label>
+                            <input type="time" id="mo1" class="form-control login-input" placeholder="Store Name" required autofocus>
+                            
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="mc1">Closing Time</label>
+                            <input type="time" id="mc1" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Two</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="mo2">Opening Time</label>
+                            <input type="time" id="mo2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="mc2">Closing Time</label>
+                            <input type="time" id="mc2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Three</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="mo3">Opening Time</label>
+                            <input type="time" id="mo3" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="mc3">Closing Time</label>
+                            <input type="time" id="mc3" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
+                      <h2 class="signup-heading text-center">Tuesday</h2>
+                      <br>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift One</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="to1">Opening Time</label>
+                            <input type="time" id="to1" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="tc1">Closing Time</label>
+                            <input type="time" id="tc1" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Two</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="to2">Opening Time</label>
+                            <input type="time" id="to2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="tc2">Closing Time</label>
+                            <input type="time" id="tc2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Three</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="to3">Opening Time</label>
+                            <input type="time" id="to3" class="form-control login-input" placeholder="Store Name" required autofocus>
+                           
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="tc3">Closing Time</label>
+                            <input type="time" id="tc3" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
+                      <h2 class="signup-heading text-center">Wednesay</h2>
+                      <br>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift One</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="wo1">Opening Time</label>
+                            <input type="time" id="wo1" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="wc1">Closing Time</label>
+                            <input type="time" id="wc1" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Two</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="wo2">Opening Time</label>
+                            <input type="time" id="wo2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="wc2">Closing Time</label>
+                            <input type="time" id="wc2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Three</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="wo3">Opening Time</label>
+                            <input type="time" id="wo3" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="wc3">Closing Time</label>
+                            <input type="time" id="wc3" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
+                      <h2 class="signup-heading text-center">Thursday</h2>
+                      <br>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift One</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="tho1">Opening Time</label>
+                            <input type="time" id="tho1" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="thc1">Closing Time</label>
+                            <input type="time" id="thc1" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Two</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="tho2">Opening Time</label>
+                            <input type="time" id="tho2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="thc2">Closing Time</label>
+                            <input type="time" id="thc2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Three</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="tho3">Opening Time</label>
+                            <input type="time" id="tho3" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="thc3">Closing Time</label>
+                            <input type="time" id="thc3" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
+                      <h2 class="signup-heading text-center">Friday</h2>
+                      <br>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift One</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="fo1">Opening Time</label>
+                            <input type="time" id="f01" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="fc1">Closing Time</label>
+                            <input type="time" id="fc2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Two</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="fo2">Opening Time</label>
+                            <input type="time" id="fo2" class="form-control login-input" placeholder="Store Name" required autofocus>
+                            
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="fc2">Closing Time</label>
+                            <input type="time" id="fc2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Three</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="fo3">Opening Time</label>
+                            <input type="time" id="fo3" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="fc3">Closing Time</label>
+                            <input type="time" id="fc3" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
+                      <h2 class="signup-heading text-center">Saturday</h2>
+                      <br>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift One</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="sao1">Opening Time</label>
+                            <input type="time" id="sao1" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="sac1">Closing Time</label>
+                            <input type="time" id="sac1" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Two</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="sao2">Opening Time</label>
+                            <input type="time" id="sao2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="sac2">Closing Time</label>
+                            <input type="time" id="sac2" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-12">
+                      <h5>Shift Three</h5>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="sao3">Opening Time</label>
+                            <input type="time" id="sao3" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                   <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
+                      <div class="form-group">
+                         <div class="form-label-group">
+                            <label for="sac3">Closing Time</label>
+                            <input type="time" id="sac3" class="form-control login-input" placeholder="Store Name" required autofocus>
+
+                         </div>
+                      </div>
+                   </div>
+                </div>
+             </div>
+            
+       
+         </div>
+         <div class="modal-footer">
+            <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Update Working Hours</button>
+         </div>
+      </div>
+   </div>
+</div>
+<script type="text/javascript">
+    function code() {
+
+      var same = document.getElementById('same');
+      var different = document.getElementById('different');
+
+      same.style.display= "block";
+      different.style.display= "none";
+
+    }
+</script>
+ <script type="text/javascript">
+    function code2() {
+
+       var same = document.getElementById('same');
+      var different = document.getElementById('different');
+
+      same.style.display= "none";
+      different.style.display= "block";
+    }
+</script>
+
+
+
+<div class="modal fade" id="active" tabindex="-1" role="dialog" aria-labelledby="active" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="orderdetailLongTitle">Active Order's</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+        
+        <div class="chart">
+                  <canvas id="activeChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+<footer class="main-footer">
+  
+  <strong>Copyright &copy; 2021 <a href="https://humaizshahid.com">Volo</a>.</strong> All rights reserved.
+</footer>
+</div>
+
+<a  href="#" data-toggle="modal" data-target="#hours">
+    <div class="row" style="padding: 0px;margin: 0px;">
+  <div class="col-12 t-fixed " style="padding: 0px;margin: 0px;"> 
+  
+  </div>
+  
+  </div>
+  
+  <div class="trading mx-auto" >
+  <img src="../img/footer-logo.png"/>
+  </div>
+  
+  </a>
+
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- DataTables  & Plugins -->
+<script src="plugins/chart/Chart.js"></script>
+
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="plugins/jszip/jszip.min.js"></script>
+<script src="plugins/pdfmake/pdfmake.min.js"></script>
+<script src="plugins/pdfmake/vfs_fonts.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+
+<script src="../js/patnerSettings.js"></script>
+
+  
+
+
+
+
+</body>
+</html>
