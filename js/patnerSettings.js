@@ -111,6 +111,103 @@ if(pic.files.length > 0){
     
     
 }
+function checkInfo2(event) {
+    var pic = document.getElementById("pic2");
+    console.log(pic.files);
+    
+    console.log(pic.files[0].size/1000000);
+    
+    var imageSizeNotRounded = pic.files[0].size/1000000;
+    
+    var imageSize = imageSizeNotRounded.toFixed(3);
+    
+    var imageSizeDouble = parseFloat(imageSize);
+    
+    var info = document.getElementById("imgInfo2");
+    info.innerHTML = "";
+    
+    if (imageSizeDouble > 3) {
+        alert("image size cannot be larger than 3 MB");
+        info.insertAdjacentHTML('beforeend', "<br><label style='color: red;'>Image size cannot be larger than 3 MB.</label>");
+        checkImage2 = false;
+        //return false;
+    } 
+    
+
+    
+    
+    console.log(imageSizeDouble);
+    
+//  if(event.target.files.length > 0){
+if(pic.files.length > 0){
+    //var src = URL.createObjectURL(event.target.files[0]);
+    var src = URL.createObjectURL(pic.files[0]);
+    var preview = document.getElementById("file-ip-1-preview2");
+    preview.src = src;
+    preview.style.display = "block";
+    
+   
+  }
+  
+    var width, height;
+    
+        var file  = pic.files[0];
+        var img = new Image();
+        
+        
+    
+        img.onload = function() {
+            var sizes = {
+                width:this.width,
+                height: this.height
+            };
+            URL.revokeObjectURL(this.src);
+    
+            //console.log('onload: sizes', sizes);
+            console.log(sizes);
+            console.log('onload: this', this);
+            
+            width = sizes.width;
+            height = sizes.height;
+            
+            console.log(width + " x " + height);
+            
+            if (height > width || height == 0 || width == 0 || pic.files.length == 0) {
+                // alert("Image height cannot exceed width, please edit the image or upload another one");
+                //info.innerHTML = "";
+                info.insertAdjacentHTML('beforeend', "<br><label style='color: red;'>Image height cannot exceed width, please edit the image or upload another one.</label>");
+                
+                info.insertAdjacentHTML('beforeend', "<br><label'>Image size: " + imageSize + " MB</label>");
+                info.insertAdjacentHTML('beforeend', "<br><label'>Image dimensions: width: " + width + " px, height: " + height + " px</label>");
+                
+                checkImage2 = false;
+               // return false;
+                
+            } else {
+                //info.innerHTML = "";
+                console.log("got here");
+                checkImage2 = true;
+                
+                if (imageSizeDouble > 3) {
+                    checkImage2 = false;
+                }
+                
+                info.insertAdjacentHTML('beforeend', "<br><label'>Image size: " + imageSize + " MB</label>");
+                info.insertAdjacentHTML('beforeend', "<br><label'>Image dimensions: width: " + width + " px, height: " + height + " px</label>");
+                
+                //return true;
+            }
+            
+            console.log("check = " + checkImage2);
+        };
+    
+        var objectURL = URL.createObjectURL(file);
+    
+        img.src = objectURL;
+        
+    
+    
+}
 
 function fetchWorkingHours() {
   document.getElementById("workingHours").style.display = "block";

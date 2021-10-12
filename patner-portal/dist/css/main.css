@@ -488,3 +488,11 @@ optgroup > option{
     position: relative;
     z-index: 2;
   }
+  .s-img{
+      border: 1px dashed black;
+    
+    border-radius: 8px;
+  }
+  .s-border{
+      padding:10px
+  }
