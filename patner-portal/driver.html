@@ -419,6 +419,8 @@
                         <th>Driver Name</th>
                         <th>Driver Email</th>
                         <th>Driver Phone</th>
+                        <th>Order Delivered</th>
+
                         <th>Requested On</th>
                         <th>Status </th>
                        
@@ -433,6 +435,8 @@
                         <td>HumAiz</td>
                         <td>g7@hotmail.com	</td>
                         <td>+973 99999999</td>
+                        <td>23</td>
+
                         <td>2021-06-23		</td>
                         <td>Approved</td>                     
                                 
@@ -519,11 +523,9 @@
                         <b>Driver Phone</b> <br>No
                      </div>
                      <div class="col-12 text-center">
-                        <b>Driver Password</b> <br>  <span id="password">Show Password</span> <span toggle="#password-show" class="fa fa-fw fa-eye  toggle-showpassword"></span>
+                        <b>Order Delivered</b> <br>20
                      </div>
-                     <div class="col-12  text-center">
-                        <b>Driver  Two Factor Authentication </b><br> <span id="authentication">Show Authentication</span> <span toggle="#password-authentication" class="fa fa-fw fa-eye  toggle-authentication"></span>
-                     </div>
+                    
                      <div class="col-12 text-center">
                         <b>Driver Vehicle</b><br> ASAP
                      </div>
@@ -623,6 +625,7 @@
       </div>
    </div>
 </div>
+
 <div class="modal fade" id="add-driver" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
        <div class="modal-content">
@@ -759,7 +762,7 @@
           <div class="m-footer" >
             <div class="row">
                <div class="col-12">
-                  <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Add Driver</button>
+                  <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#otp">Add Driver</button>
                 </div>
                 
                </div>
@@ -767,6 +770,33 @@
        </div>
     </div>
  </div>
+ <div class="modal fade" id="otp" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+       <div class="modal-content">
+          <div class="modal-body">
+            Please enter the OTP send to the driver number.
+            <form>
+              
+                <input type="number" class="form-control" />
+
+            </form>
+
+             <div class="float-right">
+                <br>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                <a href="#" onclick="modaldismiss()"><button type="button" class="btn btn-warning" >Confirm</button></a>
+             </div>
+          </div>
+       </div>
+    </div>
+ </div>
+ <script>
+     function modaldismiss(){
+         
+        $('.modal').modal('hide') // closes all active pop ups.
+$('.modal-backdrop').remove() // removes the grey overlay.
+     }
+ </script>
  <div class="modal fade" id="edit-driver" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
        <div class="modal-content">
@@ -934,6 +964,8 @@
       </div>
    </div>
 </div>
+
+
 
 <div class="modal fade" id="active" tabindex="-1" role="dialog" aria-labelledby="active" aria-hidden="true">
   <div class="modal-dialog" role="document">
