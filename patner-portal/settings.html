@@ -18,6 +18,8 @@
       <link rel="stylesheet" href="dist/css/adminlte.min.css">
       <link rel="stylesheet" href="dist/css/main.css">
       <link rel="stylesheet" href="dist/css/toggle.css">
+      <link rel="stylesheet" href="dist/css/image-uploader.min.css">
+
    </head>
    <body class="hold-transition sidebar-mini">
       <div class="wrapper">
@@ -330,67 +332,90 @@
                            </div>
                            <!-- /.card-header -->
                            <div class="card-body">
-                              <div class="row">
-                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <label>Minimum Order</label>
-                                    <input class="form-control"/>
-                                 </div>
-                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                    <label>Appears to Customer</label>
-                                    <div class="store-status">
-                                       <label class="switch switch-left-right">
-                                       <input class="switch-input" type="checkbox">
-                                       <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                              <form name="form-example-2" id="form-example-2" enctype="multipart/form-data">
+                                 <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                       <label>Minimum Order</label>
+                                       <input class="form-control"/>
                                     </div>
-                                 </div>
-                                 <div class="col-6  s-border " >
-                                     <div class="row s-img">
-                                         <div class="col-12">
-                                            <div class="form-input">
-                                                <label>Logo</label><br>
-                                               <input type="file" id="pic" name="pic" accept="image/*" onchange='checkInfo(event)'>
-                                            </div>
-
-                                         </div>
-                                        <div class="col-6 my-auto" >
-                                            <div class="preview">
-                                               <img id="file-ip-1-preview" class="img-fluid" style="margin-top:10px;margin-bottom: 10px;">
-                                            </div>
-                                         </div>
-                                         <div class="col-6 my-auto" >
-                                            <div id='imgInfo'  ></div>
-                                         </div>
-                                     </div>
-                                    
-                                   
-                                 </div>
-                                 <div class="col-6 s-border" >
-                                    <div class="row s-img">
-                                        <div class="col-12">
-                                           <div class="form-input">
-                                               <label>Background Image</label><br>
-                                              <input type="file" id="pic2" name="pic2" accept="image/*" onchange='checkInfo2(event)'>
-                                           </div>
-
-                                        </div>
-                                       <div class="col-6 my-auto" >
-                                           <div class="preview">
-                                              <img id="file-ip-1-preview2" class="img-fluid" style="margin-top:10px;margin-bottom: 10px;">
-                                           </div>
-                                        </div>
-                                        <div class="col-6 my-auto" >
-                                           <div id='imgInfo2' ></div>
-                                        </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                       <label>Appears to Customer</label>
+                                       <div class="store-status">
+                                          <label class="switch switch-left-right">
+                                          <input class="switch-input" type="checkbox">
+                                          <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                                       </div>
                                     </div>
-                                   
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  s-border " >
+                                        <div class="row s-img">
+                                            <div class="col-12">
+                                               <div class="form-input">
+                                                   <label>Logo</label><br>
+                                                  <input type="file" id="pic" name="pic" accept="image/*" onchange='checkInfo(event)'>
+                                               </div>
+   
+                                            </div>
+                                           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  my-auto" >
+                                               <div class="preview">
+                                                  <img id="file-ip-1-preview" class="img-fluid" style="margin-top:10px;margin-bottom: 10px;">
+                                               </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  my-auto" >
+                                               <div id='imgInfo'  ></div>
+                                            </div>
+                                        </div>
+                                       
+                                      
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  s-border" >
+                                       <div class="row s-img">
+                                           <div class="col-12">
+                                              <div class="form-input">
+                                                  <label>Background Image</label><br>
+                                                 <input type="file" id="pic2" name="pic2" accept="image/*" onchange='checkInfo2(event)'>
+                                              </div>
+   
+                                           </div>
+                                          <div class="col-6 my-auto" >
+                                              <div class="preview">
+                                                 <img id="file-ip-1-preview2" class="img-fluid" style="margin-top:10px;margin-bottom: 10px;">
+                                              </div>
+                                           </div>
+                                           <div class="col-6 my-auto" >
+                                              <div id='imgInfo2' ></div>
+                                           </div>
+                                       </div>
+                                      
+                                     
+                                   </div>
+                                   <div class="col-12">
+                                      <div class="form-group">
+                                       <div class="input-field">
+                                          <label class="active">Reservation background images</label>
+                                          <div class="input-images" style="padding-top: .5rem;"></div>
+                                      </div>
                                   
-                                </div>
-                                 
-                                
-                                 <div class="col-12">
-                                    <button class="btn btn-default btn-block">Update Settings</button>
+                                      </div>
+                                   </div>
+                                    
+                               
+                                    <div class="col-12">
+                                       <button class="btn btn-default btn-block">Update Settings</button>
+                                    </div>
                                  </div>
-                              </div>
+                              </form>
+                              
+                           </div>
+                        </div>
+                        <div class="card" id="requests">
+                          
+                           <!-- /.card-header -->
+                           <div class="card-body">
+                            <div class="row">
+                               <div class="col-12">
+                                  <button class="btn btn-info btn-block" data-toggle="modal" data-target="#hours">Working Hours</button>
+                               </div>
+                            </div>
                            </div>
                         </div>
                      </div>
@@ -486,209 +511,49 @@
                   </button>
                </div>
                <div class="modal-body">
-                  <center>
-                     <h2>Sunday</h2>
-                  </center>
+                
                   <table class="table table-striped">
-                     <thead >
-                        <tr >
-                           <th>Shift</th>
-                           <th>Opening Time</th>
-                           <th>Closing Time</th>
-                        </tr>
-                     </thead>
+                   
                      <tbody>
                         <tr>
-                           <td>First Shidt</td>
-                           <td>9:00 AM</td>
-                           <td>12:00 PM</td>
+                           <td>Sunday</td>
+                           <td>Closed</td>
+                          
                         </tr>
                         <tr>
-                           <td>Second Shift</td>
-                           <td>1:00 PM</td>
-                           <td>5:00 PM</td>
+                           <td>Monday</td>
+                           <td>9:00 AM to 12:00 AM, 6:00 AM to 12:00 PM</td>
+                          
                         </tr>
                         <tr>
-                           <td>Third Shift</td>
-                           <td>7:00 PM</td>
-                           <td>12:00 AM</td>
+                           <td>Tuesday</td>
+                           <td>9:00 AM to 12:00 AM, 6:00 AM to 12:00 PM</td>
+                          
                         </tr>
+                        <tr>
+                           <td>Wednesay</td>
+                           <td>9:00 AM to 12:00 AM, 6:00 AM to 12:00 PM</td>
+                          
+                        </tr>
+                        <tr>
+                           <td>Thursaday</td>
+                           <td>9:00 AM to 12:00 AM, 6:00 AM to 12:00 PM</td>
+                          
+                        </tr>
+                        <tr>
+                           <td>Friday</td>
+                           <td>9:00 AM to 12:00 AM, 6:00 AM to 12:00 PM</td>
+                          
+                        </tr>
+                        <tr>
+                           <td>Saturday</td>
+                           <td>Closed</td>
+                          
+                        </tr>
+                        
                      </tbody>
                   </table>
-                  <center>
-                     <h2>Monday</h2>
-                  </center>
-                  <table class="table table-striped">
-                     <thead >
-                        <tr >
-                           <th>Shift</th>
-                           <th>Opening Time</th>
-                           <th>Closing Time</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>First Shidt</td>
-                           <td>9:00 AM</td>
-                           <td>12:00 PM</td>
-                        </tr>
-                        <tr>
-                           <td>Second Shift</td>
-                           <td>1:00 PM</td>
-                           <td>5:00 PM</td>
-                        </tr>
-                        <tr>
-                           <td>Third Shift</td>
-                           <td>7:00 PM</td>
-                           <td>12:00 AM</td>
-                        </tr>
-                     </tbody>
-                  </table>
-                  <center>
-                     <h2>Tuesday</h2>
-                  </center>
-                  <table class="table table-striped">
-                     <thead >
-                        <tr >
-                           <th>Shift</th>
-                           <th>Opening Time</th>
-                           <th>Closing Time</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>First Shidt</td>
-                           <td>9:00 AM</td>
-                           <td>12:00 PM</td>
-                        </tr>
-                        <tr>
-                           <td>Second Shift</td>
-                           <td>1:00 PM</td>
-                           <td>5:00 PM</td>
-                        </tr>
-                        <tr>
-                           <td>Third Shift</td>
-                           <td>7:00 PM</td>
-                           <td>12:00 AM</td>
-                        </tr>
-                     </tbody>
-                  </table>
-                  <center>
-                     <h2>Wednesday</h2>
-                  </center>
-                  <table class="table table-striped">
-                     <thead >
-                        <tr >
-                           <th>Shift</th>
-                           <th>Opening Time</th>
-                           <th>Closing Time</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>First Shidt</td>
-                           <td>9:00 AM</td>
-                           <td>12:00 PM</td>
-                        </tr>
-                        <tr>
-                           <td>Second Shift</td>
-                           <td>1:00 PM</td>
-                           <td>5:00 PM</td>
-                        </tr>
-                        <tr>
-                           <td>Third Shift</td>
-                           <td>7:00 PM</td>
-                           <td>12:00 AM</td>
-                        </tr>
-                     </tbody>
-                  </table>
-                  <center>
-                     <h2>Thursday</h2>
-                  </center>
-                  <table class="table table-striped">
-                     <thead >
-                        <tr >
-                           <th>Shift</th>
-                           <th>Opening Time</th>
-                           <th>Closing Time</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>First Shidt</td>
-                           <td>9:00 AM</td>
-                           <td>12:00 PM</td>
-                        </tr>
-                        <tr>
-                           <td>Second Shift</td>
-                           <td>1:00 PM</td>
-                           <td>5:00 PM</td>
-                        </tr>
-                        <tr>
-                           <td>Third Shift</td>
-                           <td>7:00 PM</td>
-                           <td>12:00 AM</td>
-                        </tr>
-                     </tbody>
-                  </table>
-                  <center>
-                     <h2>Friday</h2>
-                  </center>
-                  <table class="table table-striped">
-                     <thead >
-                        <tr >
-                           <th>Shift</th>
-                           <th>Opening Time</th>
-                           <th>Closing Time</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>First Shidt</td>
-                           <td>9:00 AM</td>
-                           <td>12:00 PM</td>
-                        </tr>
-                        <tr>
-                           <td>Second Shift</td>
-                           <td>1:00 PM</td>
-                           <td>5:00 PM</td>
-                        </tr>
-                        <tr>
-                           <td>Third Shift</td>
-                           <td>7:00 PM</td>
-                           <td>12:00 AM</td>
-                        </tr>
-                     </tbody>
-                  </table>
-                  <center>
-                     <h2>Saturday</h2>
-                  </center>
-                  <table class="table table-striped">
-                     <thead >
-                        <tr >
-                           <th>Shift</th>
-                           <th>Opening Time</th>
-                           <th>Closing Time</th>
-                        </tr>
-                     </thead>
-                     <tbody>
-                        <tr>
-                           <td>First Shidt</td>
-                           <td>9:00 AM</td>
-                           <td>12:00 PM</td>
-                        </tr>
-                        <tr>
-                           <td>Second Shift</td>
-                           <td>1:00 PM</td>
-                           <td>5:00 PM</td>
-                        </tr>
-                        <tr>
-                           <td>Third Shift</td>
-                           <td>7:00 PM</td>
-                           <td>12:00 AM</td>
-                        </tr>
-                     </tbody>
-                  </table>
+                  
                </div>
                <div class="m-footer">
                   <div class="row">
@@ -713,508 +578,450 @@
                   </button>
                </div>
                <div class="modal-body">
-                  <div class="row">
-                     <div class="col-12">
-                        <div class="form-group">
-                           <div style="margin-top: 10px;font-weight: normal !important;">
-                              <label class="radio-inline" style="font-weight: normal !important;"><input name="type" type="radio" value="" onclick="code()" checked> Same for Every Day</label>
-                              <label class="radio-inline" style="font-weight: normal !important;"><input name="type" type="radio" value="" onclick="code2()"> Different for Every Day</label>
+                  <form id="myItemForm" enctype="multipart/form-data" class="form-container">
+                   
+                     <button type="button" class="close" onclick="closeWorkingHours()">x</button>
+                    
+         
+                     <div id='currentHours'></div>
+                     <br>
+                     
+                     <div id="hoursDiv">
+                         <fieldset id="Sunday" name="Sunday">
+                             <legend>Sunday</legend>
+         
+                            
+                             <div class="form-check-inline"> 
+                              <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[0][0]" name="hours[0][0]" class='sunday' value="closed" onclick='checkHours(this.id)'> Closed &nbsp;</label> 
+                              <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[0][1]" name="hours[0][0]" class='sunday' value="24Hours" onclick='checkHours(this.id)'> 24 Hours &nbsp;</label>  
+                              <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[0][2]" name="hours[0][0]" class='sunday' value="1Shift" onclick='checkHours(this.id)'> 1 Shift &nbsp;</label>  
+                              <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[0][3]" name="hours[0][0]" class='sunday' value="2Shifts" onclick='checkHours(this.id)'> 2 Shift &nbsp;</label>  
+
+
+
+                             
+                             
+                             
+
+                             </div>
+
+                           
+         
+                             <div id=hours[0][4] class='shift'>
+                                 <label>Shift 1:</label>
+                                 
+                             
+                                 <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                       <label>From: </label>
+                                      <input type="time" class="form-control" />
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                       <label>To: </label>
+                                       <input type="time" class="form-control" />
+                                    </div>
+                                    </div>
+                                   
+                             </div>
+         
+                             <div id=hours[0][11] class='shift'>
+                              <label>Shift 2:</label>
+                              <div class="row">
+                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label>From: </label>
+                                   <input type="time" class="form-control" />
+                                 </div>
+                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label>To: </label>
+                                    <input type="time" class="form-control" />
+                                 </div>
+                                 </div>
+                                
+                                
+         
+         
+                             </div>
+         
+         
+                         </fieldset>
+         
+                        
+         
+                         <fieldset id='Monday' name='Monday'>
+                             <legend>Monday</legend>
+
+                             <div class="form-check-inline"> 
+                              <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[1][0]" name="hours[0][0]" class='sunday' value="closed" onclick='checkHours(this.id)'> Closed &nbsp;</label> 
+                              <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[1][1]" name="hours[0][0]" class='sunday' value="24Hours" onclick='checkHours(this.id)'> 24 Hours &nbsp;</label>  
+                              <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[1][2]" name="hours[0][0]" class='sunday' value="1Shift" onclick='checkHours(this.id)'> 1 Shift &nbsp;</label>  
+                              <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[1][3]" name="hours[0][0]" class='sunday' value="2Shifts" onclick='checkHours(this.id)'> 2 Shift &nbsp;</label>  
+
+
+
+                             
+                             
+                             
+
+                             </div>
+                            
+         
+                             <div id=hours[1][4] class='shift'>
+                              <label>Shift 1:</label>
+                              
+                          
+                              <div class="row">
+                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label>From: </label>
+                                   <input type="time" class="form-control" />
+                                 </div>
+                                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                    <label>To: </label>
+                                    <input type="time" class="form-control" />
+                                 </div>
+                                 </div>
+                                
+                          </div>
+      
+                          <div id=hours[1][11] class='shift'>
+                           <label>Shift 2:</label>
+                           <div class="row">
+                              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                 <label>From: </label>
+                                <input type="time" class="form-control" />
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                 <label>To: </label>
+                                 <input type="time" class="form-control" />
+                              </div>
+                              </div>
+                             
+                             
+      
+      
+                          </div>
+      
+         
+         
+                         </fieldset>
+         
+                         <br>
+                         <fieldset id='Tuesday' name='Tuesday'>
+                           <legend>Tuesday</legend>
+
+                           <div class="form-check-inline"> 
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[2][0]" name="hours[0][0]" class='sunday' value="closed" onclick='checkHours(this.id)'> Closed &nbsp;</label> 
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[2][1]" name="hours[0][0]" class='sunday' value="24Hours" onclick='checkHours(this.id)'> 24 Hours &nbsp;</label>  
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[2][2]" name="hours[0][0]" class='sunday' value="1Shift" onclick='checkHours(this.id)'> 1 Shift &nbsp;</label>  
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[2][3]" name="hours[0][0]" class='sunday' value="2Shifts" onclick='checkHours(this.id)'> 2 Shift &nbsp;</label>  
+
+
+
+                           
+                           
+                           
+
                            </div>
+                           <br>
+       
+                           <div id=hours[2][4] class='shift'>
+                            <label>Shift 1:</label>
+                            
+                        
+                            <div class="row">
+                               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                  <label>From: </label>
+                                 <input type="time" class="form-control" />
+                               </div>
+                               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                  <label>To: </label>
+                                  <input type="time" class="form-control" />
+                               </div>
+                               </div>
+                              
                         </div>
+    
+                        <div id=hours[2][11] class='shift'>
+                         <label>Shift 2:</label>
+                         <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                               <label>From: </label>
+                              <input type="time" class="form-control" />
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                               <label>To: </label>
+                               <input type="time" class="form-control" />
+                            </div>
+                            </div>
+                           
+                           
+    
+    
+                        </div>
+    
+       
+       
+                       </fieldset>
+         
+                     
+         
+                      
+         
+                         <fieldset id='Wednesay' name='Wednesay'>
+                           <legend>Wednesay</legend>
+       
+       
+       
+                         
+                           <div class="form-check-inline"> 
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[3][0]" name="hours[0][0]" class='sunday' value="closed" onclick='checkHours(this.id)'> Closed &nbsp;</label> 
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[3][1]" name="hours[0][0]" class='sunday' value="24Hours" onclick='checkHours(this.id)'> 24 Hours &nbsp;</label>  
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[3][2]" name="hours[0][0]" class='sunday' value="1Shift" onclick='checkHours(this.id)'> 1 Shift &nbsp;</label>  
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[3][3]" name="hours[0][0]" class='sunday' value="2Shifts" onclick='checkHours(this.id)'> 2 Shift &nbsp;</label>  
+
+
+
+                           
+                           
+                           
+
+                           </div>
+                           <br>
+       
+                           <div id=hours[3][4] class='shift'>
+                            <label>Shift 1:</label>
+                            
+                        
+                            <div class="row">
+                               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                  <label>From: </label>
+                                 <input type="time" class="form-control" />
+                               </div>
+                               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                  <label>To: </label>
+                                  <input type="time" class="form-control" />
+                               </div>
+                               </div>
+                              
+                        </div>
+    
+                        <div id=hours[3][11] class='shift'>
+                         <label>Shift 2:</label>
+                         <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                               <label>From: </label>
+                              <input type="time" class="form-control" />
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                               <label>To: </label>
+                               <input type="time" class="form-control" />
+                            </div>
+                            </div>
+                           
+                           
+    
+    
+                        </div>
+    
+       
+       
+                       </fieldset>
+         
+                        
+                         
+         
+                        
+                         <fieldset id='Thursaday' name='Thursaday'>
+                           <legend>Thursaday</legend>
+       
+       
+       
+                           
+                           <div class="form-check-inline"> 
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[4][0]" name="hours[0][0]" class='sunday' value="closed" onclick='checkHours(this.id)'> Closed &nbsp;</label> 
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[4][1]" name="hours[0][0]" class='sunday' value="24Hours" onclick='checkHours(this.id)'> 24 Hours &nbsp;</label>  
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[4][2]" name="hours[0][0]" class='sunday' value="1Shift" onclick='checkHours(this.id)'> 1 Shift &nbsp;</label>  
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[4][3]" name="hours[0][0]" class='sunday' value="2Shifts" onclick='checkHours(this.id)'> 2 Shift &nbsp;</label>  
+
+
+
+                           
+                           
+                           
+
+                           </div>
+                           <br>
+       
+                           <div id=hours[4][4] class='shift'>
+                            <label>Shift 1:</label>
+                            
+                        
+                            <div class="row">
+                               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                  <label>From: </label>
+                                 <input type="time" class="form-control" />
+                               </div>
+                               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                  <label>To: </label>
+                                  <input type="time" class="form-control" />
+                               </div>
+                               </div>
+                              
+                        </div>
+    
+                        <div id=hours[4][11] class='shift'>
+                         <label>Shift 2:</label>
+                         <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                               <label>From: </label>
+                              <input type="time" class="form-control" />
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                               <label>To: </label>
+                               <input type="time" class="form-control" />
+                            </div>
+                            </div>
+                           
+                           
+    
+    
+                        </div>
+    
+       
+       
+                       </fieldset>
+                         
+         
+                         <fieldset id='Friday' name='Friday'>
+                           <legend>Friday</legend>
+       
+       
+       
+                         
+                           <div class="form-check-inline"> 
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[5][0]" name="hours[0][0]" class='sunday' value="closed" onclick='checkHours(this.id)'> Closed &nbsp;</label> 
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[5][1]" name="hours[0][0]" class='sunday' value="24Hours" onclick='checkHours(this.id)'> 24 Hours &nbsp;</label>  
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[5][2]" name="hours[0][0]" class='sunday' value="1Shift" onclick='checkHours(this.id)'> 1 Shift &nbsp;</label>  
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[5][3]" name="hours[0][0]" class='sunday' value="2Shifts" onclick='checkHours(this.id)'> 2 Shift &nbsp;</label>  
+
+
+
+                           
+                           
+                           
+
+                           </div>
+                           <br>
+       
+                           <div id=hours[5][4] class='shift'>
+                            <label>Shift 1:</label>
+                            
+                        
+                            <div class="row">
+                               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                  <label>From: </label>
+                                 <input type="time" class="form-control" />
+                               </div>
+                               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                  <label>To: </label>
+                                  <input type="time" class="form-control" />
+                               </div>
+                               </div>
+                              
+                        </div>
+    
+                        <div id=hours[5][11] class='shift'>
+                         <label>Shift 2:</label>
+                         <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                               <label>From: </label>
+                              <input type="time" class="form-control" />
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                               <label>To: </label>
+                               <input type="time" class="form-control" />
+                            </div>
+                            </div>
+                           
+                           
+    
+    
+                        </div>
+    
+       
+       
+                       </fieldset>
+         
+                      
+         
+                         <fieldset id='Saturday' name='Saturday'>
+                           <legend>Saturday</legend>
+       
+       
+       
+                          
+                           <div class="form-check-inline"> 
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[6][0]" name="hours[0][0]" class='sunday' value="closed" onclick='checkHours(this.id)'> Closed &nbsp;</label> 
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[6][1]" name="hours[0][0]" class='sunday' value="24Hours" onclick='checkHours(this.id)'> 24 Hours &nbsp;</label>  
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[6][2]" name="hours[0][0]" class='sunday' value="1Shift" onclick='checkHours(this.id)'> 1 Shift &nbsp;</label>  
+                            <label class="radio-inline" style="font-weight: normal !important;"> <input type="radio" id="hours[6][3]" name="hours[0][0]" class='sunday' value="2Shifts" onclick='checkHours(this.id)'> 2 Shift &nbsp;</label>  
+
+
+
+                           
+                           
+                           
+
+                           </div>
+                          
+       
+                           <div id=hours[6][4] class='shift'>
+                            <label>Shift 1:</label>
+                            
+                        
+                            <div class="row">
+                               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                  <label>From: </label>
+                                 <input type="time" class="form-control" />
+                               </div>
+                               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                  <label>To: </label>
+                                  <input type="time" class="form-control" />
+                               </div>
+                               </div>
+                              
+                        </div>
+    
+                        <div id=hours[6][11] class='shift'>
+                         <label>Shift 2:</label>
+                         <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                               <label>From: </label>
+                              <input type="time" class="form-control" />
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                               <label>To: </label>
+                               <input type="time" class="form-control" />
+                            </div>
+                            </div>
+                           
+                           
+    
+    
+                        </div>
+    
+       
+       
+                       </fieldset>
+         
+                       
+         
                      </div>
-                  </div>
-                  <div id="same" >
-                     <div class="row"  >
-                        <div class="col-12">
-                           <h5>Shift One</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="op1">Opening Time</label>
-                                 <input type="time" id="op1" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="cl1">Closing Time</label>
-                                 <input type="time" id="cl1" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Two</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="op2">Opening Time</label>
-                                 <input type="time" id="op2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="cl2">Closing Time</label>
-                                 <input type="time" id="cl2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Three</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="op3">Opening Time</label>
-                                 <input type="time" id="op3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="cl3">Closing Time</label>
-                                 <input type="time" id="cl3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div id="different" style="display: none;width: 100%;">
-                     <div class="row">
-                        <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
-                           <h2 class="signup-heading text-center">Sunday</h2>
-                           <br>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift One</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="so1">Opening Time</label>
-                                 <input type="time" id="so1" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="sc1">Closing Time</label>
-                                 <input type="time" id="sc1" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Two</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="so2">Opening Time</label>
-                                 <input type="time" id="so2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="sc2">Closing Time</label>
-                                 <input type="time" id="sc2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Three</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="so3">Opening Time</label>
-                                 <input type="time" id="so3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="sc3">Closing Time</label>
-                                 <input type="time" id="sc3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
-                           <h2 class="signup-heading text-center">Monday</h2>
-                           <br>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift One</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="mo1">Opening Time</label>
-                                 <input type="time" id="mo1" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="mc1">Closing Time</label>
-                                 <input type="time" id="mc1" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Two</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="mo2">Opening Time</label>
-                                 <input type="time" id="mo2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="mc2">Closing Time</label>
-                                 <input type="time" id="mc2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Three</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="mo3">Opening Time</label>
-                                 <input type="time" id="mo3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="mc3">Closing Time</label>
-                                 <input type="time" id="mc3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
-                           <h2 class="signup-heading text-center">Tuesday</h2>
-                           <br>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift One</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="to1">Opening Time</label>
-                                 <input type="time" id="to1" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="tc1">Closing Time</label>
-                                 <input type="time" id="tc1" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Two</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="to2">Opening Time</label>
-                                 <input type="time" id="to2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="tc2">Closing Time</label>
-                                 <input type="time" id="tc2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Three</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="to3">Opening Time</label>
-                                 <input type="time" id="to3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="tc3">Closing Time</label>
-                                 <input type="time" id="tc3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
-                           <h2 class="signup-heading text-center">Wednesay</h2>
-                           <br>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift One</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="wo1">Opening Time</label>
-                                 <input type="time" id="wo1" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="wc1">Closing Time</label>
-                                 <input type="time" id="wc1" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Two</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="wo2">Opening Time</label>
-                                 <input type="time" id="wo2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="wc2">Closing Time</label>
-                                 <input type="time" id="wc2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Three</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="wo3">Opening Time</label>
-                                 <input type="time" id="wo3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="wc3">Closing Time</label>
-                                 <input type="time" id="wc3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
-                           <h2 class="signup-heading text-center">Thursday</h2>
-                           <br>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift One</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="tho1">Opening Time</label>
-                                 <input type="time" id="tho1" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="thc1">Closing Time</label>
-                                 <input type="time" id="thc1" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Two</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="tho2">Opening Time</label>
-                                 <input type="time" id="tho2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="thc2">Closing Time</label>
-                                 <input type="time" id="thc2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Three</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="tho3">Opening Time</label>
-                                 <input type="time" id="tho3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="thc3">Closing Time</label>
-                                 <input type="time" id="thc3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
-                           <h2 class="signup-heading text-center">Friday</h2>
-                           <br>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift One</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="fo1">Opening Time</label>
-                                 <input type="time" id="f01" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="fc1">Closing Time</label>
-                                 <input type="time" id="fc2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Two</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="fo2">Opening Time</label>
-                                 <input type="time" id="fo2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="fc2">Closing Time</label>
-                                 <input type="time" id="fc2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Three</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="fo3">Opening Time</label>
-                                 <input type="time" id="fo3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="fc3">Closing Time</label>
-                                 <input type="time" id="fc3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12" style="margin-top: 10px;margin-bottom: -20px;">
-                           <h2 class="signup-heading text-center">Saturday</h2>
-                           <br>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift One</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="sao1">Opening Time</label>
-                                 <input type="time" id="sao1" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="sac1">Closing Time</label>
-                                 <input type="time" id="sac1" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Two</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="sao2">Opening Time</label>
-                                 <input type="time" id="sao2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="sac2">Closing Time</label>
-                                 <input type="time" id="sac2" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-12">
-                           <h5>Shift Three</h5>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="sao3">Opening Time</label>
-                                 <input type="time" id="sao3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-xs-12 col-sm-12">
-                           <div class="form-group">
-                              <div class="form-label-group">
-                                 <label for="sac3">Closing Time</label>
-                                 <input type="time" id="sac3" class="form-control login-input" placeholder="Store Name" required autofocus>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+         
+               
+         
+                 </form>
+                  
+              
                </div>
                <div class="modal-footer">
                   <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Update Working Hours</button>
@@ -1267,17 +1074,11 @@
          <strong>Copyright &copy; 2021 <a href="https://humaizshahid.com">Volo</a>.</strong> All rights reserved.
       </footer>
       </div>
-      <a  href="#" data-toggle="modal" data-target="#hours">
-         <div class="row" style="padding: 0px;margin: 0px;">
-            <div class="col-12 t-fixed " style="padding: 0px;margin: 0px;"> 
-            </div>
-         </div>
-         <div class="trading mx-auto" >
-            <img src="../img/footer-logo.png"/>
-         </div>
-      </a>
+     
       <!-- jQuery -->
       <script src="plugins/jquery/jquery.min.js"></script>
+      <script src="dist/js/image-uploader.min.js"></script>
+
       <!-- Bootstrap 4 -->
       <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
       <!-- DataTables  & Plugins -->
@@ -1296,8 +1097,18 @@
       <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
       <!-- AdminLTE App -->
       <script src="dist/js/adminlte.min.js"></script>
+      
       <!-- AdminLTE for demo purposes -->
       <script src="dist/js/demo.js"></script>
+
       <script src="../js/patnerSettings.js"></script>
+      <script>
+         $(document).ready(function(){
+
+$('.input-images').imageUploader();
+
+});
+     
+      </script>
    </body>
 </html>
