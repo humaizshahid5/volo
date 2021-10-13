@@ -489,7 +489,7 @@ optgroup > option{
     z-index: 2;
   }
   .s-img{
-      border: 1px dashed black;
+      border: 1px solid #FAC3C3;
     
     border-radius: 8px;
   }
