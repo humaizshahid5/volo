@@ -15,9 +15,9 @@
       <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
       <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
       <!-- Theme style -->
-      <link rel="stylesheet" href="dist/css/adminlte.min.css">
+      <link rel="stylesheet" href="dist/css/adminlte.css">
       <link rel="stylesheet" href="dist/css/main.css">
-      <link rel="stylesheet" href="dist/css/toggle.css">
+      <link rel="stylesheet" href="dist/css/toggle2.css">
    </head>
    <body class="hold-transition sidebar-mini">
       <div class="wrapper">
@@ -338,11 +338,29 @@
                            </div>
                         </div>
                         <div class="card" id="requests">
+                            <div class="card-header">
+                               <h3 class="card-title">Search</h3>
+                            </div>
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                               <div class="row">
+                                   <div class="col-12">
+                                       <inpu type="text" class="form-control" style="margin-bottom:10px;" />
+                                   </div>
+                                  <div class="col-12">
+                                     
+                                     <button class="btn btn-default btn-block" data-toggle="modal" data-target="#categories">Search</button>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                        <div class="card" id="requests">
                            <div class="card-header">
                               <h3 class="card-title">AddOns</h3>
                            </div>
                            <!-- /.card-header -->
                            <div class="card-body">
+
                              
                                 <div id="accordion">
                                     <div class="card">
@@ -350,7 +368,7 @@
                                             <div class="card-header tab-header my-auto"  id="heading1">
                                                 <div class="row">
                                                     <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6 my-auto">
-                                                        <a class="card-link" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        <a class="card-link" data-toggle="collapse"  href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                                             <div style="width: 100%;">
                                                                 Fast Food  
                                                             </div>
@@ -364,6 +382,9 @@
                                                                 <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
                                                                 <button class="btn btn-default btn-md" data-toggle="modal" data-target="#edit_category">
                                                                     Options
+                                                                </button>
+                                                                <button class="btn btn-danger btn-md" data-toggle="modal" data-target="#cat-del">
+                                                                  Delete
                                                                 </button>
                                                                 &nbsp;<a class="card-link" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">  <i class="fa fa-angle-down"></i></a>
                                                         
@@ -383,7 +404,7 @@
                                               <div class="col-12 addon-box">
                                                   <div class="row">
                                                       <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 my-auto">
-                                                          Mayo Garlice
+                                                         <span> Mayo Garlice</span>
                                                       </div>
                                                       <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 my-auto">
                                                         
@@ -396,12 +417,18 @@
                                                     </div>
 
 
-                                                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 my-auto ">
-                                                        <button class="btn btn-default btn-md float-right" data-toggle="modal" data-target="#edit">
-                                                            Options
-                                                        </button>
-                                                    </div>
+                                                   
+                                                  <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 my-auto ">
+                                                   <div class="float-right">
+                                                    <button class="btn btn-default btn-md " data-toggle="modal" data-target="#edit">
+                                                       Options
+                                                   </button>
+                                                   <button class="btn btn-danger btn-md" data-toggle="modal" data-target="#addon-del">
+                                                      Delete
+                                                  </button>
+                                                   </div>
 
+                                                </div>
 
                                                   </div>
                                                   
@@ -424,9 +451,15 @@
 
 
                                                   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 my-auto ">
-                                                      <button class="btn btn-default btn-md float-right" data-toggle="modal" data-target="#edit">
-                                                          Options
-                                                      </button>
+                                                     <div class="float-right">
+                                                      <button class="btn btn-default btn-md " data-toggle="modal" data-target="#edit">
+                                                         Options
+                                                     </button>
+                                                     <button class="btn btn-danger btn-md" data-toggle="modal" data-target="#addon-del">
+                                                        Delete
+                                                    </button>
+                                                     </div>
+
                                                   </div>
 
 
@@ -459,6 +492,9 @@
                                                             <button class="btn btn-default btn-md" data-toggle="modal" data-target="#edit_category">
                                                                 Options
                                                             </button>
+                                                            <button class="btn btn-danger btn-md" data-toggle="modal" data-target="#cat-del">
+                                                               Delete
+                                                             </button>
                                                             &nbsp;
                                                             <a class="card-link" data-toggle="collapse" href="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">  <i class="fa fa-angle-down"></i></a>
                                                      </div>
@@ -490,10 +526,17 @@
                                                 </div>
 
 
+                                             
                                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 my-auto ">
-                                                    <button class="btn btn-default btn-md float-right" data-toggle="modal" data-target="#edit">
-                                                        Options
-                                                    </button>
+                                                   <div class="float-right">
+                                                    <button class="btn btn-default btn-md " data-toggle="modal" data-target="#edit">
+                                                       Options
+                                                   </button>
+                                                   <button class="btn btn-danger btn-md" data-toggle="modal" data-target="#addon-del">
+                                                      Delete
+                                                  </button>
+                                                   </div>
+
                                                 </div>
 
 
@@ -517,11 +560,18 @@
                                               </div>
 
 
+                                             
                                               <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 my-auto ">
-                                                  <button class="btn btn-default btn-md float-right" data-toggle="modal" data-target="#edit">
-                                                      Options
-                                                  </button>
-                                              </div>
+                                                <div class="float-right">
+                                                 <button class="btn btn-default btn-md " data-toggle="modal" data-target="#edit">
+                                                    Options
+                                                </button>
+                                                <button class="btn btn-danger btn-md" data-toggle="modal" data-target="#addon-del">
+                                                   Delete
+                                               </button>
+                                                </div>
+
+                                             </div>
 
 
                                             </div>
@@ -617,6 +667,34 @@
                      <br>
                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                      <a href="../PSignIn.html"><button type="button" class="btn btn-warning" >Confirm</button></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" id="addon-del" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-body">
+                  Are you sure you want to delete the addon?
+                  <div class="float-right">
+                     <br>
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                     <a href="#" data-dismiss="modal"><button type="button" class="btn btn-warning" >Confirm</button></a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" id="cat-del" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-body">
+                  Are you sure you want to delete the Category?
+                  <div class="float-right">
+                     <br>
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                     <a href="#" data-dismiss="modal"><button type="button" class="btn btn-warning" >Confirm</button></a>
                   </div>
                </div>
             </div>
