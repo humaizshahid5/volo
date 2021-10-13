@@ -324,6 +324,49 @@
                <div class="container-fluid">
                   <div class="row">
                      <div class="col-lg-12">
+                        <div class="card" id="complete">
+                           <div class="card-header">
+                              <h3 class="card-title">Filter</h3>
+                           </div>
+                           <!-- /.card-header -->
+                           <div class="card-body">
+                              <div class="row">
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                       <label>From</label>
+                                       <input type="date" class="form-control" name="from" />
+                                    </div>
+                                 </div>
+                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                       <label>To</label>
+                                       <input type="date" class="form-control" name="from" />
+                                    </div>
+                                 </div>
+                                 <div class="col-12">
+                                    <button class="btn btn-block btn-default">
+                                       Generate Statement
+                                    </button>
+                                 </div>
+                                 
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card" id="complete">
+                          
+                           <!-- /.card-header -->
+                           <div class="card-body">
+                              <div class="row">
+                                
+                                 <div class="col-12">
+                                    <button class="btn btn-block btn-info">
+                                       Generate Latest Balance
+                                    </button>
+                                 </div>
+                                 
+                              </div>
+                           </div>
+                        </div>
                       
                         <div class="card" id="requests">
                            <div class="card-header">
@@ -350,21 +393,19 @@
                                    </div>
                                    <div class="col-6" >
                                     <div class="form-group">
-                                        <select class="form-control" onchange="changeChart()" id="barChartTime">
-            
-                                            <option value="allTime">All time</option>
-                                            <option value="week">Last week</option>
-                                            <option value="month">Last month</option>
-                                            <option value="3months">3 months</option>
-                                            <option value="6months">6 months</option>
-                                            <option value="year">Year</option>
-                                            
-                                        </select>
+                                       <select class="form-control" onchange="changeChart()" id="lineChartSelect">
+
+                                          <option value="ordersCount">Number of orders</option>
+                                          <option value="ordersSum">Order value</option>
+                                          <option value="promoSum">Promo earnings</option>
+                                          <option value="promoCount">Promo Sales count</option>
+                                          
+                                      </select>
                                     </div>
                                     </div>
                                     <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mx-auto">
                                         <div >
-                                            <canvas id="myChart" style="height: 100px;"></canvas>
+                                            <canvas id="todayChart" style="height: 300px;"></canvas>
                                           </div>
                                     </div>
                                 </div>
@@ -411,7 +452,7 @@
                                      </div>
                                      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mx-auto">
                                         <div>
-                                            <canvas id="myChart2"></canvas>
+                                            <canvas id="myChart"></canvas>
                                           </div>
                                      </div>
                                  </div>
@@ -499,7 +540,7 @@
                                      </div>
                                      <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 mx-auto">
                                         <div>
-                                            <canvas id="todayChart" style="height: 300px;"></canvas>
+                                            <canvas id="myChart2"></canvas>
                                           </div>
                                      </div>
                                  </div>
@@ -648,15 +689,7 @@
          <strong>Copyright &copy; 2021 <a href="https://humaizshahid.com">Volo</a>.</strong> All rights reserved.
       </footer>
       </div>
-      <a  href="#" data-toggle="modal" data-target="#add">
-         <div class="row" style="padding: 0px;margin: 0px;">
-            <div class="col-12 t-fixed " style="padding: 0px;margin: 0px;"> 
-            </div>
-         </div>
-         <div class="trading mx-auto" >
-            <img src="../img/footer-logo.png"/>
-         </div>
-      </a>
+     
       <!-- jQuery -->
       <script src="plugins/jquery/jquery.min.js"></script>
       <!-- Bootstrap 4 -->
@@ -724,13 +757,9 @@ var myChart3 = new Chart(ctx3, {
   data: {
     labels: ["M", "T", "W", "T", "F", "S", "S"],
     datasets: [{
-      label: 'apples',
+      label: 'Customer',
       data: [12, 19, 3, 17, 28, 24, 7],
       backgroundColor: "rgba(153,255,51,1)"
-    }, {
-      label: 'oranges',
-      data: [30, 29, 5, 5, 20, 3, 10],
-      backgroundColor: "rgba(255,153,0,1)"
     }]
   }
 });
