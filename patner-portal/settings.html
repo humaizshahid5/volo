@@ -1024,7 +1024,72 @@
               
                </div>
                <div class="modal-footer">
-                  <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Update Working Hours</button>
+                  <button type="button" class="btn btn-default btn-block" data-toggle="modal" data-target="#check">Check Working Hours</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal fade" id="check" tabindex="-1" role="dialog" aria-labelledby="cancelled" aria-hidden="true">
+         <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="orderdetailLongTitle">Working Hours</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                
+                  <table class="table table-striped">
+                   
+                     <tbody>
+                        <tr>
+                           <td>Sunday</td>
+                           <td>Closed</td>
+                          
+                        </tr>
+                        <tr>
+                           <td>Monday</td>
+                           <td>9:00 AM to 12:00 AM, 6:00 AM to 12:00 PM</td>
+                          
+                        </tr>
+                        <tr>
+                           <td>Tuesday</td>
+                           <td>9:00 AM to 12:00 AM, 6:00 AM to 12:00 PM</td>
+                          
+                        </tr>
+                        <tr>
+                           <td>Wednesay</td>
+                           <td>9:00 AM to 12:00 AM, 6:00 AM to 12:00 PM</td>
+                          
+                        </tr>
+                        <tr>
+                           <td>Thursaday</td>
+                           <td>9:00 AM to 12:00 AM, 6:00 AM to 12:00 PM</td>
+                          
+                        </tr>
+                        <tr>
+                           <td>Friday</td>
+                           <td>9:00 AM to 12:00 AM, 6:00 AM to 12:00 PM</td>
+                          
+                        </tr>
+                        <tr>
+                           <td>Saturday</td>
+                           <td>Closed</td>
+                          
+                        </tr>
+                        
+                     </tbody>
+                  </table>
+                  
+               </div>
+               <div class="m-footer">
+                  <div class="row">
+                   
+                     <div class="col-12">
+                        <button type="button" class="btn btn-default btn-block " onclick="modaldismiss()">Confirm Working Hours</button>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
@@ -1110,5 +1175,12 @@ $('.input-images').imageUploader();
 });
      
       </script>
+       <script>
+         function modaldismiss(){
+             
+                    $('.modal').modal('hide') // closes all active pop ups.
+                    $('.modal-backdrop').remove() // removes the grey overlay.
+         }
+     </script>
    </body>
 </html>
