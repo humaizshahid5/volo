@@ -491,7 +491,7 @@ optgroup > option{
   .s-img{
       border: 1px solid #FAC3C3;
     
-    border-radius: 8px;
+    border-radius: 4px;
   }
   .s-border{
       padding:10px
@@ -504,3 +504,6 @@ optgroup > option{
       margin-bottom: 20px;
   }
   
+  .shift{
+      display: none;
+  }

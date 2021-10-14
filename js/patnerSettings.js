@@ -14,6 +14,7 @@ var pid;
 var checkImage = false;
 
 
+
 function checkInfo(event) {
     var pic = document.getElementById("pic");
     console.log(pic.files);
