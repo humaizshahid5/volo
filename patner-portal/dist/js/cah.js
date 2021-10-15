@@ -175,7 +175,7 @@ function PassAddOns() {
     
     // insert div here
     var PassedAddOnDiv = document.getElementById("PassedAddOnDiv");
-    PassedAddOnDiv.insertAdjacentHTML('beforeend', "<div id='" + gg + "xx'><br><fieldset id='" + gg + "x'><label>Category name (English):</label><input type='text' id='AddOn[" + gg + "][0]' name='AddOn[" + gg + "][0]' required><br><label>Category name: (Arabic):</label><input type='text' id='AddOn[" + gg + "][1]' name='AddOn[" + gg + "][1]' required><br><label>Required or optional?:</label><select id='AddOn[" + gg + "][2]' name='AddOn[" + gg + "][2]'><option value='y'>required</option><option value='n'>optional</option></select><br><label>Minimum choices:</label><input type='number' id='AddOn[" + gg + "][3]' name='AddOn[" + gg + "][3]'><br><label>Maximum choices:</label><input type='number' id='AddOn[" + gg + "][4]' name='AddOn[" + gg + "][4]'><br><input type='hidden' id='AddOn[" + gg + "][5]' name='AddOn[" + gg + "][5]' value=''><input type='hidden' name='AddOn[" + gg + "][6]' id='AddOn[" + gg + "][7]' value=''><label id='AddOn[" + gg + "][6]'></label></fieldset></div>");
+    PassedAddOnDiv.insertAdjacentHTML('beforeend', "<div id='" + gg + "xx'><fieldset id='" + gg + "x'><div class='row'><div class='col-12'><label>Category name (English):</label><input class='form-control' type='text' id='AddOn[" + gg + "][0]' name='AddOn[" + gg + "][0]' required></div><div class='col-12'><label>Category name: (Arabic):</label><input class='form-control' type='text' id='AddOn[" + gg + "][1]' name='AddOn[" + gg + "][1]' required></div><div class='col-12'><label>Required or optional?:</label><select class='form-control' id='AddOn[" + gg + "][2]' name='AddOn[" + gg + "][2]'><option value='y'>required</option><option value='n'>optional</option></select></div><div class='col-12'><label>Minimum choices:</label><input class='form-control' type='number' id='AddOn[" + gg + "][3]' name='AddOn[" + gg + "][3]'></div><div class='col-12'><label>Maximum choices:</label><input class='form-control' type='number' id='AddOn[" + gg + "][4]' name='AddOn[" + gg + "][4]'></div><div class='col-12'><input type='hidden' id='AddOn[" + gg + "][5]' name='AddOn[" + gg + "][5]' value=''><input type='hidden' name='AddOn[" + gg + "][6]' id='AddOn[" + gg + "][7]' value=''><label id='AddOn[" + gg + "][6]'></label></div></div></fieldset></div>");
     
     //var fieldset = document.getElementById(gg + "x");
     var section = document.getElementById(gg + 'x');
@@ -195,7 +195,7 @@ function PassAddOns() {
             inputfield.value +=  id + "," ;
             nameField.value += name + ", ";
             fieldset.insertAdjacentHTML('beforeend', name + ", ");
-            //fieldset.insertAdjacentHTML('beforeend',"<br><label class='AddOn[" + gg + "][1]' id='" + id + "' name ='" + name + "'>" + name + "</label>")
+            //fieldset.insertAdjacentHTML('beforeend',"<label class='AddOn[" + gg + "][1]' id='" + id + "' name ='" + name + "'>" + name + "</label>")
             
         } else {
             continue;
@@ -217,7 +217,7 @@ function PassAddOns() {
     fieldset.innerHTML = postfieldset;
     
     
-    section.insertAdjacentHTML('beforeend', "<br><br><button type='button' name='" + gg + "xx' onclick='removeAddOn(this.name)'>x</button>");
+    section.insertAdjacentHTML('beforeend', "<div class='row'><div class='col-12'><button class='btn btn-danger btn-block' type='button' name='" + gg + "xx' onclick='removeAddOn(this.name)'>x</button></div></div><br>");
     gg++
     closeAddOns();
     
@@ -364,9 +364,10 @@ function PassEditedAddOns() {
     
     if (testing == 1) { 
     
-    // insert div here
+    // insert div here    
+
     var PassedAddOnDiv = document.getElementById("EditPassedAddOnDiv");
-    PassedAddOnDiv.insertAdjacentHTML('beforeend', "<div id='" + ggg + "yy'><br><fieldset id='" + ggg + "y'><label>Category name (English):</label><input type='text' id='EditAddOn[" + ggg + "][0]' name='EditAddOn[" + ggg + "][0]' required><br><label>Category name: (Arabic):</label><input type='text' id='EditAddOn[" + ggg + "][1]' name='EditAddOn[" + ggg + "][1]' required><br><label>Required or optional?:</label><select id='EditAddOn[" + ggg + "][2]' name='EditAddOn[" + ggg + "][2]'><option value='y'>required</option><option value='n'>optional</option></select><br><label>Minimum choices:</label><input type='number' id='EditAddOn[" + ggg + "][3]' name='EditAddOn[" + ggg + "][3]'><br><label>Maximum choices:</label><input type='number' id='EditAddOn[" + ggg + "][4]' name='EditAddOn[" + ggg + "][4]'><br><input type='hidden' id='EditAddOn[" + ggg + "][5]' name='EditAddOn[" + ggg + "][5]' value=''><input type='hidden' name='EditAddOn[" + ggg + "][6]' id='EditAddOn[" + ggg + "][7]' value=''><label id='EditAddOn[" + ggg + "][6]'></label></fieldset></div>");
+    PassedAddOnDiv.insertAdjacentHTML('beforeend', "<div id='" + gg + "xx'><fieldset id='" + gg + "x'><div class='row'><div class='col-12'><label>Category name (English):</label><input class='form-control' type='text' id='AddOn[" + gg + "][0]' name='AddOn[" + gg + "][0]' required></div><div class='col-12'><label>Category name: (Arabic):</label><input class='form-control' type='text' id='AddOn[" + gg + "][1]' name='AddOn[" + gg + "][1]' required></div><div class='col-12'><label>Required or optional?:</label><select class='form-control' id='AddOn[" + gg + "][2]' name='AddOn[" + gg + "][2]'><option value='y'>required</option><option value='n'>optional</option></select></div><div class='col-12'><label>Minimum choices:</label><input class='form-control' type='number' id='AddOn[" + gg + "][3]' name='AddOn[" + gg + "][3]'></div><div class='col-12'><label>Maximum choices:</label><input class='form-control' type='number' id='AddOn[" + gg + "][4]' name='AddOn[" + gg + "][4]'></div><div class='col-12'><input type='hidden' id='AddOn[" + gg + "][5]' name='AddOn[" + gg + "][5]' value=''><input type='hidden' name='AddOn[" + gg + "][6]' id='AddOn[" + gg + "][7]' value=''><label id='AddOn[" + gg + "][6]'></label></div></div></fieldset></div>");
     
     //var fieldset = document.getElementById(gg + "x");
     var section = document.getElementById(ggg + 'y');
@@ -406,13 +407,16 @@ function PassEditedAddOns() {
     var prefieldset = fieldset.innerHTML;
     var postfieldset = prefieldset.slice(0, -2);
     fieldset.innerHTML = postfieldset;
+
     
-    
-    section.insertAdjacentHTML('beforeend', "<br><br><button type='button' name='" + ggg + "yy' onclick='removeAddOn(this.name)'>x</button>");
     ggg++;
+    section.insertAdjacentHTML('beforeend', "<div class='row'><div class='col-12'><button class='btn btn-danger btn-block' type='button' name='" + gg + "xx' onclick='removeAddOn(this.name)'>x</button></div></div><br>");
+
     closeEditAddOns();
     
     } else {
+        section.insertAdjacentHTML('beforeend', "<div class='row'><div class='col-12'><button class='btn btn-danger btn-block' type='button' name='" + gg + "xx' onclick='removeAddOn(this.name)'>x</button></div></div><br>");
+
         closeEditAddOns();
     }
 }

@@ -545,3 +545,6 @@ optgroup > option{
     object-fit:contain;
     height: 150px;
 }
+.star-check{
+    color: orange;
+}
