@@ -512,7 +512,7 @@ optgroup > option{
   .s-border{
       padding:10px
   }
-  .addon-box{
+  .addon-box,.menu-box{
       
       background-color: rgb(243, 240, 240);
       border-radius: 8px;
