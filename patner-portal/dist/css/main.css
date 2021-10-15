@@ -237,12 +237,12 @@ td{
     vertical-align: bottom;
     text-align: center;
 }
-table.products-table > thead > tr > th{
+table.products-table > thead > tr > .product-th{
     min-width: 100px;
     vertical-align: bottom;
     text-align: left;
 }
-table.products-table > tbody > tr > td{
+table.products-table > tbody > tr > td.product-td{
     min-width: 100px;
     vertical-align: bottom;
     text-align: left;
