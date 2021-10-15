@@ -523,3 +523,25 @@ optgroup > option{
   .shift{
       display: none;
   }
+.addon-header{
+    background-color: rgb(243, 240, 240);
+    height: 50px;
+    line-height: 50px;
+}
+.addon-check{
+   position: relative;
+   top:7px;
+    width: 30px;
+    height: 25px;
+}
+.AddOns{
+    padding:0 20px 10px 20px;
+}
+.select2-drop{
+    z-index: 2000000 !important; 
+}
+.product-image{
+    width: 100%;
+    object-fit:contain;
+    height: 150px;
+}
