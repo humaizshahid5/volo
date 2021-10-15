@@ -237,6 +237,22 @@ td{
     vertical-align: bottom;
     text-align: center;
 }
+table.products-table > thead > tr > th{
+    min-width: 100px;
+    vertical-align: bottom;
+    text-align: left;
+}
+table.products-table > tbody > tr > td{
+    min-width: 100px;
+    vertical-align: bottom;
+    text-align: left;
+}
+.products-table > tr > th{
+    min-width: 100px;
+    vertical-align: bottom;
+    text-align: left;
+}
+
 th{
     text-align: center;
    margin-bottom: auto;
