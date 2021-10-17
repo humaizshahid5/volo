@@ -541,7 +541,7 @@ optgroup > option{
     z-index: 2000000 !important; 
 }
 .product-image{
-    width: 100%;
+    width: 250px !important;
     object-fit:contain;
     height: 150px;
 }
