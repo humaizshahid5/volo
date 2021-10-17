@@ -1438,10 +1438,13 @@
     </script>
         <script>
          function modaldismiss(btn_del){
-            
+            var default_value = document.getElementById(btn_del).innerHTML;
              document.getElementById(btn_del).innerHTML = "<i class='fa fa-spinner fa-spin'></i> Deleting";
              setTimeout(function(){ $('.modal').modal('hide') 
-                    $('.modal-backdrop').remove()}, 1000);
+                    $('.modal-backdrop').remove();
+                    document.getElementById(btn_del).innerHTML = default_value;
+                  
+                  }, 1000);
            
              
          }
