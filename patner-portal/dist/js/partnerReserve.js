@@ -114,25 +114,29 @@ function ShowTableField(name) {
     var confirmTableBtn = document.getElementById("confirmTableBtn");
     var editBtn = document.getElementById("changeTableBtn");
 
-    var reserveInputs = document.getElementsByClassName("reserveInputs");
-    var reserveLabels = document.getElementsByClassName("reserveLabels");
+   
+    var reservetext = document.getElementsByClassName("reserve_txt");
+    var reservefield = document.getElementsByClassName("r-popup");
+
+
 
     if (name == "edit") {
 
-        // tableLabel.style.display = "none";
-        // tableNumber.style.display = "inline";
+       
         confirmTableBtn.style.display = "inline";
+        
+        for (i = 0; i < reservefield.length; i++) {
 
+            reservefield[i].style.display = "block";
+            reservetext[i].style.display = "none";
+           
+
+        }
         editBtn.name = "cancel";
         editBtn.innerHTML = "Cancel";
 
 
-        for (i = 0; i < reserveInputs.length; i++) {
-
-            reserveInputs[i].style.display = "inline";
-            reserveLabels[i].style.display = "none";
-
-        }
+      
 
     } else if (name == "cancel") {
 
@@ -143,12 +147,50 @@ function ShowTableField(name) {
         editBtn.name = "edit";
         editBtn.innerHTML = "Edit";
 
-        for (i = 0; i < reserveInputs.length; i++) {
 
-            reserveInputs[i].style.display = "none";
-            reserveLabels[i].style.display = "inline";
+        for (i = 0; i < reservefield.length; i++) {
+
+            reservefield[i].style.display = "none";
+            reservetext[i].style.display = "block";
+           
 
         }
+        
+
+    }
+
+}
+function updateTableNumber(name) {
+
+    // var tableNumber = document.getElementById("tableNumber");
+    // var tableLabel = document.getElementById("tableLabel");
+    var confirmTableBtn = document.getElementById("confirmTableBtn");
+    var editBtn = document.getElementById("changeTableBtn");
+
+   
+    var reservetext = document.getElementsByClassName("reserve_txt");
+    var reservefield = document.getElementsByClassName("r-popup");
+
+
+
+    if (name == "update") {
+
+        // tableLabel.style.display = "inline";
+        // tableNumber.style.display = "none";
+        confirmTableBtn.style.display = "none";
+
+        editBtn.name = "edit";
+        editBtn.innerHTML = "Edit";
+
+
+        for (i = 0; i < reservefield.length; i++) {
+
+            reservefield[i].style.display = "none";
+            reservetext[i].style.display = "block";
+           
+
+        }
+        
 
     }
 
