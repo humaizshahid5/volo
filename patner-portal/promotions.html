@@ -700,7 +700,7 @@
                            <div class="card-body">
                              <div class="row">
                                <div class="col-12" style="overflow: scroll;">
-                                 <table id="history" class="table table-bordered  table-responsive" >
+                                 <table id="promtions_table" class="table table-bordered  table-responsive" >
                                    <thead>
                                    <tr>
                                     
@@ -1009,7 +1009,7 @@
     
       <script>
          $(function () {
-             $("#history")
+             $("#promtions_table")
                  .DataTable({
                      
                      lengthChange: true,
@@ -1023,7 +1023,7 @@
                  })
                  .buttons()
                  .container()
-                 .appendTo("#example1_wrapper .col-md-6:eq(0)");
+                 .appendTo("#promtions_table_wrapper .col-md-6:eq(0)");
          });
       </script>
        <script src="dist/js/mutiple_select.js"></script>
