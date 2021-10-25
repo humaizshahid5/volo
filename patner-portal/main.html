@@ -1,1918 +1,1454 @@
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Patner Portal | Volo</title>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Patner Portal | Volo</title>
+      <!-- Google Font: Source Sans Pro -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+      <!-- Font Awesome Icons -->
+      <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+      <!-- Ionicons -->
+      <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+      <!-- DataTables -->
+      <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+      <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+      <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+      <!-- Theme style -->
+      <link rel="stylesheet" href="dist/css/adminlte.css">
+      <link rel="stylesheet" href="dist/css/main.css">
+      <link rel="stylesheet" href="dist/css/toggle2.css">
+      <link rel="stylesheet" href="dist/css/select2.min.css" />
 
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-   <!-- Ionicons -->
-   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- DataTables -->
-  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <link rel="stylesheet" href="dist/css/main.css">
-
-</head>
-<body class="hold-transition sidebar-mini">
-  
-<div class="wrapper">
-  <div class="preloader flex-column justify-content-center align-items-center"  > 
-    <img class="" src="../img/footer-logo.png" width="120" height="120" />
-    <img class="animation__shake" src="../img/loading.gif" width="120" height="120"  />
-
-
- </div>
-  
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-     
-    </ul>
-
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="fas fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notifications-dropdown">
-          <span class="dropdown-item dropdown-header">Notifications</span>
-         
-          <a href="#" class="dropdown-item" data-toggle="modal" data-target="#orderdetail">
-            <div class="row n-row">
-              <div class="col-2 n-circle ">
-                <i class="fas fa-shopping-bag"></i>
-              </div>
-              <div class="col-10 my-auto mx-auto " >
-                 <p class="n-text">HumAiz placed a new order</p>
-             
-              </div>
-
-            </div>
-          
-
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="reservations.html" class="dropdown-item" >
-            <div class="row">
-              <div class="col-2 n-circle my-auto">
-                <i class="fas fa-book"></i>
-              </div>
-              <div class="col-10 my-auto mx-auto " >
-                <p class="n-text">HumAiz placed a new reservation</p>
-             
-              </div>
-
-            </div>
-          
-
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item" data-toggle="modal" data-target="#ordercomplete" >
-            <div class="row">
-              <div class="col-2 n-circle my-auto">
-                <i class="fas fa-times"></i>
-              </div>
-              <div class="col-10 my-auto mx-auto " >
-                <p class="n-text">  An order was cancelled</p>
-             
-              </div>
-
-            </div>
-          
-
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="review.html" class="dropdown-item" >
-            <div class="row">
-              <div class="col-2 n-circle my-auto">
-                <i class="fas fa-star"></i>
-              </div>
-              <div class="col-10 my-auto mx-auto " >
-                <p class="n-text">  You get a new review</p>
-             
-              </div>
-
-            </div>
-          
-
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item" data-toggle="modal" data-target="#chat" >
-            <div class="row">
-              <div class="col-2 n-circle my-auto">
-                <i class="fas fa-comment"></i>
-              </div>
-              <div class="col-10 my-auto" >
-                Volo replied to your enquiry:
-              <p class="n-more">
-                Thanks for contacting volo support. We are happy to assist you. Feel free to reach us anytime
-
-              </p>
-             
-              </div>
-
-            </div>
-          
-
-          </a>
-          <div class="dropdown-divider"></div>
-          <div class="dropdown-item" >
-            <div class="row">
-              <div class="col-2 n-circle my-auto" onclick="$('#orderpending').modal('show');">
-                <i class="fas fa-motorcycle" ></i>
-              </div>
-              <div class="col-10 my-auto"  >
-               
-               <a class="n-text" href="#" onclick="$('#orderpending').modal('show');" style="text-decoration: none;color:black; display: inline; line-break: strict;">
-                Your driver had an accident
-               </a>
-               <br>
-              
-                    Rider No: <a href="#" onclick="copyToClipboard('#p1')"  > <p id="p1" class="n-text" style="display: inline">+91433566644</p></a>
-
-
-                   
-                  
-                  
-               
-
-              </div>
-                
-           
-
-            </div>
-          
-
-          </div>
-        
-          <div class="dropdown-divider"></div>
-          
-         
-          
-          
-        </div>
-      </li>
-      <script>
-       function copyToClipboard(element) {
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val($(element).text()).select();
-        document.execCommand("copy");
-        $temp.remove();
-      }
-
-  
-
-      </script>
-
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item">
-        <a class="nav-link" href="#" data-toggle="modal" data-target="#chat">
-          <i class="fas fa-comment"></i>
-        </a>
-      </li>
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-expand-arrows-alt"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link controlleft" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-          <i class="fas fa-th-large"></i>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" data-toggle="modal" data-target="#signout">
-          <i class="fas fa-lock"></i>
-        </a>
-      </li>
-    
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4" >
-    <!-- Brand Logo -->
-    <a href="main.html" class="brand-link mx-auto text-center" >
-      <img src="../img/footer-logo.png" alt="Volo Logo" height="50px" >
-   
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex brand-text ">
-        <div class="row brand-text ">
-          <div class="col-12 mx-auto  ">
-            <div class="company-img mx-auto">
-              <img src="../img/kfc.png" />
-            </div>
-
-          </div>
-          <div class="col-12">
-          
-            <p class="comapny-title"> Gloria-Jeans Coffee Main Market Manama, Bahrain</p>
-           
-          </div>
-
-          </div>
-       
-       
-    </div>
-
-      <!-- SidebarSearch Form -->
-      <div class="form-inline">
-        <div class="input-group" data-widget="sidebar-search">
-          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-sidebar">
-              <i class="fas fa-search fa-fw"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+   </head>
+   <body class="hold-transition sidebar-mini">
+      <div class="wrapper">
+         <div class="preloader flex-column justify-content-center align-items-center"  > 
+            <img class="" src="../img/footer-logo.png" width="120" height="120" />
+            <img class="animation__shake" src="../img/loading.gif" width="120" height="120"  />
+         </div>
+         <!-- Navbar -->
+         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
                <li class="nav-item">
-                <a href="main.html" class="nav-link">
-                  <i class="nav-icon fas fa-tachometer-alt"></i>
-                  <p>
-                    Dashboard
-                  
-                  </p>
-                </a>
-              </li>
-              
-          <li class="nav-item">
-            <a href="order-history.html" class="nav-link ">
-              <i class="nav-icon fas fa-shopping-bag"></i>
-              <p>
-                Order's History
-              
-              </p>
-            </a>
-           
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link ">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-                Reservations's
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="reservations.html" class="nav-link ">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Today Reservations's</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="reservation-history.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Reservations's History</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="reservation-reviews.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p> Reservations's Review</p>
-                </a>
-              </li>
+                  <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+               </li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a href="menu.html" class="nav-link">
-               <i class="nav-icon fas fa-shopping-cart"></i>
-               <p>
-                  Menu
-               </p>
-            </a>
-         </li>
-          <li class="nav-item">
-            <a href="cah.html" class="nav-link">
-               <i class="nav-icon fas fa-home"></i>
-               <p>
-                  Do it Yourself
-               </p>
-            </a>
-         </li>
-          <li class="nav-item">
-            <a href="settings.html" class="nav-link">
-              <i class="nav-icon fas fa-cog"></i>
-              <p>
-                Settings
-               
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="reviews.html" class="nav-link">
-              <i class="nav-icon fas fa-star"></i>
-              <p>
-                Reviews
-               
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="promotions.html" class="nav-link ">
-              <i class="nav-icon fas fa-bullhorn"></i>
-              <p>
-                Promotions
-               
-              </p>
-            </a>
-            
-          </li>
-          <li class="nav-item">
-            <a href="addons.html" class="nav-link">
-               <i class="nav-icon fas fa-plus"></i>
-               <p>
-                  Add-ons
-               </p>
-            </a>
-         </li>
-          <li class="nav-item">
-            <a href="driver.html" class="nav-link">
-              <i class="nav-icon fas fa-motorcycle"></i>
-              <p>
-                Drivers
-               
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="analytics.html" class="nav-link">
-               <i class="nav-icon fas fa-chart-pie"></i>
-               <p>
-                  Analytics
-               </p>
-            </a>
-         </li>
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
-
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
-          </div><!-- /.col -->
-          
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Starter Page</li>
-            </ol>
-            
-
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
-    
-    <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>150</h3>
-
-                <p>Order's Request</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-paper-plane"></i>
-              </div>
-              <a href="#requests" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>53</h3>
-
-                <p>Pending Order's</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-history"></i>
-              </div>
-              <a href="#pending" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-        
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>65</h3>
-
-                <p>Prepared Order's</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-concierge-bell"></i>
-               
-              </div>
-              <a href="#ready" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-        
-          </div>
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>65</h3>
-
-                <p>Completed Order's</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-check"></i>
-              </div>
-              <a href="#complete" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="card">
-              <!-- /.card-header -->
-              <div class="card-body" >
-                <div class="row">
-                  
-                  <div class="col-md-4 col-sm-6 col-12">
-                    <a href="#" data-toggle="modal" data-target="#active">
-                    <div class="info-box bg-gradient-info">
-                      <span class="info-box-icon"><i class="far fa-clock"></i></span>
-        
-                      <div class="info-box-content">
-                        <span class="info-box-text">Active Order</span>
-                        <span class="info-box-number">10</span>
-        
-                        <div class="progress">
-                          <div class="progress-bar" style="width: 70%"></div>
-                        </div>
-                        <span class="progress-description">
-                          70% Increase from last hour
-                        </span>
-                      </div>
-                      <!-- /.info-box-content -->
-                    </div>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+               <!-- Navbar Search -->
+               <li class="nav-item dropdown">
+                  <a class="nav-link" data-toggle="dropdown" href="#">
+                  <i class="fas fa-bell"></i>
+                  <span class="badge badge-warning navbar-badge">15</span>
                   </a>
-                    <!-- /.info-box -->
-                  </div>
-
-                  <!-- /.col -->
-                  <div class="col-md-4 col-sm-6 col-12">
-                    <a href="#" data-toggle="modal" data-target="#today">
-                    <div class="info-box bg-gradient-success">
-                      <span class="info-box-icon"><i class="fas fa-calendar-alt"></i></span>
-        
-                      <div class="info-box-content">
-                        <span class="info-box-text">Today's Order</span>
-                        <span class="info-box-number">1,410</span>
-        
-                        <div class="progress">
-                          <div class="progress-bar" style="width: 70%"></div>
+                  <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right notifications-dropdown">
+                     <span class="dropdown-item dropdown-header">Notifications</span>
+                     <a href="#" class="dropdown-item" data-toggle="modal" data-target="#orderdetail">
+                        <div class="row n-row">
+                           <div class="col-2 n-circle ">
+                              <i class="fas fa-shopping-bag"></i>
+                           </div>
+                           <div class="col-10 my-auto mx-auto " >
+                              <p class="n-text">HumAiz placed a new order</p>
+                           </div>
                         </div>
-                        <span class="progress-description">
-                          70% Increase from last day
-                        </span>
-                      </div>
-                      <!-- /.info-box-content -->
-                    </div>
-                    </a>
-                    <!-- /.info-box -->
-                  </div>
-                  <!-- /.col -->
-                  <div class="col-md-4 col-sm-6 col-12">
-                    <a href="#" data-toggle="modal" data-target="#cancelled">
-                    <div class="info-box bg-gradient-danger">
-                      <span class="info-box-icon"><i class="fas fa-times"></i></span>
-        
-                      <div class="info-box-content">
-                        <span class="info-box-text">Cancled Order</span>
-                        <span class="info-box-number">410</span>
-        
-                        <div class="progress">
-                          <div class="progress-bar" style="width: 70%"></div>
+                     </a>
+                     <div class="dropdown-divider"></div>
+                     <a href="reservations.html" class="dropdown-item" >
+                        <div class="row">
+                           <div class="col-2 n-circle my-auto">
+                              <i class="fas fa-book"></i>
+                           </div>
+                           <div class="col-10 my-auto mx-auto " >
+                              <p class="n-text">HumAiz placed a new reservation</p>
+                           </div>
                         </div>
-                        <span class="progress-description">
-                          70% Increase in 30 Days
-                        </span>
-                      </div>
-                      <!-- /.info-box-content -->
-                    </div>
-                    </a>
-                    <!-- /.info-box -->
+                     </a>
+                     <div class="dropdown-divider"></div>
+                     <a href="#" class="dropdown-item" data-toggle="modal" data-target="#ordercomplete" >
+                        <div class="row">
+                           <div class="col-2 n-circle my-auto">
+                              <i class="fas fa-times"></i>
+                           </div>
+                           <div class="col-10 my-auto mx-auto " >
+                              <p class="n-text">  An order was cancelled</p>
+                           </div>
+                        </div>
+                     </a>
+                     <div class="dropdown-divider"></div>
+                     <a href="review.html" class="dropdown-item" >
+                        <div class="row">
+                           <div class="col-2 n-circle my-auto">
+                              <i class="fas fa-star"></i>
+                           </div>
+                           <div class="col-10 my-auto mx-auto " >
+                              <p class="n-text">  You get a new review</p>
+                           </div>
+                        </div>
+                     </a>
+                     <div class="dropdown-divider"></div>
+                     <a href="#" class="dropdown-item" data-toggle="modal" data-target="#chat" >
+                        <div class="row">
+                           <div class="col-2 n-circle my-auto">
+                              <i class="fas fa-comment"></i>
+                           </div>
+                           <div class="col-10 my-auto" >
+                              Volo replied to your enquiry:
+                              <p class="n-more">
+                                 Thanks for contacting volo support. We are happy to assist you. Feel free to reach us anytime
+                              </p>
+                           </div>
+                        </div>
+                     </a>
+                     <div class="dropdown-divider"></div>
+                     <div class="dropdown-item" >
+                        <div class="row">
+                           <div class="col-2 n-circle my-auto" onclick="$('#orderpending').modal('show');">
+                              <i class="fas fa-motorcycle" ></i>
+                           </div>
+                           <div class="col-10 my-auto"  >
+                              <a class="n-text" href="#" onclick="$('#orderpending').modal('show');" style="text-decoration: none;color:black; display: inline; line-break: strict;">
+                              Your driver had an accident
+                              </a>
+                              <br>
+                              Rider No: 
+                              <a href="#" onclick="copyToClipboard('#p1')"  >
+                                 <p id="p1" class="n-text" style="display: inline">+91433566644</p>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="dropdown-divider"></div>
                   </div>
+               </li>
+               <script>
+                  function copyToClipboard(element) {
+                   var $temp = $("<input>");
+                   $("body").append($temp);
+                   $temp.val($(element).text()).select();
+                   document.execCommand("copy");
+                   $temp.remove();
+                  }
                   
-                </div>
-           
-              </div>
-            </div>
-          </div>
-          </div>
-
-        <div class="row">
-
-          <div class="col-lg-12">
-           
-            <div class="card" id="requests">
-              <div class="card-header">
-                <h3 class="card-title">Order's Request</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-12" style="overflow: scroll;">
-                    <table id="example1" class="table table-bordered  table-responsive" >
-                      <thead>
-                      <tr>
-                        <th class="info-heading"></th>
-                        <th>Order ID</th>
-                        <th>Placed On</th>
-                        <th>Pickup Time</th>
-                        <th>Order Type</th>
-                        <th>Customer Name</th>
-                        <th>Customer Phone</th>
-                        <th>Payment</th>
-                        <th>Total</th>
-                       
-                      </tr>
-                      </thead>
-                      <tbody>
-
-                      <tr>
-                        <td class="more-info"><button class="btn btn-md btn-default btn-more" data-toggle="modal" data-target="#orderdetail">+</button></td>
-                        <td>21BE0B82</td>
-                        <td>23:33 11 July 2021</td>
-                        <td>ASAP</td>
-                        <td>Delivery</td>
-                        <td>Mohamed Jaffer	</td>
-                        <td>+973 0000000	</td>                     
-                        <td>Cash</td>                 
-                        <td>BD 5.400	</td>               
-                      </tr>
-                      <tr>
-                        <td class="more-info"><button class="btn btn-md btn-default btn-more" data-toggle="modal" data-target="#orderdetail">+</button></td>
-                        <td>21BE0B82</td>
-                        <td>23:33 11 July 2021</td>
-                        <td>ASAP</td>
-                        <td>Delivery</td>
-                        <td>Mohamed Jaffer	</td>
-                        <td>+973 0000000	</td>                     
-                        <td>Cash</td>                 
-                        <td>BD 5.400	</td>               
-                      </tr>
-                      <tr>
-                        <td class="more-info"><button class="btn btn-md btn-default btn-more" data-toggle="modal" data-target="#orderdetail">+</button></td>
-                        <td>21BE0B82</td>
-                        <td>23:33 11 July 2021</td>
-                        <td>ASAP</td>
-                        <td>Delivery</td>
-                        <td>Mohamed Jaffer	</td>
-                        <td>+973 0000000	</td>                     
-                        <td>Cash</td>                 
-                        <td>BD 5.400	</td>               
-                      </tr>
-                      <tr>
-                        <td class="more-info"><button class="btn btn-md btn-default btn-more" data-toggle="modal" data-target="#orderdetail">+</button></td>
-                        <td>21BE0B82</td>
-                        <td>23:33 11 July 2021</td>
-                        <td>ASAP</td>
-                        <td>Delivery</td>
-                        <td>Mohamed Jaffer	</td>
-                        <td>+973 0000000	</td>                     
-                        <td>Cash</td>                 
-                        <td>BD 5.400	</td>               
-                      </tr>
-                      <tr>
-                        <td class="more-info"><button class="btn btn-md btn-default btn-more" data-toggle="modal" data-target="#orderdetail">+</button></td>
-                        <td>21BE0B82</td>
-                        <td>23:33 11 July 2021</td>
-                        <td>ASAP</td>
-                        <td>Delivery</td>
-                        <td>Mohamed Jaffer	</td>
-                        <td>+973 0000000	</td>                     
-                        <td>Cash</td>                 
-                        <td>BD 5.400	</td>               
-                      </tr>
-                      <tr>
-                        <td class="more-info"><button class="btn btn-md btn-default btn-more" data-toggle="modal" data-target="#orderdetail">+</button></td>
-                        <td>21BE0B82</td>
-                        <td>23:33 11 July 2021</td>
-                        <td>ASAP</td>
-                        <td>Delivery</td>
-                        <td>Mohamed Jaffer	</td>
-                        <td>+973 0000000	</td>                     
-                        <td>Cash</td>                 
-                        <td>BD 5.400	</td>               
-                      </tr>
-                      <tr>
-                        <td class="more-info"><button class="btn btn-md btn-default btn-more" data-toggle="modal" data-target="#orderdetail">+</button></td>
-                        <td>21BE0B82</td>
-                        <td>23:33 11 July 2021</td>
-                        <td>ASAP</td>
-                        <td>Delivery</td>
-                        <td>Mohamed Jaffer	</td>
-                        <td>+973 0000000	</td>                     
-                        <td>Cash</td>                 
-                        <td>BD 5.400	</td>               
-                      </tr>
-    
-                      </tbody>
-                     
-                    </table>
-
+                  
+                  
+               </script>
+               <!-- Notifications Dropdown Menu -->
+               <li class="nav-item">
+                  <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+                  <i class="fas fa-expand-arrows-alt"></i>
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link controlleft" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                  <i class="fas fa-th-large"></i>
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#signout">
+                  <i class="fas fa-lock"></i>
+                  </a>
+               </li>
+            </ul>
+         </nav>
+         <!-- /.navbar -->
+         <!-- Main Sidebar Container -->
+         <aside class="main-sidebar sidebar-dark-primary elevation-4" >
+            <!-- Brand Logo -->
+            <a href="main.html" class="brand-link mx-auto text-center" >
+            <img src="../img/footer-logo.png" alt="Volo Logo" height="50px" >
+            </a>
+            <!-- Sidebar -->
+            <div class="sidebar">
+               <!-- Sidebar user panel (optional) -->
+               <div class="user-panel mt-3 pb-3 mb-3 d-flex brand-text ">
+                  <div class="row brand-text ">
+                     <div class="col-12 mx-auto  ">
+                        <div class="company-img mx-auto">
+                           <img src="../img/kfc.png" />
+                        </div>
+                     </div>
+                     <div class="col-12">
+                        <p class="comapny-title"> Gloria-Jeans Coffee Main Market Manama, Bahrain</p>
+                     </div>
                   </div>
-                </div>
-
-           
-          
-              </div>
-              <!-- /.card-body -->
-            </div>
-
-           
-          </div>
-         
-        </div>
-        <!-- /.row -->
-        <div class="row">
-
-          <div class="col-lg-12">
-           
-            <div class="card" id="pending">
-              <div class="card-header">
-                <h3 class="card-title">Pending Order</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-12" style="overflow: scroll;">
-                    <table id="example2" class="table table-bordered  table-responsive" >
-                      <thead>
-                      <tr>
-                        <th class="info-heading"></th>
-                        <th>Order ID</th>
-                        <th>Placed On</th>
-                        <th>Pickup Time</th>
-                        <th>Order Type</th>
-                        <th>Customer Name</th>
-                        <th>Customer Phone</th>
-                        <th>Payment</th>
-                        <th>Total</th>
-                       
-                      </tr>
-                      </thead>
-                      <tbody>
-
-                      <tr>
-                        <td class="more-info"><button class="btn btn-md btn-default btn-more" data-toggle="modal" data-target="#orderpending">+</button></td>
-                        <td>21BE0B82</td>
-                        <td>23:33 11 July 2021</td>
-                        <td>ASAP</td>
-                        <td>Delivery</td>
-                        <td>Mohamed Jaffer	</td>
-                        <td>+973 0000000	</td>                     
-                        <td>Cash</td>                 
-                        <td>BD 5.400	</td>               
-                      </tr>
-                    
-    
-                      </tbody>
-                     
-                    </table>
-
+               </div>
+               <!-- SidebarSearch Form -->
+               <div class="form-inline">
+                  <div class="input-group" data-widget="sidebar-search">
+                     <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                     <div class="input-group-append">
+                        <button class="btn btn-sidebar">
+                        <i class="fas fa-search fa-fw"></i>
+                        </button>
+                     </div>
                   </div>
-                </div>
-
-           
-          
-              </div>
-              <!-- /.card-body -->
+               </div>
+               <!-- Sidebar Menu -->
+               <nav class="mt-2">
+                  <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                     <!-- Add icons to the links using the .nav-icon class
+                        with font-awesome or any other icon font library -->
+                     <li class="nav-item">
+                        <a href="main.html" class="nav-link">
+                           <i class="nav-icon fas fa-tachometer-alt"></i>
+                           <p>
+                              Dashboard
+                           </p>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="order-history.html" class="nav-link ">
+                           <i class="nav-icon fas fa-shopping-bag"></i>
+                           <p>
+                              Order's History
+                           </p>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="#" class="nav-link ">
+                           <i class="nav-icon fas fa-book"></i>
+                           <p>
+                              Reservations's
+                              <i class="right fas fa-angle-left"></i>
+                           </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                           <li class="nav-item">
+                              <a href="reservations.html" class="nav-link ">
+                                 <i class="far fa-circle nav-icon"></i>
+                                 <p>Today Reservations's</p>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a href="reservation-history.html" class="nav-link">
+                                 <i class="far fa-circle nav-icon"></i>
+                                 <p>Reservations's History</p>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a href="reservation-reviews.html" class="nav-link">
+                                 <i class="far fa-circle nav-icon"></i>
+                                 <p> Reservations's Review</p>
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                     <li class="nav-item">
+                        <a href="menu.html" class="nav-link">
+                           <i class="nav-icon fas fa-shopping-cart"></i>
+                           <p>
+                              Menu
+                           </p>
+                        </a>
+                     </li>
+                    <li class="nav-item">
+                        <a href="cah.html" class="nav-link">
+                           <i class="nav-icon fas fa-home"></i>
+                           <p>
+                              Do it Yourself
+                           </p>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="settings.html" class="nav-link">
+                           <i class="nav-icon fas fa-cog"></i>
+                           <p>
+                              Settings
+                           </p>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="reviews.html" class="nav-link">
+                           <i class="nav-icon fas fa-star"></i>
+                           <p>
+                              Reviews
+                           </p>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="promotions.html" class="nav-link ">
+                           <i class="nav-icon fas fa-bullhorn"></i>
+                           <p>
+                              Promotions
+                           </p>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="addons.html" class="nav-link">
+                           <i class="nav-icon fas fa-plus"></i>
+                           <p>
+                              Add-ons
+                           </p>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="driver.html" class="nav-link">
+                           <i class="nav-icon fas fa-motorcycle"></i>
+                           <p>
+                              Drivers
+                           </p>
+                        </a>
+                     </li>
+                     <li class="nav-item">
+                        <a href="analytics.html" class="nav-link">
+                           <i class="nav-icon fas fa-chart-pie"></i>
+                           <p>
+                              Analytics
+                           </p>
+                        </a>
+                     </li>
+                  </ul>
+               </nav>
+               <!-- /.sidebar-menu -->
             </div>
-
-           
-          </div>
-         
-        </div>
-        <div class="row">
-
-          <div class="col-lg-12">
-           
-            <div class="card" id="ready">
-              <div class="card-header">
-                <h3 class="card-title">Order ready for delivery and pickup</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-12" style="overflow: scroll;">
-                    <table id="example3" class="table table-bordered  table-responsive" >
-                      <thead>
-                      <tr>
-                        <th class="info-heading"></th>
-                        <th>Order ID</th>
-                        <th>Placed On</th>
-                        <th>Pickup Time</th>
-                        <th>Order Type</th>
-                        <th>Customer Name</th>
-                        <th>Customer Phone</th>
-                        <th>Customer address</th>
-                     
-                        <th>Total</th>
-                       
-                       
-                     
-
+            <!-- /.sidebar -->
+         </aside>
+         <!-- Content Wrapper. Contains page content -->
+         <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+               <div class="container-fluid">
+                  <div class="row mb-2">
+                     <div class="col-sm-6">
+                        <h1 class="m-0">Menu</h1>
+                     </div>
+                     <!-- /.col -->
+                     <div class="col-sm-6">
+                        <ol class="breadcrumb float-sm-right">
+                           <li class="breadcrumb-item"><a href="#">Home</a></li>
+                           <li class="breadcrumb-item active">Starter Page</li>
+                        </ol>
+                     </div>
+                     <!-- /.col -->
+                  </div>
+                  <!-- /.row -->
+               </div>
+               <!-- /.container-fluid -->
+            </div>
+            <!-- /.content-header -->
+            <!-- Main content -->
+            <div class="content">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="card" id="requests">
+                          
+                           <!-- /.card-header -->
+                           <div class="card-body">
+                              <div class="row">
+                                 <div class="col-12">
+                                    <button class="btn btn-info btn-block" data-toggle="modal" data-target="#categories">Add Category</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card" id="requests">
+                          
+                           <!-- /.card-header -->
+                           <div class="card-body">
+                              <div class="row">
+                                 <div class="col-12">
+                                    <button class="btn btn-default btn-block" data-toggle="modal" data-target="#add">Add  New Items</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="row">
+                                 <div class="col-12">
+                                    <div class="input-group">
+                                       <input type="text" class="form-control" placeholder="Search for Products">
+                                       <div class="input-group-append">
+                                         <button class="btn btn-default" type="button">
+                                           <i class="fa fa-search"></i>
+                                         </button>
+                                       </div>
+                                     </div>
+                                     
+                                 </div>
+                              </div>
+                           </div>
+                         
+                        </div>
                         
-                      </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td class="more-info"><button class="btn btn-md btn-default btn-more" data-toggle="modal" data-target="#ordercomplete">+</button></td>
-                          <td>21BE0B82</td>
-                          <td>23:33 11 July 2021</td>
-                          <td>ASAP</td>
-                          <td>Delivery</td>
-                          <td>Mohamed Jaffer	</td>
-                          <td>+973 0000000	</td>                     
-                          <td>Cash</td>                 
-                          <td>BD 5.400	</td>               
-                        </tr>
-    
-                      </tbody>
-                     
-                    </table>
+                        <div class="card" id="requests">
+                           <div class="card-header">
+                              <h3 class="card-title">Products</h3>
+                           </div>
+                           <!-- /.card-header -->
+                           <div class="card-body">
+                              
 
-                  </div>
-                </div>
+                             
+                                <div id="accordion">
+                                   
+                                    <div class="card">
+                                       
+                                            <div class="card-header tab-header my-auto"  id="heading1">
+                                                <div class="row">
+                                                    <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6 my-auto">
+                                                        <a class="card-link" data-toggle="collapse"  href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                            <div style="width: 100%;">
+                                                                Fast Food  
+                                                            </div>
 
-           
-          
-              </div>
-              <!-- /.card-body -->
-            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 my-auto">
+                                                        <div class="float-right my-auto">
+                                                            <label class="switch switch-left-right">
+                                                                <input class="switch-input" type="checkbox">
+                                                                <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                                                                <button class="btn btn-default btn-md" data-toggle="modal" data-target="#edit_category">
+                                                                    Options
+                                                                </button>
+                                                              
+                                                                &nbsp;<a class="card-link" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">  <i class="fa fa-angle-down"></i></a>
+                                                        
+                                                            </div>
 
-           
-          </div>
-         
-        </div>
-        <!-- /.row -->
-        <div class="row">
+                                                    </div>
+                                                </div>
+                                               
+                                                   
+                                                
+                                                 
+                                            </div>
+                                         
+                                      <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                                        <div class="card-body">
+                                          <div class="row">
+                                             <div class="col-12 menu-box">
+                                                <div class="row">
+                                                    <div class="col-lg-2 col-md-3 col-xs-12 col-sm-12 my-auto float-left">
+                                                     
+                                                             <img src="../img/kfc.png" class="product-image" />
+                                                     </div>
+                                                    <div class="col-lg-6 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                                        <div class="row">
+                                                            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                                                Mayo Garlic
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                                                0.100 BHD 
+                                                            </div>
+                                                            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                                                Extra Cheese, Extra Chilli, Extra Pepper
+                                                            </div>
+                                                        </div>
+                                                            
+                                                            
+                                                             
+                                                         </div>
+                                                         <div class="col-lg-1 col-md-1 col-xs-12 col-sm-12 my-auto">
+                                                            <div class="float-md-right">
+                                                               4.3 <i class="fas fa-star rating-icon "></i>
+                                                            </div>
+                                                           
 
-          <div class="col-lg-12">
-          
-            <div class="card" id="complete">
-              <div class="card-header">
-                <h3 class="card-title">Completed Order</h3>
-              </div>
-              <!-- /.card-header -->
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-12" style="overflow: scroll;">
-                    <table id="example4" class="table table-bordered  table-responsive" >
-                      <thead>
-                      <tr>
-                        <th class="info-heading"></th>
-                        <th>Order ID</th>
-                        <th>Placed On</th>
-                        <th>Pickup Time</th>
-                        <th>Order Type</th>
-                        <th>Customer Name</th>
-                        <th>Customer Phone</th>
-                        <th>Payment</th>
-                        <th>Total</th>
-                      
-                      </tr>
-                      </thead>
-                      <tbody>
 
-                      <tr>
-                        <td class="more-info"><button class="btn btn-md btn-default btn-more" data-toggle="modal" data-target="#ordercomplete">+</button></td>
-                        <td>21BE0B82</td>
-                        <td>23:33 11 July 2021</td>
-                        <td>ASAP</td>
-                        <td>Delivery</td>
-                        <td>Mohamed Jaffer	</td>
-                        <td>+973 0000000	</td>                     
-                        <td>Cash</td>                 
-                        <td>BD 5.400	</td>               
-                      </tr>
-                    
-
-                      </tbody>
-                    
-                    </table>
-
-                  </div>
-            
-                </div>
-
-          
-
-              </div>
-              <!-- /.card-body -->
-            </div>
-
-          
-          </div>
-
-      </div>
-        <!-- /.row -->
+                                                         </div>
+                                                     
+                                                   
+                                                
       
-      </div><!-- /.container-fluid -->
-    </div>
- 
-
-    <!-- /.content -->
-  </div>
-
-
-  <!-- /.content-wrapper -->
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark" > 
-    <!-- Control sidebar content goes here -->
-    <div class="p-3">
-      <h5>Title</h5>
-      <p>Sidebar content</p>
-    </div>
-  </aside>
-  <!-- /.control-sidebar -->
-  
-  <div class="col-md-3 live-chat" id="live-chat">
-    <!-- DIRECT CHAT SUCCESS -->
-    <div class="card card-warning direct-chat direct-chat-warning shadow">
-      <div class="card-header">
-        <h3 class="card-title">Contact Chat</h3>
-
-        <div class="card-tools">
-         
-          <button type="button" class="btn btn-tool" data-card-widget="collapse">
-            <i class="fas fa-minus"></i>
-          </button>
-         
-          <button type="button" class="btn btn-tool"  data-toggle="modal" data-target="#chat-dismiss">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-      </div>
-      <div class="modal fade" id="chat-dismiss" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
-        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-           <div class="modal-content">
-              <div class="modal-body">
-                 Are you sure you want to close chat ?
-                 <div class="float-right">
-                    <br>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#support-review" data-dismiss="modal" data-card-widget="remove" >Confirm</button>
-                 </div>
-              </div>
-           </div>
-        </div>
-      </div>
-      <div class="modal fade" id="leavemessage" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true" style="z-index: 4000000;">
-        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-           <div class="modal-content">
-              <div class="modal-body">
-                <div class="col-12 text-right">
-                  <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"> &times; </button>
-                 </div>
-                    <label>Leave a Message<br></label>
-                     <textarea class="form-control" rows="5"></textarea>
-                    <br>
-                    <button type="button" class="btn btn-default btn-block" data-dismiss="modal" data-card-widget="remove">Send</button>
-                    
-                 </div>
-              </div>
-           </div>
-       </div>
       
-      <!-- /.card-header -->
-      <div class="card-body">
-        <div class="direct-chat-messages">
-          <!-- Message. Default to the left -->
-          <div class="direct-chat-msg">
-            <div class="direct-chat-infos clearfix">
-              <span class="direct-chat-name float-left">Alexander Pierce</span>
-              <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
-            </div>
-         
-            <div class="direct-chat-text">
-              Is this template really for free? That's unbelievable!
-            </div>
-          
-          </div>
-          <!-- /.direct-chat-msg -->
-
-          <!-- Message to the right -->
-          <div class="direct-chat-msg right">
-            <div class="direct-chat-infos clearfix">
-              <span class="direct-chat-name float-right">Sarah Bullock</span>
-              <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
-            </div>
-            <!-- /.direct-chat-infos -->
-        
-            <!-- /.direct-chat-img -->
-            <div class="direct-chat-text">
-              You better believe it!
-            </div>
-            <!-- /.direct-chat-text -->
-          </div>
-          <!-- /.direct-chat-msg -->
-        </div>
-        <!--/.direct-chat-messages-->
-
-        <!-- Contacts are loaded here -->
-        <div class="direct-chat-contacts">
-          <ul class="contacts-list">
-            <li>
-              <a href="#">
-                <img class="contacts-list-img" src="dist/img/user1-128x128.jpg" alt="User Avatar">
-
-                <div class="contacts-list-info">
-                  <span class="contacts-list-name">
-                    Count Dracula
-                    <small class="contacts-list-date float-right">2/28/2015</small>
-                  </span>
-                  <span class="contacts-list-msg">How have you been? I was...</span>
-                </div>
-                <!-- /.contacts-list-info -->
-              </a>
-            </li>
-            <!-- End Contact Item -->
-          </ul>
-          <!-- /.contatcts-list -->
-        </div>
-        <!-- Conversations are loaded here -->
-       
-        <!--/.direct-chat-messages-->
-
-        <!-- Contacts are loaded here -->
-        <div class="direct-chat-contacts">
-          <ul class="contacts-list">
-            <li>
-              <a href="#">
-                <img class="contacts-list-img" src="dist/img/user1-128x128.jpg" alt="User Avatar">
-
-                <div class="contacts-list-info">
-                  <span class="contacts-list-name">
-                    Count Dracula
-                    <small class="contacts-list-date float-right">2/28/2015</small>
-                  </span>
-                  <span class="contacts-list-msg">How have you been? I was...</span>
-                </div>
-                <!-- /.contacts-list-info -->
-              </a>
-            </li>
-            <!-- End Contact Item -->
-          </ul>
-          <!-- /.contatcts-list -->
-        </div>
-        <!-- /.direct-chat-pane -->
-        <center>You are currently 5 in the line</center>
-        <center><button class="btn btn-default btn-md btn-lm" data-toggle="modal" data-target="#leavemessage">Leave a Message</button></center>
-        
-      </div>
-      <!-- /.card-body -->
-      <div class="card-footer">
-        <form action="#" method="post">
-          <div class="input-group">
-            <input type="text" name="message" placeholder="Type Message ..." class="form-control">
-            <span class="input-group-append">
-              <button type="submit" class="btn btn-success">Send</button>
-            </span>
-          </div>
-        </form>
-      </div>
-      <!-- /.card-footer-->
-    </div>
-    <!--/.direct-chat -->
-  </div>
-<div class="modal fade" id="orderdetail" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="orderdetailLabel">Order Details</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-         </div>
-         <div class="modal-body order-popup ">
-            <div class="row ">
-               <div class="col-12 justify-content-center">
-                  <center>
-                     <img src="../img/footer-logo.png" class="img-center" width="80px" />
-                     <br>
-                  </center>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-10 mx-auto">
-                  <div class="row order-info">
-                     <div class="col-6 text-left">
-                        <b>Order ID</b> <br>21BE0B82
-                     </div>
-                     <div class="col-6 text-right">
-                        <b>Order Type</b> <br>Delivery
-                     </div>
-                     <div class="col-6 text-left">
-                        <b>Cutlery</b> <br>No
-                     </div>
-                     <div class="col-6 text-right">
-                        <b>Prepaid</b> <br>No
-                     </div>
-                     <div class="col-12 text-center">
-                        <b>Payment</b> <br> Cash
-                     </div>
-                     <div class="col-12  text-center">
-                        <b>Place On </b><br> 21 June 2021 21:55
-                     </div>
-                     <div class="col-12 text-center">
-                        <b>Pickup Time</b><br> ASAP
-                     </div>
-                     <div class="col-8 mx-auto text-center">
-                      <b>Name</b><br>
-                       Mohamed Jaffer	
-                     </div>
-                    <div class="col-8 mx-auto text-center">
-                      <b>Phone No</b><br>
-                      +973 0000000	
-                     </div>
-                     <div class="col-8 mx-auto text-center">
-                        <b>Address</b><br>
-                        Ryt Road: Rut Block: 608 Area: Arad Notes: none
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="item-details">
-               <div class="row ">
-                  <div class="col-1 quantity">
-                     1 
-                  </div>
-                  <div class="col-1 quantity-icon">
-                     <i class="fa fa-times"></i>
-                  </div>
-                  <div class="col-7 order-details">
-                     <h3>Pizza</h3>
-                     <p>hola1 (BD 0.100) | hola2 (BD 0.100) | Spicy (BD 0.200)</p>
-                  </div>
-                  <div class="col-3 price-details">
-                     <div class="float-right">                
-                        BD 3.50
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-md-10 mx-auto">
-               <div class="row payment-info">
-                  <div class="col-6 text-left" >
-                     <b>Promo:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     None
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Cart Subtotal:</b> 
-                  </div>
-                  <div class="col-6 text-right" >
-                     BD 26.800
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Cart Discount:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     -BB 0.000
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Delivery:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     +BD 1.300
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Cart Total:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     26.800
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Total:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     28.100
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="order-map">
-            <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Bahrain+(Volo)&amp;t=&amp;z=3&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
-         </div>
-         <div class="m-footer" >
-            <div class="row">
-               <div class="col-12">
-                  <button type="button" class="btn btn-info " data-dismiss="modal">Print <i class="fas fa-print"></i></button>
-                  <div class="float-right">
-                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#accept">Accept <i class="fas fa-check"></i></button>
-                     <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#decline">Decline <i class="fas fa-times"></i></button>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="modal fade" id="orderpending" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="orderdetailLabel">Order Details</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-         </div>
-         <div class="modal-body order-popup ">
-            <div class="row ">
-               <div class="col-12 justify-content-center">
-                  <center>
-                     <img src="../img/footer-logo.png" class="img-center" width="80px" />
-                     <br>
-                  </center>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-10 mx-auto">
-                  <div class="row order-info">
-                     <div class="col-6 text-left">
-                        <b>Order ID</b> <br>21BE0B82
-                     </div>
-                     <div class="col-6 text-right">
-                        <b>Order Type</b> <br>Delivery
-                     </div>
-                     <div class="col-6 text-left">
-                        <b>Cutlery</b> <br>No
-                     </div>
-                     <div class="col-6 text-right">
-                        <b>Prepaid</b> <br>No
-                     </div>
-                     <div class="col-12 text-center">
-                        <b>Payment</b> <br> Cash
-                     </div>
-                     <div class="col-12  text-center">
-                        <b>Place On </b><br> 21 June 2021 21:55
-                     </div>
-                     <div class="col-12 text-center">
-                        <b>Pickup Time</b><br> ASAP
-                     </div>
-                     <div class="col-8 mx-auto text-center">
-                      <b>Name</b><br>
-                       Mohamed Jaffer	
-                     </div>
-                    <div class="col-8 mx-auto text-center">
-                      <b>Phone No</b><br>
-                      +973 0000000	
-                     </div>
-                     <div class="col-8 mx-auto text-center">
-                        <b>Address</b><br>
-                        Ryt Road: Rut Block: 608 Area: Arad Notes: none
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="item-details">
-               <div class="row ">
-                  <div class="col-1 quantity">
-                     1 
-                  </div>
-                  <div class="col-1 quantity-icon">
-                     <i class="fa fa-times"></i>
-                  </div>
-                  <div class="col-7 order-details">
-                     <h3>Pizza</h3>
-                     <p>hola1 (BD 0.100) | hola2 (BD 0.100) | Spicy (BD 0.200)</p>
-                  </div>
-                  <div class="col-3 price-details">
-                     <div class="float-right">                
-                        BD 3.50
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-md-10 mx-auto">
-               <div class="row payment-info">
-                  <div class="col-6 text-left" >
-                     <b>Promo:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     None
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Cart Subtotal:</b> 
-                  </div>
-                  <div class="col-6 text-right" >
-                     BD 26.800
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Cart Discount:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     -BB 0.000
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Delivery:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     +BD 1.300
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Cart Total:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     26.800
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Total:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     28.100
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="order-map">
-            <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Bahrain+(Volo)&amp;t=&amp;z=3&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
-         </div>
-         <div class="m-footer" >
-            <div class="row">
-               <div class="col-12">
-                  <button type="button" class="btn btn-info " data-dismiss="modal">Print <i class="fas fa-print"></i></button>
-                  <div class="float-right">
-                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#accept">Accept <i class="fas fa-check"></i></button>
-                     <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#decline">Decline <i class="fas fa-times"></i></button>
-                     <button type="button" class="btn btn-info"  data-toggle="modal" data-target="#rider">Assign Rider <i class="fas fa-motorcycle"></i></button>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="modal fade" id="ordercomplete" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="orderdetailLabel">Order Details</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-         </div>
-         <div class="modal-body order-popup ">
-            <div class="row ">
-               <div class="col-12 justify-content-center">
-                  <center>
-                     <img src="../img/footer-logo.png" class="img-center" width="80px" />
-                     <br>
-                  </center>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-md-10 mx-auto">
-                  <div class="row order-info">
-                     <div class="col-6 text-left">
-                        <b>Order ID</b> <br>21BE0B82
-                     </div>
-                     <div class="col-6 text-right">
-                        <b>Order Type</b> <br>Delivery
-                     </div>
-                     <div class="col-6 text-left">
-                        <b>Cutlery</b> <br>No
-                     </div>
-                     <div class="col-6 text-right">
-                        <b>Prepaid</b> <br>No
-                     </div>
-                     <div class="col-12 text-center">
-                        <b>Payment</b> <br> Cash
-                     </div>
-                     <div class="col-12  text-center">
-                        <b>Place On </b><br> 21 June 2021 21:55
-                     </div>
-                     <div class="col-12 text-center">
-                        <b>Pickup Time</b><br> ASAP
-                     </div>
-                     <div class="col-8 mx-auto text-center">
-                      <b>Name</b><br>
-                       Mohamed Jaffer	
-                     </div>
-                    <div class="col-8 mx-auto text-center">
-                      <b>Phone No</b><br>
-                      +973 0000000	
-                     </div>
-                     <div class="col-8 mx-auto text-center">
-                        <b>Address</b><br>
-                        Ryt Road: Rut Block: 608 Area: Arad Notes: none
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="item-details">
-               <div class="row ">
-                  <div class="col-1 quantity">
-                     1 
-                  </div>
-                  <div class="col-1 quantity-icon">
-                     <i class="fa fa-times"></i>
-                  </div>
-                  <div class="col-7 order-details">
-                     <h3>Pizza</h3>
-                     <p>hola1 (BD 0.100) | hola2 (BD 0.100) | Spicy (BD 0.200)</p>
-                  </div>
-                  <div class="col-3 price-details">
-                     <div class="float-right">                
-                        BD 3.50
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="row">
-            <div class="col-md-10 mx-auto">
-               <div class="row payment-info">
-                  <div class="col-6 text-left" >
-                     <b>Promo:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     None
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Cart Subtotal:</b> 
-                  </div>
-                  <div class="col-6 text-right" >
-                     BD 26.800
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Cart Discount:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     -BB 0.000
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Delivery:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     +BD 1.300
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Cart Total:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     26.800
-                  </div>
-                  <div class="col-6 text-left">
-                     <b>Total:</b> 
-                  </div>
-                  <div class="col-6 text-right">
-                     28.100
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="order-map">
-            <div style="width: 100%"><iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=Bahrain+(Volo)&amp;t=&amp;z=3&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
-         </div>
-         <div class="m-footer" >
-            <div class="row">
-               <div class="col-12">
-                  <button type="button" class="btn btn-info " data-dismiss="modal">Print <i class="fas fa-print"></i></button>
-                
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="modal fade" id="decline" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
-   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <div class="modal-body">
-            Are you sure you want to decline ?
-            <div class="float-right">
-               <br>
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-               <button type="button" class="btn btn-warning" data-dismiss="modal">Confirm</button>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="modal fade" id="support-review" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true" style="z-index: 4000000;">
-  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-     <div class="modal-content">
-        <div class="modal-body">
-          <div class="col-12 text-right">
-            <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"> &times; </button>
- 
-           </div>
-           <div class="col-12">
-            Thank you for contacting us, please rate your experience below
-           </div>
-           <div class="col-12">
-             <label>Rate</label>
-         <br>
-            </div>
-            <div class="rate">
-              <input type="radio" id="star5" name="rate" value="5" />
-              <label for="star5" title="text">5 stars</label>
-              <input type="radio" id="star4" name="rate" value="4" />
-              <label for="star4" title="text">4 stars</label>
-              <input type="radio" id="star3" name="rate" value="3" />
-              <label for="star3" title="text">3 stars</label>
-              <input type="radio" id="star2" name="rate" value="2" />
-              <label for="star2" title="text">2 stars</label>
-              <input type="radio" id="star1" name="rate" value="1" />
-              <label for="star1" title="text">1 star</label>
-            </div>
-
-            
-           
-
-          
-              <label>Comment<br></label>
-            
-         
-             <textarea class="form-control"></textarea>
-           
-           
-           
-              <br>
-              <button type="button" class="btn btn-default btn-block" data-dismiss="modal">Send</button>
-              
-           </div>
-        </div>
-     </div>
-  </div>
-</div>
+                                                 
+                                                  <div class="col-lg-3 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                                    <div class="float-right">
+                                                       <label class="switch switch-left-right option-addon my-auto">
+                                                          <input class="switch-input" type="checkbox">
+                                                          <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                                                     <button class="btn btn-default btn-md " data-toggle="modal" data-target="#edit">
+                                                        Options
+                                                    </button>
+                                                   
+                                                    </div>
+      
+                                                 </div>
+      
+      
+                                                </div>
+                                                
+      
+                                            </div>
+                                            <div class="col-12 menu-box">
+                                             <div class="row">
+                                                 <div class="col-lg-2 col-md-3 col-xs-12 col-sm-12 my-auto float-left">
+                                                  
+                                                          <img src="../img/har.png" class="product-image" />
+                                                  </div>
+                                                 <div class="col-lg-6 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                                     <div class="row">
+                                                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                                             Mayo Garlic
+                                                         </div>
+                                                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                                             0.100 BHD 
+                                                         </div>
+                                                         <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                                             Extra Cheese, Extra Chilli, Extra Pepper
+                                                         </div>
+                                                     </div>
+                                                         
+                                                         
+                                                          
+                                                      </div>
+                                                      <div class="col-lg-1 col-md-1 col-xs-12 col-sm-12 my-auto">
+                                                         <div class="float-md-right">
+                                                            4.3 <i class="fas fa-star rating-icon "></i>
+                                                         </div>
+                                                        
 
 
-<div class="modal fade" id="accept" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
-   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <div class="modal-body h-100">
-            <center>Order have been approved to be picked up in</center>
-            <div class="col-12 p-time mx-auto">
-               <div class="p-text mx-auto my-auto"">
-                  Wed, 21 May 12:45 pm
-               </div>
-            </div>
-            <div class="float-right">
-               <br>
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Dismiss</button>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="modal fade" id="chat" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
-  <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-     <div class="modal-content">
-        <div class="modal-body">
-          <div class="col-12">
-            <div class="col-12 text-right">
-              <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"> &times; </button>
+                                                      </div>
+                                                  
+                                                
+                                             
    
-             </div>
+   
+                                              
+                                               <div class="col-lg-3 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                                 <div class="float-right">
+                                                    <label class="switch switch-left-right option-addon my-auto">
+                                                       <input class="switch-input" type="checkbox">
+                                                       <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                                                  <button class="btn btn-default btn-md " data-toggle="modal" data-target="#edit">
+                                                     Options
+                                                 </button>
+                                                
+                                                 </div>
+   
+                                              </div>
+   
+   
+                                             </div>
+                                             
+   
+                                         </div>
+                                              
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="card">
+                                       
+                                        <div class="card-header tab-header my-auto"  id="heading2">
+                                            <div class="row">
+                                                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6 my-auto">
+                                                    <a class="card-link" data-toggle="collapse" href="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+                                                        <div style="width: 100%;">
+                                                            Drink
+                                                        </div>
 
-          </div>
-          <div class="col-12 mx-auto justify-content-center" >
-            <br>
-            <p style="text-align: center;">Facing any issue please feel free to contact our 24/7 support </p>
-           <center><button class="btn btn-default text-center" onclick="chat()" data-dismiss="modal">Contact Support</button></center> 
-            <br>
-          </div>
-           
-          
-           
-        </div>
-     </div>
-  </div>
-</div>
-<script>
-  function chat(){
-    
-    var chat = document.getElementById('live-chat');
-    chat.style.display = 'block';
-  }
-</script>
-<div class="modal fade" id="signout" tabindex="-1" role="dialog" aria-labelledby="signout" aria-hidden="true">
-   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="orderdetailLongTitle">Logout of</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
+                                                    </a>
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 my-auto">
+                                                    <div class="float-right my-auto">
+                                                        <label class="switch switch-left-right">
+                                                            <input class="switch-input" type="checkbox">
+                                                            <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                                                            <button class="btn btn-default btn-md" data-toggle="modal" data-target="#edit_category">
+                                                                Options
+                                                            </button>
+                                                           
+                                                            &nbsp;
+                                                            <a class="card-link" data-toggle="collapse" href="#collapsetwo" aria-expanded="true" aria-controls="collapsetwo">  <i class="fa fa-angle-down"></i></a>
+                                                     </div>
+
+                                                </div>
+                                            </div>
+                                           
+                                               
+                                            
+                                             
+                                        </div>
+                                     
+                                  <div id="collapsetwo" class="collapse show" data-parent="#accordion">
+                                    <div class="card-body">
+                                      <div class="row">
+                                       <div class="col-12 menu-box">
+                                          <div class="row">
+                                              <div class="col-lg-2 col-md-3 col-xs-12 col-sm-12 my-auto float-left">
+                                               
+                                                       <img src="../img/mcd.png" class="product-image" />
+                                               </div>
+                                              <div class="col-lg-6 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                                  <div class="row">
+                                                      <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                                          Mayo Garlic
+                                                      </div>
+                                                      <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                                          0.100 BHD 
+                                                      </div>
+                                                      <div class="col-lg-4 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                                          Extra Cheese, Extra Chilli, Extra Pepper
+                                                      </div>
+                                                  </div>
+                                                      
+                                                      
+                                                       
+                                                   </div>
+                                                   <div class="col-lg-1 col-md-1 col-xs-12 col-sm-12 my-auto mx-auto">
+                                                      <div class="float-md-right">
+                                                         4.3 <i class="fas fa-star rating-icon "></i>
+                                                      </div>
+
+                                                     
+
+
+                                                   </div>
+                                               
+                                             
+                                          
+
+
+                                           
+                                            <div class="col-lg-3 col-md-4 col-xs-12 col-sm-12 my-auto">
+                                              <div class="float-right">
+                                                 <label class="switch switch-left-right option-addon my-auto">
+                                                    <input class="switch-input" type="checkbox">
+                                                    <span class="switch-label" data-on="On" data-off="Off"></span> <span class="switch-handle"></span> </label>
+                                               <button class="btn btn-default btn-md " data-toggle="modal" data-target="#edit">
+                                                  Options
+                                              </button>
+                                             
+                                              </div>
+
+                                           </div>
+
+
+                                          </div>
+                                          
+
+                                      </div>
+                                          
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                          
+                              
+                                  </div>
+                              </div>
+                           </div>
+                        
+                     </div>
+                     <!-- /.card-body -->
+                  </div>
+               </div>
+            </div>
+            <!-- /.row -->
          </div>
-         <div class="modal-body">
-            <div class="row">
-               <div class="col-12 logout-popup">
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                     <label class="form-check-label" for="exampleRadios1">
-                     This device
-                     </label>
-                  </div>
-                  <div class="form-check">
-                     <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                     <label class="form-check-label" for="exampleRadios2">
-                     All devices
-                     </label>
-                  </div>
+         <!-- /.container-fluid -->
+      </div>
+      <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark" >
+         <!-- Control sidebar content goes here -->
+         <div class="p-3">
+            <h5>Title</h5>
+            <p>Sidebar content</p>
+         </div>
+      </aside>
+      <!-- /.control-sidebar -->
+      <div class="modal fade" id="decline" tabindex="-1" role="dialog" aria-labelledby="decline" aria-hidden="true">
+         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-body">
+                  Are you sure you want to decline ?
                   <div class="float-right">
                      <br>
-                     <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#confirm">Logout</button>
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                     <button type="button" class="btn btn-warning" data-dismiss="modal">Confirm</button>
                   </div>
                </div>
             </div>
          </div>
       </div>
-   </div>
-</div>
-<div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
-   <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
-      <div class="modal-content">
-         <div class="modal-body">
-            Are you sure you want to logout?
-            <div class="float-right">
-               <br>
-               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-               <a href="../PSignIn.html"><button type="button" class="btn btn-warning" >Confirm</button></a>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="modal fade" id="rider" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
-   <div class="modal-dialog modal-sm" role="document">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="orderdetailLabel">Assign a Rider</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-         </div>
-         <div class="modal-body">
-            <form>
-               <div class="form-group">
-                  <label for="RiderPool">Rider Pool</label>
-                  <select  class="form-control" id="RiderPool">
-                     <option>HumAiz</option>
-                  </select>
+      <div class="modal fade" id="signout" tabindex="-1" role="dialog" aria-labelledby="signout" aria-hidden="true">
+         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="orderdetailLongTitle">Logout of</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
                </div>
-            </form>
-         </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Save changes</button>
+               <div class="modal-body">
+                  <div class="row">
+                     <div class="col-12 logout-popup">
+                        <div class="form-check">
+                           <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                           <label class="form-check-label" for="exampleRadios1">
+                           This device
+                           </label>
+                        </div>
+                        <div class="form-check">
+                           <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                           <label class="form-check-label" for="exampleRadios2">
+                           All devices
+                           </label>
+                        </div>
+                        <div class="float-right">
+                           <br>
+                           <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#confirm">Logout</button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
-   </div>
-</div>
-<div class="modal fade" id="trading" tabindex="-1" role="dialog" aria-labelledby="orderdetailLabel" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content ">
-       
-         <div class="modal-body">
-           <div class="row">
-            <div class="col-8">
-              <h3>Start Trading</h3>
+      <div class="modal fade" id="confirm" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+         <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-body">
+                  Are you sure you want to logout?
+                  <div class="float-right">
+                     <br>
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                     <a href="../PSignIn.html"><button type="button" class="btn btn-warning" >Confirm</button></a>
+                  </div>
+               </div>
             </div>
-           <div class="col-4 text-right">
-             <button type="button" class="btn btn-default" data-dismiss="modal" aria-label="Close"> &times; </button>
-  
-            </div>
+         </div>
+      </div>
+   
+     
+      <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="active" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="orderdetailLongTitle">Add New Item</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                <div class="addItem-popup" id="addItem">
+                    <form id="myItemForm" enctype="multipart/form-data" class="form-container">
+                        <p>Add new Item:</p>
+                       
+                        <div id="itemDiv">
+                          <fieldset id="addItem">
+                              <div class="row">
+                                  <div class="col-12">
+                                    <label for="english">Item Name (English):</label>
+                                    <input class="form-control" type="text" placeholder="Item name" name="Item[1][0]" id='Item[1][0]' required>
 
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="native">Item Name (Arabic):</label>
+                                    <input class="form-control" type="text" placeholder="Name in Arabic" name="Item[1][1]" id='Item[1][1]' required>
+
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="price" >Price (VAT Exclusive):</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" name="AddOn[1][2]" id='AddOn[1][2]' step="0.001" required>
+                                        <div class="input-group-prepend">
+                                           <div class="input-group-text">BHD</div>
+                                        </div>
+                                     </div>
+
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="categoryAssign">Assign to category:</label>
+                                    <select class="form-control" id="Item[1][3]" name="Item[1][3]">
+                                        <option>Please Select One</option>
+                                    </select> 
+                                      
+
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="engDescription">Description (English):</label>
+                                    <textarea id='Item[1][4]' name="Item[1][4]" class='form-control'></textarea>
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="natDescription">Description (Arabic):</label>
+                                    <textarea id='Item[1][5]' name="Item[1][5]" class='textarea form-control'></textarea> 
+
+                                  </div>
+                                  <div class="col-12">
+
+                                    <label for="prep" >Prep time:</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" name="Item[1][6]" id='Item[1][6]' step="0.01" required>
+
+                                        <div class="input-group-prepend">
+                                           <div class="input-group-text">-</div>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <label for='Item[1][7]'>Item size</label>
+                                    <select class="form-control" id='Item[1][7]' name='Item[1][7]'>
+                                        <option value='S'>Burger Box</option>
+                                        <option value='M'>Tissue Box</option>
+                                        <option value='L'>Pizza Box</option>
+                                        <option value='XL'>Office Box</option>
+                                        
+                                    </select>
+
+                                  </div>
+                                  <div class="col-12  s-border " >
+                                    <div class="row s-img">
+                                        <div class="col-12">
+                                           <div class="form-input">
+                                               <label>Product Image</label><br>
+                                              <input type="file" id="pic" name="pic" accept="image/*" onchange='checkInfo(event)'>
+                                           </div>
+
+                                        </div>
+                                       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  my-auto" >
+                                           <div class="preview">
+                                              <img id="file-ip-1-preview" class="img-fluid" style="margin-top:10px;margin-bottom: 10px;">
+                                           </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  my-auto" >
+                                           <div id='imgInfo'  ></div>
+                                        </div>
+                                    </div>
+                                   
+                                  
+                                </div>
+                              
+                                  <div class="col-12">
+                                      <label>Addon:</label>
+                                      
+                                       
+                                    <div id="PassedAddOnDiv"></div>
+                                    </div>
+                                    <div class="col-12">
+                                        
+                                      <button type='button' class='btn btn-block btn-info' data-toggle="modal" data-target="#addon">+ Add-Ons</button>
+                                        
+                                 
+                                    
+                                  </div>
+                                    
+                                   
+
+                                 
+                              </div>
+                            
+
+                             
+                             
+                          </fieldset>
+                         
+                        </div>
+                        
+            
+                  </form>
+                </div>
+               </div>
+               <div class="m-footer">
+                  <button type="button" onclick="submitAddOn()" class="btn btn-default btn-block" data-dismiss="modal">Add</button>
+               </div>
+            </div>
+         </div>
+      </div>
+     
+  
+      <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="active" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+           <div class="modal-content">
+              <div class="modal-header">
+                 <h5 class="modal-title" id="orderdetailLongTitle">Edit Products</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+                 </button>
+              </div>
+              <div class="modal-body">
+                <div class="addItem-popup" id="addItem">
+                    <form id="myItemForm" enctype="multipart/form-data" class="form-container">
+                       
+                       
+                        <div id="itemDiv">
+                          <fieldset id="addItem">
+                              <div class="row">
+                                  <div class="col-12">
+                                    <label for="english">Item Name (English):</label>
+                                    <input class="form-control" type="text" placeholder="Item name" name="Item[1][0]" id='Item[1][0]' required>
+
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="native">Item Name (Arabic):</label>
+                                    <input class="form-control" type="text" placeholder="Name in Arabic" name="Item[1][1]" id='Item[1][1]' required>
+
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="price" >Price (VAT Exclusive):</label>
+                                    <div class="input-group">
+                                        <input class="form-control" type="number" name="AddOn[1][2]" id='AddOn[1][2]' step="0.001" required>
+                                        <div class="input-group-prepend">
+                                           <div class="input-group-text">BHD</div>
+                                        </div>
+                                     </div>
+
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="categoryAssign">Assign to category:</label>
+                                    <select class="form-control" id="Item[1][3]" name="Item[1][3]">
+                                        <option>Please Select One</option>
+                                    </select> 
+                                      
+
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="engDescription">Description (English):</label>
+                                    <textarea id='Item[1][4]' name="Item[1][4]" class='form-control'></textarea>
+                                  </div>
+                                  <div class="col-12">
+                                    <label for="natDescription">Description (Arabic):</label>
+                                    <textarea id='Item[1][5]' name="Item[1][5]" class='textarea form-control'></textarea> 
+
+                                  </div>
+                                  <div class="col-12">
+
+                                    <label for="prep" >Prep time:</label>
+                                    <div class="input-group">
+                                        <input type="number" class="form-control" name="Item[1][6]" id='Item[1][6]' step="0.01" required>
+
+                                        <div class="input-group-prepend">
+                                           <div class="input-group-text">-</div>
+                                        </div>
+                                     </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <label for='Item[1][7]'>Item size</label>
+                                    <select class="form-control" id='Item[1][7]' name='Item[1][7]'>
+                                        <option value='S'>Burger Box</option>
+                                        <option value='M'>Tissue Box</option>
+                                        <option value='L'>Pizza Box</option>
+                                        <option value='XL'>Office Box</option>
+                                        
+                                    </select>
+
+                                  </div>
+                                  <div class="col-12  s-border " >
+                                    <div class="row s-img">
+                                        <div class="col-12">
+                                           <div class="form-input">
+                                               <label>Product Image</label><br>
+                                              <input type="file" id="pic2" name="pic" accept="image/*" onchange='checkInfo2(event)'>
+                                           </div>
+
+                                        </div>
+                                       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  my-auto" >
+                                           <div class="preview">
+                                              <img id="file-ip-1-preview2" class="img-fluid" style="margin-top:10px;margin-bottom: 10px;">
+                                           </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  my-auto" >
+                                           <div id='imgInfo2'  ></div>
+                                        </div>
+                                    </div>
+                                   
+                                  
+                                </div>
+                                  <div class="col-12">
+                                      <label>Addon:</label>
+                                      
+                                      <div id="EditPassedAddOnDiv"></div>
+
+                                  </div>
+                                  <div class="col-12">
+                                        
+                                    <button type='button' class='btn btn-block btn-info' data-toggle="modal" data-target="#editaddon">+ Add-Ons</button>
+                                      
+                               
+                                  
+                                </div>
+                              </div>
+                            
+
+                             
+                             
+                          </fieldset>
+                         
+                        </div>
+                        
+            
+                  </form>
+                </div>
+               </div>
+              <div class="m-footer">
+               <button class="btn btn-danger btn-md" data-toggle="modal" data-target="#addon-del">
+                  Delete
+                </button>
+                <div class="float-right">
+                  <button type="button" onclick="submitAddOn()" class="btn btn-default btn-md" data-dismiss="modal">Edit</button>
+
+                </div>
+              </div>
            </div>
-        
-            <form>
-               <div class="row">
-                <div class="col-12 mx-auto justify-content-center">
-                  <h5 style="text-align: center;">Current Status
-                    <span class="badge badge-secondary" style="background-color: green;">On</span></h5>
+        </div>
+     </div>
+     <div class="modal fade" id="editaddon" tabindex="-1" role="dialog" aria-labelledby="active" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="orderdetailLongTitle">Edit Add-Ons</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+              
+              <div id="EditAddOns" class="addOn-popup">
+                
+                  <form class="addOnForm" id="EditaddOnForm">
+                    <div id="EditAddOnsDiv">
+                     <div class="row ">
+                        
+                             <div class="col-12 addon-header ">
+                              <label id="10d21a93i">holaaa99</label>
+                              
+                              <input type="checkbox" class="checkboxCat addon-check float-right" id="10d21a93" name="10d21a93" onclick="clickAll(this.name, this.id)">
 
-                </div>
-                  <div class="col-md-12">
-                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                        Start/Stop Trading
-                        </label>
-                     </div>
-                  </div>
-                 
-                  <div class="col-md-12">
-                     <div class="form-check">
-                       <div class="row">
-                         <div class="col-12">
-                          <input class="form-check-input" type="checkbox" value="" id="shipping_time" onclick="ShowHideDiv(this)">
-                          <label class="form-check-label" for="defaultCheck1">
-                             Disable automatic Shipping Until 
-                            </label>
+                             </div>
+                         
+                    <div class="col-12">
+                      
+                          <div class="AddOns" id="10d21a93x">
+                         
+                              <div class="search">
+                              <label id="326ac0e7d">fghjk</label>
+                              <input type="checkbox" class="addOncheckbox float-right addon-check 10d21a93" name="fghjk" id="326ac0e7">
+                            </div>
+                            
+                            <div class="search">
+                              <label id="a0295a28d">FGHJKLKJ</label>
+                              <input type="checkbox" class="addOncheckbox float-right addon-check 10d21a93" name="FGHJKLKJ" id="a0295a28">
+                            </div>
+                            
+                            <div class="search">
+                              <label id="c1506c55d">ghjk</label>
+                              <input type="checkbox" class="addOncheckbox float-right addon-check 10d21a93" name="ghjk" id="c1506c55">
+                              </div>
+                            </div>
+  
                          </div>
-                         <div class="col-12">
-                          <select class="form-control" id="time" style="display: none;">
-                            <option>11:30 Pm</option>
-                            <option>12:00 Pm</option>
-                            <option>12:30 Pm</option>
-                            <option>01:00 Pm</option>
-                         </select>
+
+                    
+
+                     </div>
+                     
+                   
+                     <div class="row">
+                        
+                      <div class="col-12 addon-header ">
+                          <label id="14067432i">hola</label>
+                          <input type="checkbox" class="checkboxCat addon-check float-right" id="14067432" name="14067432" onclick="clickAll(this.name, this.id)">
+
+                       
+
+                      </div>
+                  
+                      <div class="col-12">
+                          <div class="AddOns" id="14067432x">
+                      
+                              <div class="search">
+                              <label id="2a31ff59d">hola1</label>
+                              <input type="checkbox" class="addOncheckbox addon-check float-right 14067432" name="hola1" id="2a31ff59">
+                            </div>
+                            
+                            <div class="search">
+                              <label id="bb491ff7d">hola2</label>
+                              <input type="checkbox" class="addOncheckbox addon-check float-right 14067432" name="hola2" id="bb491ff7">
+                            </div>
+                            
+                            <div class="search">
+                              <label id="d45ab194d">test 1</label>
+                              <input type="checkbox" class="addOncheckbox addon-check float-right 14067432" name="test 1" id="d45ab194">
+                            </div>
+                            
+                            <div class="search">
+                              <label id="f42b9908d">hola5</label>
+                              <input type="checkbox" class="addOncheckbox addon-check float-right 14067432" name="hola5" id="f42b9908">
+                            </div>
+                          </div>
+                              
+
                       
 
-                         </div>
-                       </div>
+                          </div>
+                        </div>
+                     
                       
-                           
+                    </div>
+                    
+                  
+                      
+                  </form>
+              </div>
+              
+            </div>
+            <div class="m-footer">
+            
+              <div class="float-right">
+                <button type="button" onclick="PassEditedAddOns()" class="btn btn-default btn-md" data-dismiss="modal">Add</button>
+
+              </div>
+            </div>
+         </div>
+      </div>
+   </div>
+     <div class="modal fade" id="addon" tabindex="-1" role="dialog" aria-labelledby="active" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="orderdetailLongTitle">Edit Add-Ons</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+              
+              <div id="addOns" class="addOn-popup">
+                
+                  <form class="addOnForm" id="addOnForm">
+                    <div id="AddOnDiv">
+                     <div class="row ">
+                        
+                             <div class="col-12 addon-header ">
+                              <label id="10d21a93i">holaaa99</label>
+                              
+                              <input type="checkbox" class="checkboxCat addon-check float-right" id="10d21a93" name="10d21a93" onclick="clickAll(this.name, this.id)">
+
+                             </div>
+                         
+                    <div class="col-12">
+                      
+                          <div class="AddOns" id="10d21a93x">
+                         
+                              <div class="search">
+                              <label id="326ac0e7d">fghjk</label>
+                              <input type="checkbox" class="addOncheckbox float-right addon-check 10d21a93" name="fghjk" id="326ac0e7">
+                            </div>
+                            
+                            <div class="search">
+                              <label id="a0295a28d">FGHJKLKJ</label>
+                              <input type="checkbox" class="addOncheckbox float-right addon-check 10d21a93" name="FGHJKLKJ" id="a0295a28">
+                            </div>
+                            
+                            <div class="search">
+                              <label id="c1506c55d">ghjk</label>
+                              <input type="checkbox" class="addOncheckbox float-right addon-check 10d21a93" name="ghjk" id="c1506c55">
+                              </div>
+                            </div>
+  
+                         </div>
+
+                    
+
                      </div>
-                  </div>
-                  <script type="text/javascript">
-                    function ShowHideDiv(shipping_time) {
-                        var dvPassport = document.getElementById("time");
-                        dvPassport.style.display = shipping_time.checked ? "block" : "none";
-                    }
-                </script>
-      
-                  <div class="col-md-12">
-                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                        <label class="form-check-label" for="defaultCheck1">
-                        Busy?
-                        </label>
-                     </div>
-                  </div>
-                  <div class="col-md-12">
-                     <div class="form-group">
-                        <label for="forDelay">
-                        Average Delay
-                        </label>
-                        <select class="form-control">
-                           <option>10 Min</option>
-                           <option>20 Min</option>
-                           <option>30 Min</option>
-                           <option>40 Min</option>
-                           <option>50 Min</option>
-                        </select>
-                     </div>
-                  </div>
-                  <div class="col-md-12">
-                     <b>Current Delay is: </b> 15 min <br>
-                     <b>Nearest closing time: </b> 11:30 PM 
-                  </div>
-                  <div class="col-12" style="margin-top: 20px;">
-                    <button type="button" class="btn btn-default btn-block">Submit changes</button>
-                  </div>
+                     
+                   
+                     <div class="row">
+                        
+                      <div class="col-12 addon-header ">
+                          <label id="14067432i">hola</label>
+                          <input type="checkbox" class="checkboxCat addon-check float-right" id="14067432" name="14067432" onclick="clickAll(this.name, this.id)">
+
+                       
+
+                      </div>
+                  
+                      <div class="col-12">
+                          <div class="AddOns" id="14067432x">
+                      
+                              <div class="search">
+                              <label id="2a31ff59d">hola1</label>
+                              <input type="checkbox" class="addOncheckbox addon-check float-right 14067432" name="hola1" id="2a31ff59">
+                            </div>
+                            
+                            <div class="search">
+                              <label id="bb491ff7d">hola2</label>
+                              <input type="checkbox" class="addOncheckbox addon-check float-right 14067432" name="hola2" id="bb491ff7">
+                            </div>
+                            
+                            <div class="search">
+                              <label id="d45ab194d">test 1</label>
+                              <input type="checkbox" class="addOncheckbox addon-check float-right 14067432" name="test 1" id="d45ab194">
+                            </div>
+                            
+                            <div class="search">
+                              <label id="f42b9908d">hola5</label>
+                              <input type="checkbox" class="addOncheckbox addon-check float-right 14067432" name="hola5" id="f42b9908">
+                            </div>
+                          </div>
+                              
+
+                      
+
+                          </div>
+                        </div>
+                     
+                      
+                    </div>
+                    
+                  
+                      
+                  </form>
+              </div>
+              
+            </div>
+            <div class="m-footer">
+            
+              <div class="float-right">
+                <button type="button" onclick="PassAddOns()" class="btn btn-default btn-md" data-dismiss="modal">Add</button>
+
+              </div>
+            </div>
+         </div>
+      </div>
+   </div>
+     <div class="modal fade" id="addon-del" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-body">
+               Are you sure you want to delete the item?
+               <div class="float-right">
+                  <br>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                 <button id="delbtn" type="button" class="btn btn-warning" onclick="modaldismiss(this.id)" >  Confirm</button>
                </div>
-            </form>
+            </div>
          </div>
-         
       </div>
    </div>
-</div>
+      <div class="modal fade" id="categories" tabindex="-1" role="dialog" aria-labelledby="active" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+           <div class="modal-content">
+              <div class="modal-header">
+                 <h5 class="modal-title" id="orderdetailLongTitle">Add New Category</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+                 </button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="row">
+                          <div class="col-12">
+                              <div class="form-group">
+                                <label>Category Name (English):</label>
+                                <input type="text" class="form-control" />
 
-<div class="modal fade" id="today" tabindex="-1" role="dialog" aria-labelledby="today" aria-hidden="true">
-   <div class="modal-dialog" role="document">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="orderdetailLongTitle">Order's Today</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-         </div>
-         <div class="modal-body">
-          <div class="chart">
-            <canvas id="todayChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-          
-  </div>
-         </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-         </div>
-      </div>
-   </div>
-</div>
-<div class="modal fade" id="cancelled" tabindex="-1" role="dialog" aria-labelledby="cancelled" aria-hidden="true">
-   <div class="modal-dialog" role="document">
-      <div class="modal-content">
-         <div class="modal-header">
-            <h5 class="modal-title" id="orderdetailLongTitle">Cancelled Order's</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-         </div>
-         <div class="modal-body">
-          <div class="chart">
-            <canvas id="cancelledChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-          
-  </div>
-         </div>
-         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-         </div>
-      </div>
-   </div>
-</div>
+                              </div>
 
-<div class="modal fade" id="active" tabindex="-1" role="dialog" aria-labelledby="active" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="orderdetailLongTitle">Active Order's</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-group">
+                              <label>Category Name (Arabic):</label>
+                              <input type="text" class="form-control" />
+
+                            </div>
+
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                              <label>Order:</label>
+                              <select class="form-control">
+                                  <option>First</option>
+                              </select>
+
+                            </div>
+
+                        </div>
+                      </div>
+                  </form>
+               
+              </div>
+              <div class="m-footer">
+                 <button type="button" onclick="submitAddOn()" class="btn btn-default btn-block" data-dismiss="modal">Add</button>
+              </div>
+           </div>
         </div>
-        <div class="modal-body">
-        
-        <div class="chart">
-                  <canvas id="activeChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+     </div>
+     
+     <div class="modal fade" id="edit_category" tabindex="-1" role="dialog" aria-labelledby="active" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+           <div class="modal-content">
+              <div class="modal-header">
+                 <h5 class="modal-title" id="orderdetailLongTitle">Edit Category</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+                 </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                              <label>Category Name (English):</label>
+                              <input type="text" class="form-control" />
+
+                            </div>
+
+                        </div>
+                        <div class="col-12">
+                          <div class="form-group">
+                            <label>Category Name (Arabic):</label>
+                            <input type="text" class="form-control" />
+
+                          </div>
+
+                      </div>
+                      <div class="col-12">
+                          <div class="form-group">
+                            <label>Order:</label>
+                            <select class="form-control">
+                                <option>First</option>
+                            </select>
+
+                          </div>
+
+                      </div>
+                    </div>
+                </form>
+               
+              </div>
+              <div class="m-footer">
+               <button class="btn btn-danger btn-md" data-toggle="modal" data-target="#cat-del">
+                  Delete
+                </button>
+                <div class="float-right">
+                  <button type="button" onclick="submitAddOn()" class="btn btn-default btn-md" data-dismiss="modal">Edit</button>
+
                 </div>
+              </div>
+           </div>
         </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
+     </div>
+     <div class="modal fade" id="cat-del" tabindex="-1" role="dialog" aria-labelledby="confirm" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-body">
+               Are you sure you want to delete the Category?
+               <div class="float-right">
+                  <br>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button  type="button" class="btn btn-warning" data-dismiss="modal" data-toggle="modal" data-target="#move" >Confirm</button>
+               </div>
+            </div>
+         </div>
       </div>
-  </div>
-</div>
+   </div>
+   <div class="modal fade" id="move" tabindex="-1" role="dialog" aria-labelledby="active" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title" id="orderdetailLongTitle">Move Items</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+               </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                              <label>Category Name (English):</label>
+                             <select class="form-control">
+                                <option>Fast Food</option>
+                                <option>Drink </option>
 
+                             </select>
 
-<footer class="main-footer">
-  
-  <strong>Copyright &copy; 2021 <a href="https://humaizshahid.com">Volo</a>.</strong> All rights reserved.
-</footer>
-</div>
+                            </div>
 
-<a  href="#" data-toggle="modal" data-target="#trading">
-  <div class="row" style="padding: 0px;margin: 0px;">
-<div class="col-12 t-fixed " style="padding: 0px;margin: 0px;"> 
+                        </div>
+                        <div class="col-12">
+                         <button class="btn btn-default btn-block" >Move Items</button>
+                      </div>
+                    </div>
+                </form>
+             
+            </div>
+            <div class="m-footer">
+               
+               <button id="delbtn2" type="button" class="btn btn-danger btn-block" onclick="modaldismiss(this.id)" >  Delte All items</button>
+              
+             
+            </div>
+         </div>
+      </div>
+   </div>
+      <footer class="main-footer">
+         <strong>Copyright &copy; 2021 <a href="https://humaizshahid.com">Volo</a>.</strong> All rights reserved.
+      </footer>
+      </div>
 
-</div>
+      <!-- jQuery -->
+      <script src="plugins/jquery/jquery.min.js"></script>
 
-</div>
-
-<div class="trading mx-auto" >
-<img src="../img/footer-logo.png"/>
-</div>
-
-</a>
-
-<!-- jQuery -->
-<script src="plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap 4 -->
-<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-<!-- DataTables  & Plugins -->
-<script src="plugins/chart/Chart.js"></script>
-
-<script src="plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
-<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
-<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
-<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
-<script src="plugins/jszip/jszip.min.js"></script>
-<script src="plugins/pdfmake/pdfmake.min.js"></script>
-<script src="plugins/pdfmake/vfs_fonts.js"></script>
-<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
-<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
-<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-
-<!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
-
-
-  
-
-
-<script>
-  var ctx = document.getElementById("activeChart").getContext('2d');
-     var myChart = new Chart(ctx, {
-         type: 'line',
-         data: {
-             labels: ["10 AM",	"11 AM",	"12 PM",	"1 PM",	"2 PM ",	"3 PM",	"4 PM","5 PM",	"6 PM","7 PM"],
-             datasets: [{
-                 label: 'Active Order', // Name the series
-                 data: [5,	3,	10,	9,	8,	15,	17,	20,	12, 28], // Specify the data values array
-                 fill: false,
-                 borderColor: '#2196f3', // Add custom color border (Line)
-                 backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
-                 borderWidth: 1 // Specify bar border width
-             }]},
-         options: {
-         responsive: true, // Instruct chart js to respond nicely.
-         maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
-         }
- });
- var today = document.getElementById("todayChart").getContext('2d');
-     var myChart = new Chart(today, {
-         type: 'line',
-         data: {
-             labels: ["Today",	"Tuesday",	"Wednesay",	"Thursaday",	"Friday ",	"Saturday",	"Sanday"],
-             datasets: [{
-                 label: 'Todays Order', // Name the series
-                 data: [15,	30,	29,	35,	32,	38,	40], // Specify the data values array
-                 fill: false,
-                 borderColor: '#2196f3', // Add custom color border (Line)
-                 backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
-                 borderWidth: 1 // Specify bar border width
-             }]},
-         options: {
-         responsive: true, // Instruct chart js to respond nicely.
-         maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
-         }
- });
- var cancelled = document.getElementById("cancelledChart").getContext('2d');
-     var myChart = new Chart(cancelled, {
-         type: 'line',
-         data: {
-             labels: ["Today",	"Tuesday",	"Wednesay",	"Thursaday",	"Friday ",	"Saturday",	"Sanday"],
-             datasets: [{
-                 label: 'Cancelled Order', // Name the series
-                 data: [1,	7,	9,	0,	8,	4,	10], // Specify the data values array
-                 fill: false,
-                 borderColor: '#2196f3', // Add custom color border (Line)
-                 backgroundColor: '#2196f3', // Add custom color background (Points and Fill)
-                 borderWidth: 1 // Specify bar border width
-             }]},
-         options: {
-         responsive: true, // Instruct chart js to respond nicely.
-         maintainAspectRatio: false, // Add to prevent default behaviour of full-width/height 
-         }
- });
- </script>
-<script>
-  $(function () {
-    $("#example1").DataTable({
-     "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": true,
-      "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    $("#example2").DataTable({ 
-     "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ], "autoWidth": false,
-      "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
-    $("#example3").DataTable({
-     "lengthChange": true, "pageLength": 50, "lengthMenu": [ [5, 10, 25, 50, -1], [5, 10, 25, 50, "All"] ],  "autoWidth": false,
-      "buttons": ["copy",  "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example3_wrapper .col-md-6:eq(0)');
-    $("#example4").DataTable({
-       "lengthChange": true, "pageLength": 20, "lengthMenu": [ [5, 10, 20, 25, 50, -1], [5, 10, 20, 25, 50, "All"] ], "autoWidth": false,
-      "buttons": ["copy", "excel", "pdf", "print", "colvis"]
-    }).buttons().container().appendTo('#example4_wrapper .col-md-6:eq(0)');
+      <!-- Bootstrap 4 -->
+      <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <!-- DataTables  & Plugins -->
+      <script src="plugins/chart/Chart.js"></script>
+      <script src="plugins/datatables/jquery.dataTables.min.js"></script>
+      <script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
     
-  });
+      <script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+      <script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+      <script src="plugins/jszip/jszip.min.js"></script>
+      <script src="plugins/pdfmake/pdfmake.min.js"></script>
+      <script src="plugins/pdfmake/vfs_fonts.js"></script>
+      <script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+      <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+      <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+      <!-- AdminLTE App -->
+      <script src="dist/js/adminlte.min.js"></script>
+      <!-- AdminLTE for demo purposes -->
+      <script src="dist/js/demo.js"></script>
+      <script src="dist/js/addOn2.js"></script>
+      <script src="dist/js/cah.js"></script>
+
+      <script src="dist/js/patnerSettings.js"></script>
+             
+
+      <script>
+        $('.card-header').click(function() {
+          $(this).find('i').toggleClass('fas fa-angle-down fas fa-angle-up');
+      });
+      $(document).ready(function(){
+        //Add a minus icon to the collapse element that is open by default
+          $('.collapse.show').each(function(){
+          $(this).parent().find(".fa").removeClass("fa-angle-down").addClass("fa-angle-up");
+          });
+            
+        //Toggle plus/minus icon on show/hide of collapse element
+        $('.collapse').on('shown.bs.collapse', function(){
+          $(this).parent().find(".fa").removeClass("fa-angle-down").addClass("fa-angle-up");
+        }).on('hidden.bs.collapse', function(){
+          $(this).parent().find(".fa").removeClass("fa-angle-up").addClass("fa-angle-down");
+        });       
+      });
+    </script>
+        <script>
+         function modaldismiss(btn_del){
+            var default_value = document.getElementById(btn_del).innerHTML;
+             document.getElementById(btn_del).innerHTML = "<i class='fa fa-spinner fa-spin'></i> Deleting";
+             setTimeout(function(){ $('.modal').modal('hide') 
+                    $('.modal-backdrop').remove();
+                    document.getElementById(btn_del).innerHTML = default_value;
+                  
+                  }, 1000);
+           
+             
+         }
+     </script>
+     
   
-</script>
-</body>
+   </body>
 </html>
